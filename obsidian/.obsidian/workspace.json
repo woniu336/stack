@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e49a5c9903ce3009",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "笔记与博客/夜深了.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,10 +191,18 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "482a24f1be07e9c1",
+  "active": "e49a5c9903ce3009",
   "lastOpenFiles": [
+    "笔记与博客/测试001.md",
     "笔记与博客/晚上好.md",
     "笔记与博客/夜深了.md",
+    "笔记与博客/未命名.md",
+    "resources/_gen/images",
+    "resources/_gen/assets",
+    "resources/_gen",
+    "resources",
+    "obs_sctipts/NewBlog.js",
+    "obs_sctipts",
     "模板/基础模板.md",
     "模板/进度条模板.md",
     "模板/日记模板.md",
@@ -195,19 +216,11 @@
     "笔记与博客/博客写作/page/links",
     "笔记与博客/博客写作/page/about/_index.html",
     "笔记与博客/博客写作/page/about",
-    "笔记与博客/博客写作/page/_index.html",
-    "笔记与博客/博客写作/page",
-    "笔记与博客/博客写作/post/_index.html",
-    "笔记与博客/博客写作/post",
-    "笔记与博客/博客写作/_index.html",
-    "笔记与博客/博客写作",
-    "笔记与博客/未命名.md",
     "笔记与博客/未命名 1.md",
     "模板/Youtube视频模板.md",
     "模板/Bilibili视频模板.md",
     "Obsidian使用/主动型插件使用.md",
     "Obsidian使用/obsidian插件使用存档.md",
-    "笔记与博客/测试001.md",
     "模板/通用视频模板.md",
     "未命名.md",
     "笔记与博客/hugo博客文章/66.md",
@@ -215,7 +228,6 @@
     "模板/blue topaz模板.md",
     "模板/slide模板.md",
     "模板/VG简介模板.md",
-    "模板/绘图模板.md",
     "Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg",
     "模板/Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg"
   ]

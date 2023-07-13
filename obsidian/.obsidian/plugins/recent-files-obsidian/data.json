@@ -5,6 +5,10 @@
       "path": "笔记与博客/夜深了.md"
     },
     {
+      "basename": "测试001",
+      "path": "笔记与博客/测试001.md"
+    },
+    {
       "basename": "晚上好",
       "path": "笔记与博客/晚上好.md"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "obsidian插件使用存档",
       "path": "Obsidian使用/obsidian插件使用存档.md"
-    },
-    {
-      "basename": "测试001",
-      "path": "笔记与博客/测试001.md"
     },
     {
       "basename": "Mermaid书写范例实例",

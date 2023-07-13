@@ -1,3 +1,0 @@
-
-
-{{< bilibili VIDEO_ID >}}
