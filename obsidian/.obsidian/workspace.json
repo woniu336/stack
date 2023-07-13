@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian使用/obsidian中的markdown书写范例实例.md",
+                "file": "笔记与博客/夜深了.md",
                 "mode": "source",
                 "source": false
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian使用/obsidian中的markdown书写范例实例.md"
+                "file": "笔记与博客/夜深了.md"
               }
             }
           },
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian使用/obsidian中的markdown书写范例实例.md",
+                "file": "笔记与博客/夜深了.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian使用/obsidian中的markdown书写范例实例.md",
+                "file": "笔记与博客/夜深了.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -191,8 +191,9 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "fe492c4e8031dcdd",
+  "active": "e49a5c9903ce3009",
   "lastOpenFiles": [
+    "Obsidian使用/obsidian中的markdown书写范例实例.md",
     "Obsidian使用/obsidian插件使用存档.md",
     "Obsidian使用/Obsidian Emo Uploader.md",
     "Obsidian使用/Mermaid书写范例实例.md",
@@ -228,7 +229,6 @@
     "未命名.md",
     "笔记与博客/hugo博客文章/66.md",
     "模板/acfun视频模板.md",
-    "模板/blue topaz模板.md",
     "Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg",
     "模板/Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg"
   ]
