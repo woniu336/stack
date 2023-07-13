@@ -51,7 +51,7 @@ params:
         avatar:
             enabled: true
             local: true
-            src: img/go.png
+            src: https://sdn.geekzu.org/avatar/6969d9446ac73edbace44fe66cbae6fc?s=240&d=mp
 
     article:
         math: false
