@@ -37,5 +37,5 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }} # 两个仓库请使用 deploy_key
           external_repository: woniu336/woniu336.github.io  # 如果在同一个仓库请注释
           publish_dir: ./public # hugo 生成到 public 作为跟目录
-          publish_branch: gh-pages # Github Pages 所在分支
+          publish_branch: main # Github Pages 所在分支
           commit_message: ${{ github.event.head_commit.message }}
