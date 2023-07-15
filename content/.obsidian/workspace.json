@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/博客园写作.md",
+                "file": "post/夜深了.md",
                 "mode": "source",
                 "source": false
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/博客园写作.md"
+                "file": "post/夜深了.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/博客园写作.md",
+                "file": "post/夜深了.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/博客园写作.md",
+                "file": "post/夜深了.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -180,6 +180,9 @@
   },
   "active": "a5056d5fefda48c3",
   "lastOpenFiles": [
+    "post/晚上好.md",
+    "post/测试001.md",
+    "post/博客园写作.md",
     "post/99/index.md",
     "post/33/index.md",
     "笔记与博客/夜深了.md",
@@ -213,9 +216,6 @@
     "笔记与博客/博客写作/page/about/_index.html",
     "笔记与博客/博客写作/page/about",
     "笔记与博客/未命名 1.md",
-    "模板/Youtube视频模板.md",
-    "模板/Bilibili视频模板.md",
-    "模板/通用视频模板.md",
     "Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg",
     "模板/Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg"
   ]
