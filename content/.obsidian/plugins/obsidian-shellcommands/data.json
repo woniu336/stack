@@ -137,7 +137,7 @@
     {
       "id": "992j60w9ke",
       "platform_specific_commands": {
-        "default": "git add -A & git commit -m \"{{_comment}}\" & git push\n"
+        "default": "git add -A & git commit -m \"{{_commit}}\" & git push\n"
       },
       "shells": {},
       "alias": "push",
@@ -165,7 +165,13 @@
       "output_handling_mode": "buffered",
       "events": {},
       "command_palette_availability": "enabled",
-      "preactions": [],
+      "preactions": [
+        {
+          "type": "prompt",
+          "enabled": true,
+          "prompt_id": "erweckknxm"
+        }
+      ],
       "variable_default_values": {}
     }
   ],
