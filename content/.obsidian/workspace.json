@@ -4,11 +4,71 @@
     "type": "split",
     "children": [
       {
-        "id": "139c7c3130ede6fd",
+        "id": "d90655f35e221474",
         "type": "tabs",
         "children": [
           {
-            "id": "27196036c9704a91",
+            "id": "e36e80c44e9dd134",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "日记/2023-07-16.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f089717e5fc740c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/测试.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2fee3b0d9acceb81",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "日记/2023-07-17.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2e9213e8529e4c18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/16号了.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e5000784749bae79",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/晚上了.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9b00b42f2ce39563",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,7 +79,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -187,19 +248,22 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "27196036c9704a91",
+  "active": "9b00b42f2ce39563",
   "lastOpenFiles": [
     "主面板.md",
     "post/晚上了.md",
+    "post/测试.md",
+    "post/16号了.md",
+    "日记/2023-07-17.md",
+    "日记/2023-07-16.md",
+    "附件/Pasted image 20230716040805.png",
+    "post/001.md",
     "obsidian使用/obsidian插件使用存档.md",
     "obsidian使用/obsidian中的markdown书写范例实例.md",
     "obsidian使用/主动型插件使用.md",
     "obsidian使用/Obsidian Emo Uploader.md",
-    "日记/2023-07-16.md",
     "日记/未命名.md",
     "闪念/78.md",
-    "post/001.md",
-    "post/测试.md",
     "post/周末了，我靠.md",
     "日记/2023-七月-日.md",
     "日记/评论系统选择.md",
@@ -216,8 +280,6 @@
     "obsidian使用/LaTeX公式书写范例.md",
     "_index.zh-cn.md",
     "模板/闪念模板.md",
-    "闪念/评论系统选择.md",
-    "闪念/哈哈哈.md",
     "模板/_index.html",
     "模板",
     "post/Pasted image 20230716014045.png",
@@ -229,7 +291,6 @@
     "post/图片测试",
     "post/Pasted image 20230716010131.png",
     "post/Pasted image 20230716005920.png",
-    "Pasted image 20230716005529.png",
     "附件",
     "未命名.canvas",
     "post/001",

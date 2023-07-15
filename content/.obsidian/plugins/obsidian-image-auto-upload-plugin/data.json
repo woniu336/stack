@@ -415,6 +415,35 @@
       "id": "eea070ab-79c3-44ef-8388-d0fca6c08cc3",
       "createdAt": 1689442856633,
       "updatedAt": 1689442856633
+    },
+    {
+      "fileName": "Pasted image 20230716040805.webp",
+      "width": 340,
+      "height": 687,
+      "extname": ".webp",
+      "imgUrl": "https://r2.leshans.eu.org/2023/07/b1ce7ea9aa02113214402bb75af5756c.webp",
+      "url": "https://r2.leshans.eu.org/2023/07/b1ce7ea9aa02113214402bb75af5756c.webp",
+      "type": "aws-s3",
+      "config": {
+        "_configName": "cf-r2",
+        "_id": "30afa6bf-68f5-45ac-b0dd-790c45972ffc",
+        "_createdAt": 1687440335713,
+        "_updatedAt": 1687440466688,
+        "accessKeyID": "c44c6b76fd0cef4b9e939edc3ff313ff",
+        "secretAccessKey": "bc0edc2f131d09bf592ee72b0ad95b5f308612b5b018ca07051f7c973e046e30",
+        "bucketName": "blog",
+        "uploadPath": "{year}/{month}/{md5}.{extName}",
+        "region": "auto",
+        "endpoint": "https://9f623b740b21465e05dfd016b92ecfa5.r2.cloudflarestorage.com",
+        "proxy": "",
+        "urlPrefix": "https://r2.leshans.eu.org",
+        "pathStyleAccess": false,
+        "rejectUnauthorized": true,
+        "acl": "public-read"
+      },
+      "id": "46155980-d539-4793-bfb4-0a7517a70483",
+      "createdAt": 1689451836199,
+      "updatedAt": 1689451836199
     }
   ]
 }
