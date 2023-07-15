@@ -5,28 +5,36 @@
       "path": "post/001/index.md"
     },
     {
-      "basename": "_index.zh-cn",
-      "path": "_index.zh-cn.md"
-    },
-    {
-      "basename": "_index",
-      "path": "_index.md"
-    },
-    {
-      "basename": "_index",
-      "path": "categories/_index.md"
-    },
-    {
       "basename": "obsidian插件使用存档",
       "path": "Obsidian使用/obsidian插件使用存档.md"
     },
     {
-      "basename": "晚上好",
-      "path": "笔记与博客/晚上好.md"
+      "basename": "baidu.com",
+      "path": "baidu.com.md"
     },
     {
-      "basename": "测试001",
-      "path": "笔记与博客/测试001.md"
+      "basename": "ffff",
+      "path": "ffff.md"
+    },
+    {
+      "basename": "index.zh-cn",
+      "path": "page/about/index.zh-cn.md"
+    },
+    {
+      "basename": "_index.zh-cn",
+      "path": "_index.zh-cn.md"
+    },
+    {
+      "basename": "index",
+      "path": "page/archives/index.md"
+    },
+    {
+      "basename": "ts-logo-128",
+      "path": "page/links/ts-logo-128.jpg"
+    },
+    {
+      "basename": "index",
+      "path": "page/search/index.md"
     },
     {
       "basename": "博客园写作",
@@ -37,28 +45,28 @@
       "path": "Obsidian使用/Mermaid书写范例实例.md"
     },
     {
+      "basename": "晚上好",
+      "path": "笔记与博客/晚上好.md"
+    },
+    {
+      "basename": "_index",
+      "path": "_index.md"
+    },
+    {
+      "basename": "_index",
+      "path": "categories/_index.md"
+    },
+    {
+      "basename": "测试001",
+      "path": "笔记与博客/测试001.md"
+    },
+    {
       "basename": "LaTeX公式书写范例",
       "path": "Obsidian使用/LaTeX公式书写范例.md"
     },
     {
       "basename": "index",
-      "path": "page/search/index.md"
-    },
-    {
-      "basename": "index",
       "path": "page/links/index.md"
-    },
-    {
-      "basename": "ts-logo-128",
-      "path": "page/links/ts-logo-128.jpg"
-    },
-    {
-      "basename": "index",
-      "path": "page/archives/index.md"
-    },
-    {
-      "basename": "index.zh-cn",
-      "path": "page/about/index.zh-cn.md"
     },
     {
       "basename": "index",

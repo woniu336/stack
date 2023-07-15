@@ -32,6 +32,18 @@
       "name": "新建文章",
       "mode": "any",
       "color": "#216bba"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-2urksgwhku",
+      "icon": "bike",
+      "name": "启动服务",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-56me5k3cup",
+      "icon": "battery-charging",
+      "name": "停止服务",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],

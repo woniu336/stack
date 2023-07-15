@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "eca2d4ecc30397d2",
+        "id": "1c14cd996c9e2770",
         "type": "tabs",
         "children": [
           {
-            "id": "7e994b29e853f1f8",
+            "id": "6b4fa80dffa27688",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "post/001/index.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -169,6 +169,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "cmdr:启动服务": false,
+      "cmdr:停止服务": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
@@ -182,10 +184,20 @@
       "cmdr:新建文章": false
     }
   },
-  "active": "7e994b29e853f1f8",
+  "active": "6b4fa80dffa27688",
   "lastOpenFiles": [
-    "_index.zh-cn.md",
+    "Obsidian使用/obsidian插件使用存档.md",
     "post/001/index.md",
+    "baidu.com.md",
+    "ffff.md",
+    "page/about/index.zh-cn.md",
+    "_index.zh-cn.md",
+    "page/archives/index.md",
+    "page/links/ts-logo-128.jpg",
+    "page/search/index.md",
+    "笔记与博客/博客园写作.md",
+    "Obsidian使用/Mermaid书写范例实例.md",
+    "笔记与博客/晚上好.md",
     "post/001",
     "_index.md",
     "未命名.md",
@@ -202,22 +214,12 @@
     "Excalidraw",
     "post/我的写作",
     "post/测试001.md",
-    "Obsidian使用/obsidian插件使用存档.md",
     "post/博客园写作.md",
-    "笔记与博客/晚上好.md",
     "笔记与博客/测试001.md",
-    "笔记与博客/博客园写作.md",
     "post/牛逼666",
     "post/出发游泳吧",
-    "Obsidian使用/Mermaid书写范例实例.md",
     "post/66/index.md",
     "post/66",
-    "Obsidian使用/LaTeX公式书写范例.md",
-    "page/search/index.md",
-    "page/links/index.md",
-    "page/links/ts-logo-128.jpg",
-    "page/archives/index.md",
-    "page/about/index.zh-cn.md",
     "模板/_index.html",
     "模板",
     "resources/_gen/images",
