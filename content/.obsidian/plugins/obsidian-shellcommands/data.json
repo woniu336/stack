@@ -137,7 +137,7 @@
     {
       "id": "992j60w9ke",
       "platform_specific_commands": {
-        "default": "git add -A && git commit -m \"{{_comment}}\" && git push"
+        "default": "git add -A & git commit -m \"{{_comment}}\" & git push\n"
       },
       "shells": {},
       "alias": "push",
@@ -236,6 +236,28 @@
       "default_value": null
     }
   ],
-  "custom_shells": [],
+  "custom_shells": [
+    {
+      "id": "1wjsri03er",
+      "name": "",
+      "description": "",
+      "binary_path": "",
+      "shell_arguments": [
+        "-c",
+        "{{!shell_command_content}}"
+      ],
+      "host_platform": "win32",
+      "host_platform_configurations": {
+        "win32": {
+          "quote_shell_arguments": true
+        }
+      },
+      "shell_platform": null,
+      "escaper": "PowerShell",
+      "path_translator": null,
+      "shell_command_wrapper": null,
+      "shell_command_test": null
+    }
+  ],
   "output_wrappers": []
 }
