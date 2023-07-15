@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "晚上了",
+      "path": "post/晚上了.md"
+    },
+    {
       "basename": "主面板",
       "path": "主面板.md"
+    },
+    {
+      "basename": "obsidian插件使用存档",
+      "path": "obsidian使用/obsidian插件使用存档.md"
+    },
+    {
+      "basename": "obsidian中的markdown书写范例实例",
+      "path": "obsidian使用/obsidian中的markdown书写范例实例.md"
+    },
+    {
+      "basename": "主动型插件使用",
+      "path": "obsidian使用/主动型插件使用.md"
+    },
+    {
+      "basename": "Obsidian Emo Uploader",
+      "path": "obsidian使用/Obsidian Emo Uploader.md"
+    },
+    {
+      "basename": "2023-07-16",
+      "path": "日记/2023-07-16.md"
     },
     {
       "basename": "001",
@@ -17,28 +41,8 @@
       "path": "post/周末了，我靠.md"
     },
     {
-      "basename": "晚上了",
-      "path": "post/晚上了.md"
-    },
-    {
-      "basename": "obsidian中的markdown书写范例实例",
-      "path": "obsidian使用/obsidian中的markdown书写范例实例.md"
-    },
-    {
-      "basename": "obsidian插件使用存档",
-      "path": "obsidian使用/obsidian插件使用存档.md"
-    },
-    {
-      "basename": "Obsidian Emo Uploader",
-      "path": "obsidian使用/Obsidian Emo Uploader.md"
-    },
-    {
       "basename": "LaTeX公式书写范例",
       "path": "obsidian使用/LaTeX公式书写范例.md"
-    },
-    {
-      "basename": "主动型插件使用",
-      "path": "obsidian使用/主动型插件使用.md"
     },
     {
       "basename": "_index.zh-cn",

@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "6a42a8efdcba9adb",
+        "id": "139c7c3130ede6fd",
         "type": "tabs",
         "children": [
           {
-            "id": "8a92767f8e9e5f9a",
+            "id": "27196036c9704a91",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/001.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b832037baae58c93",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "主面板.md",
+                "file": "post/晚上了.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,6 +100,16 @@
         "dimension": 48.77450980392157,
         "children": [
           {
+            "id": "deb128aef779b79a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "post/晚上了.md"
+              }
+            }
+          },
+          {
             "id": "c7930d3692988b42",
             "type": "leaf",
             "state": {
@@ -136,22 +133,12 @@
         "dimension": 51.225490196078425,
         "children": [
           {
-            "id": "deb128aef779b79a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "主面板.md"
-              }
-            }
-          },
-          {
             "id": "23629b398460c96f",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "主面板.md",
+                "file": "post/晚上了.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "主面板.md",
+                "file": "post/晚上了.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -182,6 +169,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "cmdr:上传图片": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
@@ -189,65 +177,64 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "homepage:Open homepage": false,
-      "workspaces:管理工作区布局": false,
       "cmdr:推送并发布": false,
       "cmdr:设置代理": false,
       "cmdr:取消代理": false,
       "cmdr:新建文章": false,
       "cmdr:启动服务": false,
       "cmdr:停止服务": false,
-      "cmdr:上传图片": false
+      "homepage:Open homepage": false,
+      "workspaces:管理工作区布局": false
     }
   },
-  "active": "b832037baae58c93",
+  "active": "27196036c9704a91",
   "lastOpenFiles": [
+    "主面板.md",
+    "post/晚上了.md",
+    "obsidian使用/obsidian插件使用存档.md",
+    "obsidian使用/obsidian中的markdown书写范例实例.md",
+    "obsidian使用/主动型插件使用.md",
+    "obsidian使用/Obsidian Emo Uploader.md",
+    "日记/2023-07-16.md",
+    "日记/未命名.md",
+    "闪念/78.md",
     "post/001.md",
     "post/测试.md",
     "post/周末了，我靠.md",
-    "post/晚上了.md",
-    "obsidian使用/obsidian中的markdown书写范例实例.md",
-    "obsidian使用/obsidian插件使用存档.md",
-    "obsidian使用/Obsidian Emo Uploader.md",
+    "日记/2023-七月-日.md",
+    "日记/评论系统选择.md",
+    "日记/2023-七月-一.md",
+    "附件/Pasted image 20230716033256.png",
+    "Pasted image 20230716011144.png.md",
+    "日记/777.md",
+    "附件/_index.html",
+    "附件",
+    "闪念/反反复复.md",
+    "闪念/风格.md",
+    "闪念/8888.md",
+    "闪念/未命名.md",
     "obsidian使用/LaTeX公式书写范例.md",
-    "obsidian使用/主动型插件使用.md",
-    "主面板.md",
     "_index.zh-cn.md",
     "模板/闪念模板.md",
     "闪念/评论系统选择.md",
     "闪念/哈哈哈.md",
-    "闪念/202307160237.md",
-    "闪念/202307160234.md",
     "模板/_index.html",
     "模板",
-    "日记/未命名.md",
-    "page/about/index.zh-cn.md",
     "post/Pasted image 20230716014045.png",
     "post/Pasted image 20230716012820.png",
     "post/Pasted image 20230716011144.png",
     "post/Pasted image 20230716011358.png",
     "闪念/Pasted image 20230716010255.png",
-    "post/图片测试/index.md",
     "闪念/Pasted image 20230716010919.png",
     "post/图片测试",
     "post/Pasted image 20230716010131.png",
     "post/Pasted image 20230716005920.png",
-    "附件/Pasted image 20230716005529.png.md",
     "Pasted image 20230716005529.png",
-    "附件/_index.html",
     "附件",
-    "草稿/晚上好.md",
-    "草稿/夜深了.md",
-    "草稿/测试001.md",
-    "post/001/index.md",
-    "Home.md",
-    "Excalidraw/Drawing 2023-07-15 23.53.29.excalidraw.md",
     "未命名.canvas",
-    "page/links/ts-logo-128.jpg",
     "post/001",
     "post/帅第黑",
     "Excalidraw",
-    "post/我的写作",
-    "post/牛逼666"
+    "post/我的写作"
   ]
 }

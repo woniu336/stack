@@ -2,7 +2,7 @@
   "trashOption": "system",
   "alwaysUpdateLinks": true,
   "newFileLocation": "root",
-  "attachmentFolderPath": "./",
+  "attachmentFolderPath": "附件",
   "userIgnoreFilters": [
     "模板/"
   ],

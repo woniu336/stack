@@ -18,7 +18,7 @@
     },
     "Insert YAML attributes": {
       "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": true,
-      "Text to insert": "title:\naliases:\ntags:\nfrom:\n"
+      "Text to insert": "title:\naliases:\ntags:\nfrom:\ndraft: true\n"
     },
     "Move Tags to Yaml": {
       "Move all tags to Yaml frontmatter of the document.": false,

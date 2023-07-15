@@ -1,4 +1,5 @@
 {
-  "folder": "闪念",
-  "template": "模板/闪念模板"
+  "folder": "日记",
+  "template": "",
+  "format": "YYYY-MM-DD"
 }
