@@ -11,8 +11,12 @@
             "id": "7e994b29e853f1f8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "post/牛逼666/index.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -123,7 +127,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "post/牛逼666/index.md"
+              }
             }
           },
           {
@@ -132,6 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "post/牛逼666/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,6 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "post/牛逼666/index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -168,29 +176,29 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "cmdr:Shell commands: Execute: push": false
+      "cmdr:推送并发布": false
     }
   },
   "active": "7e994b29e853f1f8",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2023-07-15 22.22.58.excalidraw.md",
-    "categories/_index.md",
-    "post/牛逼666/index.md",
-    "Excalidraw",
-    "post/我的写作/index.md",
     "post/出发游泳吧/index.md",
-    "post/我的写作",
+    "post/牛逼666/index.md",
+    "post/我的写作/index.md",
+    "post/晚上好.md",
     "post/未命名.md",
     "post/夜深了.md",
+    "未命名.md",
+    "Excalidraw/Drawing 2023-07-15 22.22.58.excalidraw.md",
+    "categories/_index.md",
+    "Excalidraw",
+    "post/我的写作",
     "post/测试001.md",
-    "post/晚上好.md",
     "Obsidian使用/obsidian插件使用存档.md",
     "post/博客园写作.md",
     "笔记与博客/晚上好.md",
     "笔记与博客/测试001.md",
     "笔记与博客/博客园写作.md",
     "post/牛逼666",
-    "未命名.md",
     "post/出发游泳吧",
     "Obsidian使用/Mermaid书写范例实例.md",
     "post/66/index.md",
