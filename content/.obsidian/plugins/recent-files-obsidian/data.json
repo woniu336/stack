@@ -5,14 +5,6 @@
       "path": "主面板.md"
     },
     {
-      "basename": "晚上了",
-      "path": "post/晚上了.md"
-    },
-    {
-      "basename": "周末了，我靠",
-      "path": "post/周末了，我靠.md"
-    },
-    {
       "basename": "001",
       "path": "post/001.md"
     },
@@ -21,8 +13,12 @@
       "path": "post/测试.md"
     },
     {
-      "basename": "LaTeX公式书写范例",
-      "path": "obsidian使用/LaTeX公式书写范例.md"
+      "basename": "周末了，我靠",
+      "path": "post/周末了，我靠.md"
+    },
+    {
+      "basename": "晚上了",
+      "path": "post/晚上了.md"
     },
     {
       "basename": "obsidian中的markdown书写范例实例",
@@ -37,8 +33,20 @@
       "path": "obsidian使用/Obsidian Emo Uploader.md"
     },
     {
+      "basename": "LaTeX公式书写范例",
+      "path": "obsidian使用/LaTeX公式书写范例.md"
+    },
+    {
+      "basename": "主动型插件使用",
+      "path": "obsidian使用/主动型插件使用.md"
+    },
+    {
       "basename": "_index.zh-cn",
       "path": "_index.zh-cn.md"
+    },
+    {
+      "basename": "index.zh-cn",
+      "path": "page/about/index.zh-cn.md"
     },
     {
       "basename": "ts-logo-128",
@@ -47,10 +55,6 @@
     {
       "basename": "_index",
       "path": "_index.md"
-    },
-    {
-      "basename": "index.zh-cn",
-      "path": "page/about/index.zh-cn.md"
     },
     {
       "basename": "index",
@@ -75,10 +79,6 @@
     {
       "basename": "index",
       "path": "page/about/index.md"
-    },
-    {
-      "basename": "主动型插件使用",
-      "path": "obsidian使用/主动型插件使用.md"
     }
   ],
   "omittedPaths": [
