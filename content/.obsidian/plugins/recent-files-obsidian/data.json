@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "基础模板",
-      "path": "模板/基础模板.md"
-    },
-    {
       "basename": "夜深了",
       "path": "笔记与博客/夜深了.md"
+    },
+    {
+      "basename": "晚上好",
+      "path": "笔记与博客/晚上好.md"
+    },
+    {
+      "basename": "测试001",
+      "path": "笔记与博客/测试001.md"
+    },
+    {
+      "basename": "博客园写作",
+      "path": "笔记与博客/博客园写作.md"
+    },
+    {
+      "basename": "基础模板",
+      "path": "模板/基础模板.md"
     },
     {
       "basename": "obsidian中的markdown书写范例实例",
@@ -37,14 +49,6 @@
       "path": "模板/进度条模板.md"
     },
     {
-      "basename": "测试001",
-      "path": "笔记与博客/测试001.md"
-    },
-    {
-      "basename": "晚上好",
-      "path": "笔记与博客/晚上好.md"
-    },
-    {
       "basename": "日记模板",
       "path": "模板/日记模板.md"
     },
@@ -59,10 +63,6 @@
     {
       "basename": "油管视频嵌入代码",
       "path": "模板/油管视频嵌入代码.md"
-    },
-    {
-      "basename": "博客园写作",
-      "path": "笔记与博客/博客园写作.md"
     }
   ],
   "omittedPaths": [
