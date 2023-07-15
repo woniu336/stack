@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "博客园写作",
+      "path": "post/博客园写作.md"
+    },
+    {
       "basename": "晚上了",
       "path": "post/晚上了.md"
+    },
+    {
+      "basename": "测试",
+      "path": "post/测试.md"
     },
     {
       "basename": "晚上好",
@@ -15,14 +23,6 @@
     {
       "basename": "_index.zh-cn",
       "path": "_index.zh-cn.md"
-    },
-    {
-      "basename": "博客园写作",
-      "path": "post/博客园写作.md"
-    },
-    {
-      "basename": "测试",
-      "path": "post/测试.md"
     },
     {
       "basename": "ts-logo-128",
