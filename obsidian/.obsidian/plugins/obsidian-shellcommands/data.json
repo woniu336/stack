@@ -97,7 +97,7 @@
     {
       "id": "ta8qgcnqqy",
       "platform_specific_commands": {
-        "default": "hugo new post/{{_post_title}}"
+        "default": "hugo new post/{{_post_title}}/index.md"
       },
       "shells": {},
       "alias": "new",

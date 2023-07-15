@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "基础模板",
+      "path": "模板/基础模板.md"
+    },
+    {
       "basename": "夜深了",
       "path": "笔记与博客/夜深了.md"
     },
@@ -27,10 +31,6 @@
     {
       "basename": "主动型插件使用",
       "path": "Obsidian使用/主动型插件使用.md"
-    },
-    {
-      "basename": "基础模板",
-      "path": "模板/基础模板.md"
     },
     {
       "basename": "进度条模板",

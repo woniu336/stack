@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5ddb1c7d14259434",
+        "id": "992188e7b7b8c9a3",
         "type": "tabs",
         "children": [
           {
-            "id": "3b072960a269b546",
+            "id": "a5056d5fefda48c3",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -170,8 +170,9 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "3b072960a269b546",
+  "active": "a5056d5fefda48c3",
   "lastOpenFiles": [
+    "模板/基础模板.md",
     "测试.md",
     "笔记与博客/夜深了.md",
     "Obsidian使用/obsidian中的markdown书写范例实例.md",
@@ -180,7 +181,6 @@
     "Obsidian使用/Mermaid书写范例实例.md",
     "Obsidian使用/LaTeX公式书写范例.md",
     "Obsidian使用/主动型插件使用.md",
-    "模板/基础模板.md",
     "模板/进度条模板.md",
     "笔记与博客/测试001.md",
     "笔记与博客/晚上好.md",
