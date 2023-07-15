@@ -3,7 +3,4 @@ resources
 assets/jsconfig.json
 .hugo_build.lock
 
-content/post/模板
-content/post/.obsidian
-content/post/.trash
-content/post/Obsidian使用
+
