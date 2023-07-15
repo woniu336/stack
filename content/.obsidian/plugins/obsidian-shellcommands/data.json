@@ -25,7 +25,7 @@
     {
       "id": "2urksgwhku",
       "platform_specific_commands": {
-        "default": "hugo server --disableFastRender && start msedge http://localhost:1313/"
+        "default": "hugo server --disableFastRender\n"
       },
       "shells": {},
       "alias": "server",
@@ -95,13 +95,13 @@
       "variable_default_values": {}
     },
     {
-      "id": "ta8qgcnqqy",
+      "id": "0iq3a2u5y9",
       "platform_specific_commands": {
-        "default": "hugo new post/{{_post_title}}/index.md"
+        "default": "hugo new post/{{_55}}/index.md"
       },
       "shells": {},
       "alias": "new",
-      "icon": "file",
+      "icon": "car",
       "confirm_execution": false,
       "ignore_error_codes": [],
       "input_contents": {
@@ -129,7 +129,7 @@
         {
           "type": "prompt",
           "enabled": true,
-          "prompt_id": "86zje3i9hp"
+          "prompt_id": "o2p4w0i97r"
         }
       ],
       "variable_default_values": {}
@@ -137,8 +137,8 @@
   ],
   "prompts": [
     {
-      "id": "86zje3i9hp",
-      "title": "新建帖子",
+      "id": "o2p4w0i97r",
+      "title": "新建文章",
       "description": "",
       "preview_shell_command": false,
       "fields": [
@@ -146,14 +146,7 @@
           "label": "请输入标题",
           "description": "",
           "default_value": "",
-          "target_variable_id": "kxeow33aah",
-          "required": true
-        },
-        {
-          "label": "",
-          "description": "",
-          "default_value": "",
-          "target_variable_id": "",
+          "target_variable_id": "jnkf6kbgwj",
           "required": true
         }
       ],
@@ -177,6 +170,12 @@
     {
       "id": "kxeow33aah",
       "name": "post_title",
+      "description": "",
+      "default_value": null
+    },
+    {
+      "id": "jnkf6kbgwj",
+      "name": "55",
       "description": "",
       "default_value": null
     }
