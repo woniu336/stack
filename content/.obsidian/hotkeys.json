@@ -54,5 +54,14 @@
       ],
       "key": "Y"
     }
+  ],
+  "file-explorer:new-file": [],
+  "obsidian-shellcommands:shell-command-0iq3a2u5y9": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
   ]
 }
