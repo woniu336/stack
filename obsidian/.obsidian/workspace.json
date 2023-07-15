@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "127f1c6ebaeae261",
+        "id": "5ddb1c7d14259434",
         "type": "tabs",
         "children": [
           {
-            "id": "482a24f1be07e9c1",
+            "id": "3b072960a269b546",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记与博客/夜深了.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e49a5c9903ce3009",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记与博客/夜深了.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -140,9 +123,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记与博客/夜深了.md"
-              }
+              "state": {}
             }
           },
           {
@@ -151,7 +132,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记与博客/夜深了.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +148,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记与博客/夜深了.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -191,8 +170,10 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "e49a5c9903ce3009",
+  "active": "3b072960a269b546",
   "lastOpenFiles": [
+    "测试.md",
+    "笔记与博客/夜深了.md",
     "Obsidian使用/obsidian中的markdown书写范例实例.md",
     "Obsidian使用/obsidian插件使用存档.md",
     "Obsidian使用/Obsidian Emo Uploader.md",
@@ -201,7 +182,6 @@
     "Obsidian使用/主动型插件使用.md",
     "模板/基础模板.md",
     "模板/进度条模板.md",
-    "笔记与博客/夜深了.md",
     "笔记与博客/测试001.md",
     "笔记与博客/晚上好.md",
     "笔记与博客/未命名.md",
@@ -226,7 +206,6 @@
     "模板/Youtube视频模板.md",
     "模板/Bilibili视频模板.md",
     "模板/通用视频模板.md",
-    "未命名.md",
     "笔记与博客/hugo博客文章/66.md",
     "模板/acfun视频模板.md",
     "Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg",
