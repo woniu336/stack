@@ -1,11 +1,12 @@
 {
   "accentColor": "",
-  "theme": "obsidian",
+  "theme": "moonstone",
   "cssTheme": "Blue Topaz",
   "translucency": false,
   "enabledCssSnippets": [
     "bluer"
   ],
   "showViewHeader": false,
-  "textFontFamily": ""
+  "textFontFamily": "",
+  "baseFontSize": 17
 }

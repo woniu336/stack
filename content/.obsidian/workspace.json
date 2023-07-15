@@ -4,23 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d90655f35e221474",
+        "id": "d9dae3abf7cc32fd",
         "type": "tabs",
         "children": [
           {
-            "id": "e36e80c44e9dd134",
+            "id": "9f2baac8df483820",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "日记/2023-07-16.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "memos_view",
+              "state": {}
             }
           },
           {
-            "id": "f089717e5fc740c7",
+            "id": "f67efb24e84f961c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,57 +26,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "2fee3b0d9acceb81",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "日记/2023-07-17.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2e9213e8529e4c18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/16号了.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e5000784749bae79",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/晚上了.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9b00b42f2ce39563",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/晚上了.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/晚上了.md"
+                "file": "post/测试.md"
               }
             }
           },
@@ -199,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/晚上了.md",
+                "file": "post/测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/晚上了.md",
+                "file": "post/测试.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -245,41 +193,42 @@
       "cmdr:启动服务": false,
       "cmdr:停止服务": false,
       "homepage:Open homepage": false,
-      "workspaces:管理工作区布局": false
+      "workspaces:管理工作区布局": false,
+      "obsidian-memos:Memos": false
     }
   },
-  "active": "9b00b42f2ce39563",
+  "active": "f67efb24e84f961c",
   "lastOpenFiles": [
     "主面板.md",
+    "日记/delete.md",
+    "日记/2023-07-16.md",
+    "日记/2023-07-17.md",
+    "日记/未命名.md",
+    "日记/2023-07-19.md",
+    "附件/2023-07-17 2023-07-16 05.15.19.excalidraw.md",
+    "的.md",
+    "post/001.md",
     "post/晚上了.md",
     "post/测试.md",
+    "日记/2023-07-18.md",
     "post/16号了.md",
-    "日记/2023-07-17.md",
-    "日记/2023-07-16.md",
+    "page/about/index.zh-cn.md",
+    "_index.md",
+    "_index.zh-cn.md",
+    "categories/_index.md",
+    "obsidian使用/Obsidian Emo Uploader.md",
+    "post/周末了，我靠.md",
     "附件/Pasted image 20230716040805.png",
-    "post/001.md",
     "obsidian使用/obsidian插件使用存档.md",
     "obsidian使用/obsidian中的markdown书写范例实例.md",
     "obsidian使用/主动型插件使用.md",
-    "obsidian使用/Obsidian Emo Uploader.md",
-    "日记/未命名.md",
     "闪念/78.md",
-    "post/周末了，我靠.md",
     "日记/2023-七月-日.md",
     "日记/评论系统选择.md",
     "日记/2023-七月-一.md",
     "附件/Pasted image 20230716033256.png",
-    "Pasted image 20230716011144.png.md",
-    "日记/777.md",
     "附件/_index.html",
     "附件",
-    "闪念/反反复复.md",
-    "闪念/风格.md",
-    "闪念/8888.md",
-    "闪念/未命名.md",
-    "obsidian使用/LaTeX公式书写范例.md",
-    "_index.zh-cn.md",
-    "模板/闪念模板.md",
     "模板/_index.html",
     "模板",
     "post/Pasted image 20230716014045.png",

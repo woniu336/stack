@@ -1,32 +1,64 @@
 {
   "recentFiles": [
     {
-      "basename": "晚上了",
-      "path": "post/晚上了.md"
+      "basename": "测试",
+      "path": "post/测试.md"
     },
     {
       "basename": "主面板",
       "path": "主面板.md"
     },
     {
-      "basename": "测试",
-      "path": "post/测试.md"
-    },
-    {
-      "basename": "16号了",
-      "path": "post/16号了.md"
+      "basename": "2023-07-16",
+      "path": "日记/2023-07-16.md"
     },
     {
       "basename": "2023-07-17",
       "path": "日记/2023-07-17.md"
     },
     {
-      "basename": "2023-07-16",
-      "path": "日记/2023-07-16.md"
+      "basename": "2023-07-19",
+      "path": "日记/2023-07-19.md"
     },
     {
       "basename": "001",
       "path": "post/001.md"
+    },
+    {
+      "basename": "晚上了",
+      "path": "post/晚上了.md"
+    },
+    {
+      "basename": "2023-07-18",
+      "path": "日记/2023-07-18.md"
+    },
+    {
+      "basename": "16号了",
+      "path": "post/16号了.md"
+    },
+    {
+      "basename": "index.zh-cn",
+      "path": "page/about/index.zh-cn.md"
+    },
+    {
+      "basename": "_index",
+      "path": "_index.md"
+    },
+    {
+      "basename": "_index.zh-cn",
+      "path": "_index.zh-cn.md"
+    },
+    {
+      "basename": "_index",
+      "path": "categories/_index.md"
+    },
+    {
+      "basename": "Obsidian Emo Uploader",
+      "path": "obsidian使用/Obsidian Emo Uploader.md"
+    },
+    {
+      "basename": "周末了，我靠",
+      "path": "post/周末了，我靠.md"
     },
     {
       "basename": "obsidian插件使用存档",
@@ -41,32 +73,12 @@
       "path": "obsidian使用/主动型插件使用.md"
     },
     {
-      "basename": "Obsidian Emo Uploader",
-      "path": "obsidian使用/Obsidian Emo Uploader.md"
-    },
-    {
-      "basename": "周末了，我靠",
-      "path": "post/周末了，我靠.md"
-    },
-    {
       "basename": "LaTeX公式书写范例",
       "path": "obsidian使用/LaTeX公式书写范例.md"
     },
     {
-      "basename": "_index.zh-cn",
-      "path": "_index.zh-cn.md"
-    },
-    {
-      "basename": "index.zh-cn",
-      "path": "page/about/index.zh-cn.md"
-    },
-    {
       "basename": "ts-logo-128",
       "path": "page/links/ts-logo-128.jpg"
-    },
-    {
-      "basename": "_index",
-      "path": "_index.md"
     },
     {
       "basename": "index",
@@ -79,10 +91,6 @@
     {
       "basename": "Mermaid书写范例实例",
       "path": "obsidian使用/Mermaid书写范例实例.md"
-    },
-    {
-      "basename": "_index",
-      "path": "categories/_index.md"
     },
     {
       "basename": "index",

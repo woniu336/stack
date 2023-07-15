@@ -3,9 +3,7 @@
   "alwaysUpdateLinks": true,
   "newFileLocation": "root",
   "attachmentFolderPath": "附件",
-  "userIgnoreFilters": [
-    "模板/"
-  ],
+  "userIgnoreFilters": null,
   "showInlineTitle": false,
   "strictLineBreaks": true,
   "promptDelete": false,
