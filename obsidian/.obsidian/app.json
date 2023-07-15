@@ -1,7 +1,7 @@
 {
   "trashOption": "local",
   "alwaysUpdateLinks": true,
-  "newFileLocation": "folder",
+  "newFileLocation": "root",
   "attachmentFolderPath": "./",
   "userIgnoreFilters": [
     "模板/"
@@ -9,5 +9,7 @@
   "showInlineTitle": false,
   "strictLineBreaks": true,
   "promptDelete": false,
-  "newFileFolderPath": "笔记与博客"
+  "newFileFolderPath": "笔记与博客",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true
 }

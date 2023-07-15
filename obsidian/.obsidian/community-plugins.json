@@ -14,5 +14,6 @@
   "obsidian-git",
   "obsidian-image-auto-upload-plugin",
   "shadow-page",
-  "quickadd"
+  "quickadd",
+  "obsidian-shellcommands"
 ]
