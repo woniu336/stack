@@ -11,8 +11,12 @@
             "id": "a5056d5fefda48c3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "post/博客园写作.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -123,7 +127,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "post/博客园写作.md"
+              }
             }
           },
           {
@@ -132,6 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "post/博客园写作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,6 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "post/博客园写作.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
