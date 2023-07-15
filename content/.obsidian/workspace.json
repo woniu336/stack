@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "055d85eb1d5597da",
+        "id": "4b3c630c99fc881a",
         "type": "tabs",
         "children": [
           {
-            "id": "a72a0eea37c4e896",
+            "id": "1422f5f684c3ceb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "主面板.md",
+                "file": "post/图片测试/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "小破站",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -129,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "主面板.md"
+                "file": "post/图片测试/index.md"
               }
             }
           },
@@ -139,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "主面板.md",
+                "file": "post/图片测试/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "主面板.md",
+                "file": "post/图片测试/index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -177,23 +176,35 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "homepage:Open homepage": false,
+      "workspaces:管理工作区布局": false,
       "cmdr:推送并发布": false,
       "cmdr:设置代理": false,
       "cmdr:取消代理": false,
       "cmdr:新建文章": false,
       "cmdr:启动服务": false,
-      "cmdr:停止服务": false,
-      "homepage:Open homepage": false,
-      "workspaces:管理工作区布局": false
+      "cmdr:停止服务": false
     }
   },
-  "active": "a72a0eea37c4e896",
+  "active": "1422f5f684c3ceb1",
   "lastOpenFiles": [
-    "post/周末了，我靠.md",
-    "post/博客园写作.md",
+    "post/图片测试/Pasted image 20230716010255.png",
+    "post/图片测试/index.md",
     "主面板.md",
-    "post/晚上了.md",
+    "post/图片测试",
+    "post/Pasted image 20230716010131.png",
+    "obsidian使用/LaTeX公式书写范例.md",
     "obsidian使用/obsidian中的markdown书写范例实例.md",
+    "obsidian使用/obsidian插件使用存档.md",
+    "obsidian使用/Obsidian Emo Uploader.md",
+    "post/001.md",
+    "post/周末了，我靠.md",
+    "post/Pasted image 20230716005920.png",
+    "附件/Pasted image 20230716005529.png.md",
+    "Pasted image 20230716005529.png",
+    "附件/_index.html",
+    "附件",
+    "post/晚上了.md",
     "日记/未命名.md",
     "post/测试.md",
     "草稿/晚上好.md",
@@ -208,25 +219,16 @@
     "post/未命名.md",
     "_index.md",
     "baidu.com.md",
-    "obsidian使用/obsidian插件使用存档.md",
     "ffff.md",
     "page/about/index.zh-cn.md",
     "page/archives/index.md",
-    "page/search/index.md",
-    "obsidian使用/Mermaid书写范例实例.md",
     "post/001",
-    "未命名.md",
-    "post/牛逼666/index.md",
-    "post/帅第黑/index.md",
     "post/帅第黑",
     "Excalidraw",
     "post/我的写作",
     "post/牛逼666",
     "post/出发游泳吧",
     "post/66",
-    "模板/_index.html",
-    "模板",
-    "resources/_gen/images",
     "Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg",
     "模板/Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg"
   ]

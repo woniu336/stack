@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "index",
+      "path": "post/图片测试/index.md"
+    },
+    {
+      "basename": "Pasted image 20230716010255",
+      "path": "post/图片测试/Pasted image 20230716010255.png"
+    },
+    {
       "basename": "主面板",
       "path": "主面板.md"
     },
@@ -9,16 +17,28 @@
       "path": "post/周末了，我靠.md"
     },
     {
-      "basename": "博客园写作",
-      "path": "post/博客园写作.md"
-    },
-    {
-      "basename": "晚上了",
-      "path": "post/晚上了.md"
+      "basename": "LaTeX公式书写范例",
+      "path": "obsidian使用/LaTeX公式书写范例.md"
     },
     {
       "basename": "obsidian中的markdown书写范例实例",
       "path": "obsidian使用/obsidian中的markdown书写范例实例.md"
+    },
+    {
+      "basename": "obsidian插件使用存档",
+      "path": "obsidian使用/obsidian插件使用存档.md"
+    },
+    {
+      "basename": "Obsidian Emo Uploader",
+      "path": "obsidian使用/Obsidian Emo Uploader.md"
+    },
+    {
+      "basename": "001",
+      "path": "post/001.md"
+    },
+    {
+      "basename": "晚上了",
+      "path": "post/晚上了.md"
     },
     {
       "basename": "测试",
@@ -35,10 +55,6 @@
     {
       "basename": "_index",
       "path": "_index.md"
-    },
-    {
-      "basename": "obsidian插件使用存档",
-      "path": "obsidian使用/obsidian插件使用存档.md"
     },
     {
       "basename": "index.zh-cn",
@@ -61,20 +77,12 @@
       "path": "categories/_index.md"
     },
     {
-      "basename": "LaTeX公式书写范例",
-      "path": "obsidian使用/LaTeX公式书写范例.md"
-    },
-    {
       "basename": "index",
       "path": "page/links/index.md"
     },
     {
       "basename": "index",
       "path": "page/about/index.md"
-    },
-    {
-      "basename": "Obsidian Emo Uploader",
-      "path": "obsidian使用/Obsidian Emo Uploader.md"
     },
     {
       "basename": "主动型插件使用",
