@@ -37,7 +37,8 @@
       "id": "obsidian-shellcommands:shell-command-2urksgwhku",
       "icon": "bike",
       "name": "启动服务",
-      "mode": "any"
+      "mode": "any",
+      "color": "#bf351d"
     },
     {
       "id": "obsidian-shellcommands:shell-command-56me5k3cup",
@@ -58,7 +59,8 @@
       "插入模板",
       "查看关系图谱",
       "打开/创建今天的日记",
-      "创建时间戳笔记"
+      "创建时间戳笔记",
+      "新建 Excalidraw 绘图"
     ]
   },
   "spacing": 8,
