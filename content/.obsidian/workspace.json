@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/夜深了.md",
+                "file": "Obsidian使用/obsidian中的markdown书写范例实例.md",
                 "mode": "source",
                 "source": false
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/夜深了.md"
+                "file": "Obsidian使用/obsidian中的markdown书写范例实例.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/夜深了.md",
+                "file": "Obsidian使用/obsidian中的markdown书写范例实例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/夜深了.md",
+                "file": "Obsidian使用/obsidian中的markdown书写范例实例.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -180,6 +180,15 @@
   },
   "active": "a5056d5fefda48c3",
   "lastOpenFiles": [
+    "post/夜深了.md",
+    "模板/闪念模板.md",
+    "模板/进度条模板.md",
+    "模板/油管视频嵌入代码.md",
+    "模板/日记模板.md",
+    "模板/基础模板.md",
+    "模板/_index.html",
+    "模板/B站视频嵌入代码.md",
+    "模板",
     "post/晚上好.md",
     "post/测试001.md",
     "post/博客园写作.md",
@@ -189,7 +198,6 @@
     "笔记与博客/晚上好.md",
     "笔记与博客/测试001.md",
     "笔记与博客/博客园写作.md",
-    "模板/基础模板.md",
     "测试.md",
     "Obsidian使用/obsidian中的markdown书写范例实例.md",
     "Obsidian使用/obsidian插件使用存档.md",
@@ -197,7 +205,6 @@
     "Obsidian使用/Mermaid书写范例实例.md",
     "Obsidian使用/LaTeX公式书写范例.md",
     "Obsidian使用/主动型插件使用.md",
-    "模板/进度条模板.md",
     "笔记与博客/未命名.md",
     "resources/_gen/images",
     "resources/_gen/assets",
@@ -205,17 +212,10 @@
     "resources",
     "obs_sctipts/NewBlog.js",
     "obs_sctipts",
-    "模板/日记模板.md",
-    "模板/闪念模板.md",
-    "模板/B站视频嵌入代码.md",
-    "模板/油管视频嵌入代码.md",
     "笔记与博客/博客写作/page/links/index.md",
     "笔记与博客/博客写作/page/about/index.zh-cn.md",
     "笔记与博客/博客写作/page/links/_index.html",
     "笔记与博客/博客写作/page/links",
-    "笔记与博客/博客写作/page/about/_index.html",
-    "笔记与博客/博客写作/page/about",
-    "笔记与博客/未命名 1.md",
     "Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg",
     "模板/Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg"
   ]
