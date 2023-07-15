@@ -45,6 +45,13 @@
       "icon": "battery-charging",
       "name": "停止服务",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-image-auto-upload-plugin:Upload all images",
+      "icon": "bold",
+      "name": "上传图片",
+      "mode": "any",
+      "color": "#f2ae1c"
     }
   ],
   "rightRibbon": [],

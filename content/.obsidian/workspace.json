@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "808bb817866fe7d7",
+        "id": "9292f2ee179f3aeb",
         "type": "tabs",
         "children": [
           {
-            "id": "0c882cb5639f61e6",
+            "id": "1ed39e69a3383fd7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/晚上了.md",
+                "file": "主面板.md",
                 "mode": "source",
                 "source": false
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/晚上了.md"
+                "file": "主面板.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/晚上了.md",
+                "file": "主面板.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/晚上了.md",
+                "file": "主面板.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -183,17 +183,19 @@
       "cmdr:取消代理": false,
       "cmdr:新建文章": false,
       "cmdr:启动服务": false,
-      "cmdr:停止服务": false
+      "cmdr:停止服务": false,
+      "cmdr:上传图片": false
     }
   },
-  "active": "0c882cb5639f61e6",
+  "active": "1ed39e69a3383fd7",
   "lastOpenFiles": [
+    "post/晚上了.md",
+    "post/Pasted image 20230716014045.png",
+    "post/周末了，我靠.md",
+    "主面板.md",
     "post/Pasted image 20230716012820.png",
     "post/001.md",
-    "主面板.md",
     "post/测试.md",
-    "post/周末了，我靠.md",
-    "post/晚上了.md",
     "post/Pasted image 20230716011144.png",
     "post/Pasted image 20230716011358.png",
     "闪念/Pasted image 20230716010255.png",
@@ -232,8 +234,6 @@
     "post/我的写作",
     "post/牛逼666",
     "post/出发游泳吧",
-    "post/66",
-    "Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg",
-    "模板/Excalidraw/2023-01-10 2023-01-10 16.21.59.excalidraw.svg"
+    "post/66"
   ]
 }

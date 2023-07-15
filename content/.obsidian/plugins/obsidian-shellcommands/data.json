@@ -25,7 +25,7 @@
     {
       "id": "2urksgwhku",
       "platform_specific_commands": {
-        "default": "hugo server --disableFastRender\n"
+        "default": "hugo server -D --disableFastRender\n"
       },
       "shells": {},
       "alias": "server",
