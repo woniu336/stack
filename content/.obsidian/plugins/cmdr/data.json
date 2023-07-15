@@ -11,6 +11,27 @@
       "name": "推送并发布",
       "mode": "any",
       "color": "#e82195"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-e0jhkf7c5r",
+      "icon": "at-sign",
+      "name": "设置代理",
+      "mode": "any",
+      "color": "#2caf5a"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-qyyohtxf75",
+      "icon": "bug",
+      "name": "取消代理",
+      "mode": "any",
+      "color": "#38362e"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-0iq3a2u5y9",
+      "icon": "calendar",
+      "name": "新建文章",
+      "mode": "any",
+      "color": "#216bba"
     }
   ],
   "rightRibbon": [],
