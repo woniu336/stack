@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6aa3fb1a98aee738",
+        "id": "52de50d57a5e346e",
         "type": "tabs",
         "children": [
           {
-            "id": "ea8c7df1a2ffe56e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "日记/2023-07-16.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ba999e7bf16c3dcb",
+            "id": "e5ac4a5bf80003f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -202,7 +189,7 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "ba999e7bf16c3dcb",
+  "active": "e5ac4a5bf80003f7",
   "lastOpenFiles": [
     "主面板.md",
     "日记/2023-07-16.md",
