@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "71a133e12b790a9e",
+        "id": "b417eeeb2fad78b9",
         "type": "tabs",
         "children": [
           {
-            "id": "65400d09e7fafb51",
+            "id": "920db4fcc5b8961d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/16号了.md",
+                "file": "post/周末了，我靠.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/16号了.md"
+                "file": "post/周末了，我靠.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/16号了.md",
+                "file": "post/周末了，我靠.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/16号了.md",
+                "file": "post/周末了，我靠.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,6 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
       "homepage:Open homepage": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-memos:Memos": false,
       "cmdr:取消代理": false,
       "cmdr:新建文章": false,
       "cmdr:启动服务": false,
@@ -186,12 +185,14 @@
       "cmdr:上传图片": false,
       "cmdr:提交更改": false,
       "cmdr:设置代理": false,
-      "cmdr:推送发布": false
+      "cmdr:推送发布": false,
+      "obsidian-memos:Memos": false
     }
   },
-  "active": "65400d09e7fafb51",
+  "active": "920db4fcc5b8961d",
   "lastOpenFiles": [
     "主面板.md",
+    "post/16号了.md",
     "日记/2023-07-18.md",
     "日记/2023-07-19.md",
     "日记/delete.md",
@@ -203,7 +204,6 @@
     "的.md",
     "post/001.md",
     "post/晚上了.md",
-    "post/16号了.md",
     "page/about/index.zh-cn.md",
     "_index.md",
     "_index.zh-cn.md",
