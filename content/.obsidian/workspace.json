@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "b417eeeb2fad78b9",
+        "id": "4c3c6016cb2dccfc",
         "type": "tabs",
         "children": [
           {
-            "id": "920db4fcc5b8961d",
+            "id": "8e3e008d827edf48",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/周末了，我靠.md",
+                "file": "post/002.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f3cd8fdea7abb36a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/002.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/周末了，我靠.md"
+                "file": "post/002.md"
               }
             }
           },
@@ -138,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/周末了，我靠.md",
+                "file": "post/002.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/周末了，我靠.md",
+                "file": "post/002.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -189,9 +202,12 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "920db4fcc5b8961d",
+  "active": "f3cd8fdea7abb36a",
   "lastOpenFiles": [
     "主面板.md",
+    "post/002.md",
+    "post/001.md",
+    "post/周末了，我靠.md",
     "post/16号了.md",
     "日记/2023-07-18.md",
     "日记/2023-07-19.md",
@@ -202,14 +218,12 @@
     "日记/未命名.md",
     "附件/2023-07-17 2023-07-16 05.15.19.excalidraw.md",
     "的.md",
-    "post/001.md",
     "post/晚上了.md",
     "page/about/index.zh-cn.md",
     "_index.md",
     "_index.zh-cn.md",
     "categories/_index.md",
     "obsidian使用/Obsidian Emo Uploader.md",
-    "post/周末了，我靠.md",
     "附件/Pasted image 20230716040805.png",
     "obsidian使用/obsidian插件使用存档.md",
     "obsidian使用/obsidian中的markdown书写范例实例.md",
@@ -217,7 +231,6 @@
     "闪念/78.md",
     "日记/2023-七月-日.md",
     "日记/评论系统选择.md",
-    "日记/2023-七月-一.md",
     "附件/Pasted image 20230716033256.png",
     "附件/_index.html",
     "附件",
