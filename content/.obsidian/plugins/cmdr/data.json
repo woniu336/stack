@@ -44,7 +44,20 @@
       "icon": "at-sign",
       "name": "提交更改",
       "mode": "any",
-      "color": "#8c0d0d"
+      "color": "#31a329"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-e0jhkf7c5r",
+      "icon": "axe",
+      "name": "设置代理",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-git:push2",
+      "icon": "arrow-up-circle",
+      "name": "推送发布",
+      "mode": "any",
+      "color": "#ea1a93"
     }
   ],
   "rightRibbon": [],

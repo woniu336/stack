@@ -169,7 +169,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "cmdr:上传图片": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
@@ -177,15 +176,17 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "cmdr:推送并发布": false,
-      "cmdr:设置代理": false,
+      "homepage:Open homepage": false,
+      "workspaces:管理工作区布局": false,
+      "obsidian-memos:Memos": false,
       "cmdr:取消代理": false,
       "cmdr:新建文章": false,
       "cmdr:启动服务": false,
       "cmdr:停止服务": false,
-      "homepage:Open homepage": false,
-      "workspaces:管理工作区布局": false,
-      "obsidian-memos:Memos": false
+      "cmdr:上传图片": false,
+      "cmdr:设置代理": false,
+      "cmdr:提交更改": false,
+      "cmdr:推送发布": false
     }
   },
   "active": "65400d09e7fafb51",
