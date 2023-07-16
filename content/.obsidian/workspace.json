@@ -11,6 +11,14 @@
             "id": "e5ac4a5bf80003f7",
             "type": "leaf",
             "state": {
+              "type": "memos_view",
+              "state": {}
+            }
+          },
+          {
+            "id": "0744d9303c57aad4",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "post/002.md",
@@ -19,7 +27,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -189,18 +198,18 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "e5ac4a5bf80003f7",
+  "active": "0744d9303c57aad4",
   "lastOpenFiles": [
     "主面板.md",
+    "日记/2023-07-18.md",
     "日记/2023-07-16.md",
-    "post/周末了，我靠.md",
+    "日记/2023-07-17.md",
     "post/002.md",
+    "post/周末了，我靠.md",
     "post/001.md",
     "post/16号了.md",
-    "日记/2023-07-18.md",
     "日记/2023-07-19.md",
     "日记/delete.md",
-    "日记/2023-07-17.md",
     "post/测试.md",
     "日记/未命名.md",
     "附件/2023-07-17 2023-07-16 05.15.19.excalidraw.md",
