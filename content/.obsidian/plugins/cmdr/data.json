@@ -37,7 +37,7 @@
       "icon": "bold",
       "name": "上传图片",
       "mode": "any",
-      "color": "#921181"
+      "color": "#000000"
     },
     {
       "id": "obsidian-git:commit",
@@ -57,7 +57,7 @@
       "icon": "arrow-up-circle",
       "name": "推送发布",
       "mode": "any",
-      "color": "#ea1a93"
+      "color": "#167939"
     }
   ],
   "rightRibbon": [],

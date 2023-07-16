@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4c3c6016cb2dccfc",
+        "id": "b3f653f19957b5b1",
         "type": "tabs",
         "children": [
           {
-            "id": "8e3e008d827edf48",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/002.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f3cd8fdea7abb36a",
+            "id": "7e19c17afc73147f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -191,6 +178,7 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
       "homepage:Open homepage": false,
       "workspaces:管理工作区布局": false,
+      "obsidian-memos:Memos": false,
       "cmdr:取消代理": false,
       "cmdr:新建文章": false,
       "cmdr:启动服务": false,
@@ -198,11 +186,10 @@
       "cmdr:上传图片": false,
       "cmdr:提交更改": false,
       "cmdr:设置代理": false,
-      "cmdr:推送发布": false,
-      "obsidian-memos:Memos": false
+      "cmdr:推送发布": false
     }
   },
-  "active": "f3cd8fdea7abb36a",
+  "active": "7e19c17afc73147f",
   "lastOpenFiles": [
     "主面板.md",
     "post/002.md",
