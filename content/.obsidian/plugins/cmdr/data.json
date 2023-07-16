@@ -6,20 +6,6 @@
   "fileMenu": [],
   "leftRibbon": [
     {
-      "id": "obsidian-shellcommands:shell-command-992j60w9ke",
-      "icon": "arrow-up-circle",
-      "name": "推送并发布",
-      "mode": "any",
-      "color": "#e82195"
-    },
-    {
-      "id": "obsidian-shellcommands:shell-command-e0jhkf7c5r",
-      "icon": "at-sign",
-      "name": "设置代理",
-      "mode": "any",
-      "color": "#2caf5a"
-    },
-    {
       "id": "obsidian-shellcommands:shell-command-qyyohtxf75",
       "icon": "bug",
       "name": "取消代理",
@@ -52,6 +38,13 @@
       "name": "上传图片",
       "mode": "any",
       "color": "#f2ae1c"
+    },
+    {
+      "id": "obsidian-git:commit",
+      "icon": "at-sign",
+      "name": "提交更改",
+      "mode": "any",
+      "color": "#259d65"
     }
   ],
   "rightRibbon": [],
