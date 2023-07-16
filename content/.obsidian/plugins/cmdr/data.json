@@ -37,14 +37,14 @@
       "icon": "bold",
       "name": "上传图片",
       "mode": "any",
-      "color": "#f2ae1c"
+      "color": "#921181"
     },
     {
       "id": "obsidian-git:commit",
       "icon": "at-sign",
       "name": "提交更改",
       "mode": "any",
-      "color": "#31a329"
+      "color": "#225fa0"
     },
     {
       "id": "obsidian-shellcommands:shell-command-e0jhkf7c5r",
