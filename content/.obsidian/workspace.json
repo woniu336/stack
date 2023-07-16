@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "cb94e41d47539a7a",
+        "id": "b578ac0cb83d7ea8",
         "type": "tabs",
         "children": [
           {
-            "id": "e6889758dddb9ac1",
+            "id": "19756817bf0f64d3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "日记/2023-07-18.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d492f241b6607094",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post/测试.md",
+                "file": "日记/2023-07-19.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/测试.md"
+                "file": "日记/2023-07-19.md"
               }
             }
           },
@@ -151,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/测试.md",
+                "file": "日记/2023-07-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/测试.md",
+                "file": "日记/2023-07-19.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -201,7 +188,7 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "d492f241b6607094",
+  "active": "19756817bf0f64d3",
   "lastOpenFiles": [
     "主面板.md",
     "日记/2023-07-18.md",
