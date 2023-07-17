@@ -4,13 +4,13 @@
     "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
     "fontSize": 18,
     "emojiStyle": "twemoji",
-    "iconColor": "#0cb035",
+    "iconColor": "#1aa810",
     "recentlyUsedIcons": [
+      "SiAdobedreamweaver",
+      "SiAngular",
+      "SiAmp",
       "SiAcclaim",
-      "SiAerlingus",
-      "SiActigraph",
-      "SiHugoWhite",
-      "SiAiqfome"
+      "SiAerlingus"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -22,7 +22,7 @@
     },
     "iconInTabsEnabled": false
   },
-  "post": "SiHugoWhite",
+  "post": "SiAmp",
   "日记": "SiAiqfome",
   "闪念": "SiAerlingus",
   "附件": "SiAngularWhite"
