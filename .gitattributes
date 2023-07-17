@@ -1,0 +1,6 @@
+# 设置文本文件的换行符转换规则
+* text=auto
+
+# 排除特定文件或目录不进行换行符转换
+*.jpg binary
+/path/to/excluded/ directory -text
