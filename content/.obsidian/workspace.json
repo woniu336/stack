@@ -26,9 +26,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f43034284f79d995",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/002.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -198,14 +210,14 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "60f9729f442a1105",
+  "active": "f43034284f79d995",
   "lastOpenFiles": [
-    "post/002.md.rej",
     "主面板.md",
+    "post/002.md",
+    "post/002.md.rej",
     "日记/2023-07-18.md",
     "日记/2023-07-16.md",
     "日记/2023-07-17.md",
-    "post/002.md",
     "post/周末了，我靠.md",
     "post/001.md",
     "post/16号了.md",
@@ -245,7 +257,6 @@
     "未命名.canvas",
     "post/001",
     "post/帅第黑",
-    "Excalidraw",
-    "post/我的写作"
+    "Excalidraw"
   ]
 }
