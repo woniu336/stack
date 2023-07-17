@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "主面板.md",
+                "file": "日记/2023-07-21.md",
                 "mode": "source",
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "主面板.md"
+                "file": "日记/2023-07-21.md"
               }
             }
           },
@@ -171,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "主面板.md",
+                "file": "日记/2023-07-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,7 +188,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "主面板.md",
+                "file": "日记/2023-07-21.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -224,9 +224,10 @@
   },
   "active": "4dce10cae93d5204",
   "lastOpenFiles": [
+    "主面板.md",
+    "日记/2023-07-21.md",
     "日记/2023-07-20.md",
     "日记/2023-07-19.md",
-    "主面板.md",
     "post/002.md",
     "post/002.md.rej",
     "日记/2023-07-18.md",
@@ -251,7 +252,6 @@
     "obsidian使用/obsidian中的markdown书写范例实例.md",
     "obsidian使用/主动型插件使用.md",
     "闪念/78.md",
-    "日记/2023-七月-日.md",
     "附件/Pasted image 20230716033256.png",
     "附件/_index.html",
     "附件",
