@@ -2,13 +2,13 @@ baseurl: https://blog.leshans.eu.org/
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 10
-title: 木瓜有点甜
+title: 奇迹森林
 
 languages:
 
     zh-cn:
         languageName: 中文
-        title: 木瓜有点甜
+        title: 奇迹森林
         description: 演示说明
         weight: 1
 
@@ -39,7 +39,7 @@ params:
 
     footer:
         since: 2023
-        customText:  <a href="https://gohugo.io/" target="_blank" rel="noopener">由 Hugo 强力驱动</a> | <a href="https://vercel.com/" target="_blank" rel="noopener">托管在 Github</a>
+        customText:  <a href="https://gohugo.io/" target="_blank" rel="noopener">由 Hugo 强力驱动</a> | <a href="https://github.com/" target="_blank" rel="noopener">托管在 Github</a>
 
     dateFormat:
         published: 2006-01-02
@@ -47,7 +47,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: 分享的喜悦✍️
+        subtitle: Believe in miracles✍️
         avatar:
             enabled: true
             local: true
@@ -149,7 +149,7 @@ params:
                   limit: 12
             - type: tag-cloud
               params:
-                  limit: 16
+                  limit: 20
         page:
             - type: toc
 

@@ -3,18 +3,18 @@ title: 友链
 slug: "links"
 toc: false
 links:
-  - title: 豆豆
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://blog.linsnow.cn/link-img/links-img/doudou_hu58d68e142ff8d65f2fb2125e08e285ba_8054_120x120_resize_q75_h2_box_2.webp
-  - title: TypeScript
-    description: 👻爱折腾的设计师
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-  - title: TypeScript
-    description: 🎃山有扶苏，隰有荷华
-    website: https://www.typescriptlang.org
-    image: https://blog.linsnow.cn/link-img/links-img/seersu_hu6bd575abbd3fdabe010da19ef985fae9_2592_120x120_resize_q75_h2_box_2.webp
+  - title: Z字骚年
+    description: CSDN博客
+    website: https://blog.csdn.net/u010066597?type=blog
+    image: https://avatars.githubusercontent.com/u/3828072?v=4&s=160
+  - title: 阿甘知识库
+    description: 👻爱折腾的闲人
+    website: https://blog.taoshuge.eu.org
+    image: https://i.imgtg.com/2023/07/31/Oi3cqX.png
+  - title: 木瓜哥博客园
+    description: 🎃木瓜哥
+    website: https://www.cnblogs.com/meshare/#/c/subject/category/default.html
+    image: https://imgsrc.baidu.com/forum/pic/item/267f9e2f0708283824f87125fe99a9014c08f10e.jpg
 
 menu:
     main: 
@@ -26,13 +26,13 @@ comments: true
 ---
 
 
-## 博客信息🤡
+## 友链格式🤡
 
 ```bash
-🍔名字： L1nSn0w's Blog
-🍟博客地址：https://blog.linsnow.cn
+🍔名字： 奇迹森林
+🍟博客地址：https://blog.leshans.eu.org
 🥗简介：无限进步.🎈
-🍚我的头像: https://blog.linsnow.cn/img/avatar.png
+🍚我的头像:  https://i.imgtg.com/2023/07/31/Oi3cqX.png
 ```
 
 ## 🙏🏻要求
