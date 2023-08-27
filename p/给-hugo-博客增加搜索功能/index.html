@@ -1,0 +1,550 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="此方法来自 Hugo官方文档 中的 hugofastsearch A usability and speed update to “Github Gist for Fuse. Js integration” — global, keyboard-optimized search. 没错，这个方案，是 Github Gist for Fuse.js integration 的改进版。 其实"><title>给 Hugo 博客增加搜索功能</title><link rel=canonical href=https://blog.leshans.eu.org/p/%E7%BB%99-hugo-%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/><link rel=stylesheet href=/scss/style.min.f2bb9b98844410b8cdab5c9ea6286884b0b747cbeb2a62e0d4f2a1347c120bee.css><meta property="og:title" content="给 Hugo 博客增加搜索功能"><meta property="og:description" content="此方法来自 Hugo官方文档 中的 hugofastsearch A usability and speed update to “Github Gist for Fuse. Js integration” — global, keyboard-optimized search. 没错，这个方案，是 Github Gist for Fuse.js integration 的改进版。 其实"><meta property="og:url" content="https://blog.leshans.eu.org/p/%E7%BB%99-hugo-%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/"><meta property="og:site_name" content="奇迹森林"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="hugo"><meta property="article:published_time" content="2023-07-28T23:32:05+08:00"><meta property="article:modified_time" content="2023-07-28T23:32:05+08:00"><meta name=twitter:title content="给 Hugo 博客增加搜索功能"><meta name=twitter:description content="此方法来自 Hugo官方文档 中的 hugofastsearch A usability and speed update to “Github Gist for Fuse. Js integration” — global, keyboard-optimized search. 没错，这个方案，是 Github Gist for Fuse.js integration 的改进版。 其实"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#亮点>亮点</a></li><li><a href=#集成步骤>集成步骤</a></li><li><a href=#相关文件>相关文件</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%BB%BA%E7%AB%99/>建站</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/%E7%BB%99-hugo-%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/>给 Hugo 博客增加搜索功能</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2023-07-28</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 5 分钟</time></div></footer></div></header><section class=article-content><p>此方法来自 <a class=link href=https://gohugo.io/tools/search/ target=_blank rel=noopener>Hugo官方文档</a> 中的 <a class=link href=https://gist.github.com/cmod/5410eae147e4318164258742dd053993 target=_blank rel=noopener>hugofastsearch</a></p><blockquote><p>A usability and speed update to “Github Gist for Fuse. Js integration” — global, keyboard-optimized search.</p></blockquote><p>没错，这个方案，是 <a class=link href=https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae target=_blank rel=noopener>Github Gist for Fuse.js integration</a> 的改进版。</p><p>其实在使用这个方案之前，老灯也尝试了 <code>hugo-lunr-zh</code> 方案。<a class=link href=https://www.npmjs.com/package/hugo-lunr target=_blank rel=noopener>hugo-lunr</a> <strong>Last publish 4 years ago</strong> 而 <a class=link href=https://www.npmjs.com/package/hugo-lunr-zh target=_blank rel=noopener>hugo-lunr-zh</a> 本身是基于 <code>hugo-lunr</code> 添加了一个 nodejieba (结巴分词 lib)分词的功能以支持中文，同样是年久失修了 <strong>Last publish 2 years ago</strong>，不过我使用这个生成索引失败了，没有任何错误输出，只能做罢。</p><h2 id=亮点>亮点</h2><ol><li>最小/零外部依赖（无需 jQuery）</li><li>添加到每个页面尺寸尽可能小</li><li>JSON 索引文件按需加载（进一步减少对页的速度/用户体验的整体影响）</li><li>键盘友好，瞬时导航（有点像 Alfred / macOS Spotlight）</li></ol><p>另外，此方案就像 <a class=link href=https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae target=_blank rel=noopener>Eddie Webb指出的那样</a>, 还有如下额外的好处：</p><ol><li>无需 NPM, grunt 等外部工具</li><li>无需额外的编译步骤，你只需要像往常一样执行 <code>hugo</code></li><li>可以方便地切换到任意可使用 json 索引的客户端搜索工具</li></ol><h2 id=集成步骤>集成步骤</h2><ol><li>添加 <code>index.json</code> 文件到 <code>layouts/_default</code></li><li>修改 <code>config.toml</code> 以使 Hugo 对首页生成额外的 <code>JSON</code> 输出格式</li><li>添加 <code>fastsearch.js</code> 和 <code>fuse.min.js</code> (可从 <a class=link href=https://fusejs.io/ target=_blank rel=noopener>https://fusejs.io</a> 下载) 到 <code>static/js</code></li><li>添加搜索框 HTML 代码到模板页面 footer</li><li>添加 CSS 样式到模板页面 header 或模板主 CSS 文件</li><li>访问 <a class=link href=http://localhost:1313/ target=_blank rel=noopener>http://localhost:1313/</a> , 键入 <code>Alt-/</code> 执行搜索</li></ol><h2 id=相关文件>相关文件</h2><blockquote><p>注意：跟原文章相比，老灯做了一些微调</p></blockquote><ol><li><p>允许通过点击页面空白处隐藏搜索框，而不是只能按 Esc</p></li><li><p>在右上角添加了一个搜索按钮，方便不想按快捷键的人</p></li><li><p>默认的快捷键由于 Firefox Linux 默认 <code>Super-/</code> 是 <strong>Quick Find</strong> 功能，因此我改成了 <code>Alt-/</code></p></li><li><p><code>layouts/_default/index.json</code></p></li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-go-html-template data-lang=go-html-template><span class=line><span class=cl><span class=cp>{{-</span><span class=w> </span><span class=na>$.Scratch.Add</span><span class=w> </span><span class=s>&#34;index&#34;</span><span class=w> </span><span class=nx>slice</span><span class=w> </span><span class=cp>-}}</span>
+</span></span><span class=line><span class=cl><span class=cp>{{-</span><span class=w> </span><span class=k>range</span><span class=w> </span><span class=na>.Site.RegularPages</span><span class=w> </span><span class=cp>-}}</span>
+</span></span><span class=line><span class=cl>    <span class=cp>{{-</span><span class=w> </span><span class=na>$.Scratch.Add</span><span class=w> </span><span class=s>&#34;index&#34;</span><span class=w> </span><span class=o>(</span><span class=nx>dict</span><span class=w> </span><span class=s>&#34;title&#34;</span><span class=w> </span><span class=na>.Title</span><span class=w> </span><span class=s>&#34;tags&#34;</span><span class=w> </span><span class=na>.Params.tags</span><span class=w> </span><span class=s>&#34;categories&#34;</span><span class=w> </span><span class=na>.Params.categories</span><span class=w> </span><span class=s>&#34;contents&#34;</span><span class=w> </span><span class=na>.Plain</span><span class=w> </span><span class=s>&#34;permalink&#34;</span><span class=w> </span><span class=na>.Permalink</span><span class=w> </span><span class=s>&#34;date&#34;</span><span class=w> </span><span class=na>.Date</span><span class=w> </span><span class=s>&#34;section&#34;</span><span class=w> </span><span class=na>.Section</span><span class=o>)</span><span class=w> </span><span class=cp>-}}</span>
+</span></span><span class=line><span class=cl><span class=cp>{{-</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>-}}</span>
+</span></span><span class=line><span class=cl><span class=cp>{{-</span><span class=w> </span><span class=na>$.Scratch.Get</span><span class=w> </span><span class=s>&#34;index&#34;</span><span class=w> </span><span class=o>|</span><span class=w> </span><span class=nx>jsonify</span><span class=w> </span><span class=cp>-}}</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>这里默认取的 <code>contents</code>, 如果文章数量特别多，可能会导致生成的索引过大</p></blockquote><ol start=2><li><code>config.toml</code> 增加配置</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=p>[</span><span class=nx>outputs</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>home</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;HTML&#34;</span><span class=p>,</span> <span class=s2>&#34;RSS&#34;</span><span class=p>,</span> <span class=s2>&#34;JSON&#34;</span><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li><code>static/js/fastsearch.js</code></li></ol><p><code>fuse.min.js</code> 可从 <a class=link href=https://github.com/krisk/Fuse/releases target=_blank rel=noopener>https://github.com/krisk/Fuse/releases</a> 下载。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>fuse</span><span class=p>;</span> <span class=c1>// holds our search engine
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>var</span> <span class=nx>fuseIndex</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>searchVisible</span> <span class=o>=</span> <span class=kc>false</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>firstRun</span> <span class=o>=</span> <span class=kc>true</span><span class=p>;</span> <span class=c1>// allow us to delay loading json data unless search activated
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>var</span> <span class=nx>list</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;searchResults&#39;</span><span class=p>);</span> <span class=c1>// targets the &lt;ul&gt;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>var</span> <span class=nx>first</span> <span class=o>=</span> <span class=nx>list</span><span class=p>.</span><span class=nx>firstChild</span><span class=p>;</span> <span class=c1>// first child of search list
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>var</span> <span class=nx>last</span> <span class=o>=</span> <span class=nx>list</span><span class=p>.</span><span class=nx>lastChild</span><span class=p>;</span> <span class=c1>// last child of search list
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>var</span> <span class=nx>maininput</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;searchInput&#39;</span><span class=p>);</span> <span class=c1>// input box for search
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>var</span> <span class=nx>resultsAvailable</span> <span class=o>=</span> <span class=kc>false</span><span class=p>;</span> <span class=c1>// Did we get any search results?
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// ==========================================
+</span></span></span><span class=line><span class=cl><span class=c1>// The main keyboard event listener running the show
+</span></span></span><span class=line><span class=cl><span class=c1>//
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nb>document</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;keydown&#39;</span><span class=p>,</span> <span class=kd>function</span><span class=p>(</span><span class=nx>event</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// CMD-/ to show / hide Search
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=k>if</span> <span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>altKey</span> <span class=o>&amp;&amp;</span> <span class=nx>event</span><span class=p>.</span><span class=nx>which</span> <span class=o>===</span> <span class=mi>191</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=c1>// Load json search index if first time invoking search
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=c1>// Means we don&#39;t load json unless searches are going to happen; keep user payload small unless needed
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>doSearch</span><span class=p>(</span><span class=nx>event</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Allow ESC (27) to close search box
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=k>if</span> <span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>keyCode</span> <span class=o>==</span> <span class=mi>27</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>searchVisible</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s2>&#34;fastSearch&#34;</span><span class=p>).</span><span class=nx>style</span><span class=p>.</span><span class=nx>visibility</span> <span class=o>=</span> <span class=s2>&#34;hidden&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=nb>document</span><span class=p>.</span><span class=nx>activeElement</span><span class=p>.</span><span class=nx>blur</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>      <span class=nx>searchVisible</span> <span class=o>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// DOWN (40) arrow
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=k>if</span> <span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>keyCode</span> <span class=o>==</span> <span class=mi>40</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>searchVisible</span> <span class=o>&amp;&amp;</span> <span class=nx>resultsAvailable</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;down&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nx>event</span><span class=p>.</span><span class=nx>preventDefault</span><span class=p>();</span> <span class=c1>// stop window from scrolling
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=k>if</span> <span class=p>(</span> <span class=nb>document</span><span class=p>.</span> <span class=nx>ActiveElement</span> <span class=o>==</span> <span class=nx>maininput</span><span class=p>)</span> <span class=p>{</span> <span class=nx>first</span><span class=p>.</span><span class=nx>Focus</span> <span class=p>();</span> <span class=p>}</span> <span class=c1>// if the currently focused element is the main input --&gt; focus the first &lt;li&gt;
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>Else</span> <span class=k>if</span> <span class=p>(</span> <span class=nb>document</span><span class=p>.</span> <span class=nx>ActiveElement</span> <span class=o>==</span> <span class=nx>last</span> <span class=p>)</span> <span class=p>{</span> <span class=nx>last</span><span class=p>.</span><span class=nx>Focus</span> <span class=p>();</span> <span class=p>}</span> <span class=c1>// if we&#39;re at the bottom, stay there
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>Else</span> <span class=p>{</span> <span class=nb>document</span><span class=p>.</span><span class=nx>ActiveElement</span><span class=p>.</span><span class=nx>ParentElement</span><span class=p>.</span><span class=nx>NextSibling</span><span class=p>.</span><span class=nx>FirstElementChild</span><span class=p>.</span><span class=nx>Focus</span> <span class=p>();</span> <span class=p>}</span> <span class=c1>// otherwise select the next search result
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// UP (38) arrow
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>If</span> <span class=p>(</span><span class=nx>event</span><span class=p>.</span> <span class=nx>KeyCode</span> <span class=o>==</span> <span class=mi>38</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>If</span> <span class=p>(</span><span class=nx>searchVisible</span> <span class=o>&amp;&amp;</span> <span class=nx>resultsAvailable</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Event</span><span class=p>.</span><span class=nx>PreventDefault</span> <span class=p>();</span> <span class=c1>// stop window from scrolling
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>If</span> <span class=p>(</span> <span class=nb>document</span><span class=p>.</span> <span class=nx>ActiveElement</span> <span class=o>==</span> <span class=nx>maininput</span><span class=p>)</span> <span class=p>{</span> <span class=nx>maininput</span><span class=p>.</span><span class=nx>Focus</span> <span class=p>();</span> <span class=p>}</span> <span class=c1>// If we&#39;re in the input box, do nothing
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>Else</span> <span class=k>if</span> <span class=p>(</span> <span class=nb>document</span><span class=p>.</span> <span class=nx>ActiveElement</span> <span class=o>==</span> <span class=nx>first</span><span class=p>)</span> <span class=p>{</span> <span class=nx>maininput</span><span class=p>.</span><span class=nx>Focus</span> <span class=p>();</span> <span class=p>}</span> <span class=c1>// If we&#39;re at the first item, go to input box
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>Else</span> <span class=p>{</span> <span class=nb>document</span><span class=p>.</span><span class=nx>ActiveElement</span><span class=p>.</span><span class=nx>ParentElement</span><span class=p>.</span><span class=nx>PreviousSibling</span><span class=p>.</span><span class=nx>FirstElementChild</span><span class=p>.</span><span class=nx>Focus</span> <span class=p>();</span> <span class=p>}</span> <span class=c1>// Otherwise, select the search result above the current active one
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// ==========================================
+</span></span></span><span class=line><span class=cl><span class=c1>// execute search as each character is typed
+</span></span></span><span class=line><span class=cl><span class=c1>//
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>Document</span><span class=p>.</span><span class=nx>GetElementById</span> <span class=p>(</span><span class=s2>&#34;searchInput&#34;</span><span class=p>).</span> <span class=nx>Onkeyup</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>  <span class=nx>ExecuteSearch</span> <span class=p>(</span><span class=k>this</span><span class=p>.</span> <span class=nx>Value</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>Document</span><span class=p>.</span><span class=nx>QuerySelector</span> <span class=p>(</span><span class=s2>&#34;body&#34;</span><span class=p>).</span> <span class=nx>Onclick</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span> <span class=nx>TagName</span> <span class=o>===</span> <span class=s1>&#39;BODY&#39;</span> <span class=o>||</span> <span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span> <span class=nx>TagName</span> <span class=o>===</span> <span class=s1>&#39;DIV&#39;</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>HideSearch</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>document</span><span class=p>.</span><span class=nx>QuerySelector</span> <span class=p>(</span><span class=s2>&#34; #search -btn&#34;</span><span class=p>).</span> <span class=nx>Onclick</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>    <span class=nx>DoSearch</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=nb>Function</span> <span class=nx>doSearch</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>e</span><span class=p>.</span><span class=nx>stopPropagation</span> <span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=nx>If</span> <span class=p>(</span><span class=nx>firstRun</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>LoadSearch</span> <span class=p>()</span> <span class=c1>// loads our json data and builds fuse. Js search index
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nx>FirstRun</span> <span class=o>=</span> <span class=kc>false</span> <span class=c1>// let&#39;s never do this again
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Toggle visibility of search box
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>If</span> <span class=p>(</span><span class=o>!</span> <span class=nx>SearchVisible</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>ShowSearch</span> <span class=p>()</span> <span class=c1>// search visible
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>HideSearch</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>Function</span> <span class=nx>hideSearch</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Document</span><span class=p>.</span><span class=nx>GetElementById</span> <span class=p>(</span><span class=s2>&#34;fastSearch&#34;</span><span class=p>).</span> <span class=nx>Style</span><span class=p>.</span> <span class=nx>Visibility</span> <span class=o>=</span> <span class=s2>&#34;hidden&#34;</span> <span class=c1>// hide search box
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>Document</span><span class=p>.</span><span class=nx>ActiveElement</span><span class=p>.</span><span class=nx>Blur</span> <span class=p>()</span> <span class=c1>// remove focus from search box 
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>SearchVisible</span> <span class=o>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>Function</span> <span class=nx>showSearch</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Document</span><span class=p>.</span><span class=nx>GetElementById</span> <span class=p>(</span><span class=s2>&#34;fastSearch&#34;</span><span class=p>).</span> <span class=nx>Style</span><span class=p>.</span> <span class=nx>Visibility</span> <span class=o>=</span> <span class=s2>&#34;visible&#34;</span> <span class=c1>// show search box
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>Document</span><span class=p>.</span><span class=nx>GetElementById</span> <span class=p>(</span><span class=s2>&#34;searchInput&#34;</span><span class=p>).</span> <span class=nx>Focus</span> <span class=p>()</span> <span class=c1>// put focus in input box so you can just start typing
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>SearchVisible</span> <span class=o>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// ==========================================
+</span></span></span><span class=line><span class=cl><span class=c1>// fetch some json without jquery
+</span></span></span><span class=line><span class=cl><span class=c1>//
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nb>Function</span> <span class=nx>fetchJSONFile</span> <span class=p>(</span><span class=nx>path</span><span class=p>,</span> <span class=nx>callback</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>Var</span> <span class=nx>httpRequest</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>XMLHttpRequest</span> <span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=nx>HttpRequest</span><span class=p>.</span> <span class=nx>Onreadystatechange</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>If</span> <span class=p>(</span><span class=nx>httpRequest</span><span class=p>.</span> <span class=nx>ReadyState</span> <span class=o>===</span> <span class=mi>4</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>If</span> <span class=p>(</span><span class=nx>httpRequest</span><span class=p>.</span> <span class=nx>Status</span> <span class=o>===</span> <span class=mi>200</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>Var</span> <span class=nx>data</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>Parse</span> <span class=p>(</span><span class=nx>httpRequest</span><span class=p>.</span> <span class=nx>ResponseText</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>          <span class=nx>If</span> <span class=p>(</span><span class=nx>callback</span><span class=p>)</span> <span class=nx>callback</span> <span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl>  <span class=nx>HttpRequest</span><span class=p>.</span><span class=nx>Open</span> <span class=p>(</span><span class=s1>&#39;GET&#39;</span><span class=p>,</span> <span class=nx>path</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>HttpRequest</span><span class=p>.</span><span class=nx>Send</span> <span class=p>();</span> 
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// ==========================================
+</span></span></span><span class=line><span class=cl><span class=c1>// load our search index, only executed once
+</span></span></span><span class=line><span class=cl><span class=c1>// on first call of search box (CMD-/)
+</span></span></span><span class=line><span class=cl><span class=c1>//
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nb>Function</span> <span class=nx>loadSearch</span> <span class=p>()</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>  <span class=nx>Console</span><span class=p>.</span><span class=nx>Log</span> <span class=p>(</span><span class=s1>&#39;loadSearch ()&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=nx>FetchJSONFile</span> <span class=p>(</span><span class=s1>&#39;/index. Json&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>data</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>Var</span> <span class=nx>options</span> <span class=o>=</span> <span class=p>{</span> <span class=c1>// fuse. Js options; check fuse. Js website for details
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>ShouldSort</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Location</span><span class=o>:</span> <span class=mi>0</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Distance</span><span class=o>:</span> <span class=mi>100</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Threshold</span><span class=o>:</span> <span class=mf>0.4</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>MinMatchCharLength</span><span class=o>:</span> <span class=mi>2</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Keys</span><span class=o>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>        <span class=s1>&#39;permalink&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=s1>&#39;title&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=s1>&#39;tags&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=s1>&#39;contents&#39;</span>
+</span></span><span class=line><span class=cl>        <span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>};</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Create the Fuse index
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>FuseIndex</span> <span class=o>=</span> <span class=nx>Fuse</span><span class=p>.</span><span class=nx>CreateIndex</span> <span class=p>(</span><span class=nx>options</span><span class=p>.</span> <span class=nx>Keys</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Fuse</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Fuse</span> <span class=p>(</span><span class=nx>data</span><span class=p>,</span> <span class=nx>options</span><span class=p>,</span> <span class=nx>fuseIndex</span><span class=p>);</span> <span class=c1>// build the index from the json file
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// ==========================================
+</span></span></span><span class=line><span class=cl><span class=c1>// using the index we loaded on CMD-/, run 
+</span></span></span><span class=line><span class=cl><span class=c1>// a search query (for &#34;term&#34;) every time a letter is typed
+</span></span></span><span class=line><span class=cl><span class=c1>// in the search box
+</span></span></span><span class=line><span class=cl><span class=c1>//
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nb>Function</span> <span class=nx>executeSearch</span> <span class=p>(</span><span class=nx>term</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>Let</span> <span class=nx>results</span> <span class=o>=</span> <span class=nx>fuse</span><span class=p>.</span><span class=nx>Search</span> <span class=p>(</span><span class=nx>term</span><span class=p>);</span> <span class=c1>// the actual query being run using fuse. Js
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>Let</span> <span class=nx>searchitems</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span><span class=p>;</span> <span class=c1>// our results bucket
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>  <span class=nx>If</span> <span class=p>(</span><span class=nx>results</span><span class=p>.</span> <span class=nx>Length</span> <span class=o>===</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// no results based on what was typed into the input box
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>ResultsAvailable</span> <span class=o>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Searchitems</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span> <span class=k>else</span> <span class=p>{</span> <span class=c1>// build our html
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// console.Log (results)
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>Permalinks</span> <span class=o>=</span> <span class=p>[];</span>
+</span></span><span class=line><span class=cl>    <span class=nx>NumLimit</span> <span class=o>=</span> <span class=mi>5</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>For</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>item</span> <span class=k>in</span> <span class=nx>results</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// only show first 5 results
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nx>If</span> <span class=p>(</span><span class=nx>item</span> <span class=o>&gt;</span> <span class=nx>numLimit</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>Break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>If</span> <span class=p>(</span><span class=nx>permalinks</span><span class=p>.</span><span class=nx>Includes</span> <span class=p>(</span><span class=nx>results</span><span class=p>[</span><span class=nx>item</span><span class=p>].</span> <span class=nx>Item</span><span class=p>.</span> <span class=nx>Permalink</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>Continue</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//   console.Log (&#39;item: %d, title: %s&#39;, item, results[item]. Item. Title)
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>searchitems</span> <span class=o>=</span> <span class=nx>searchitems</span> <span class=o>+</span> <span class=s1>&#39;&lt;li&gt;&lt;a href=&#34;&#39;</span> <span class=o>+</span> <span class=nx>results</span><span class=p>[</span><span class=nx>item</span><span class=p>].</span><span class=nx>item</span><span class=p>.</span><span class=nx>permalink</span> <span class=o>+</span> <span class=s1>&#39;&#34; tabindex=&#34;0&#34;&gt;&#39;</span> <span class=o>+</span> <span class=s1>&#39;&lt;span class=&#34;title&#34;&gt;&#39;</span> <span class=o>+</span> <span class=nx>results</span><span class=p>[</span><span class=nx>item</span><span class=p>].</span> <span class=nx>Item</span><span class=p>.</span> <span class=nx>Title</span> <span class=o>+</span> <span class=s1>&#39;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Permalinks</span><span class=p>.</span><span class=nx>Push</span> <span class=p>(</span><span class=nx>results</span><span class=p>[</span><span class=nx>item</span><span class=p>].</span> <span class=nx>Item</span><span class=p>.</span> <span class=nx>Permalink</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>ResultsAvailable</span> <span class=o>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>Document</span><span class=p>.</span> <span class=nx>GetElementById</span> <span class=p>(</span><span class=s2>&#34;searchResults&#34;</span><span class=p>).</span> <span class=nx>InnerHTML</span> <span class=o>=</span> <span class=nx>searchitems</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>If</span> <span class=p>(</span><span class=nx>results</span><span class=p>.</span> <span class=nx>Length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>First</span> <span class=o>=</span> <span class=nx>list</span><span class=p>.</span> <span class=nx>FirstChild</span><span class=p>.</span> <span class=nx>FirstElementChild</span><span class=p>;</span> <span class=c1>// first result container — used for checking against keyboard up/down location
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>Last</span> <span class=o>=</span> <span class=nx>list</span><span class=p>.</span> <span class=nx>LastChild</span><span class=p>.</span> <span class=nx>FirstElementChild</span><span class=p>;</span> <span class=c1>// last result container — used for checking against keyboard up/down location
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>添加搜索框 HTML 代码到模板页面 footer</li></ol><p>这个可以通过添加到 baseof 或者 footer 模板。</p><p>比如我当前在使用的 <a class=link href=https://github.com/ttys3/hugo-theme-terminal/tree/ttys3 target=_blank rel=noopener>terminal</a> 主题，它就内置了额外的 footer 支持，可以通过添加 <code>layouts/partials/extended_footer. Html</code> 方便地对 footer 增加内容。</p><p>如果主题没有额外的支持，你可以 copy 你当前主题目录下的 baseof. Html 模板到<code>layouts/_default/baseof. Html</code>，然后在最后附加内容。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>a</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;search-btn&#34;</span> <span class=na>style</span><span class=o>=</span><span class=s>&#34;display: inline-block;&#34;</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;javascript:void(0);&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>span</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;icon-search&#34;</span><span class=p>&gt;</span>捜<span class=p>&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;fastSearch&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>input</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;searchInput&#34;</span> <span class=na>tabindex</span><span class=o>=</span><span class=s>&#34;0&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>ul</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;searchResults&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;/js/fuse.min.js&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span> <span class=c>&lt;!-- download and copy over fuse.min.js file from fusejs.io --&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;/js/fastsearch.js&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=5><li>添加 CSS 样式到模板页面 header 或模板主 CSS 文件</li></ol><p>这个可以通过添加到 header 模板或模板的主 CSS 文件。</p><p>比如我当前在使用的 <a class=link href=https://github.com/ttys3/hugo-theme-terminal/tree/ttys3 target=_blank rel=noopener>terminal</a> 主题，它就内置了额外的 header 支持，可以通过添加 <code>layouts/partials/extended_header. Html</code> 方便地对 header 增加内容。</p><p>如果主题没有额外的支持，你可以修改模板的主 CSS 文件，通常是<code>style. Css</code> 或 <code>main. Css</code>，这个因情况而异。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl>  <span class=p>#</span><span class=nn>fastSearch</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Visibility</span><span class=p>:</span> <span class=kc>hidden</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Position</span><span class=p>:</span> <span class=kc>absolute</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Right</span><span class=p>:</span> <span class=mi>10</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Top</span><span class=p>:</span> <span class=mi>10</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Display</span><span class=p>:</span> <span class=kc>inline-block</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Width</span><span class=p>:</span> <span class=mi>320</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Margin</span><span class=p>:</span> <span class=mi>0</span> <span class=mi>10</span> <span class=n>px</span> <span class=mi>0</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Padding</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>#</span><span class=nn>fastSearch</span> <span class=nt>input</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Padding</span><span class=p>:</span> <span class=mi>4</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>%</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Height</span><span class=p>:</span> <span class=mi>31</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Font-size</span><span class=p>:</span> <span class=mf>1.6</span> <span class=n>em</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>color</span><span class=p>:</span> <span class=mh>#222129</span> <span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Font-weight</span><span class=p>:</span> <span class=kc>bold</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>background-color</span><span class=p>:</span> <span class=mh>#ffa86a</span> <span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Border-radius</span><span class=p>:</span> <span class=mi>3</span> <span class=n>px</span> <span class=mi>3</span> <span class=n>px</span> <span class=mi>0</span> <span class=n>px</span> <span class=mi>0</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Border</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Outline</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Text-align</span><span class=p>:</span> <span class=kc>left</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Display</span><span class=p>:</span> <span class=kc>inline-block</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>#</span><span class=nn>searchResults</span> <span class=nt>li</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>List-style</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Margin-left</span><span class=p>:</span> <span class=mi>0</span> <span class=n>em</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>background-color</span><span class=p>:</span> <span class=mh>#333</span> <span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>border-bottom</span><span class=p>:</span> <span class=mi>1</span> <span class=n>px</span> <span class=kc>dotted</span> <span class=mh>#000</span> <span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>#</span><span class=nn>searchResults</span> <span class=nt>li</span> <span class=p>.</span><span class=nc>title</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Font-size</span><span class=p>:</span> <span class=mf>1.1</span> <span class=n>em</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Margin</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Display</span><span class=p>:</span> <span class=kc>inline-block</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>#</span><span class=nn>searchResults</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Visibility</span><span class=p>:</span> <span class=kc>inherit</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Display</span><span class=p>:</span> <span class=kc>inline-block</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Width</span><span class=p>:</span> <span class=mi>320</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Margin</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Max-height</span><span class=p>:</span> <span class=n>calc</span> <span class=p>(</span><span class=mi>100</span> <span class=n>vh</span> <span class=o>-</span> <span class=mi>120</span> <span class=n>px</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>Overflow</span><span class=p>:</span> <span class=kc>hidden</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>#</span><span class=nn>searchResults</span> <span class=nt>a</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Text-decoration</span><span class=p>:</span> <span class=kc>none</span> <span class=o>!</span><span class=n>Important</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Padding</span><span class=p>:</span> <span class=mi>10</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Display</span><span class=p>:</span> <span class=kc>inline-block</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>%</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>#</span><span class=nn>searchResults</span> <span class=nt>a</span><span class=o>:</span> <span class=nt>hover</span><span class=o>,</span> <span class=p>#</span><span class=nn>searchResults</span> <span class=nt>a</span><span class=o>:</span> <span class=nt>focus</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Outline</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>background-color</span><span class=p>:</span> <span class=mh>#666</span> <span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>color</span><span class=p>:</span> <span class=mh>#fff</span> <span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>#</span><span class=nn>search</span> <span class=nt>-btn</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Position</span><span class=p>:</span> <span class=kc>absolute</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Top</span><span class=p>:</span> <span class=mi>10</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Right</span><span class=p>:</span> <span class=mi>20</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Font-size</span><span class=p>:</span> <span class=mi>24</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>@</span><span class=k>media</span> <span class=o>(</span><span class=nt>max-width</span><span class=o>:</span> <span class=nt>683</span> <span class=nt>px</span><span class=o>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=p>#</span><span class=nn>fastSearch</span> <span class=o>,</span> <span class=p>#</span><span class=nn>search</span> <span class=nt>-btn</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=n>Top</span><span class=p>:</span> <span class=mi>64</span> <span class=n>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>如果样式跟你当前的主题不是很合，你可以自行稍作调整。</p></section><footer class=article-footer><section class=article-tags><a href=/tags/hugo/>hugo</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/%E5%88%A9%E7%94%A8github-page%E5%92%8Cgithub-action%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84hugo%E5%8D%9A%E5%AE%A2/><div class=article-details><h2 class=article-title>利用Github Page和Github Action部署你的Hugo博客</h2></div></a></article><article><a href=/p/hugo%E4%BD%BF%E7%94%A8shortcode%E6%8F%92%E5%85%A5bilibiliyoutube%E8%A7%86%E9%A2%91/><div class=article-details><h2 class=article-title>Hugo使用Shortcode插入bilibili、Youtube视频</h2></div></a></article><article><a href=/p/hugo%E9%83%A8%E7%BD%B2twikoo%E8%AF%84%E8%AE%BA/><div class=article-details><h2 class=article-title>hugo部署twikoo评论</h2></div></a></article><article><a href=/p/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B%E4%B9%8B%E5%B7%A5%E5%85%B7%E7%AF%87/><div class=article-details><h2 class=article-title>博客写作流程之工具篇</h2></div></a></article><article><a href=/p/hugo-%E4%BB%A3%E7%A0%81%E6%8B%B7%E8%B4%9D%E6%8F%92%E4%BB%B6/><div class=article-details><h2 class=article-title>Hugo 代码拷贝插件</h2></div></a></article></div></div></aside><script src=//unpkg.com/@waline/client@v2/dist/waline.js></script>
+<link href=//unpkg.com/@waline/client@v2/dist/waline.css rel=stylesheet><div id=waline class=waline-container></div><style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding);--waline-font-size:var(--article-font-size)}.waline-container .wl-count{color:var(--card-text-color-main)}</style><script>Waline.init({dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://unpkg.com/@waline/emojis@1.1.0/bmoji"],lang:"zh-CN",locale:{admin:"👻屑博主",placeholder:"🎉留下你的脚印."},pageview:!0,requiredMeta:["name","email"],serverURL:"https://waline.talimus.eu.org"})</script><footer class=site-footer><section class=copyright>&copy;
+2023 奇迹森林</section><section class=powerby><a href=https://gohugo.io/ target=_blank rel=noopener>由 Hugo 强力驱动</a> | <a href=https://github.com/ target=_blank rel=noopener>托管在 Github</a><br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.18.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

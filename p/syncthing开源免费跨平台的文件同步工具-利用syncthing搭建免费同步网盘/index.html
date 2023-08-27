@@ -1,0 +1,160 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步"><title>Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</title><link rel=canonical href=https://blog.leshans.eu.org/p/syncthing%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7-%E5%88%A9%E7%94%A8syncthing%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%90%8C%E6%AD%A5%E7%BD%91%E7%9B%98/><link rel=stylesheet href=/scss/style.min.f2bb9b98844410b8cdab5c9ea6286884b0b747cbeb2a62e0d4f2a1347c120bee.css><meta property="og:title" content="Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘"><meta property="og:description" content="实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步"><meta property="og:url" content="https://blog.leshans.eu.org/p/syncthing%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7-%E5%88%A9%E7%94%A8syncthing%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%90%8C%E6%AD%A5%E7%BD%91%E7%9B%98/"><meta property="og:site_name" content="奇迹森林"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="syncthing"><meta property="article:published_time" content="2023-08-12T11:18:50+08:00"><meta property="article:modified_time" content="2023-08-12T11:18:50+08:00"><meta name=twitter:title content="Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘"><meta name=twitter:description content="实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#开始安装>开始安装</a></li><li><a href=#保持后台运行>保持后台运行</a></li><li><a href=#开机自动启动并保持运行>开机自动启动并保持运行</a></li><li><a href=#禁止ip访问>禁止IP访问</a></li><li><a href=#更新-syncthing>更新 Syncthing</a></li><li><a href=#使用普通用户安装>使用普通用户安装</a><ol><li><a href=#建立新用户>建立新用户</a></li><li><a href=#开始安装-1>开始安装:</a></li><li><a href=#开机自启>开机自启</a></li></ol></li><li><a href=#syncthing-tray-简单小巧的文件同步工具>Syncthing Tray 简单小巧的文件同步工具</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/syncthing%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7-%E5%88%A9%E7%94%A8syncthing%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%90%8C%E6%AD%A5%E7%BD%91%E7%9B%98/>Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2023-08-12</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 4 分钟</time></div></footer></div></header><section class=article-content><p>实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步备份的，只可惜这些网盘很多都是打不开的。国内的坚果云在同步这一块做得不错，但是免费的额度太少了，不能满足大量同步的需要。</p><p>本篇文章要分享的开源免费跨平台的文件同步工具<code>Syncthing</code>，可以实现实时同步备份搭建个人同步网盘的功能，试用了一下发现Syncthing完全可以替代市面上这些同步网盘。Syncthing可以运行在<code>Windows</code>、<code>Linux</code>、<code>MacOS</code>等全平台上，而且提供了安卓手机APP，功能非常强大。</p><p>GitHub 项目地址：<a class=link href=https://github.com/syncthing/syncthing target=_blank rel=noopener>https://github.com/syncthing/syncthing</a></p><p>文档地址：<a class=link href=https://docs.syncthing.net/intro/getting-started.html target=_blank rel=noopener>https://docs.syncthing.net/intro/getting-started.html</a></p><p>客户端下载：<a class=link href=https://github.com/syncthing/syncthing/releases target=_blank rel=noopener>https://github.com/syncthing/syncthing/releases</a></p><h2 id=开始安装>开始安装</h2><p><code>推荐使用普通用户安装,请往下看</code></p><p><code>本文只记录在ubuntu20.04上怎么搭建</code></p><p>更新一下组件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>apt update -y <span class=o>&amp;&amp;</span> apt install -y curl <span class=o>&amp;&amp;</span> apt install -y socat <span class=o>&amp;&amp;</span> apt install wget -y
+</span></span></code></pre></td></tr></table></div></div><p>然后:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>wget https://github.com/syncthing/syncthing/releases/download/v1.23.7/syncthing-linux-amd64-v1.23.7.tar.gz
+</span></span><span class=line><span class=cl>tar -zxvf syncthing-linux-amd64-v1.23.7.tar.gz
+</span></span><span class=line><span class=cl><span class=nb>cd</span> syncthing-linux-amd64-v1.23.7
+</span></span><span class=line><span class=cl>cp syncthing /usr/local/bin/
+</span></span></code></pre></td></tr></table></div></div><p>接着:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>syncthing
+</span></span></code></pre></td></tr></table></div></div><p>使用<code>CTRL + C</code>停止运行,修改文件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>vim /root/.config/syncthing/config.xml
+</span></span></code></pre></td></tr></table></div></div><p>将<code>127.0.0.1:8384</code>改成 <code>0.0.0.0:8384</code> 即可,保存退出</p><p>再输入<code>syncthing</code>运行它。然后在浏览器输入<code>服务器IP:8384</code>访问。</p><h2 id=保持后台运行>保持后台运行</h2><p>对于VPS主机运行syncthing如果关闭终端，syncthing也会停止运行，可以将syncthing放在后台，命令如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>nohup syncthing <span class=p>&amp;</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=开机自动启动并保持运行>开机自动启动并保持运行</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>vim /usr/lib/systemd/system/syncthing@.service
+</span></span></code></pre></td></tr></table></div></div><p>加入以下内容</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl> <span class=o>[</span>Unit<span class=o>]</span>
+</span></span><span class=line><span class=cl> <span class=nv>Description</span><span class=o>=</span>Syncthing - Open Source Continuous File Synchronization <span class=k>for</span> %I
+</span></span><span class=line><span class=cl> <span class=nv>Documentation</span><span class=o>=</span>man:syncthing<span class=o>(</span>1<span class=o>)</span>
+</span></span><span class=line><span class=cl> <span class=nv>After</span><span class=o>=</span>network.target
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl> <span class=o>[</span>Service<span class=o>]</span>
+</span></span><span class=line><span class=cl> <span class=nv>User</span><span class=o>=</span>%i
+</span></span><span class=line><span class=cl> <span class=nv>ExecStart</span><span class=o>=</span>/usr/local/bin/syncthing -no-browser -no-restart -logflags<span class=o>=</span><span class=m>0</span>
+</span></span><span class=line><span class=cl> <span class=nv>Restart</span><span class=o>=</span>on-failure
+</span></span><span class=line><span class=cl> <span class=nv>SuccessExitStatus</span><span class=o>=</span><span class=m>3</span> <span class=m>4</span>
+</span></span><span class=line><span class=cl> <span class=nv>RestartForceExitStatus</span><span class=o>=</span><span class=m>3</span> <span class=m>4</span>
+</span></span><span class=line><span class=cl> <span class=o>[</span>Install<span class=o>]</span>
+</span></span><span class=line><span class=cl> <span class=nv>WantedBy</span><span class=o>=</span>multi-user.target
+</span></span></code></pre></td></tr></table></div></div><p>然后保存退出，之后就可以通过systemd进行启动和管理了，注意注意把命令里面的<code>root</code>替换成自己的用户名：</p><p>启动<code>syncthing</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>systemctl start syncthing@root.service
+</span></span></code></pre></td></tr></table></div></div><p>设置<code>syncthing</code>开机自启</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>systemctl <span class=nb>enable</span> syncthing@root.service
+</span></span></code></pre></td></tr></table></div></div><p>查看syncthing运行状态</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>systemctl status syncthing@root.service
+</span></span></code></pre></td></tr></table></div></div><p>停止syncthing</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>systemctl stop syncthing@root.service
+</span></span></code></pre></td></tr></table></div></div><p>关闭syncthing开机自启</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>systemctl disable syncthing@root.service
+</span></span></code></pre></td></tr></table></div></div><p>或者可以用<code>--user</code>参数来运行</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1systemctl –root start syncthing
+</span></span></code></pre></td></tr></table></div></div><h2 id=禁止ip访问>禁止IP访问</h2><p>如果你已经成功绑定了域名到<code>Syncthing</code>，想要禁止使用IP访问Syncthing，那么把配置文件作如下修改即可。</p><p>把端口设置成：0.0.0.0:8384，那么syncthing可以通过ip进行访问 。<br>把端口设置成：127.0.0.1:8384，那么只能通过域名访问，这个时候只有通过nginx反向代理才能访问到127.0.0.1这个本地地址。</p><h2 id=更新-syncthing>更新 Syncthing</h2><p>把 <code>v1.23.7</code> 改成最新版本即可</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>wget https://github.com/syncthing/syncthing/releases/download/v1.23.7/syncthing-linux-amd64-v1.23.7.tar.gz
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>tar -zxvf syncthing-linux-amd64-v1.23.7.tar.gz
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>cd</span> syncthing-linux-amd64-v1.23.7
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>systemctl stop syncthing@root.service
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>cp syncthing /usr/local/bin/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>systemctl start syncthing@root.service
+</span></span></code></pre></td></tr></table></div></div><h2 id=使用普通用户安装>使用普通用户安装</h2><p>如果以 root 用户启动 Syncthing 会被提示不建议在 root 用户下运行，所以在正式使用之前，</p><h3 id=建立新用户>建立新用户</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>adduser sync
+</span></span></code></pre></td></tr></table></div></div><p>设置密码 然后一路回车默认 最后 <code>y</code></p><p><code>切换用户:</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo su sync
+</span></span></code></pre></td></tr></table></div></div><p><code>进入主目录:</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>cd</span> /home/sync
+</span></span></code></pre></td></tr></table></div></div><h3 id=开始安装-1>开始安装:</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>wget https://github.com/syncthing/syncthing/releases/download/v1.23.7/syncthing-linux-amd64-v1.23.7.tar.gz
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>tar -zxvf syncthing-linux-amd64-v1.23.7.tar.gz
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>cd</span> syncthing-linux-amd64-v1.23.7
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>cp syncthing /home/sync/syncthing
+</span></span></code></pre></td></tr></table></div></div><p>运行一次 <code>syncthing</code>，程序会将配置文件释放出来。</p><p>停止运行程序，先编辑配置文件。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>vim /home/sync/.config/syncthing/config.xml
+</span></span></code></pre></td></tr></table></div></div><p>找到 <code>&lt;address></code> 这行，将 <code>127.0.0.1</code> 改为 <code>0.0.0.0</code>，这样就可以从公网访问 Web UI 了，保存退出。</p><p>再次直接运行 <code>syncthing</code>，然后在地址栏输入 <code>http://w.x.y.z:8384/</code> 进入 Syncthing 的 Web UI 管理界面，第一次访问时会提醒设置账号及密码，建议设置并重启 Syncthing。</p><p>这时候 <code>syncthing</code> 就已经可以开始正常使用了，如果使用了防火墙，在过程中对相应的规则进行放行。</p><p>那么将执行以下命令：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>iptables -I INPUT -p tcp --dport <span class=m>8384</span> -j ACCEPT
+</span></span></code></pre></td></tr></table></div></div><h3 id=开机自启>开机自启</h3><p>切换回<code>root</code>: sudo su root</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>vim /lib/systemd/system/syncthing.service
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=o>[</span>Unit<span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=nv>Description</span><span class=o>=</span>Syncthing
+</span></span><span class=line><span class=cl><span class=nv>Documentation</span><span class=o>=</span>man:syncthing<span class=o>(</span>1<span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=nv>After</span><span class=o>=</span>network.target
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>[</span>Service<span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=nv>User</span><span class=o>=</span>sync
+</span></span><span class=line><span class=cl><span class=nv>ExecStart</span><span class=o>=</span>/home/sync/syncthing -no-browser -no-restart -logflags<span class=o>=</span><span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=nv>Restart</span><span class=o>=</span>on-failure
+</span></span><span class=line><span class=cl><span class=nv>SuccessExitStatus</span><span class=o>=</span><span class=m>3</span> <span class=m>4</span>
+</span></span><span class=line><span class=cl><span class=nv>RestartForceExitStatus</span><span class=o>=</span><span class=m>3</span> <span class=m>4</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Hardening</span>
+</span></span><span class=line><span class=cl><span class=nv>ProtectSystem</span><span class=o>=</span>full
+</span></span><span class=line><span class=cl><span class=nv>PrivateTmp</span><span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl><span class=nv>SystemCallArchitectures</span><span class=o>=</span>native
+</span></span><span class=line><span class=cl><span class=nv>MemoryDenyWriteExecute</span><span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl><span class=nv>NoNewPrivileges</span><span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>[</span>Install<span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=nv>WantedBy</span><span class=o>=</span>multi-user.target
+</span></span></code></pre></td></tr></table></div></div><p>最后:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>systemctl <span class=nb>enable</span> syncthing
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>systemctl start syncthing
+</span></span></code></pre></td></tr></table></div></div><h2 id=syncthing-tray-简单小巧的文件同步工具>Syncthing Tray 简单小巧的文件同步工具</h2><p>点击下载:</p><p><a class=link href=https://github.com/Martchus/syncthingtray/releases/download/v1.4.4/syncthingtray-1.4.4-x86_64-w64-mingw32.exe.zip target=_blank rel=noopener>Syncthing Tray</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/syncthing/>syncthing</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><script src=//unpkg.com/@waline/client@v2/dist/waline.js></script>
+<link href=//unpkg.com/@waline/client@v2/dist/waline.css rel=stylesheet><div id=waline class=waline-container></div><style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding);--waline-font-size:var(--article-font-size)}.waline-container .wl-count{color:var(--card-text-color-main)}</style><script>Waline.init({dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://unpkg.com/@waline/emojis@1.1.0/bmoji"],lang:"zh-CN",locale:{admin:"👻屑博主",placeholder:"🎉留下你的脚印."},pageview:!0,requiredMeta:["name","email"],serverURL:"https://waline.talimus.eu.org"})</script><footer class=site-footer><section class=copyright>&copy;
+2023 奇迹森林</section><section class=powerby><a href=https://gohugo.io/ target=_blank rel=noopener>由 Hugo 强力驱动</a> | <a href=https://github.com/ target=_blank rel=noopener>托管在 Github</a><br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.18.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

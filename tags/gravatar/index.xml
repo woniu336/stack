@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gravatar on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/gravatar/</link><description>Recent content in gravatar on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 24 Aug 2023 12:32:50 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/gravatar/index.xml" rel="self" type="application/rss+xml"/><item><title>Gravatar头像 镜像地址大全</title><link>https://blog.leshans.eu.org/p/gravatar%E5%A4%B4%E5%83%8F-%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80%E5%A4%A7%E5%85%A8/</link><pubDate>Thu, 24 Aug 2023 12:32:50 +0800</pubDate><guid>https://blog.leshans.eu.org/p/gravatar%E5%A4%B4%E5%83%8F-%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80%E5%A4%A7%E5%85%A8/</guid><description>&lt;h2 id="介绍">介绍&lt;/h2>
+&lt;p>当我们在很多博客或者网站留言，评论的时候会看到有的人头像很酷很个性化，但是这个博客和网站本身并没有提供设置头像的功能，感觉有点神奇，那么是怎么做到的呢？&lt;code>其实这是使用了Gravatar&lt;/code>。&lt;/p>
+&lt;p>Gravatar，全称&lt;code>Globally Recognized Avatar&lt;/code>。翻译成中文为&lt;code>全球通用头像&lt;/code>。&lt;/p>
+&lt;p>Gravatar的概念首先是在国外的独立WordPress博客中兴起的，当你到任何一个支持Gravatar的网站留言时，这个网站都会根据你所提供的Email地址为你显示出匹配的头像。当然，这个头像，是需要你事先到Gravatar的网站注册并上传的，否则，在这个网站上，就只会显示成一个默认的头像。&lt;/p>
+&lt;p>当你访问支持&lt;code>gravatar&lt;/code>头像的网站时，只要输入你注册的邮箱账号，&lt;code>即会自动调用gravatar的api&lt;/code>，转换成保存的头像。这样就可以为广大程序提供个人头像存储服务。&lt;/p>
+&lt;h2 id="使用">使用&lt;/h2>
+&lt;p>使用该服务时需要去&lt;a class="link" href="https://cn.gravatar.com/" target="_blank" rel="noopener"
+>官网&lt;/a>中注册一个账号，并上传头像。&lt;/p>
+&lt;p>注意头像上传后会审核，然后管理员会按图片包含的内容划分一个等级（G 普通级、PG 辅导级、R 和 X 为限制级）。&lt;/p>
+&lt;p>通过之后这个头像就可以使用了。在任何支持Gravatar的地方，在评论填写email地址时，请填写你申请注册头像用的这个email地址。你的头像就会出现在留言中。就这样可以展示给大家看了&lt;/p>
+&lt;h2 id="调用">调用&lt;/h2>
+&lt;p>由于gravatar目前服务极不稳定，调用时推荐用国内的源。&lt;/p>
+&lt;p>以下个人整理备份。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">- gravatar官方的www源：&lt;span class="o">[&lt;/span>https://www.gravatar.com/avatar/&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- gravatar官方的cn源：&lt;span class="o">[&lt;/span>https://cn.gravatar.com/avatar/&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- gravatar官方的en源：&lt;span class="o">[&lt;/span>https://en.gravatar.com/avatar/&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- gravatar官方的secure源：&lt;span class="o">[&lt;/span>https://secure.gravatar.com/avatar/&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- V2EX源：&lt;span class="o">[&lt;/span>https://cdn.v2ex.com/gravatar/&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Loli源：&lt;span class="o">[&lt;/span>https://gravatar.loli.net/avatar/&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- 极客族：&lt;span class="o">[&lt;/span>https://sdn.geekzu.org/avatar/&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

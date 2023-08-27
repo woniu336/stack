@@ -1,0 +1,265 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服! 这里主要怎么五分钟无痛的安装好它， 主要参"><title>可能是最快的独角数卡发卡网搭建教程</title><link rel=canonical href=https://blog.leshans.eu.org/p/%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%BF%AB%E7%9A%84%E7%8B%AC%E8%A7%92%E6%95%B0%E5%8D%A1%E5%8F%91%E5%8D%A1%E7%BD%91%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/><link rel=stylesheet href=/scss/style.min.f2bb9b98844410b8cdab5c9ea6286884b0b747cbeb2a62e0d4f2a1347c120bee.css><meta property="og:title" content="可能是最快的独角数卡发卡网搭建教程"><meta property="og:description" content="独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服! 这里主要怎么五分钟无痛的安装好它， 主要参"><meta property="og:url" content="https://blog.leshans.eu.org/p/%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%BF%AB%E7%9A%84%E7%8B%AC%E8%A7%92%E6%95%B0%E5%8D%A1%E5%8F%91%E5%8D%A1%E7%BD%91%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"><meta property="og:site_name" content="奇迹森林"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="发卡"><meta property="article:published_time" content="2023-07-30T23:06:40+08:00"><meta property="article:modified_time" content="2023-07-30T23:06:40+08:00"><meta name=twitter:title content="可能是最快的独角数卡发卡网搭建教程"><meta name=twitter:description content="独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服! 这里主要怎么五分钟无痛的安装好它， 主要参"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#相关地址> 相关地址</a></li><li><a href=#1-首先安装docker>1. 首先安装docker</a></li><li><a href=#2-安装部署独角数卡>2. 安装部署独角数卡</a><ol><li><a href=#1-创建安装目录>1. 创建安装目录</a></li><li><a href=#2网页安装>2.网页安装</a></li></ol></li><li><a href=#3迁移服务器>3.迁移服务器</a></li><li><a href=#4-更新与卸载>4. 更新与卸载</a><ol><li><a href=#更新-shop>更新 shop</a></li><li><a href=#卸载-shop> 卸载 shop</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%BB%BA%E7%AB%99/>建站</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%BF%AB%E7%9A%84%E7%8B%AC%E8%A7%92%E6%95%B0%E5%8D%A1%E5%8F%91%E5%8D%A1%E7%BD%91%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/>可能是最快的独角数卡发卡网搭建教程</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2023-07-30</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 4 分钟</time></div></footer></div></header><section class=article-content><p>独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服!
+这里主要怎么五分钟无痛的安装好它，</p><p>主要参考了一位大佬的docker镜像 <a class=link href=https://blog.dov.moe/posts/49102/ target=_blank rel=noopener>https://blog.dov.moe/posts/49102/</a></p><p>啰嗦两句，这个镜像比官方推荐那个镜像要好，官方那个docker是半吊子的，还需要装mysql和redis</p><h2 id=相关地址> 相关地址</h2><p>GitHub 官方仓库：<a class=link href=https://github.com/assimon/dujiaoka target=_blank rel=noopener>https://github.com/assimon/dujiaoka</a><br>Docker 镜像地址：<a class=link href=https://hub.docker.com/r/stilleshan/dujiaoka target=_blank rel=noopener>https://hub.docker.com/r/stilleshan/dujiaoka</a> （同时支持 X86 和 ARM 架构）来自：<a class=link href=https://www.ioiox.com/archives/159.html target=_blank rel=noopener>Stille 大佬</a><br>常见问题集锦：<a class=link href=https://github.com/assimon/dujiaoka/wiki/problems target=_blank rel=noopener>https://github.com/assimon/dujiaoka/wiki/problems</a></p><h2 id=1-首先安装docker>1. 首先安装docker</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>curl -fsSL https://get.docker.com <span class=p>|</span> sh
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>curl -L <span class=s2>&#34;https://github.com/docker/compose/releases/latest/download/docker-compose-</span><span class=k>$(</span>uname -s<span class=k>)</span><span class=s2>-</span><span class=k>$(</span>uname -m<span class=k>)</span><span class=s2>&#34;</span> -o /usr/local/bin/docker-compose
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>chmod +x /usr/local/bin/docker-compose
+</span></span></code></pre></td></tr></table></div></div><h2 id=2-安装部署独角数卡>2. 安装部署独角数卡</h2><h3 id=1-创建安装目录>1. 创建安装目录</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo -i  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>mkdir -p /root/data/docker_data/shop  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=nb>cd</span> /root/data/docker_data/shop  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>mkdir storage uploads  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>chmod -R <span class=m>777</span> storage uploads  
+</span></span><span class=line><span class=cl><span class=c1># 创建数据目录用于挂载  </span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>touch env.conf  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>chmod -R <span class=m>777</span> env.conf
+</span></span></code></pre></td></tr></table></div></div><p>这边我们直接用 docker 的方式安装。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>vim docker-compose.yml
+</span></span></code></pre></td></tr></table></div></div><p>英文输入法下，按 <code>i</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>version: <span class=s2>&#34;3&#34;</span>  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>services:  
+</span></span><span class=line><span class=cl>  web:  
+</span></span><span class=line><span class=cl>    image: stilleshan/dujiaoka  
+</span></span><span class=line><span class=cl>    environment:  
+</span></span><span class=line><span class=cl>        <span class=c1># - INSTALL=false  </span>
+</span></span><span class=line><span class=cl>        - <span class=nv>INSTALL</span><span class=o>=</span><span class=nb>true</span>  
+</span></span><span class=line><span class=cl>        <span class=c1># - MODIFY=true  </span>
+</span></span><span class=line><span class=cl>    volumes:  
+</span></span><span class=line><span class=cl>      - ./env.conf:/dujiaoka/.env  
+</span></span><span class=line><span class=cl>      - ./uploads:/dujiaoka/public/uploads  
+</span></span><span class=line><span class=cl>      - ./storage:/dujiaoka/storage  
+</span></span><span class=line><span class=cl>    ports:  
+</span></span><span class=line><span class=cl>      - 8090:80         <span class=c1># 8090可以改成任意服务器没有使用过的端口，80不要修改  </span>
+</span></span><span class=line><span class=cl>    restart: always  
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>  db:  
+</span></span><span class=line><span class=cl>    image: mariadb:focal  
+</span></span><span class=line><span class=cl>    restart: always  
+</span></span><span class=line><span class=cl>    environment:  
+</span></span><span class=line><span class=cl>      - <span class=nv>MYSQL_ROOT_PASSWORD</span><span class=o>=</span>changeyourpassword  
+</span></span><span class=line><span class=cl>      - <span class=nv>MYSQL_DATABASE</span><span class=o>=</span>dujiaoka  
+</span></span><span class=line><span class=cl>      - <span class=nv>MYSQL_USER</span><span class=o>=</span>dujiaoka  
+</span></span><span class=line><span class=cl>      - <span class=nv>MYSQL_PASSWORD</span><span class=o>=</span>changeyourpassword  
+</span></span><span class=line><span class=cl>    volumes:  
+</span></span><span class=line><span class=cl>      - ./mysql:/var/lib/mysql  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  redis:  
+</span></span><span class=line><span class=cl>    image: redis:alpine  
+</span></span><span class=line><span class=cl>    restart: always  
+</span></span><span class=line><span class=cl>    volumes:  
+</span></span><span class=line><span class=cl>      - ./redis:/data
+</span></span></code></pre></td></tr></table></div></div><p><code>changeyourpassword</code> 可以修改成自己的密码。</p><p>修改好之后，注意切换成英文输入法，然后按一下 <code>esc</code>，然后 <code>:wq</code> 保存退出。</p><p>添加env.conf文件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>vim env.conf
+</span></span></code></pre></td></tr></table></div></div><p>输入：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>APP_NAME</span><span class=o>=</span>咕咕的小卖部  
+</span></span><span class=line><span class=cl><span class=nv>APP_ENV</span><span class=o>=</span><span class=nb>local</span>  
+</span></span><span class=line><span class=cl><span class=nv>APP_KEY</span><span class=o>=</span>base64:rKwRuI6eRpCw/9e2XZKKGj/Yx3iZy5e7+FQ6+aQl8Zg<span class=o>=</span>  
+</span></span><span class=line><span class=cl><span class=nv>APP_DEBUG</span><span class=o>=</span><span class=nb>true</span>  
+</span></span><span class=line><span class=cl><span class=nv>APP_URL</span><span class=o>=</span>https://你的域名  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=nv>LOG_CHANNEL</span><span class=o>=</span>stack  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=c1># 数据库配置  </span>
+</span></span><span class=line><span class=cl><span class=nv>DB_CONNECTION</span><span class=o>=</span>mysql  
+</span></span><span class=line><span class=cl><span class=nv>DB_HOST</span><span class=o>=</span>db  
+</span></span><span class=line><span class=cl><span class=nv>DB_PORT</span><span class=o>=</span><span class=m>3306</span>  
+</span></span><span class=line><span class=cl><span class=nv>DB_DATABASE</span><span class=o>=</span>dujiaoka  
+</span></span><span class=line><span class=cl><span class=nv>DB_USERNAME</span><span class=o>=</span>dujiaoka  
+</span></span><span class=line><span class=cl><span class=nv>DB_PASSWORD</span><span class=o>=</span>changeyourpassword  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=c1># redis配置  </span>
+</span></span><span class=line><span class=cl><span class=nv>REDIS_HOST</span><span class=o>=</span>redis  
+</span></span><span class=line><span class=cl><span class=nv>REDIS_PASSWORD</span><span class=o>=</span>  
+</span></span><span class=line><span class=cl><span class=nv>REDIS_PORT</span><span class=o>=</span><span class=m>6379</span>  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=nv>BROADCAST_DRIVER</span><span class=o>=</span>log  
+</span></span><span class=line><span class=cl><span class=nv>SESSION_DRIVER</span><span class=o>=</span>file  
+</span></span><span class=line><span class=cl><span class=nv>SESSION_LIFETIME</span><span class=o>=</span><span class=m>120</span>  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=c1># 缓存配置  </span>
+</span></span><span class=line><span class=cl><span class=c1># file为磁盘文件  redis为内存级别  </span>
+</span></span><span class=line><span class=cl><span class=c1># redis为内存需要安装好redis服务端并配置  </span>
+</span></span><span class=line><span class=cl><span class=nv>CACHE_DRIVER</span><span class=o>=</span>redis  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=c1># 异步消息队列  </span>
+</span></span><span class=line><span class=cl><span class=c1># sync为同步  redis为异步  </span>
+</span></span><span class=line><span class=cl><span class=c1># 使用redis异步需要安装好redis服务端并配置  </span>
+</span></span><span class=line><span class=cl><span class=nv>QUEUE_CONNECTION</span><span class=o>=</span>redis  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=c1># 后台语言  </span>
+</span></span><span class=line><span class=cl><span class=c1>## zh_CN 简体中文  </span>
+</span></span><span class=line><span class=cl><span class=c1>## zh_TW 繁体中文  </span>
+</span></span><span class=line><span class=cl><span class=c1>## en    英文  </span>
+</span></span><span class=line><span class=cl><span class=nv>DUJIAO_ADMIN_LANGUAGE</span><span class=o>=</span>zh_CN  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=c1># 后台登录地址  </span>
+</span></span><span class=line><span class=cl><span class=nv>ADMIN_ROUTE_PREFIX</span><span class=o>=</span>/admin  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=c1># 是否开启https (前端开启了后端也必须为true)  </span>
+</span></span><span class=line><span class=cl><span class=c1># 后台登录出现0err或者其他登录异常问题，大概率是开启了https而后台没有开启，把下面的false改为true即可  </span>
+</span></span><span class=line><span class=cl><span class=nv>ADMIN_HTTPS</span><span class=o>=</span><span class=nb>true</span>
+</span></span></code></pre></td></tr></table></div></div><p>这边可以不用动，因为后续我们安装的时候填的信息会覆盖这里面的内容，修改好之后，注意切换成英文输入法，然后按一下 <code>esc</code>，然后 <code>:wq</code> 保存退出。</p><p>最后：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>docker-compose up -d
+</span></span></code></pre></td></tr></table></div></div><p>理论上我们就可以输入 <code>http://ip:8090</code> 访问安装了。</p><p>注意: <code>使用IP:8090可能会出现错误</code>,</p><p>推荐使用解析好的域名安装,做好<code>反向代理</code></p><p>推荐使用 <code>Nginx Proxy Manager</code> 反向代理神器</p><p><img src=https://r2.leshans.eu.org/2023/08/5dcffa8382678de28c5807d67f8a16f8.webp loading=lazy></p><h3 id=2网页安装>2.网页安装</h3><p>访问域名开始安装：</p><ul><li>将<code>mysql</code>的地址改为<code>db</code></li><li>将<code>mysql</code>的用户名改为<code>dujiaoka</code></li><li>将<code>redis</code>的地址改为<code>redis</code></li><li>填写网站名称</li><li>网站 url 填写完整域名地址，例如<code>https://shop.ioiox.com</code></li></ul><p>点击安装成功后，<code>先不要登录</code>, 先修改其他参数后在进行登录使用</p><p><img src=https://r2.leshans.eu.org/2023/08/0ddfed22f2facd1cf293e5ca81a6e690.webp loading=lazy></p><p>此时，我们先停止容器。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>docker-compose down
+</span></span></code></pre></td></tr></table></div></div><p>将<code>docker-compose.yml</code>中的<code>INSTALL</code>改为<code>false</code></p><p>将<code>env.conf</code>中的<code>APP_DEBUG</code>改为<code>false</code> 以及 <code>ADMIN_HTTPS</code> 改成 <code>true</code></p><p>最后:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>docker-compose up -d
+</span></span></code></pre></td></tr></table></div></div><p>然后在域名后面加上 <code>/admin</code>，账户密码都是<code>admin</code> 就可以正常登录后台了！</p><p>记得改一下用户名和密码！</p><p><img src=https://r2.leshans.eu.org/2023/08/e80c067669fc97c0d004f2edb6bfb55f.webp loading=lazy></p><h2 id=3迁移服务器>3.迁移服务器</h2><ul><li>所有配置，数据，缓存，数据库都存储在整个<code>shop</code>目录中，定期备份即可。</li><li>如需迁移服务器，仅需打包本目录到新服务器，执行上述所有<code>chmod 777</code>的权限命令，再次<code>docker-compose up -d</code>即可恢复上线。</li></ul><p>进入<code>shop</code>目录</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>chmod -R <span class=m>777</span> storage uploads env.conf
+</span></span></code></pre></td></tr></table></div></div><p>然后将<code>env.conf</code>中的 <code>APP_URL</code>改成新的域名</p><p>最后运行:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>docker-compose up -d
+</span></span></code></pre></td></tr></table></div></div><h2 id=4-更新与卸载>4. 更新与卸载</h2><h3 id=更新-shop>更新 shop</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>cd</span> /root/data/docker_data/shop  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>docker-compose down   
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>cp -r /root/data/docker_data/shop /root/data/docker_data/shop.archive  <span class=c1># 万事先备份，以防万一  </span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>docker-compose pull  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>docker-compose up -d    <span class=c1># 请不要使用 docker-compose stop 来停止容器，因为这么做需要额外的时间等待容器停止；docker-compose up -d 直接升级容器时会自动停止并立刻重建新的容器，完全没有必要浪费那些时间。  </span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>docker image prune  <span class=c1># prune 命令用来删除不再使用的 docker 对象。删除所有未被 tag 标记和未被容器使用的镜像</span>
+</span></span></code></pre></td></tr></table></div></div><p>提示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>WARNING! This will remove all dangling images.  
+</span></span><span class=line><span class=cl>Are you sure you want to <span class=k>continue</span>? <span class=o>[</span>y/N<span class=o>]</span>
+</span></span></code></pre></td></tr></table></div></div><p>输入 <code>y</code></p><p>利用 Docker 搭建的应用，更新非常容易～</p><h3 id=卸载-shop> 卸载 shop</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>cd</span> /root/data/docker_data/shop  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>docker-compose down  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl><span class=nb>cd</span> ..  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>rm -rf /root/data/docker_data/shop  <span class=c1># 完全删除映射到本地的数据</span>
+</span></span></code></pre></td></tr></table></div></div><p>可以卸载得很干净。</p></section><footer class=article-footer><section class=article-tags><a href=/tags/%E5%8F%91%E5%8D%A1/>发卡</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/1panel-%E6%98%AF%E6%96%B0%E4%B8%80%E4%BB%A3%E7%9A%84-linux-%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF/><div class=article-details><h2 class=article-title>1Panel 是新一代的 Linux 服务器运维管理面板</h2></div></a></article><article><a href=/p/%E5%88%A9%E7%94%A8github-page%E5%92%8Cgithub-action%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84hugo%E5%8D%9A%E5%AE%A2/><div class=article-details><h2 class=article-title>利用Github Page和Github Action部署你的Hugo博客</h2></div></a></article><article><a href=/p/%E6%9C%80%E6%96%B0linux%E4%B8%80%E9%94%AE%E9%87%8D%E8%A3%85%E8%84%9A%E6%9C%AC%E8%BF%84%E4%BB%8A%E4%B8%BA%E6%AD%A2%E5%8A%9F%E8%83%BD%E6%9C%80%E5%85%A8%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%84%9A%E6%9C%AC/><div class=article-details><h2 class=article-title>最新Linux一键重装脚本，迄今为止功能最全，最好用的脚本</h2></div></a></article><article><a href=/p/vercel%E9%83%A8%E7%BD%B2hugo%E8%AE%B0%E5%BD%95%E9%85%8D%E7%BD%AE/><div class=article-details><h2 class=article-title>vercel部署hugo记录配置</h2></div></a></article><article><a href=/p/hugo%E4%BD%BF%E7%94%A8shortcode%E6%8F%92%E5%85%A5bilibiliyoutube%E8%A7%86%E9%A2%91/><div class=article-details><h2 class=article-title>Hugo使用Shortcode插入bilibili、Youtube视频</h2></div></a></article></div></div></aside><script src=//unpkg.com/@waline/client@v2/dist/waline.js></script>
+<link href=//unpkg.com/@waline/client@v2/dist/waline.css rel=stylesheet><div id=waline class=waline-container></div><style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding);--waline-font-size:var(--article-font-size)}.waline-container .wl-count{color:var(--card-text-color-main)}</style><script>Waline.init({dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://unpkg.com/@waline/emojis@1.1.0/bmoji"],lang:"zh-CN",locale:{admin:"👻屑博主",placeholder:"🎉留下你的脚印."},pageview:!0,requiredMeta:["name","email"],serverURL:"https://waline.talimus.eu.org"})</script><footer class=site-footer><section class=copyright>&copy;
+2023 奇迹森林</section><section class=powerby><a href=https://gohugo.io/ target=_blank rel=noopener>由 Hugo 强力驱动</a> | <a href=https://github.com/ target=_blank rel=noopener>托管在 Github</a><br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.18.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

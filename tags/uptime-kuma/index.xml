@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Uptime Kuma on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/uptime-kuma/</link><description>Recent content in Uptime Kuma on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Aug 2023 13:57:08 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/uptime-kuma/index.xml" rel="self" type="application/rss+xml"/><item><title>利用Cloudflare Tunnel为Uptime Kuma设置反向代理</title><link>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8cloudflare-tunnel%E4%B8%BAuptime-kuma%E8%AE%BE%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link><pubDate>Sun, 20 Aug 2023 13:57:08 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8cloudflare-tunnel%E4%B8%BAuptime-kuma%E8%AE%BE%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid><description>&lt;h2 id="描述">描述&lt;/h2>
+&lt;p>这是迄今为止我见过的最简单的反向代理！&lt;/p>
+&lt;p>她就是&lt;code>Cloudflare Tunnel&lt;/code>&lt;/p>
+&lt;p>不用安装Nginx 或 Apache&lt;/p>
+&lt;p>安装好&lt;code>Uptime Kuma&lt;/code>( docker 安装)，您只需在“设置”中提供 &lt;code>Cloudflare Tunnel&lt;/code> 令牌，即可在 Internet 上浏览 Uptime Kuma。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/14cffc608eff11aff6879f4c46a46f54.webp"
+loading="lazy"
+alt="Pasted image 20230820140831"
+>&lt;/p>
+&lt;p>优点：&lt;/p>
+&lt;ul>
+&lt;li>免费&lt;/li>
+&lt;li>完整的 GUI，零配置文件&lt;/li>
+&lt;li>您可以将 Uptime Kuma 置于防火墙后面&lt;/li>
+&lt;li>无需暴露您的真实IP&lt;/li>
+&lt;li>公开 Docker 端口是可选的&lt;/li>
+&lt;li>不需要 Nginx、Caddy 或 Traefik 等反向代理软件&lt;/li>
+&lt;li>零配置 SSL&lt;/li>
+&lt;li>免费SSL&lt;/li>
+&lt;/ul>
+&lt;h2 id="要求">要求&lt;/h2>
+&lt;ul>
+&lt;li>您域名的 DNS 由 Cloudflare 管理。&lt;/li>
+&lt;li>对于 Docker，仅 Debian或ubuntu 基础支持。&lt;/li>
+&lt;li>对于非 Docker，需要下载并安装&lt;code>cloudflared&lt;/code>。&lt;a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/" target="_blank" rel="noopener"
+>https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/&lt;/a>&lt;/li>
+&lt;li>对于非 Docker Windows 用户，您可以在其 Github 版本上下载 msi 安装程序：&lt;a class="link" href="https://github.com/cloudflare/cloudflared/releases/latest" target="_blank" rel="noopener"
+>https://github.com/cloudflare/cloudflared/releases/latest&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="四个步骤">四个步骤&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://dash.teams.cloudflare.com/" target="_blank" rel="noopener"
+>在Cloudflare Zero Trust&lt;/a>上创建隧道。&lt;/li>
+&lt;li>获取您的隧道令牌并将其设置到您的 Uptime Kuma 实例中。&lt;/li>
+&lt;li>将域名映射到&lt;a class="link" href="http://localhost:3001/" target="_blank" rel="noopener"
+>http://localhost:3001&lt;/a>。&lt;/li>
+&lt;li>启动。&lt;/li>
+&lt;/ol>
+&lt;h2 id="开始吧">开始吧&lt;/h2>
+&lt;p>步骤其实非常简单。然而，由于这个概念对任何人来说都是相当新的，所以详细地写出来可能会更好。&lt;/p>
+&lt;p>但相信我，一旦您学会了，您将再次记住如何在没有本指南的情况下进行配置！而对于 Nginx 或 Traefik，我永远不记得如何在不谷歌搜索的情况下进行配置。&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>前往&lt;a class="link" href="https://dash.teams.cloudflare.com/" target="_blank" rel="noopener"
+>Cloudflare Zero Trust&lt;/a>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Access&lt;/code>&amp;raquo; &lt;code>Tunnels&lt;/code>_&lt;code>Create Tunnel&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/d042170a98d589ed54049eebd00086dc.webp"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>键入&lt;code>Tunnel name&lt;/code>诸如&lt;code>uptime-kuma&lt;/code>并保存隧道。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>单击令牌进行复制。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/7b81d0bde06c988536c8118c7943ec5e.webp"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>转到您的 Uptime Kuma 实例。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/5243e955b868eca72505829a116ef9d9.webp"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Settings&lt;/code>&amp;gt;&lt;code>Reverse Proxy&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>将令牌粘贴到&lt;code>Cloudflare Tunnel Token&lt;/code>字段中。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击&lt;code>Start cloudflared&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>返回到&lt;code>Cloudflare Zero Trust&lt;/code>，如果您看到连接器，则单击&lt;code>Next&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0bf2af2207e9b775d09b821a37cab580.webp"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>选择您最喜欢的域名并映射到&lt;code>http://localhost:3001&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/ceb29fd37fa199fb99abda3965539b51.webp"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击&lt;code>Save&lt;/code>并转到您的域名&lt;code>https://&amp;lt;your domain name&amp;gt;&lt;/code>并获利！是的，它还会自动为您提供 SSL！&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/3cbf563f8867f0e5bda906d925056bc5.webp"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="如何停止">如何停止&lt;/h2>
+&lt;ul>
+&lt;li>选项 1.您可以删除 Cloudflare 上的地图。&lt;/li>
+&lt;li>选项 2. 您可以在 Uptime Kuma 中单击&lt;code>Stop cloudflared&lt;/code>和。&lt;code>Remove Token&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="环境变量">环境变量&lt;/h2>
+&lt;p>或者，您可以通过环境变量设置令牌。cloudflared 将自动启动。&lt;/p>
+&lt;p>通过这种方法，您甚至不需要将容器端口暴露给主机。&lt;/p>
+&lt;p>UPTIME_KUMA_CLOUDFLARED_TOKEN=&lt;code>&amp;lt;your token&amp;gt;&lt;/code>&lt;/p></description></item></channel></rss>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>腾讯云cos on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/%E8%85%BE%E8%AE%AF%E4%BA%91cos/</link><description>Recent content in 腾讯云cos on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 19 Aug 2023 13:09:53 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E8%85%BE%E8%AE%AF%E4%BA%91cos/index.xml" rel="self" type="application/rss+xml"/><item><title>使用cosfs挂载腾讯云COS到VPS服务器上</title><link>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8cosfs%E6%8C%82%E8%BD%BD%E8%85%BE%E8%AE%AF%E4%BA%91cos%E5%88%B0vps%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</link><pubDate>Sat, 19 Aug 2023 13:09:53 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8cosfs%E6%8C%82%E8%BD%BD%E8%85%BE%E8%AE%AF%E4%BA%91cos%E5%88%B0vps%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</guid><description>&lt;h2 id="事前准备">事前准备&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>准备好用于挂载的Bucket，配置好权限&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>获得可以用于挂载Bucket，accesskey和secret&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>本文使用的是Ubuntu 20.04&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>腾讯官方Cosfs的地址&lt;br>
+&lt;a class="link" href="https://github.com/tencentyun/cosfs/" target="_blank" rel="noopener"
+>https://github.com/tencentyun/cosfs/&lt;/a>&lt;/p>
+&lt;h3 id="1下载cosfs的安装包">1.下载cosfs的安装包&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget https://github.com/tencentyun/cosfs/releases/download/v1.0.21/cosfs_1.0.21-ubuntu20.04_amd64.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2安装软件包">2.安装软件包&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo dpkg -i cosfs_1.0.21-ubuntu20.04_amd64.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>3.如果安装过程中遇到依赖项错误，请使用以下命令修复它们&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get install -f
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3配置访问">3.配置访问&lt;/h3>
+&lt;p>将Bucket名称以及具有此Bucket访问权限的&lt;code>AccessKeyId&lt;/code>/&lt;code>AccessKeySecret&lt;/code>&lt;/p>
+&lt;p>信息存放在/etc/passwd-cosfs文件中。注意这个文件的权限必须正确设置，建议设为640。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> my-bucket:key-id:key-secret &amp;gt; /etc/passwd-cosfs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod &lt;span class="m">640&lt;/span> /etc/passwd-cosfs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>my-bucket&lt;/code>: 存储桶名称&lt;/li>
+&lt;li>&lt;code>key-id&lt;/code>: AccessKeyId&lt;/li>
+&lt;li>&lt;code>key-secret&lt;/code>: AccessKeySecret&lt;/li>
+&lt;/ul>
+&lt;h3 id="4将bucket挂载到指定目录">4.将Bucket挂载到指定目录&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cosfs my-bucket /home/cos -ourl=http://cos.ap-guangzhou.myqcloud.com -oallow_other
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>my-bucket:存储桶名称&lt;/li>
+&lt;li>/home/cos为你的服务器上的路径&lt;/li>
+&lt;li>&lt;a class="link" href="http://cos.ap-guangzhou.myqcloud.com" target="_blank" rel="noopener"
+>http://cos.ap-guangzhou.myqcloud.com&lt;/a> 为所属地域&lt;/li>
+&lt;/ul>
+&lt;h3 id="5卸载已挂载的磁盘">5.卸载已挂载的磁盘&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">fusermount -u /home/cos
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

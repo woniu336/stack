@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gogs on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/gogs/</link><description>Recent content in gogs on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 16 Aug 2023 11:47:29 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/gogs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker搭建Gogs一个轻量 Git 服务端</title><link>https://blog.leshans.eu.org/p/docker%E6%90%AD%E5%BB%BAgogs%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F-git-%E6%9C%8D%E5%8A%A1%E7%AB%AF/</link><pubDate>Wed, 16 Aug 2023 11:47:29 +0800</pubDate><guid>https://blog.leshans.eu.org/p/docker%E6%90%AD%E5%BB%BAgogs%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F-git-%E6%9C%8D%E5%8A%A1%E7%AB%AF/</guid><description>&lt;h2 id="为何选择-gogs-">为何选择 Gogs ？&lt;/h2>
+&lt;p>我选择了 &lt;a class="link" href="https://gogs.io/" target="_blank" rel="noopener"
+>Gogs&lt;/a> 来讲解，主要是出于以下几个原因：&lt;/p>
+&lt;ol>
+&lt;li>Gogs 是一个轻量化的 Git 服务，对系统占用较小。&lt;/li>
+&lt;li>Gogs 的功能够用。&lt;/li>
+&lt;li>Gogs 的安装流程简便。&lt;/li>
+&lt;/ol>
+&lt;p>其中第一点最重要，因为 Gitlab 对系统配置的要求比较高，单是内存这一项就要求大于 4 GB，如果是 2 GB 内存则会直接无法运行，这个要求已经可以淘汰掉一些入门级服务器了。而 Gogs 在 NAS、树莓派、入门级服务器上都可以无压力运行，长期运行也不会影响其他服务。&lt;/p>
+&lt;p>而且我们介绍的场景也不是多人开发协作，只是个人同步笔记用，不需要过多的开发相关功能，有最基本的 Git 服务和一个便于操作的网页就足够了。&lt;/p>
+&lt;p>Gogs 的安装过程也比较简单，官方的 Docker 版本基本做到了开箱即用，连数据库都不需要额外配置，有个文件夹存放数据就可以。&lt;/p>
+&lt;h2 id="如何在图形界面中安装-docker-版-gogs">如何在图形界面中安装 Docker 版 Gogs&lt;/h2>
+&lt;p>我通常建议通过图形化界面来管理 Docker，这样能够直观看到容器的运行状态，像启动、停止、修改配置这样的操作，都能以最简单的方式完成。&lt;/p>
+&lt;p>所以先来讲讲在图像界面下如何安装 Docker 版本的 Gogs。&lt;/p>
+&lt;h3 id="了解-docker-的关键配置">了解 Docker 的关键配置&lt;/h3>
+&lt;p>我们借助 Gogs 顺便了解一下通过 Docker 跑一个服务需要做什么配置。&lt;/p>
+&lt;p>首先我们找到 Gogs 在 &lt;code>hub.docker.com&lt;/code> 中的包：&lt;a class="link" href="https://hub.docker.com/r/gogs/gogs/" target="_blank" rel="noopener"
+>Gogs - Docker Hub&lt;/a> 。&lt;/p>
+&lt;p>根据它下方的文档提示可以得知，Gogs 的必要配置很少，我们根据它的官方配置可以得知，它需要这下面两行核心代码就可以完成部署。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker pull gogs/gogs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker run --name&lt;span class="o">=&lt;/span>gogs -p 10022:22 -p 10880:3000 -v /var/gogs:/data gogs/gogs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="如何使用-gogs">如何使用 Gogs&lt;/h2>
+&lt;p>使用 Gogs 创建仓库和 Github 类似，注册账户，创建仓库……图形化界面总是容易让人理解。这里就不再赘述了。&lt;/p>
+&lt;p>不过有一点需要注意。在完成仓库创建后，我们需要通过 git clone 把仓库下载到本地。往常在 Github 中 git clone 仓库后再尝试 push 时会提示用账号密码登录，然后由服务器判别你是否有这个仓库的更多权限，允许你做进一步的操作。&lt;/p></description></item></channel></rss>
