@@ -1,7 +1,7 @@
-baseurl: https://jimugou.com
+baseurl: https://blog.leshans.eu.org/
 languageCode: zh-cn
 theme: hugo-theme-stack
-paginate: 5
+paginate: 10
 title: 木瓜有点甜
 
 languages:
@@ -39,7 +39,7 @@ params:
 
     footer:
         since: 2023
-        customText:  <a href="https://gohugo.io/" target="_blank" rel="noopener">由 Hugo 强力驱动</a> | <a href="https://vercel.com/" target="_blank" rel="noopener">托管在 Vercel</a>
+        customText:  <a href="https://gohugo.io/" target="_blank" rel="noopener">由 Hugo 强力驱动</a> | <a href="https://vercel.com/" target="_blank" rel="noopener">托管在 Github</a>
 
     dateFormat:
         published: 2006-01-02
@@ -96,7 +96,7 @@ params:
             lang: zh-CN
             pageview: true
             emoji:
-                - https://unpkg.com/@waline/emojis@1.1.0/bmoji
+                - /source/Sticker-100/
 
             requiredMeta:
                 - name
@@ -190,7 +190,7 @@ menu:
 
         - identifier: Wormhole
           name: aWormhole
-          url: https://www.foreverblog.cn/go.html
+          url: https://blog.leshans.eu.org
           params:
             newTab: false
             icon: home  
@@ -204,7 +204,7 @@ menu:
 
         - identifier: github
           name: dGitHub
-          url: https://github.com/lin-snow
+          url: https://github.com/woniu336
           params:
             newTab: true
             icon: brand-github
