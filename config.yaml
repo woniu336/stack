@@ -96,7 +96,7 @@ params:
             lang: zh-CN
             pageview: true
             emoji:
-                - /source/Sticker-100/
+                - https://unpkg.com/@waline/emojis@1.1.0/bmoji
 
             requiredMeta:
                 - name
