@@ -237,5 +237,3 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-
-syntaxHighlighter: "highlight.js"
