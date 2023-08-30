@@ -92,7 +92,7 @@ params:
 
         # Waline client configuration see: https://waline.js.org/en/reference/component.html
         waline:
-            serverURL: https://waline.talimus.eu.org
+            serverURL: https://waline.taoshuge.eu.org/
             lang: zh-CN
             pageview: true
             emoji:
