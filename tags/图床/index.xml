@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>图床 on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/%E5%9B%BE%E5%BA%8A/</link><description>Recent content in 图床 on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 01 Sep 2023 22:54:09 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml"/><item><title>腾讯Gtimg图床-苹果cms教程</title><link>https://blog.leshans.eu.org/p/%E8%85%BE%E8%AE%AFgtimg%E5%9B%BE%E5%BA%8A-%E8%8B%B9%E6%9E%9Ccms%E6%95%99%E7%A8%8B/</link><pubDate>Fri, 01 Sep 2023 22:54:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%85%BE%E8%AE%AFgtimg%E5%9B%BE%E5%BA%8A-%E8%8B%B9%E6%9E%9Ccms%E6%95%99%E7%A8%8B/</guid><description>&lt;p>&lt;a class="link" href="https://gouya.lanzouf.com/iGgeI07zodmh" target="_blank" rel="noopener"
+>安装插件需要先安装盒子，安装插件，更新插件点击这里，新萌必看，不看必出错&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>苹果cms盒子云端安装对接后支持在线一键安装苹果cms模板 目前云端安装仅支持苹果cmsv10免费模板，因云端数据存储无法管理的问题苹果cms8 收费模板以及插件不支持云端安装。&lt;/p>
+&lt;/blockquote>
+&lt;p>为什么要&lt;code>安装盒子&lt;/code>？&lt;/p>
+&lt;p>盒子是一个&lt;code>管理插件&lt;/code>的工具，它支持安装，&lt;code>数据库自动创建&lt;/code>，卸载功能，可大大降低插件开发时间同时可以有序管理插件，&lt;code>一键干净卸载插件&lt;/code>，不会造成苹果cms混乱影响苹果cms升级等问题，让你的苹果cms可以随意增加任何想要的功能&lt;code>无需担心修改苹果cms源文件&lt;/code>影响到苹果cms正常使用。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/1b578cd247fb47a8ea61de632f6c0a24.webp"
+loading="lazy"
+alt="Pasted image 20230901225640"
+>&lt;/p>
+&lt;p>盒子下载地址：https://gouya.lanzouf.com/iGgeI07zodmh&lt;/p>
+&lt;p>QQ群：792135526（群里名额有限随时清理潜水用户）&lt;/p>
+&lt;h3 id="安装苹果cms盒子方法">&lt;strong>安装苹果cms盒子方法：&lt;/strong>&lt;/h3>
+&lt;p>1.下载到的盒子客户端压缩包内拥有一个application文件夹，直接上传到网站根目录中。&lt;/p>
+&lt;p>2.添加苹果cms盒子快捷菜单：苹果cms盒子,macBox/stylelist（参考下图）&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/59946841c80ef5f41edc6bde6b0ae07b.webp"
+loading="lazy"
+alt="Pasted image 20230901225724"
+>&lt;/p>
+&lt;h3 id="腾讯gtimg图床插件优点">腾讯Gtimg图床插件优点：&lt;/h3>
+&lt;p>&lt;code>免费，不限空间&lt;/code>，安装插件后直接使用，支持封面同步，编辑视频图片上传。&lt;/p>
+&lt;p>插件升级注意：&lt;/p>
+&lt;p>该插件不提供升级包，如需升级卸载删除原先的插件重新安装新版本即可&lt;/p>
+&lt;p>有人会担心图片失效了怎么办，其实很简单，吧图片全部清空重新采集一遍就行了，清空方法也简单，打开&lt;code>phpMyAdmin&lt;/code>找到&lt;code>mac_vod&lt;/code>表点击sql，输入sql语句：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">mac_vod&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">vod_pic&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后点击执行就可以清空所有图片，在然后重新采集一遍图片就好了。&lt;/p>
+&lt;h3 id="图床插件安装方法">&lt;strong>图床插件安装方法：&lt;/strong>&lt;/h3>
+&lt;p>1.下载到的插件压缩包上传到&lt;code>addons&lt;/code>目录中解压&lt;/p>
+&lt;p>2.打开&lt;code>苹果cms盒子&lt;/code>点击安装即可&lt;/p>
+&lt;p>3.下载地址: &lt;a class="link" href="https://gouya.lanzouy.com/igtxi0bnaqhi" target="_blank" rel="noopener"
+>https://gouya.lanzouy.com/igtxi0bnaqhi&lt;/a>&lt;/p>
+&lt;p>使用教程：&lt;/p>
+&lt;p>最新更新需要腾讯图床需要提供token，例如下面部分&lt;/p>
+&lt;p>&lt;code>userid=68552314;omaccesstoken=001fceb42ca1d843edf1066170a2a2bc5d9788a63587b8419549426a6b40c2052799417defb079f6a54b391efbb481e3f5da50123896b210607ba3f2e8fb6cf08cnv;omtoken=001fceb42ca1d843edf1066172a2bc5d9788a63587b82195461536a6b40c2052766417defb079f6a54b391efbb481e3f5da506d896db210607ba3f2e8fb6cf08cnv; &lt;/code>&lt;/p>
+&lt;p>token需要自己登录&lt;a class="link" href="https://om.qq.com/userAuth/index" target="_blank" rel="noopener"
+>腾讯开放平台&lt;/a>，然后登录一个账号刷新网页F12查看&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/7ad00f9ae9847e0f17f2bffdebf2b7af.webp"
+loading="lazy"
+alt="Pasted image 20230901225931"
+>&lt;/p>
+&lt;p>1.安装并&lt;code>启用插件&lt;/code>&lt;/p>
+&lt;p>2.参考下图切换至腾讯图床并且填写&lt;code>token&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/f228c934b40298d880a91058a9bc418d.webp"
+loading="lazy"
+alt="Pasted image 20230901225943"
+>&lt;/p>
+&lt;p>&lt;code>注意：因腾讯对于图床调整全部增加了防盗链，因此使用腾讯图床需要接触防盗，下面提供两种方法&lt;/code>&lt;/p>
+&lt;p>1.（推荐方法）编辑模板在头部增加位置&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;referrer&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;never&amp;#34;&lt;/span>&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>参考下图&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/29fcdb9d4b6134d4b3f0d0045712073a.webp"
+loading="lazy"
+alt="Pasted image 20230901230001"
+>&lt;/p>
+&lt;h3 id="插件更新方法">&lt;strong>插件更新方法：&lt;/strong>&lt;/h3>
+&lt;p>一般有插件开发者提供更新包替换，涉及到收费问题暂时不支持在线升级功能。&lt;/p>
+&lt;p>4.0升级内容：&lt;/p>
+&lt;p>1.移除模板相关代码&lt;/p>
+&lt;p>2.移除SG11加密组件，无需在安装加密组件了，直接使用即可&lt;/p>
+&lt;p>3.移除不使用的代码&lt;/p>
+&lt;p>注：因苹果cms版本问题可能出现兼容，点击安装，启用，卸载没反应，如果遇到这种问题刷新一下即可。&lt;/p></description></item></channel></rss>
