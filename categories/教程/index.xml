@@ -42,6 +42,9 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="设置-ssh-proxy-推荐">设置 SSH Proxy (推荐)&lt;/h2>
+&lt;blockquote>
+&lt;p>设置ssh代理,可加速 git clone SSH协议下载&lt;/p>
+&lt;/blockquote>
 &lt;h3 id="linux--macos">Linux &amp;amp; macOS&lt;/h3>
 &lt;p>配置文件在用户家目录下的 .ssh/config 其中 &lt;code>nc&lt;/code> 程序位于 &lt;code>/usr/bin/nc&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">

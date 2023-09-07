@@ -1,67 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宝塔 on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/%E5%AE%9D%E5%A1%94/</link><description>Recent content in 宝塔 on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 23:38:07 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml"/><item><title>宝塔7.7安装教程</title><link>https://blog.leshans.eu.org/p/6/</link><pubDate>Tue, 25 Jul 2023 23:38:07 +0800</pubDate><guid>https://blog.leshans.eu.org/p/6/</guid><description>&lt;p>为什么是 7.7.0 版本，而不是其他版本呢？因为这个版本没有很旧，也没有太多限制，还可以破解&lt;/p>
-&lt;blockquote>
-&lt;h3 id="安装宝塔">&lt;strong>安装宝塔：&lt;/strong>&lt;/h3>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;amp;&amp;amp; sh install.sh ed8484bec
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="1下载离线升级包">&lt;strong>1、下载离线升级包&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">wget https://github.com/woniu336/2btc/raw/main/LinuxPanel-7.7.0.zip
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="2解压">&lt;strong>2、解压&lt;/strong>&lt;/h3>
-&lt;p>yum -y install unzip zip （若解压失败）&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">unzip LinuxPanel-7.7.0.zip
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="3进入升级目录">&lt;strong>3、进入升级目录&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd /root/panel
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="4运行降级">&lt;strong>4、运行降级&lt;/strong>&lt;/h3>
-&lt;p>bash update.sh&lt;/p>
-&lt;h3 id="5去除登录">&lt;strong>5、去除登录&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm -f /www/server/panel/data/bind.pl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>全部安装完成后，执行以下内容，避免官方搞小动作&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">echo &amp;#39;127.0.0.1 bt.cn&amp;#39; &amp;gt;&amp;gt;/etc/hosts
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;h3 id="其他方法">其他方法&lt;/h3>
-&lt;/blockquote>
-&lt;p>&lt;strong>Centos/Ubuntu/Debian 安装命令独立运行环境（py 3.7）&lt;/strong>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宝塔 on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/%E5%AE%9D%E5%A1%94/</link><description>Recent content in 宝塔 on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 23:38:07 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml"/><item><title>宝塔面板7.7破解版安装教程</title><link>https://blog.leshans.eu.org/p/6/</link><pubDate>Tue, 25 Jul 2023 23:38:07 +0800</pubDate><guid>https://blog.leshans.eu.org/p/6/</guid><description>&lt;p>为什么选择了版本号 7.7.0 而非其他版本呢？这个版本之所以被选中，是因为它并不过于陈旧，也没有太多限制，同时具备一定的破解潜力。&lt;/p>
+&lt;h3 id="一键安装77版本">一键安装7.7版本&lt;/h3>
+&lt;p>适用 Centos/Ubuntu/Debian&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -70,23 +9,22 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sSO https://raw.githubusercontent.com/woniu336/btpanel-v7.7.0/main/install/install_panel.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> bash install_panel.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="净化与破解">净化与破解&lt;/h2>
-&lt;h3 id="修改-hosts-文件">&lt;strong>修改 hosts 文件&lt;/strong>&lt;/h3>
+&lt;/div>&lt;p>&lt;code>安装完成后,解除进入面板需要账号密码:&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;127.0.0.1 bt.cn&amp;#39;&lt;/span> &amp;gt;&amp;gt;/etc/hosts
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rm -f /www/server/panel/data/bind.pl
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="解除强制手机登录">解除强制手机登录&lt;/h3>
+&lt;/div>&lt;p>&lt;code>执行以下内容，避免官方搞小动作&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">rm -f /www/server/panel/data/bind.pl
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;127.0.0.1 bt.cn&amp;#39;&lt;/span> &amp;gt;&amp;gt;/etc/hosts
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="手动解锁宝塔所有付费插件为永不过期">&lt;strong>手动解锁宝塔所有付费插件为永不过期&lt;/strong>&lt;/h3>
@@ -102,4 +40,35 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>注意事项 : 服务器重启后又回到&amp;quot;endtime&amp;quot;: -1 需要再次修改替换&lt;/p>
+&lt;h3 id="净化面板">净化面板&lt;/h3>
+&lt;p>下载文件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">wget -O /tmp/bt.zip https://github.com/woniu336/btpanel-v7.7.0/raw/main/bt/bt.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解压文件并合并到目标目录 (选A 同意覆盖所有)&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">unzip -u /tmp/bt.zip -d /www/server/panel/BTPanel/templates/default
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>删除下载的压缩文件（如果需要）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm /tmp/bt.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="最后重启面板生效">最后重启面板生效&lt;/h3>
+&lt;p>完结撒花🤡&lt;/p>
+&lt;p>fuck bt 🤡🤡🤡&lt;/p>
 &lt;p></description></item></channel></rss>

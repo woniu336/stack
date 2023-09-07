@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>脚本 on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/%E8%84%9A%E6%9C%AC/</link><description>Recent content in 脚本 on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 12 Aug 2023 17:04:38 +0000</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E8%84%9A%E6%9C%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>好用的LDNMP一键建站脚本工具</title><link>https://blog.leshans.eu.org/p/%E5%A5%BD%E7%94%A8%E7%9A%84ldnmp%E4%B8%80%E9%94%AE%E5%BB%BA%E7%AB%99%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</link><pubDate>Sat, 12 Aug 2023 17:04:38 +0000</pubDate><guid>https://blog.leshans.eu.org/p/%E5%A5%BD%E7%94%A8%E7%9A%84ldnmp%E4%B8%80%E9%94%AE%E5%BB%BA%E7%AB%99%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</guid><description>&lt;p>安装下载工具:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>脚本 on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/%E8%84%9A%E6%9C%AC/</link><description>Recent content in 脚本 on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 12 Aug 2023 17:04:38 +0000</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E8%84%9A%E6%9C%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>强大的LDNMP一键建站脚本工具</title><link>https://blog.leshans.eu.org/p/%E5%BC%BA%E5%A4%A7%E7%9A%84ldnmp%E4%B8%80%E9%94%AE%E5%BB%BA%E7%AB%99%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</link><pubDate>Sat, 12 Aug 2023 17:04:38 +0000</pubDate><guid>https://blog.leshans.eu.org/p/%E5%BC%BA%E5%A4%A7%E7%9A%84ldnmp%E4%B8%80%E9%94%AE%E5%BB%BA%E7%AB%99%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</guid><description>&lt;p>安装依赖&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -7,7 +7,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">apt update -y  &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y curl
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>一键脚本工具:&lt;/p>
+&lt;/div>&lt;p>一键脚本&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -16,50 +16,11 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>根目录执行&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">nano .bashrc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>在内容最下方添加这行数据，定义k按键调用&lt;code>kejilion.sh&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">k&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;curl -sS -O https://kejilion.pro/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/4f4f7aea12ec40ecab2446aad75434fb.webp"
-loading="lazy"
-alt="Pasted image 20230815141922"
->&lt;/p>
-&lt;p>退出nano编辑器, &lt;code>ctrl+x&lt;/code> &lt;code> y&lt;/code>  回车&lt;/p>
-&lt;p>更新下文件&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source ~/.bashrc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>好了，尝试k键召唤科技lion一键脚本工具吧！&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/968a3bc2ead5dd1e347207379deed93e.webp"
-loading="lazy"
-alt="Pasted image 20230815142106"
->&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/478388c2efcb07b65699946a1a730b9c.webp"
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/478388c2efcb07b65699946a1a730b9c.webp"
 loading="lazy"
 alt="Pasted image 20230813220236"
 >&lt;/p>
-&lt;p>目前只支持&lt;code>Ubuntu&lt;/code>和&lt;code>Debian&lt;/code>系统，暂不支持其它系统！&lt;/p>
-&lt;p>此脚本目前比较基础，会不断进化，整合大家常用的脚本。方便使用。&lt;/p>
-&lt;p>&lt;code>LDNMP&lt;/code>属于原创内容，&lt;code>建站&lt;/code>更方便。&lt;/p>
+&lt;p>&lt;code>观看教程&lt;/code>&lt;/p>
 &lt;div class="video-wrapper">
 &lt;iframe loading="lazy"
 src="https://www.youtube.com/embed/0o7oH3Dit70"

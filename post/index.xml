@@ -1,4 +1,519 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 奇迹森林</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 03 Sep 2023 10:09:30 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub加速终极教程</title><link>https://blog.leshans.eu.org/p/github%E5%8A%A0%E9%80%9F%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</link><pubDate>Sun, 03 Sep 2023 10:09:30 +0800</pubDate><guid>https://blog.leshans.eu.org/p/github%E5%8A%A0%E9%80%9F%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</guid><description>&lt;p>本文意图解决使用 GitHub 访问(https) 或者 git clone（https or ssh）慢的问题。在此分享我的方法，我所了解的 GitHub 加速最佳方案。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 奇迹森林</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Sep 2023 22:32:24 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</link><pubDate>Tue, 05 Sep 2023 22:32:24 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</guid><description>&lt;p>随着&lt;code>GitHub&lt;/code>被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造&lt;code>空间&lt;/code>。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。&lt;/p>
+&lt;h2 id="教程">教程&lt;/h2>
+&lt;p>首先你肯定需要一个&lt;a class="link" href="https://so.csdn.net/so/search?q=Github&amp;amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener"
+>Github&lt;/a>账号，没有的可以去注册一个，地址：&lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
+>&lt;/a>&lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
+>https://github.com&lt;/a>。有了账号就继续看。&lt;/p>
+&lt;h3 id="1配置git-ssh密钥">1、配置Git SSH密钥&lt;/h3>
+&lt;blockquote>
+&lt;p>由于本地Git仓库和GitHub仓库之间的传输是通过&lt;code>SSH&lt;/code>加密的，所以必须要让github仓库认证你&lt;code>SSH key&lt;/code>，在操作之前，需要先在服务器上生成&lt;code>SSH key&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;p>设置github 用户名和邮箱&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git config --global user.name &lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email &lt;span class="s2">&amp;#34;xxxx@qq.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们先去根目录下使用命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> ~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-keygen -t rsa
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里会要你命名&lt;code>密钥名称&lt;/code>(建议使用&lt;code>默认&lt;/code>名称)，然后连续按几次&lt;code>Enter&lt;/code>，这时候会在&lt;code>/root/.ssh&lt;/code>文件夹生成2个ssh密钥，然后我们查看公钥&lt;code>id_rsa.pub&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat ~/.ssh/id_rsa.pub
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>查看后，再复制下公钥&lt;/li>
+&lt;li>打开Github官网，进入&lt;a class="link" href="https://github.com/settings/ssh/new" target="_blank" rel="noopener"
+>https://github.com/settings/ssh/new&lt;/a>，&lt;/li>
+&lt;li>&lt;code>Title&lt;/code>随意，然后&lt;code>Key&lt;/code>填入刚刚复制的公钥，最后点击&lt;code>Add SSH Key&lt;/code>添加即可。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/1e57b6308902d7ec62471db973c4265b.webp"
+loading="lazy"
+alt="Pasted image 20230905225818"
+>&lt;/p>
+&lt;h3 id="2建立私人仓库">2、建立私人仓库&lt;/h3>
+&lt;p>我们需要先访问&lt;a class="link" href="https://github.com/new" target="_blank" rel="noopener"
+>https://github.com/new&lt;/a>，新建一个仓库用来存放备份文件，名称自己随意，记得下面一定要勾选&lt;code>Private&lt;/code>，也就是&lt;code>私人仓库&lt;/code>。&lt;/p>
+&lt;h3 id="3配置本地仓库">3、配置本地仓库&lt;/h3>
+&lt;p>进入需要备份的文件夹，比如&lt;code>/www/wwwroot/lala&lt;/code>，也就是把该文件夹设定为&lt;code>本地仓库&lt;/code>，使用命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#进入需要备份的文件夹&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /www/wwwroot/lala
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#初始化你的github仓库&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#关联到远程github仓库&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote add origin git@github.com:Blichus/back_website.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果已经备份过了,&lt;code>拉取github仓库代码到服务器&lt;/code> (关联远程github仓库后)&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git pull origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="4初次备份">4、初次备份&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#进入备份的文件夹&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /www/wwwroot/lala
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#把目录下所有文件更改状况提交到暂存区，包括增，删，改。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add -A
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#提交更改的说明，说明随意了，这里为backsite&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;backsite&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#开始推送到Github&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push -u origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>推送的时候可能会警告提示:&lt;/p>
+&lt;p>&lt;code>The authenticity of host 'github.com' can't be established.&lt;/code>&lt;/p>
+&lt;p>&lt;code>Are you sure you want to continue connecting (yes/no/[fingerprint])? &lt;/code>&lt;/p>
+&lt;p>直进&lt;code>yes&lt;/code>即可。 然后可以看到仓库的备份文件了。&lt;/p>
+&lt;h3 id="5设置定时备份">5、设置定时备份&lt;/h3>
+&lt;p>在根目录先新建一个&lt;code>bash&lt;/code>脚本：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">nano ~/gitback.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">#进入到网站根目录，记得修改为自己的站点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /www/wwwroot/lala
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#将数据库导入到该目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mysqldump -uaaa -pbbb ccc &amp;gt; dddd.sql
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 把目录下所有文件更改状况提交到暂存区，包括增，删，改。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add -A
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 提交更改的说明，说明随意了，这里为backsite&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;backsite&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 开始推送到Github&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push -u origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>-uaaa&lt;/code> 注意:前面带 &lt;code>-u&lt;/code> 后面的&lt;code>aaa&lt;/code>为数据库用户名,通常是root&lt;/li>
+&lt;li>&lt;code>-pbbb&lt;/code> 后面的&lt;code>bbb&lt;/code>为数据库密码&lt;/li>
+&lt;li>&lt;code>ccc&lt;/code> 为数据库名称&lt;/li>
+&lt;li>&lt;code>dddd&lt;/code> 为备份的数据库文件&lt;/li>
+&lt;/ul>
+&lt;p>然后编辑好了后，使用&lt;code>ctrl+x&lt;/code>，&lt;code>y&lt;/code>保存,回车退出。&lt;/p>
+&lt;p>给与权限: &lt;code>chmod 777 gitback.sh&lt;/code>&lt;/p>
+&lt;p>再测试下脚本，使用命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash ~/gitback.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>脚本没问题的话，再设置为每天&lt;code>05:15&lt;/code>执行一次：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#并将运行日志输出到根目录的siteback.log文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;15 05 * * * bash ~/gitback.sh &amp;gt; ~/siteback.log 2&amp;gt;&amp;amp;1 &amp;amp;&amp;#34;&lt;/span> &amp;gt; bt.cron
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">crontab bt.cron
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf bt.cron
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果使用的是宝塔面板,直接&lt;code>计划任务&lt;/code>里添加&lt;code>shell脚本&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash ~/gitback.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后使用&lt;code>crontab -l&lt;/code>命令查看添加成功没。成功的话，就基本上算完成了。&lt;/p>
+&lt;p>如果你将本地文件夹推送到Github失败的话，常见原因有2种，具体如下。&lt;/p>
+&lt;h3 id="6其他问题">6、其他问题&lt;/h3>
+&lt;h4 id="1邮件问题">1、邮件问题&lt;/h4>
+&lt;p>报错提示：&lt;code>Your push would publish a private email address.&lt;/code>&lt;/p>
+&lt;p>这里可能是你将你的邮件地址私密了，解决方法如下：&lt;/p>
+&lt;p>&lt;code>方法一&lt;/code>&lt;/p>
+&lt;p>如果你想一直保持私密，可以选择方法二&lt;/p>
+&lt;p>访问&lt;a class="link" href="https://github.com/settings/emails" target="_blank" rel="noopener"
+>https://github.com/settings/emails&lt;/a>，将Keep my email address private的勾去掉。&lt;/p>
+&lt;p>&lt;code>方法二&lt;/code>&lt;/p>
+&lt;p>1、访问&lt;a class="link" href="https://github.com/settings/emails" target="_blank" rel="noopener"
+>https://github.com/settings/emails&lt;/a>，将Block command line pushes that expose my email的勾去掉。&lt;/p>
+&lt;p>2、设置你的&lt;code>github邮箱&lt;/code>，修改成自己的再运行命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git config --global user.email &amp;#34;admin@moerats.com&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="2密钥问题">2、密钥问题&lt;/h4>
+&lt;p>报错提示：&lt;code>Permission denied (publickey).&lt;/code>&lt;/p>
+&lt;p>大概的原因就是，你设置密钥的时候改成了其它名称，而&lt;code>ssh&lt;/code>默认只读取&lt;code>id_rsa&lt;/code>，所以会显示没权限。解决方法如下：&lt;/p>
+&lt;p>&lt;code>方法一:&lt;/code>&lt;/p>
+&lt;p>进入根目录的&lt;code>.ssh文件夹&lt;/code>，将你的github密钥文件，重新更名为&lt;code>id_rsa&lt;/code>。&lt;/p>
+&lt;p>&lt;code>方法二:&lt;/code>&lt;/p>
+&lt;p>将github密钥添加到&lt;code>ssh agent&lt;/code>，比如密匙名称为github，使用命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ssh-agent bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-add ~/.ssh/github
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="3mysql-command-not-found">3、mysql command not found&lt;/h4>
+&lt;p>&lt;code>crontab&lt;/code>定时任务中提示&lt;code>command not found&lt;/code>解决方案&lt;/p>
+&lt;p>写了个脚本定时从MySQL中提取数据，但是crontab发邮件提示&lt;code>mysql command not found&lt;/code>&lt;/p>
+&lt;p>很奇怪，因为直接执行此脚本不会报错，正常运行，但加入到crontab中就会报错，&lt;/p>
+&lt;p>经查，MySQL不在&lt;code>crontab&lt;/code>执行的环境变量中&lt;/p>
+&lt;p>解决方案：&lt;/p>
+&lt;p>找到MySQL的安装路径： which mysql&lt;/p>
+&lt;pre>&lt;code> 假设找到的是:/home/user1/mysql/bin/mysql
+&lt;/code>&lt;/pre>
+&lt;p>建立软连接 cd /usr/bin &amp;amp;&amp;amp; ln -fs /home/user1/mysql/bin/mysql mysql&lt;/p>
+&lt;p>完结撒花~~~&lt;/p></description></item><item><title>使用 squoosh-cli 批量压缩图片</title><link>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8-squoosh-cli-%E6%89%B9%E9%87%8F%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/</link><pubDate>Tue, 05 Sep 2023 12:47:54 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8-squoosh-cli-%E6%89%B9%E9%87%8F%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>去年之前，我写博客时并未意识到&lt;code>需要对图片进行压缩&lt;/code>。有时，文章加载的图片太多，其中一些图片过大，导致浏览体验不佳。但后来，我开始使用&lt;code>Squoosh&lt;/code>项目，每次写文章都会压缩配图。主要是因为&lt;code>Squoosh&lt;/code>太出色了，而且还是免费软件。&lt;/p>
+&lt;p>去年，我制作了一个Squoosh的&lt;code>Docker&lt;/code>镜像，可以在本地轻松启动一个图片压缩服务。但当时，我每次都是逐张压缩图片，因为我要为每张图片调整质量，以确保它们在本地存储中具有适当的大小。我自己搭建的图床运行在本地，使用本地SSD进行存储，所以之前的做法也很正常。然而，这次需要批量压缩大量图片让我意识到了批量处理的重要性。尽管可能无法完美平衡图片压缩后的&lt;code>质量和存储大小&lt;/code>，但在博客写作（关注图片质量）和本地存储之间做出一些妥协后，带来了极大的轻松和满足感，这绝对是值得的。&lt;/p>
+&lt;h2 id="正文">正文&lt;/h2>
+&lt;p>下面我讲讲如何使用 squoosh-cli 进行图片的批量压缩，之所以推荐在自建的 &lt;code>docker&lt;/code> 容器中运行 &lt;code>squoosh-cli&lt;/code> 命令，是因为容器里是 Linux 环境，命令行友好，不像 &lt;code>cmd&lt;/code> 和 &lt;code>powershell&lt;/code> 可能需要各种转义，引号，还有&lt;code>通配符&lt;/code>问题。&lt;/p>
+&lt;h3 id="新建一个专用压缩文件夹">新建一个专用压缩文件夹&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p /home/dk/squooshfiles
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod -R &lt;span class="m">0755&lt;/span> /home/dk/squooshfiles
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="下面启动-squoosh-容器命令如下">下面启动 squoosh 容器，命令如下&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d --name squoosh &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --restart unless-stopped &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 7701:8080 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /home/dk/squooshfiles:/app/squooshfiles &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> dko0/squoosh:1.12.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解析：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>/home/dk/squooshfiles&lt;/code>本地批量压缩图片文件夹&lt;/li>
+&lt;li>这将在容器中自动创建目录 &lt;code>/app/squooshfiles&lt;/code>&lt;/li>
+&lt;li>本地对 &lt;code>/home/dk/squooshfiles&lt;/code> 的修改和容器中对 &lt;code>/app/squooshfiles&lt;/code> 的修改将完全同步&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>注意: 下面的步骤都是在容器中进行操作&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="然后进入容器">然后进入容器&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker &lt;span class="nb">exec&lt;/span> -it squoosh ash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="安装-squoosh-cli-npm-包">安装 squoosh-cli npm 包&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npm i -g @squoosh/cli
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>安装完成之后执行 &lt;code>squoosh-cli --help&lt;/code> 应能获取命令行帮助。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/301c689fdd2bee47108cf1ba7329dcc8.webp"
+loading="lazy"
+alt="Pasted image 20230905125527"
+>&lt;/p>
+&lt;h3 id="进入压缩目录然后创建一个文件夹例如-0805">进入压缩目录,然后创建一个文件夹,例如 &lt;code>0805&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> .. &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">cd&lt;/span> squooshfiles
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir &lt;span class="m">0805&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">cd&lt;/span> &lt;span class="m">0805&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>把要批量压缩的照片拷贝到0805目录&lt;/p>
+&lt;h3 id="最后使用squoosh-cli命令执行批量压缩">最后使用 &lt;code>squoosh-cli&lt;/code> 命令执行批量压缩&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">squoosh-cli --mozjpeg &lt;span class="s1">&amp;#39;{&amp;#34;quality&amp;#34;:40,&amp;#34;baseline&amp;#34;:false,&amp;#34;arithmetic&amp;#34;:false,&amp;#34;progressive&amp;#34;:true,&amp;#34;optimize_coding&amp;#34;:true,&amp;#34;smoothing&amp;#34;:0,&amp;#34;color_space&amp;#34;:3,&amp;#34;quant_table&amp;#34;:3,&amp;#34;trellis_multipass&amp;#34;:false,&amp;#34;trellis_opt_zero&amp;#34;:false,&amp;#34;trellis_opt_table&amp;#34;:false,&amp;#34;trellis_loops&amp;#34;:1,&amp;#34;auto_subsample&amp;#34;:true,&amp;#34;chroma_subsample&amp;#34;:2,&amp;#34;separate_chroma_quality&amp;#34;:false,&amp;#34;chroma_quality&amp;#34;:75}&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>-d output1 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>-s small &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>*.jpg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解释&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>mozjpeg&lt;/code> 是最常用的压缩算法了，综合来说最推荐。&lt;/li>
+&lt;li>&lt;code>quality&lt;/code> 就是压缩质量了，在网页端可以直接预览压缩后的效果&lt;/li>
+&lt;li>&lt;code>-d&lt;/code> 设置输出目录&lt;/li>
+&lt;li>&lt;code>-s&lt;/code> 设置一个输出的文件名后缀，默认是空字符串&lt;/li>
+&lt;li> &lt;code>*.jpg&lt;/code> 只压缩当前目录下的所有 jpg 扩展名图片&lt;/li>
+&lt;/ul>
+&lt;p>批量压缩成功。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/3b00962b29df7e0a169e44aed3485d2b.webp"
+loading="lazy"
+alt="Pasted image 20230905130018"
+>&lt;/p>
+&lt;p>最后感谢 squoosh 项目，写博客压缩图片利器，完全免费开源，非常推荐各位博主使用。&lt;/p>
+&lt;ul>
+&lt;li>squoosh cli npm package: &lt;a class="link" href="https://www.npmjs.com/package/@squoosh/cli" target="_blank" rel="noopener"
+>https://www.npmjs.com/package/@squoosh/cli&lt;/a>&lt;/li>
+&lt;li>squoosh cli: &lt;a class="link" href="https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli" target="_blank" rel="noopener"
+>https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="一个重要的插曲解决报错">一个重要的插曲，解决报错&lt;/h3>
+&lt;p>TypeError: Cannot read properties of undefined (reading &amp;lsquo;writeText&amp;rsquo;)&lt;/p>
+&lt;p>这是 Chrome 限制了非安全网站的 API 使用，在非安全网站上 block 了 &lt;code>navigator.clipboard&lt;/code> 的 api 使用权限，所以无法拷贝 npx 命令出来。下面解决这个问题。&lt;/p>
+&lt;p>&lt;strong>open chrome，type &lt;code>chrome://flags/&lt;/code> in address bar, then find item &lt;code>Insecure origins treated as secure&lt;/code>, type &lt;code>http://10.10.10.5:7701&lt;/code> then enable it and relaunch your chrome.&lt;/strong>&lt;/p>
+&lt;p>Chrome 在此处认为的安全的网站&lt;/p>
+&lt;ul>
+&lt;li>必须 https&lt;/li>
+&lt;li>或 localhost&lt;/li>
+&lt;li>或 127.0.0.1&lt;/li>
+&lt;/ul>
+&lt;p>所以我们有必要加个白名单，这样好操作。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/b07bf1566bf9574ff227290d1802146e.webp"
+loading="lazy"
+alt="insecure origins.jpg"
+>&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>http://10.10.10.5:7701&lt;/code> 是我 squoosh 的运行环境地址。如果有多个地址需要设“白名单”，使用英文逗号隔开它们即可。&lt;/p>
+&lt;/blockquote></description></item><item><title>Clash：科学上网的究极解决方案</title><link>https://blog.leshans.eu.org/p/clash%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E7%A9%B6%E6%9E%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link><pubDate>Tue, 05 Sep 2023 10:39:56 +0800</pubDate><guid>https://blog.leshans.eu.org/p/clash%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%9A%84%E7%A9%B6%E6%9E%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>早期，我一直对&lt;code>Clash&lt;/code>的工作原理一知半解，只知道它是一种探索互联网世界的神奇工具。&lt;/p>
+&lt;p>每次需要&lt;code>科学上网&lt;/code>时，只需点击一下“系统代理”按钮，瞬间解决了各种无法访问网站的问题。&lt;/p>
+&lt;p>久而久之，不免觉得这一过程有些繁琐：&lt;code>打开网站 —— 拒绝访问 —— 启动 Clash—— 开启系统代理 —— 完成&lt;/code>。我曾经尝试简化这个步骤，最初的尝试是保持规则代理一直开启，通过配置文件来管理流量的转发规则。&lt;/p>
+&lt;p>但不久后，我发现有些网站的&lt;code>规则&lt;/code>并不适用，还是需要使用全局代理，这种方法有一定的限制，所以我放弃了这个想法。接着，我尝试设置全局快捷键，我选择了F2键，虽然效果还算可以，但每次都需要手动按下，稍显麻烦。正如大家都知道的，懒惰是发明创造的源泉，于是我孵化出了以下的&lt;code>终极解决方案&lt;/code>。本文将完全解决以下令人烦恼的问题：&lt;/p>
+&lt;ol>
+&lt;li>访问网页需要手动开启 Clash&lt;/li>
+&lt;li>终端不走 Clash 流量&lt;/li>
+&lt;li>Git 也蹭不到 Clash 流量&lt;/li>
+&lt;/ol>
+&lt;h2 id="准备工作">准备工作&lt;/h2>
+&lt;p>首先要准备 Clash 和节点，这是一个比较敏感的话题，所以本文不提供任何渠道。&lt;/p>
+&lt;p>其次要知道 Clash 的端口号，默认是 &lt;code>7890&lt;/code>，如果你先前没有进行更改的话。&lt;/p>
+&lt;p>最后需要 &lt;code>Chrome&lt;/code> 或 &lt;code>Edge&lt;/code> 浏览器，同时能够访问&lt;code>拓展商店&lt;/code>，找到并下载 &lt;a class="link" href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN" target="_blank" rel="noopener"
+>SwitchyOmega&lt;/a>（需要科学上网）&lt;/p>
+&lt;h2 id="配置-switchyomega">配置 SwitchyOmega&lt;/h2>
+&lt;p>Clash 用户请按照以下进行配置。&lt;/p>
+&lt;p>首先配置代理服务器，选择本机，也就是 &lt;code>127.0.0.1&lt;/code> ， 端口选择 &lt;code>7890&lt;/code>，协议选择 &lt;code>socks5&lt;/code>&lt;/p>
+&lt;p>完事以后先点一下左边 &lt;code>ACTIONS&lt;/code> 下面的 &lt;code>应用选项&lt;/code> 来保存一下&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/2a5de368ac799c8d1a4be79dcdca88ce.webp"
+loading="lazy"
+alt="image-20230904214009659"
+>&lt;/p>
+&lt;p>接下来在情景模式的&lt;code> auto switch&lt;/code> 中写入网上人家配置好的规则&lt;/p>
+&lt;p>这里请&lt;code>开启 Clash&lt;/code> 系统代理！要不然访问不了 GitHub ！&lt;/p>
+&lt;p>规则列表格式选择 &lt;code>AutoProxy&lt;/code>，规则列表网址填写&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后点击立即更新情景模式，规则列表正文自动刷新&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/12c249bdbab8cd7856ed1d37f286f5d9.webp"
+loading="lazy"
+alt="image-20230904214345242"
+>&lt;/p>
+&lt;p>接下来的一步很关键：这里选择 &lt;code>Proxy&lt;/code>，要不然开了跟没开一样&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/52e26255be41941888f642f3f225a8ed.webp"
+loading="lazy"
+alt="image-20230904214648894"
+>&lt;/p>
+&lt;p>同时，在浏览器插件中选择 &lt;code>auto switch&lt;/code> 选项，这样就可以根据我们访问的网站自动切换代理，例如谷歌，YouTube 等&lt;/p>
+&lt;blockquote>
+&lt;p>Clash 不需要开启系统代理了，只要在后台挂着就行，记得&lt;code>设置 Clash 为开机启动&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/865124ed97a641e588533a54ed4ba389.webp"
+loading="lazy"
+alt="image-20230904214758290"
+>&lt;/p>
+&lt;p>当然，别人写的规则肯定不可能百分百全覆盖，按照自己的需要把常用的网站写进规则里面就可以了。&lt;/p>
+&lt;p>这里要提醒的是，有些国外网站，例如 &lt;code>YouTube.com&lt;/code>，并不是简单的把他添加进规则里面就行，因为它本身还要引用例如 &lt;code>Googlevideo.com&lt;/code> 这一类的 cdn，还要把 cdn 也添加进规则里面。这一步可以通过以下步骤来一键添加规则：&lt;/p>
+&lt;p>找到所有未加载的资源&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/49cedeacafd049296a513fd75cbf090b.webp"
+loading="lazy"
+alt="image-20230904215451622"
+>&lt;/p>
+&lt;p>一键添加规则&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/504e4ac102093bd3083e7fac87927214.webp"
+loading="lazy"
+alt="image-20230904215518075"
+>&lt;/p>
+&lt;h2 id="设置-git-代理">设置 Git 代理&lt;/h2>
+&lt;p>设置代理&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git config --global http.proxy 127.0.0.1:7890 &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git config --global https.proxy 127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>取消代理&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git config --global --unset http.proxy &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git config --global --unset https.proxy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>查看代理&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git config --global --get http.proxy &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git config --global --get ht
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>git clone 时要使用 https 协议，因为设置的是 HTTPS 代理，所以使用 SSH 克隆还是很慢,
+解决办法: 请看本站 # &lt;code>GitHub加速终极教程&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="设置终端代理">设置终端代理&lt;/h2>
+&lt;p>Windows 用户可以跳过这里了，这边主要是针对 Linux 或 macOS 的终端进行设置&lt;/p>
+&lt;p>我自己用的是 macOS，经常使用 homebrew 下载软件时要等半天，然后对我丢出一个 time out，此情景是何等的令人恼火。但是如果一昧的设置永久系统代理，那么下载某些国内软件时反而会变成 “减速器”，而且必然会浪费很多流量（流量用不完的随意）。所以这里使用一次性的方法设置代理，即代理只在当前终端窗口有效，如果关掉再开就失效了。&lt;/p>
+&lt;p>编辑 &lt;code>zsh&lt;/code> 配置文件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">vim ~/.zshrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>滑到最底下，按自己的需要写入以下内容：&lt;/p>
+&lt;p>设置一次性代理&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;export http_proxy=http://127.0.0.1:7890;export https_proxy=http://127.0.0.1:7890;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>设置永久代理：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>http://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>http://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>保存并退出，使用 &lt;code>source ~/.zshrc&lt;/code> 刷新配置文件&lt;/p>
+&lt;p>使用方法：如果设置的是一次性代理，那么在需要使用代理的指令前加上 &lt;code>proxy&lt;/code>&lt;/p>
+&lt;p>例如使用 homebrew 下载 qq 音乐：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">proxy brew install qqmusic
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者单独使用 &lt;code>proxy&lt;/code> 一行命令开启代理，如果想关闭代理直接把当前终端窗口关掉就行，因为是一次性的&lt;/p>
+&lt;p>当然，如果是永久代理就需要手动注释掉添加的两行代码才能关闭代理 🤡&lt;/p></description></item><item><title>GitHub加速终极教程</title><link>https://blog.leshans.eu.org/p/github%E5%8A%A0%E9%80%9F%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</link><pubDate>Sun, 03 Sep 2023 10:09:30 +0800</pubDate><guid>https://blog.leshans.eu.org/p/github%E5%8A%A0%E9%80%9F%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</guid><description>&lt;p>本文意图解决使用 GitHub 访问(https) 或者 git clone（https or ssh）慢的问题。在此分享我的方法，我所了解的 GitHub 加速最佳方案。&lt;/p>
 &lt;blockquote>
 &lt;p>前提是，你的木弟子应该还行，木弟子越好，GitHub 体验越好&lt;/p>
 &lt;/blockquote>
@@ -42,6 +557,9 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="设置-ssh-proxy-推荐">设置 SSH Proxy (推荐)&lt;/h2>
+&lt;blockquote>
+&lt;p>设置ssh代理,可加速 git clone SSH协议下载&lt;/p>
+&lt;/blockquote>
 &lt;h3 id="linux--macos">Linux &amp;amp; macOS&lt;/h3>
 &lt;p>配置文件在用户家目录下的 .ssh/config 其中 &lt;code>nc&lt;/code> 程序位于 &lt;code>/usr/bin/nc&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -768,7 +1286,34 @@ alt="Pasted image 20230829023641"
 &lt;p>&lt;a class="link" href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener"
 >https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi#dns_cf" target="_blank" rel="noopener"
->https://github.com/acmesh-official/acme.sh/wiki/dnsapi#dns_cf&lt;/a>&lt;/p></description></item><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%87%AA%E5%BB%BAcdn%E5%8A%A0%E9%80%9F%E8%8A%82%E7%82%B9/</link><pubDate>Thu, 24 Aug 2023 14:05:35 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%87%AA%E5%BB%BAcdn%E5%8A%A0%E9%80%9F%E8%8A%82%E7%82%B9/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/08/f8755589bda5d30c357ce5e7110010f5.webp" alt="Featured image of post 使用Nginx反向代理，自建CDN加速节点" />&lt;h2 id="安装">安装&lt;/h2>
+>https://github.com/acmesh-official/acme.sh/wiki/dnsapi#dns_cf&lt;/a>&lt;/p></description></item><item><title>推荐8个宝藏级的开源软件！来自Github的免费精品项目</title><link>https://blog.leshans.eu.org/p/%E6%8E%A8%E8%8D%908%E4%B8%AA%E5%AE%9D%E8%97%8F%E7%BA%A7%E7%9A%84%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E6%9D%A5%E8%87%AAgithub%E7%9A%84%E5%85%8D%E8%B4%B9%E7%B2%BE%E5%93%81%E9%A1%B9%E7%9B%AE/</link><pubDate>Sun, 27 Aug 2023 23:27:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E6%8E%A8%E8%8D%908%E4%B8%AA%E5%AE%9D%E8%97%8F%E7%BA%A7%E7%9A%84%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E6%9D%A5%E8%87%AAgithub%E7%9A%84%E5%85%8D%E8%B4%B9%E7%B2%BE%E5%93%81%E9%A1%B9%E7%9B%AE/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/87400406fde62d7161f6d5c3e000eab7.webp"
+loading="lazy"
+alt="Pasted image 20230827232940"
+>&lt;/p>
+&lt;p>1.Malware-Patch：阻止 Windows 流氓软体授权的工具。它轻巧、无需后台运行，可用于阻止指定软体的管理员授权。&lt;/p>
+&lt;p>【&lt;strong>&lt;a class="link" href="https://github.com/the1812/Malware-Patch/blob/master" target="_blank" rel="noopener"
+>开源项目&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>2.Rocket.Chat：一款可自由定制的企业级开源通信平台源码。用它来可以搭建一个功能丰富的通信平台，可自託管做为 Slack 的开源替代品。支持创建频道、团队和讨论等多种不同功能的群聊，消息支持图片、文件、视频和语音，拥有包括 Windows、Linux、macOS、Android 和 iOS 在内的多种客户端。 如果你需要搭建一个安全加密，且具有高度私密性的通信平台，那麽这款开源项目就非常适合你了。&lt;/p>
+&lt;p>【&lt;a class="link" href="https://github.com/RocketChat/Rocket.Chat" target="_blank" rel="noopener"
+>&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>3.hackingtool：黑客工具全家桶。该项目收录了各种黑客工具，包括破解密码、SQL 注入、钓鱼攻击、XSS、DDos 等。堪称黑客军火库的开源项目啊&lt;br>
+【&lt;strong>&lt;a class="link" href="https://github.com/Z4nzu/hackingtool" target="_blank" rel="noopener"
+>开源项目&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>4.sniffnet：可轻鬆监控网路流量的工具。这是一个简单、可靠、炫酷的网路监控应用，可以让你一目了然地了解设备的网路流量。&lt;br>
+【&lt;a class="link" href="https://github.com/GyulyVGC/sniffnet" target="_blank" rel="noopener"
+>&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>5.changedetection ：简单好用的网站变更检测、监控和通知服务。基于 Flask+Selenium 构建的 Web 服务，可以在目标网站发生变化时发出通知，可用于监控商品降价、工作机会、版本发布、最新内容等，支持 Docker 的安装方式。&lt;/p>
+&lt;p>【&lt;a class="link" href="https://github.com/dgtlmoon/changedetection.io" target="_blank" rel="noopener"
+>&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>6.calibre：一款完全免费开源且功能强大的电子书管理工具。它是集下载、格式转化、制作、管理于一体的电子书工具，比如可以将 txt 文本，转化成包含作者信息和书籍封面的 mobi 文件，制作完成后还可以直接发送到 Kindle 设备上。 支持多种电子书格式，包括EPUB、MOBI、PDF等等。Calibre的功能非常强大，可以帮助用户轻鬆地管理自己的电子书库，包括添加、删除、重命名和搜索等。此外，它还提供了阅读器功能，用户可以在软体内直接阅读电子书，而不需要另外下载阅读器。你还可以可通过插件/扩展实现更多的功能。&lt;/p>
+&lt;p>【&lt;a class="link" href="https://github.com/kovidgoyal/calibre" target="_blank" rel="noopener"
+>&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>7.Magisk：Android 获取 Root 许可权的工具。它可以快速、无痛地获得 Android 的超级用户许可权，支持 Android 5.0 以上的设备。&lt;br>
+【&lt;strong>&lt;a class="link" href="https://github.com/topjohnwu/Magisk" target="_blank" rel="noopener"
+>开源项目&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>8.uptime-kuma：一款极简的 uptime 监控工具。该项目可以用来监控服务正常运行时间，它界面美观、支持 Docker 一键部署，提供了中文界面、通知、多状态页面等实用功能。&lt;/p>
+&lt;p>【&lt;strong>&lt;a class="link" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener"
+>开源项目&lt;/a>&lt;/strong>】&lt;/p></description></item><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%87%AA%E5%BB%BAcdn%E5%8A%A0%E9%80%9F%E8%8A%82%E7%82%B9/</link><pubDate>Thu, 24 Aug 2023 14:05:35 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%87%AA%E5%BB%BAcdn%E5%8A%A0%E9%80%9F%E8%8A%82%E7%82%B9/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
 &lt;h3 id="1安装nginx">1、安装Nginx&lt;/h3>
 &lt;p>&lt;a class="link" href="https://lnmp.org/install.html" target="_blank" rel="noopener"
 >这里使用的是军哥的LNMP&lt;/a> &lt;em>单独安装Nginx&lt;/em>&lt;/p>
@@ -954,7 +1499,7 @@ alt="Pasted image 20230829023641"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>你也可以使用多台&lt;code>VPS&lt;/code>，利用&lt;code>CloudXNS&lt;/code>智能解析，将不同地区的&lt;code>DNS&lt;/code>解析到最近的&lt;code>VPS&lt;/code>上，进行&lt;code>CND&lt;/code>加速。&lt;/p></description></item><item><title>Gravatar头像 镜像地址大全</title><link>https://blog.leshans.eu.org/p/gravatar%E5%A4%B4%E5%83%8F-%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80%E5%A4%A7%E5%85%A8/</link><pubDate>Thu, 24 Aug 2023 12:32:50 +0800</pubDate><guid>https://blog.leshans.eu.org/p/gravatar%E5%A4%B4%E5%83%8F-%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80%E5%A4%A7%E5%85%A8/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/08/68a02214eef1f4d4945bbdbab714839f.webp" alt="Featured image of post Gravatar头像 镜像地址大全" />&lt;h2 id="介绍">介绍&lt;/h2>
+&lt;/div>&lt;p>你也可以使用多台&lt;code>VPS&lt;/code>，利用&lt;code>CloudXNS&lt;/code>智能解析，将不同地区的&lt;code>DNS&lt;/code>解析到最近的&lt;code>VPS&lt;/code>上，进行&lt;code>CND&lt;/code>加速。&lt;/p></description></item><item><title>Gravatar头像 镜像地址大全</title><link>https://blog.leshans.eu.org/p/gravatar%E5%A4%B4%E5%83%8F-%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80%E5%A4%A7%E5%85%A8/</link><pubDate>Thu, 24 Aug 2023 12:32:50 +0800</pubDate><guid>https://blog.leshans.eu.org/p/gravatar%E5%A4%B4%E5%83%8F-%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80%E5%A4%A7%E5%85%A8/</guid><description>&lt;h2 id="介绍">介绍&lt;/h2>
 &lt;p>当我们在很多博客或者网站留言，评论的时候会看到有的人头像很酷很个性化，但是这个博客和网站本身并没有提供设置头像的功能，感觉有点神奇，那么是怎么做到的呢？&lt;code>其实这是使用了Gravatar&lt;/code>。&lt;/p>
 &lt;p>Gravatar，全称&lt;code>Globally Recognized Avatar&lt;/code>。翻译成中文为&lt;code>全球通用头像&lt;/code>。&lt;/p>
 &lt;p>Gravatar的概念首先是在国外的独立WordPress博客中兴起的，当你到任何一个支持Gravatar的网站留言时，这个网站都会根据你所提供的Email地址为你显示出匹配的头像。当然，这个头像，是需要你事先到Gravatar的网站注册并上传的，否则，在这个网站上，就只会显示成一个默认的头像。&lt;/p>
@@ -987,7 +1532,7 @@ alt="Pasted image 20230829023641"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- 极客族：&lt;span class="o">[&lt;/span>https://sdn.geekzu.org/avatar/&lt;span class="o">]&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Git配置、提交到多个远程仓库</title><link>https://blog.leshans.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://blog.leshans.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/08/db9d9ceb3240cf0e7b51475e32562577.webp" alt="Featured image of post Git配置、提交到多个远程仓库" />&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
+&lt;/div></description></item><item><title>Git配置、提交到多个远程仓库</title><link>https://blog.leshans.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://blog.leshans.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid><description>&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
 &lt;p>在&lt;code>gitee&lt;/code>平台,你可以将&lt;code>github&lt;/code>上的项目导入进来,只需要填上github仓库 &lt;code>URL&lt;/code>即可.非常方便&lt;/p>
 &lt;h2 id="同时提交到github和gitee">同时提交到github和gitee&lt;/h2>
 &lt;h2 id="方法一">方法一&lt;/h2>
@@ -2519,7 +3064,7 @@ alt="Pasted image 20230814123709"
 &lt;p>安装成功后，可使用 &lt;a class="link" href="https://1panel.cn/docs/installation/cli/" target="_blank" rel="noopener"
 >1pctl&lt;/a> 命令行工具来维护 1Panel&lt;/p>
 &lt;p>&lt;a class="link" href="https://1panel.cn/docs/installation/cli/" target="_blank" rel="noopener"
->https://1panel.cn/docs/installation/cli/&lt;/a>&lt;/p></description></item><item><title>好用的LDNMP一键建站脚本工具</title><link>https://blog.leshans.eu.org/p/%E5%A5%BD%E7%94%A8%E7%9A%84ldnmp%E4%B8%80%E9%94%AE%E5%BB%BA%E7%AB%99%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</link><pubDate>Sat, 12 Aug 2023 17:04:38 +0000</pubDate><guid>https://blog.leshans.eu.org/p/%E5%A5%BD%E7%94%A8%E7%9A%84ldnmp%E4%B8%80%E9%94%AE%E5%BB%BA%E7%AB%99%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</guid><description>&lt;p>安装下载工具:&lt;/p>
+>https://1panel.cn/docs/installation/cli/&lt;/a>&lt;/p></description></item><item><title>强大的LDNMP一键建站脚本工具</title><link>https://blog.leshans.eu.org/p/%E5%BC%BA%E5%A4%A7%E7%9A%84ldnmp%E4%B8%80%E9%94%AE%E5%BB%BA%E7%AB%99%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</link><pubDate>Sat, 12 Aug 2023 17:04:38 +0000</pubDate><guid>https://blog.leshans.eu.org/p/%E5%BC%BA%E5%A4%A7%E7%9A%84ldnmp%E4%B8%80%E9%94%AE%E5%BB%BA%E7%AB%99%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</guid><description>&lt;p>安装依赖&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2528,7 +3073,7 @@ alt="Pasted image 20230814123709"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">apt update -y  &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y curl
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>一键脚本工具:&lt;/p>
+&lt;/div>&lt;p>一键脚本&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2537,50 +3082,11 @@ alt="Pasted image 20230814123709"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>根目录执行&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">nano .bashrc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>在内容最下方添加这行数据，定义k按键调用&lt;code>kejilion.sh&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">k&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;curl -sS -O https://kejilion.pro/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/4f4f7aea12ec40ecab2446aad75434fb.webp"
-loading="lazy"
-alt="Pasted image 20230815141922"
->&lt;/p>
-&lt;p>退出nano编辑器, &lt;code>ctrl+x&lt;/code> &lt;code> y&lt;/code>  回车&lt;/p>
-&lt;p>更新下文件&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source ~/.bashrc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>好了，尝试k键召唤科技lion一键脚本工具吧！&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/968a3bc2ead5dd1e347207379deed93e.webp"
-loading="lazy"
-alt="Pasted image 20230815142106"
->&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/478388c2efcb07b65699946a1a730b9c.webp"
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/478388c2efcb07b65699946a1a730b9c.webp"
 loading="lazy"
 alt="Pasted image 20230813220236"
 >&lt;/p>
-&lt;p>目前只支持&lt;code>Ubuntu&lt;/code>和&lt;code>Debian&lt;/code>系统，暂不支持其它系统！&lt;/p>
-&lt;p>此脚本目前比较基础，会不断进化，整合大家常用的脚本。方便使用。&lt;/p>
-&lt;p>&lt;code>LDNMP&lt;/code>属于原创内容，&lt;code>建站&lt;/code>更方便。&lt;/p>
+&lt;p>&lt;code>观看教程&lt;/code>&lt;/p>
 &lt;div class="video-wrapper">
 &lt;iframe loading="lazy"
 src="https://www.youtube.com/embed/0o7oH3Dit70"
@@ -2597,7 +3103,7 @@ title="YouTube Video"
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">lsb_release -a
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">lsb_release -a
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="2-服务器端">2. 服务器端&lt;/h2>
@@ -9652,70 +10158,9 @@ alt="Pasted image 20230825114454"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt update -y &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt full-upgrade -y &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y curl wget sudo socat
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>宝塔7.7安装教程</title><link>https://blog.leshans.eu.org/p/6/</link><pubDate>Tue, 25 Jul 2023 23:38:07 +0800</pubDate><guid>https://blog.leshans.eu.org/p/6/</guid><description>&lt;p>为什么是 7.7.0 版本，而不是其他版本呢？因为这个版本没有很旧，也没有太多限制，还可以破解&lt;/p>
-&lt;blockquote>
-&lt;h3 id="安装宝塔">&lt;strong>安装宝塔：&lt;/strong>&lt;/h3>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;amp;&amp;amp; sh install.sh ed8484bec
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="1下载离线升级包">&lt;strong>1、下载离线升级包&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">wget https://github.com/woniu336/2btc/raw/main/LinuxPanel-7.7.0.zip
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="2解压">&lt;strong>2、解压&lt;/strong>&lt;/h3>
-&lt;p>yum -y install unzip zip （若解压失败）&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">unzip LinuxPanel-7.7.0.zip
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="3进入升级目录">&lt;strong>3、进入升级目录&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd /root/panel
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="4运行降级">&lt;strong>4、运行降级&lt;/strong>&lt;/h3>
-&lt;p>bash update.sh&lt;/p>
-&lt;h3 id="5去除登录">&lt;strong>5、去除登录&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm -f /www/server/panel/data/bind.pl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>全部安装完成后，执行以下内容，避免官方搞小动作&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">echo &amp;#39;127.0.0.1 bt.cn&amp;#39; &amp;gt;&amp;gt;/etc/hosts
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;h3 id="其他方法">其他方法&lt;/h3>
-&lt;/blockquote>
-&lt;p>&lt;strong>Centos/Ubuntu/Debian 安装命令独立运行环境（py 3.7）&lt;/strong>&lt;/p>
+&lt;/div></description></item><item><title>宝塔面板7.7破解版安装教程</title><link>https://blog.leshans.eu.org/p/6/</link><pubDate>Tue, 25 Jul 2023 23:38:07 +0800</pubDate><guid>https://blog.leshans.eu.org/p/6/</guid><description>&lt;p>为什么选择了版本号 7.7.0 而非其他版本呢？这个版本之所以被选中，是因为它并不过于陈旧，也没有太多限制，同时具备一定的破解潜力。&lt;/p>
+&lt;h3 id="一键安装77版本">一键安装7.7版本&lt;/h3>
+&lt;p>适用 Centos/Ubuntu/Debian&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -9724,23 +10169,22 @@ alt="Pasted image 20230825114454"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sSO https://raw.githubusercontent.com/woniu336/btpanel-v7.7.0/main/install/install_panel.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> bash install_panel.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="净化与破解">净化与破解&lt;/h2>
-&lt;h3 id="修改-hosts-文件">&lt;strong>修改 hosts 文件&lt;/strong>&lt;/h3>
+&lt;/div>&lt;p>&lt;code>安装完成后,解除进入面板需要账号密码:&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;127.0.0.1 bt.cn&amp;#39;&lt;/span> &amp;gt;&amp;gt;/etc/hosts
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rm -f /www/server/panel/data/bind.pl
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="解除强制手机登录">解除强制手机登录&lt;/h3>
+&lt;/div>&lt;p>&lt;code>执行以下内容，避免官方搞小动作&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">rm -f /www/server/panel/data/bind.pl
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;127.0.0.1 bt.cn&amp;#39;&lt;/span> &amp;gt;&amp;gt;/etc/hosts
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="手动解锁宝塔所有付费插件为永不过期">&lt;strong>手动解锁宝塔所有付费插件为永不过期&lt;/strong>&lt;/h3>
@@ -9756,6 +10200,37 @@ alt="Pasted image 20230825114454"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>注意事项 : 服务器重启后又回到&amp;quot;endtime&amp;quot;: -1 需要再次修改替换&lt;/p>
+&lt;h3 id="净化面板">净化面板&lt;/h3>
+&lt;p>下载文件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">wget -O /tmp/bt.zip https://github.com/woniu336/btpanel-v7.7.0/raw/main/bt/bt.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解压文件并合并到目标目录 (选A 同意覆盖所有)&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">unzip -u /tmp/bt.zip -d /www/server/panel/BTPanel/templates/default
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>删除下载的压缩文件（如果需要）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm /tmp/bt.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="最后重启面板生效">最后重启面板生效&lt;/h3>
+&lt;p>完结撒花🤡&lt;/p>
+&lt;p>fuck bt 🤡🤡🤡&lt;/p>
 &lt;p></description></item><item><title>整理一些常用的脚本（持续更新中）</title><link>https://blog.leshans.eu.org/p/5/</link><pubDate>Tue, 25 Jul 2023 23:28:57 +0800</pubDate><guid>https://blog.leshans.eu.org/p/5/</guid><description>&lt;h2 id="测试cpu性能脚本">测试CPU性能脚本&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

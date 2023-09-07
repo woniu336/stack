@@ -42,6 +42,9 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="设置-ssh-proxy-推荐">设置 SSH Proxy (推荐)&lt;/h2>
+&lt;blockquote>
+&lt;p>设置ssh代理,可加速 git clone SSH协议下载&lt;/p>
+&lt;/blockquote>
 &lt;h3 id="linux--macos">Linux &amp;amp; macOS&lt;/h3>
 &lt;p>配置文件在用户家目录下的 .ssh/config 其中 &lt;code>nc&lt;/code> 程序位于 &lt;code>/usr/bin/nc&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -123,7 +126,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOL&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Git配置、提交到多个远程仓库</title><link>https://blog.leshans.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://blog.leshans.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/08/db9d9ceb3240cf0e7b51475e32562577.webp" alt="Featured image of post Git配置、提交到多个远程仓库" />&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
+&lt;/div></description></item><item><title>Git配置、提交到多个远程仓库</title><link>https://blog.leshans.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://blog.leshans.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid><description>&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
 &lt;p>在&lt;code>gitee&lt;/code>平台,你可以将&lt;code>github&lt;/code>上的项目导入进来,只需要填上github仓库 &lt;code>URL&lt;/code>即可.非常方便&lt;/p>
 &lt;h2 id="同时提交到github和gitee">同时提交到github和gitee&lt;/h2>
 &lt;h2 id="方法一">方法一&lt;/h2>

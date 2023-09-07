@@ -1,4 +1,243 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>备份 on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/%E5%A4%87%E4%BB%BD/</link><description>Recent content in 备份 on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 26 Jul 2023 00:39:14 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%A4%87%E4%BB%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>网站远程自动备份方法分享</title><link>https://blog.leshans.eu.org/p/12/</link><pubDate>Wed, 26 Jul 2023 00:39:14 +0800</pubDate><guid>https://blog.leshans.eu.org/p/12/</guid><description>&lt;div class="video-wrapper">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>备份 on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/%E5%A4%87%E4%BB%BD/</link><description>Recent content in 备份 on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Sep 2023 22:32:24 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%A4%87%E4%BB%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</link><pubDate>Tue, 05 Sep 2023 22:32:24 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</guid><description>&lt;p>随着&lt;code>GitHub&lt;/code>被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造&lt;code>空间&lt;/code>。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。&lt;/p>
+&lt;h2 id="教程">教程&lt;/h2>
+&lt;p>首先你肯定需要一个&lt;a class="link" href="https://so.csdn.net/so/search?q=Github&amp;amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener"
+>Github&lt;/a>账号，没有的可以去注册一个，地址：&lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
+>&lt;/a>&lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
+>https://github.com&lt;/a>。有了账号就继续看。&lt;/p>
+&lt;h3 id="1配置git-ssh密钥">1、配置Git SSH密钥&lt;/h3>
+&lt;blockquote>
+&lt;p>由于本地Git仓库和GitHub仓库之间的传输是通过&lt;code>SSH&lt;/code>加密的，所以必须要让github仓库认证你&lt;code>SSH key&lt;/code>，在操作之前，需要先在服务器上生成&lt;code>SSH key&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;p>设置github 用户名和邮箱&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git config --global user.name &lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email &lt;span class="s2">&amp;#34;xxxx@qq.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们先去根目录下使用命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> ~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-keygen -t rsa
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里会要你命名&lt;code>密钥名称&lt;/code>(建议使用&lt;code>默认&lt;/code>名称)，然后连续按几次&lt;code>Enter&lt;/code>，这时候会在&lt;code>/root/.ssh&lt;/code>文件夹生成2个ssh密钥，然后我们查看公钥&lt;code>id_rsa.pub&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat ~/.ssh/id_rsa.pub
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>查看后，再复制下公钥&lt;/li>
+&lt;li>打开Github官网，进入&lt;a class="link" href="https://github.com/settings/ssh/new" target="_blank" rel="noopener"
+>https://github.com/settings/ssh/new&lt;/a>，&lt;/li>
+&lt;li>&lt;code>Title&lt;/code>随意，然后&lt;code>Key&lt;/code>填入刚刚复制的公钥，最后点击&lt;code>Add SSH Key&lt;/code>添加即可。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/1e57b6308902d7ec62471db973c4265b.webp"
+loading="lazy"
+alt="Pasted image 20230905225818"
+>&lt;/p>
+&lt;h3 id="2建立私人仓库">2、建立私人仓库&lt;/h3>
+&lt;p>我们需要先访问&lt;a class="link" href="https://github.com/new" target="_blank" rel="noopener"
+>https://github.com/new&lt;/a>，新建一个仓库用来存放备份文件，名称自己随意，记得下面一定要勾选&lt;code>Private&lt;/code>，也就是&lt;code>私人仓库&lt;/code>。&lt;/p>
+&lt;h3 id="3配置本地仓库">3、配置本地仓库&lt;/h3>
+&lt;p>进入需要备份的文件夹，比如&lt;code>/www/wwwroot/lala&lt;/code>，也就是把该文件夹设定为&lt;code>本地仓库&lt;/code>，使用命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#进入需要备份的文件夹&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /www/wwwroot/lala
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#初始化你的github仓库&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#关联到远程github仓库&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote add origin git@github.com:Blichus/back_website.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果已经备份过了,&lt;code>拉取github仓库代码到服务器&lt;/code> (关联远程github仓库后)&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git pull origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="4初次备份">4、初次备份&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#进入备份的文件夹&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /www/wwwroot/lala
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#把目录下所有文件更改状况提交到暂存区，包括增，删，改。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add -A
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#提交更改的说明，说明随意了，这里为backsite&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;backsite&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#开始推送到Github&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push -u origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>推送的时候可能会警告提示:&lt;/p>
+&lt;p>&lt;code>The authenticity of host 'github.com' can't be established.&lt;/code>&lt;/p>
+&lt;p>&lt;code>Are you sure you want to continue connecting (yes/no/[fingerprint])? &lt;/code>&lt;/p>
+&lt;p>直进&lt;code>yes&lt;/code>即可。 然后可以看到仓库的备份文件了。&lt;/p>
+&lt;h3 id="5设置定时备份">5、设置定时备份&lt;/h3>
+&lt;p>在根目录先新建一个&lt;code>bash&lt;/code>脚本：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">nano ~/gitback.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">#进入到网站根目录，记得修改为自己的站点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /www/wwwroot/lala
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#将数据库导入到该目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mysqldump -uaaa -pbbb ccc &amp;gt; dddd.sql
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 把目录下所有文件更改状况提交到暂存区，包括增，删，改。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add -A
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 提交更改的说明，说明随意了，这里为backsite&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;backsite&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 开始推送到Github&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push -u origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>-uaaa&lt;/code> 注意:前面带 &lt;code>-u&lt;/code> 后面的&lt;code>aaa&lt;/code>为数据库用户名,通常是root&lt;/li>
+&lt;li>&lt;code>-pbbb&lt;/code> 后面的&lt;code>bbb&lt;/code>为数据库密码&lt;/li>
+&lt;li>&lt;code>ccc&lt;/code> 为数据库名称&lt;/li>
+&lt;li>&lt;code>dddd&lt;/code> 为备份的数据库文件&lt;/li>
+&lt;/ul>
+&lt;p>然后编辑好了后，使用&lt;code>ctrl+x&lt;/code>，&lt;code>y&lt;/code>保存,回车退出。&lt;/p>
+&lt;p>给与权限: &lt;code>chmod 777 gitback.sh&lt;/code>&lt;/p>
+&lt;p>再测试下脚本，使用命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash ~/gitback.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>脚本没问题的话，再设置为每天&lt;code>05:15&lt;/code>执行一次：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#并将运行日志输出到根目录的siteback.log文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;15 05 * * * bash ~/gitback.sh &amp;gt; ~/siteback.log 2&amp;gt;&amp;amp;1 &amp;amp;&amp;#34;&lt;/span> &amp;gt; bt.cron
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">crontab bt.cron
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf bt.cron
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果使用的是宝塔面板,直接&lt;code>计划任务&lt;/code>里添加&lt;code>shell脚本&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash ~/gitback.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后使用&lt;code>crontab -l&lt;/code>命令查看添加成功没。成功的话，就基本上算完成了。&lt;/p>
+&lt;p>如果你将本地文件夹推送到Github失败的话，常见原因有2种，具体如下。&lt;/p>
+&lt;h3 id="6其他问题">6、其他问题&lt;/h3>
+&lt;h4 id="1邮件问题">1、邮件问题&lt;/h4>
+&lt;p>报错提示：&lt;code>Your push would publish a private email address.&lt;/code>&lt;/p>
+&lt;p>这里可能是你将你的邮件地址私密了，解决方法如下：&lt;/p>
+&lt;p>&lt;code>方法一&lt;/code>&lt;/p>
+&lt;p>如果你想一直保持私密，可以选择方法二&lt;/p>
+&lt;p>访问&lt;a class="link" href="https://github.com/settings/emails" target="_blank" rel="noopener"
+>https://github.com/settings/emails&lt;/a>，将Keep my email address private的勾去掉。&lt;/p>
+&lt;p>&lt;code>方法二&lt;/code>&lt;/p>
+&lt;p>1、访问&lt;a class="link" href="https://github.com/settings/emails" target="_blank" rel="noopener"
+>https://github.com/settings/emails&lt;/a>，将Block command line pushes that expose my email的勾去掉。&lt;/p>
+&lt;p>2、设置你的&lt;code>github邮箱&lt;/code>，修改成自己的再运行命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git config --global user.email &amp;#34;admin@moerats.com&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="2密钥问题">2、密钥问题&lt;/h4>
+&lt;p>报错提示：&lt;code>Permission denied (publickey).&lt;/code>&lt;/p>
+&lt;p>大概的原因就是，你设置密钥的时候改成了其它名称，而&lt;code>ssh&lt;/code>默认只读取&lt;code>id_rsa&lt;/code>，所以会显示没权限。解决方法如下：&lt;/p>
+&lt;p>&lt;code>方法一:&lt;/code>&lt;/p>
+&lt;p>进入根目录的&lt;code>.ssh文件夹&lt;/code>，将你的github密钥文件，重新更名为&lt;code>id_rsa&lt;/code>。&lt;/p>
+&lt;p>&lt;code>方法二:&lt;/code>&lt;/p>
+&lt;p>将github密钥添加到&lt;code>ssh agent&lt;/code>，比如密匙名称为github，使用命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ssh-agent bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-add ~/.ssh/github
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="3mysql-command-not-found">3、mysql command not found&lt;/h4>
+&lt;p>&lt;code>crontab&lt;/code>定时任务中提示&lt;code>command not found&lt;/code>解决方案&lt;/p>
+&lt;p>写了个脚本定时从MySQL中提取数据，但是crontab发邮件提示&lt;code>mysql command not found&lt;/code>&lt;/p>
+&lt;p>很奇怪，因为直接执行此脚本不会报错，正常运行，但加入到crontab中就会报错，&lt;/p>
+&lt;p>经查，MySQL不在&lt;code>crontab&lt;/code>执行的环境变量中&lt;/p>
+&lt;p>解决方案：&lt;/p>
+&lt;p>找到MySQL的安装路径： which mysql&lt;/p>
+&lt;pre>&lt;code> 假设找到的是:/home/user1/mysql/bin/mysql
+&lt;/code>&lt;/pre>
+&lt;p>建立软连接 cd /usr/bin &amp;amp;&amp;amp; ln -fs /home/user1/mysql/bin/mysql mysql&lt;/p>
+&lt;p>完结撒花~~~&lt;/p></description></item><item><title>网站远程自动备份方法分享</title><link>https://blog.leshans.eu.org/p/12/</link><pubDate>Wed, 26 Jul 2023 00:39:14 +0800</pubDate><guid>https://blog.leshans.eu.org/p/12/</guid><description>&lt;div class="video-wrapper">
 &lt;iframe loading="lazy"
 src="https://www.youtube.com/embed/0CkomEpfbhk"
 allowfullscreen
