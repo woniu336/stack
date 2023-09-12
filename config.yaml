@@ -2,13 +2,13 @@ baseurl: https://blog.leshans.eu.org/
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 10
-title: 奇迹森林
+title: 多啦博客
 
 languages:
 
     zh-cn:
         languageName: 中文
-        title: 奇迹森林
+        title: 多啦博客
         description: 演示说明
         weight: 1
 
@@ -149,7 +149,7 @@ params:
                   limit: 12
             - type: tag-cloud
               params:
-                  limit: 20
+                  limit: 30
         page:
             - type: toc
 
