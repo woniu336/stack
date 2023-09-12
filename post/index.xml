@@ -1,4 +1,1472 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 奇迹森林</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Sep 2023 22:32:24 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</link><pubDate>Tue, 05 Sep 2023 22:32:24 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</guid><description>&lt;p>随着&lt;code>GitHub&lt;/code>被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造&lt;code>空间&lt;/code>。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 奇迹森林</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Sep 2023 16:58:58 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://blog.leshans.eu.org/p/%E5%AE%9A%E6%97%B6%E5%B0%86r2%E5%9B%BE%E5%BA%8A%E5%90%8C%E6%AD%A5%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link><pubDate>Mon, 11 Sep 2023 16:58:58 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%AE%9A%E6%97%B6%E5%B0%86r2%E5%9B%BE%E5%BA%8A%E5%90%8C%E6%AD%A5%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid><description>&lt;p>请确保您的系统上已经&lt;code>安装了 rclone&lt;/code>，并且命令的路径正确。&lt;/p>
+&lt;p>要将定时任务添加到您的系统中，您可以按照以下步骤进行操作：&lt;/p>
+&lt;p>打开&lt;code>终端&lt;/code>或命令提示符，登录到您的系统。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>r2&lt;/code>为cloudflare r2 , &lt;code>cos&lt;/code>是腾讯云cos&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="在linux中">在linux中&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">crontab -e
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在打开的定时任务配置文件中，添加以下内容：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="m">0&lt;/span> &lt;span class="m">2&lt;/span> * * * rclone sync r2:blog cos:shenma-1253486782/blog --ignore-existing -u -v -P --transfers&lt;span class="o">=&lt;/span>&lt;span class="m">20&lt;/span> --ignore-errors --buffer-size&lt;span class="o">=&lt;/span>128M --check-first --checkers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>保存并关闭文件。&lt;/p>
+&lt;p>系统将自动加载新的定时任务配置。&lt;/p>
+&lt;p>现在，您的系统将在&lt;code>每天的凌晨2点&lt;/code>执行指定的命令。请注意，这是基于&lt;code>系统的时区&lt;/code>设置，如果您的系统时区设置为东八区，那么任务将在东八区的凌晨2点执行。&lt;/p>
+&lt;p>查看任务&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">crontab -l
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>调整时区:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl set-timezone Asia/Shanghai &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> hwclock --systohc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="在-windows-系统中">在 Windows 系统中&lt;/h2>
+&lt;p>您可以使用任务计划程序（Task Scheduler）来创建定时任务。以下是在 Windows 上创建定时任务的具体步骤：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>打开“任务计划程序”。您可以通过按下 Win + R 键，在运行对话框中输入 &lt;code>taskschd.msc&lt;/code>，然后按下 Enter 键来打开它。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在任务计划程序窗口中，点击左侧的 &amp;ldquo;创建任务&amp;rdquo;。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在 &amp;ldquo;常规&amp;rdquo; 选项卡中，输入任务的名称和描述。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>切换到 &amp;ldquo;触发器&amp;rdquo; 选项卡，点击 &amp;ldquo;新建&amp;rdquo; 来创建一个新的触发器。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在触发器设置中，选择 &amp;ldquo;每天&amp;rdquo;，并设置执行任务的时间为 16:40。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>切换到 &amp;ldquo;操作&amp;rdquo; 选项卡，点击 &amp;ldquo;新建&amp;rdquo; 来创建一个新的操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在操作设置中，选择 &amp;ldquo;启动程序&amp;rdquo;，然后在程序/脚本字段中输入 &lt;code>rclone&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在 &amp;ldquo;添加参数&amp;rdquo; 字段中输入 &lt;code>sync r2:blog cos:shenma-1253486782/blog --ignore-existing -u -v -P --transfers=20 --ignore-errors --buffer-size=128M --check-first --checkers=10&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>配置其他可选设置，如 &amp;ldquo;条件&amp;rdquo;、&amp;ldquo;设置&amp;rdquo; 等。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击 &amp;ldquo;确定&amp;rdquo; 保存任务。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>现在，您已经成功创建了一个在每天的16点40分执行指定命令的定时任务。请确保您的系统上已经安装了 rclone，并且命令的路径正确。您可以根据需要进行进一步的调整和修改。&lt;/p>
+&lt;h2 id="bat一键运行">bat一键运行&lt;/h2>
+&lt;p>将以下内容保存为&lt;code>bat文件&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">@echo off
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /d D:&lt;span class="se">\r&lt;/span>clone-v1.63.0-windows-amd64
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone sync r2:blog cos:shenma-1253486782/blog --ignore-existing -u -v -P --transfers&lt;span class="o">=&lt;/span>&lt;span class="m">20&lt;/span> --ignore-errors --buffer-size&lt;span class="o">=&lt;/span>128M --check-first --checkers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Debian服务器更改时区为中国</title><link>https://blog.leshans.eu.org/p/debian%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9B%B4%E6%94%B9%E6%97%B6%E5%8C%BA%E4%B8%BA%E4%B8%AD%E5%9B%BD/</link><pubDate>Mon, 11 Sep 2023 16:19:05 +0800</pubDate><guid>https://blog.leshans.eu.org/p/debian%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9B%B4%E6%94%B9%E6%97%B6%E5%8C%BA%E4%B8%BA%E4%B8%AD%E5%9B%BD/</guid><description>&lt;p>有时候我们安装服务器会用默认的UTC( Universal Time Coordinated)时区，造成后继一些软件记录时间上显示的不够直观，所以需要手动更改为中国/上海时区。&lt;br>
+更改很简单，如下2条命令即可：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rm /etc/localtime
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">timedatectl set-timezone Asia/Shanghai
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用 &lt;code>timedatectl&lt;/code>命令可以查看时区&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">timedatectl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用date -s &amp;ldquo;yyyy-MM-dd hh:mm:ss&amp;rdquo;，例如将当前系统时间设置为2021年1月4日12:00:00&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">date -s &lt;span class="s2">&amp;#34;yyyy-MM-dd hh:mm:ss&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用&lt;code>hwclock --systohc&lt;/code>可以将系统时间同步到硬件时间。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">hwclock --systohc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>是否NTP服务器同步&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">timedatectl set-ntp yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://blog.leshans.eu.org/p/%E4%BB%8E%E7%BD%91%E9%A1%B5%E8%A7%86%E9%A2%91%E5%88%B0mp4%E8%BD%BB%E6%9D%BE%E4%BD%BF%E7%94%A8m3u8%E4%B8%8B%E8%BD%BD%E5%99%A8%E4%BF%9D%E5%AD%98%E4%BD%A0%E5%96%9C%E7%88%B1%E7%9A%84%E8%A7%86%E9%A2%91/</link><pubDate>Mon, 11 Sep 2023 14:19:43 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E4%BB%8E%E7%BD%91%E9%A1%B5%E8%A7%86%E9%A2%91%E5%88%B0mp4%E8%BD%BB%E6%9D%BE%E4%BD%BF%E7%94%A8m3u8%E4%B8%8B%E8%BD%BD%E5%99%A8%E4%BF%9D%E5%AD%98%E4%BD%A0%E5%96%9C%E7%88%B1%E7%9A%84%E8%A7%86%E9%A2%91/</guid><description>&lt;h2 id="项目">项目&lt;/h2>
+&lt;h3 id="猫抓">猫抓：&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/xifangczy/cat-catch/releases" target="_blank" rel="noopener"
+>https://github.com/xifangczy/cat-catch/releases&lt;/a>&lt;/p>
+&lt;p>安装地址: &lt;a class="link" href="https://o2bmm.gitbook.io/cat-catch/docs/install" target="_blank" rel="noopener"
+>https://o2bmm.gitbook.io/cat-catch/docs/install&lt;/a>&lt;/p>
+&lt;p>文档: &lt;a class="link" href="https://o2bmm.gitbook.io/cat-catch/" target="_blank" rel="noopener"
+>https://o2bmm.gitbook.io/cat-catch/&lt;/a>&lt;/p>
+&lt;h3 id="m3u8下载器">m3u8下载器：&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/nilaoda/N_m3u8DL-CLI/releases" target="_blank" rel="noopener"
+>https://github.com/nilaoda/N_m3u8DL-CLI/releases&lt;/a>&lt;/p>
+&lt;p>下载解压,cmd命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">N_m3u8DL-CLI_v3.0.2.exe --registerUrlProtocol
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>打开浏览器: 进入需要下载的播放页面&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/bb12786f973e177337ecfe68a9f2928b.webp"
+loading="lazy"
+alt="Pasted image 20230911144224"
+>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/8ed2be91d6de5b83d6432d25d40d77f6.webp"
+loading="lazy"
+alt="Pasted image 20230911144302"
+>&lt;/p></description></item><item><title>openwrt n1 安装alist</title><link>https://blog.leshans.eu.org/p/openwrt-n1-%E5%AE%89%E8%A3%85alist/</link><pubDate>Mon, 11 Sep 2023 14:12:38 +0800</pubDate><guid>https://blog.leshans.eu.org/p/openwrt-n1-%E5%AE%89%E8%A3%85alist/</guid><description>&lt;p>项目地址 : &lt;a class="link" href="https://github.com/sbwml/luci-app-alist" target="_blank" rel="noopener"
+>https://github.com/sbwml/luci-app-alist&lt;/a>&lt;/p>
+&lt;p>OpenWrt 查看CPU架构命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat /etc/os-release &lt;span class="p">|&lt;/span>grep ARCH
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>AList文档：https://alist.nn.ci/zh/&lt;/p>
+&lt;p>下载插件: &lt;a class="link" href="https://github.com/sbwml/luci-app-alist/releases/download/v3.27.0/openwrt-21.02-aarch64_cortex-a53.tar.gz" target="_blank" rel="noopener"
+>点击下载&lt;/a>&lt;/p>
+&lt;p>&lt;code>视频教程&lt;/code>&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1PW4y1V78f"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div></description></item><item><title>免费白嫖Office 365 E5，5TB onedrive空间！</title><link>https://blog.leshans.eu.org/p/%E5%85%8D%E8%B4%B9%E7%99%BD%E5%AB%96office-365-e55tb-onedrive%E7%A9%BA%E9%97%B4/</link><pubDate>Sun, 10 Sep 2023 15:51:37 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%85%8D%E8%B4%B9%E7%99%BD%E5%AB%96office-365-e55tb-onedrive%E7%A9%BA%E9%97%B4/</guid><description>&lt;p>注册入口&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.microsoft.com/zh-cn/microsoft-365/dev-program" target="_blank" rel="noopener"
+>https://developer.microsoft.com/zh-cn/microsoft-365/dev-program&lt;/a>&lt;/p>
+&lt;p>1T改成5T&lt;/p>
+&lt;p>&lt;a class="link" href="https://admin.onedrive.com/?v=StorageSettings" target="_blank" rel="noopener"
+>https://admin.onedrive.com/?v=StorageSettings&lt;/a>&lt;/p>
+&lt;p>添加新用户&lt;/p>
+&lt;p>&lt;a class="link" href="https://admin.microsoft.com/" target="_blank" rel="noopener"
+>https://admin.microsoft.com/&lt;/a>&lt;/p>
+&lt;p>续签API设置&lt;/p>
+&lt;p>&lt;a class="link" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" rel="noopener"
+>https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps&lt;/a>&lt;/p>
+&lt;p>E5续签软件下载&lt;/p>
+&lt;p>&lt;a class="link" href="https://e5renew.com/" target="_blank" rel="noopener"
+>https://e5renew.com/&lt;/a>&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/4NmPlEf4FTk"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div></description></item><item><title>vps使用rclone挂载Google Drive详细记录</title><link>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/</link><pubDate>Sun, 10 Sep 2023 15:33:02 +0800</pubDate><guid>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
+&lt;h2 id="一-安装并配置-rclone">一、 安装并配置 rclone&lt;/h2>
+&lt;p>首先在 vps 上一键安装 rclone：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl https://rclone.org/install.sh &lt;span class="p">|&lt;/span> sudo bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接下来在本地电脑上下载命令行操作的 rclone：&lt;/p>
+&lt;p>访问 &lt;a class="link" href="https://rclone.org/downloads/" target="_blank" rel="noopener"
+>rclone 下载地址&lt;/a>，选择您的操作系统下载相应的 zip 包并解压。一会需要用得着。&lt;/p>
+&lt;p>软件准备好中，在 vps 上开始配置，执行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>选择 n&lt;/code>，新建配置：&lt;/p>
+&lt;p>此时 &lt;code>rclone&lt;/code> 会要你选择要挂载什么网盘，找到 &lt;code>google drive&lt;/code> 并选择。&lt;/p>
+&lt;p>注意是 google drive，不是 google cloud 或 google photos。&lt;/p>
+&lt;blockquote>
+&lt;p>选择后 rclone 会要求输入 api token，如果留空会使用 rclone 默认的 api，但是据官方说明官方的目前使用人数过多，由于 google 本身的限制可能会出现需要等待时间过长的问题，因此推荐自己去申请一个 api。&lt;/p>
+&lt;/blockquote>
+&lt;p>非常推荐使用自己的 API，可以大幅提升稳定性。&lt;/p>
+&lt;h2 id="申请-api">申请 api&lt;/h2>
+&lt;p>申请 api 并不复杂，也不一定要是需要被挂载的 google 账户操作，随意一个正常的 google 账户就可以。下面是申请的简单步骤：&lt;/p>
+&lt;ol>
+&lt;li>首先登录到 &lt;a class="link" href="https://console.developers.google.com/" target="_blank" rel="noopener"
+>Google API console&lt;/a>，创建一个应用，点击 “启用 API 和服务”，找到 Google Drive 并启用&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/c146931fae3335bbe2b6b98c9b59c69f.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>启用 Google Drive API&lt;/p>
+&lt;ol start="2">
+&lt;li>
+&lt;p>点击 OAuth 同意屏幕，用户类型选择外部，应用名称随便填写，比如 “rclone” 就可以。用户支持电子邮件和开发者联系邮箱都填写您自己的就可以，点击保存并继续，剩下的参数都是用默认就可以了。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击凭据，屏幕上方点击创建凭据，选择 OAuth 客户端 ID&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/0448d20490053057dc0885454f265bcd.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>创建凭据选择&lt;/p>
+&lt;p>应用类型选择桌面应用。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/61d656c89d21680f5d533d21efd06157.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>应用类型选择&lt;/p>
+&lt;p>名称随便填，点击创建。创建后会向您提供您的&lt;code>客户端 ID 和客户端密码&lt;/code>，务必记下这些数据，并且填写到 rclone 中。&lt;/p>
+&lt;p>最后选择 OAuth 同意屏幕，选择发布应用。此时应该能看到发布状态变为了正式版。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/0c488c24a67d7cae11cd392229e74fda.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>发布状态&lt;/p>
+&lt;p>至此 Google API 就申请完成了，继续返回到 rclone 中进行配置。&lt;/p>
+&lt;p>填写 Google API 后，应该会看到如下显示：&lt;/p>
+&lt;p>&lt;code>Scope that rclone should use when requesting access from drive.Choose a number from below, or type in your own value.Press Enter to leave empty. 1 / Full access all files, excluding Application Data Folder. \ (drive) 2 / Read-only access to file metadata and file contents. \ (drive.readonly) / Access to files created by rclone only. 3 | These are visible in the drive website. | File authorization is revoked when the user deauthorizes the app. \ (drive.file) / Allows read and write access to the Application Data folder. 4 | This is not visible in the drive website. \ (drive.appfolder) / Allows read-only access to file metadata but 5 | does not allow any access to read or download file content. \ (drive.metadata.readonly)&lt;/code>&lt;/p>
+&lt;p>这个可以根据需求选择，比如我要完整的访问权限，就选择 1。&lt;/p>
+&lt;p>接下来&lt;/p>
+&lt;p>&lt;code>root_folder_id&lt;/code> 为空，&lt;code>service_account_file&lt;/code> 也为空，直接回车即可。&lt;/p>
+&lt;p>&lt;code>Edit advanced config&lt;/code> 输入 n，不需要进行额外的高级配置。&lt;/p>
+&lt;p>&lt;code>Use auto config&lt;/code> 因为是要在 vps 上挂载，vps 没有桌面环境，因此必须选择 &lt;code>n&lt;/code>，进行远程配置。&lt;/p>
+&lt;p>选择后会看见如下显示：&lt;/p>
+&lt;p>&lt;code>Option config_token.For this to work, you will need rclone available on a machine that hasa web browser available.For more help and alternate methods see: https://rclone.org/remote_setup/Execute the following on the machine with the web browser (same rcloneversion recommended): rclone authorize &amp;quot;drive&amp;quot; &amp;quot;Your Token Code&amp;quot;Then paste the result.Enter a value.&lt;/code>&lt;/p>
+&lt;p>注意，接下来要在本地执行，前面下载在本地的 rclone 压缩包解压后，你应该能看到一个 &lt;code>rclone.exe&lt;/code>，类似下图&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/aecb3cb51ee21df5e8754c021d9bd8ef.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>rclone 解压后&lt;/p>
+&lt;p>打开终端，进入到此目录后执行 &lt;code>rclone authorize “drive”&lt;/code> 这一行。&lt;/p>
+&lt;p>如果不出意外，会自动打开浏览器进入到谷歌账号登录界面，此时一定要登录被挂载的谷歌账号，并选择同意授权。由于是新申请的 API，没有经过的谷歌的验证，所以谷歌会提醒该应用未经验证。但是左下角有一行小灰字，点击选择继续就能授权。&lt;/p>
+&lt;p>授权成功浏览器会提示 success：&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/9fb706ce4d086fc3a92a52393247ec6e.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>授权成功&lt;/p>
+&lt;p>此时返回命令行，等待几秒就能看见授权的 code 了。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/ef9ff70bca686bdbb9bba83d0c3574ec.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;code>获取授权 code&lt;/code>&lt;/p>
+&lt;p>复制授权 code，输入到&lt;code> rclone&lt;/code> 中。&lt;/p>
+&lt;p>接下来 rclone 会询问是否为团队盘：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">Configure this as a Shared Drive &lt;span class="o">(&lt;/span>Team Drive&lt;span class="o">)&lt;/span>? y&lt;span class="o">)&lt;/span> Yesn&lt;span class="o">)&lt;/span> No &lt;span class="o">(&lt;/span>default&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果您要挂载的就是团队盘，那么选择 y，不是的话就选择 n&lt;/p>
+&lt;p>此时配置就已经结束了，退出 clone，开始挂载。&lt;/p>
+&lt;h2 id="二-挂载-google-drive">二、 挂载 Google Drive&lt;/h2>
+&lt;p>首先新建一个文件夹用于挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p /home/google
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>开始挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone mount gdrive: /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>gdrive&lt;/code> 是 rclone 配置时输入的&lt;code>配置名称&lt;/code>，&lt;code>/home/google&lt;/code> 是挂载目录，&lt;code>&amp;amp;&lt;/code> 是指后台运行。&lt;/p>
+&lt;p>此时可能会报错：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Fatal error: mount not ready
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>一般是因为缺少依赖导致的，我们选择安装&lt;/p>
+&lt;p>centos 系使用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yum install -y fuse fuse3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>debian 系使用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install -y fuse fuse3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>再次执行挂载命令，如果没有报错，就是挂载成功了。&lt;/p>
+&lt;p>检查挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">df -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>应该看到：&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/2ebbd4ed56fee9f093f9b88c5e71cb49.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>挂载成功显示&lt;/p>
+&lt;p>可以看到 /google 已经成功挂载了&lt;/p>
+&lt;p>接下来进入 /google 进行一些简单的测试&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /google
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir &lt;span class="nb">test&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf &lt;span class="nb">test&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果能够顺利执行，则说明挂载没有问题。&lt;/p></description></item><item><title>VPS利剑！全面解析如何用rclone挂载OneDrive</title><link>https://blog.leshans.eu.org/p/vps%E5%88%A9%E5%89%91%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90%E5%A6%82%E4%BD%95%E7%94%A8rclone%E6%8C%82%E8%BD%BDonedrive/</link><pubDate>Sun, 10 Sep 2023 13:17:27 +0800</pubDate><guid>https://blog.leshans.eu.org/p/vps%E5%88%A9%E5%89%91%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90%E5%A6%82%E4%BD%95%E7%94%A8rclone%E6%8C%82%E8%BD%BDonedrive/</guid><description>&lt;p>之前写过一篇使用 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code>的记录，这次来补上挂载 &lt;code>onedrive&lt;/code> 的坑。挂载方法其实大同小异，网上也有许多文章进行介绍。&lt;/p>
+&lt;p>不过有些介绍实在是太简略了，甚至只是简单的复制了官方的示例，导致依旧看的一头雾水，所以我对 &lt;code>rclone&lt;/code> 挂载 &lt;code>onedrive&lt;/code> 的流程进行了整理和记录，希望能对大家有所帮助，能一次解决问题。&lt;/p>
+&lt;h2 id="1-创建-onedrive-api">1. 创建 OneDrive API&lt;/h2>
+&lt;p>&lt;em>为了实际使用中更稳定的体验，避免因为共享 API 达到使用限制而引发错误，绝对推荐创建自己的 API。&lt;/em>&lt;/p>
+&lt;p>&lt;em>若要创建自己的 API，务必确保你的账号拥有 API 权限！&lt;/em>&lt;/p>
+&lt;h3 id="11-获取-client_id">1.1 获取 client_id&lt;/h3>
+&lt;p>首先访问 &lt;a class="link" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" rel="noopener"
+>Microsoft Azur&lt;/a>&lt;a class="link" href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" rel="noopener"
+>e 应用注册&lt;/a>，登录账号后点击&lt;strong>应用注册&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/dcb8a72dfdad00b4f98aeb6324ec41fa.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>应用注册&lt;/p>
+&lt;p>点击左上角的&lt;strong>新注册&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/c77eb0cad25a852bcde2020c94bea4ae.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>新注册&lt;/p>
+&lt;p>如图所示进行配置，名称可以随便写，账户类型选择第三项&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/3f1cdbb403f98fc91f8cb284927dabb6.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>注册应用程序&lt;/p>
+&lt;p>点击注册后可以看到你的应用的相关信息，复制好 应用程序 (客户端) ID ，这个就是 client_id&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/d7a132861c1e91b2abbab93f1c20c802.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>获取 client_id&lt;/p>
+&lt;h3 id="12-获取-client_secret">1.2 获取 client_secret&lt;/h3>
+&lt;p>依次点击&lt;strong>证书和密码&lt;/strong>，&lt;strong>新客户端密码&lt;/strong>，在截止期限中将时间选择为最长（即两年）&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/928cbd118607fec1f2603a73c69bce73.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>创建新客户端密码&lt;/p>
+&lt;p>然后就可以看见值和机密 ID，我们只需要记录下 值 就可以，这个就是 client_secret 。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/48ffac8b3c907b3f836f8138f30e0bae.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>获取 client_secret&lt;/p>
+&lt;h3 id="13-添加-api-权限">1.3 添加 API 权限&lt;/h3>
+&lt;p>依次点击 &lt;strong>API 权限&lt;/strong>，&lt;strong>添加权限&lt;/strong>，&lt;strong>Microsoft Graph&lt;/strong>，在右边栏搜索并添加权限。&lt;/p>
+&lt;p>&lt;code>Files.Read&lt;/code>,&lt;code>Files.ReadWrite&lt;/code>,&lt;code>Files.Read.All&lt;/code>,&lt;code>Files.ReadWrite.All&lt;/code>,&lt;code>offline_access&lt;/code>,&lt;code>User.Read&lt;/code>这几项&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/c421c592df0809fe62cdba55117252c9.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>添加权限&lt;/p>
+&lt;p>添加完成后应该是这样&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/53136b466330aeb7d18e921db51611ad.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>API 权限展示&lt;/p>
+&lt;h3 id="14-添加身份验证">1.4 添加身份验证&lt;/h3>
+&lt;p>依次点击&lt;strong>身份验证&lt;/strong>，&lt;strong>添加平台&lt;/strong>，&lt;strong>Web&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/9bd5081f6aa45690320c04d290292944.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>添加身份验证, 在重定向 URI 中输入 &lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">http://localhost
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/f180ee860062e528227d36317a5c0c25.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>设置重定向&lt;/p>
+&lt;p>至此，OneDrive API 创建完成&lt;/p>
+&lt;h2 id="2-添加-rclone-配置">2. 添加 rclone 配置&lt;/h2>
+&lt;p>&lt;em>注：由于 OneDrive 的授权 key 可能会很长导致 rclone 远程配置中无法接受 key，目前 rclone 没有解决这个问题，因此可能挂载过程中会出现问题，如果出现了下文描述的问题，请参考第三部分来解决。&lt;/em>&lt;/p>
+&lt;h3 id="21-安装-rclone">2.1 安装 rclone&lt;/h3>
+&lt;p>由于 vps 中没有桌面环境，无法独立完成配置，所以 vps 和本地电脑都要安装 rclone。&lt;/p>
+&lt;p>vps 中执行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">curl https://rclone.org/install.sh | sudo bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>即可成功安装&lt;/p>
+&lt;p>本地电脑请&lt;a class="link" href="https://rclone.org/downloads/" target="_blank" rel="noopener"
+>点此下载 rclone&lt;/a> 并解压&lt;/p>
+&lt;h3 id="22-在-rclone-中配置-onedrive">2.2 在 rclone 中配置 OneDrive&lt;/h3>
+&lt;p>首先在 vps 中执行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rclone config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>初始状态下什么配置都没有，点击 n 创建一个新配置&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/a5a77da141d2f7a250b34716d1a19b9b.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>添加配置&lt;/p>
+&lt;p>接着会让你填写一个名称，这个随意填，例如 &lt;code>od&lt;/code>&lt;/p>
+&lt;p>然后会要求选择要挂载的网盘，找到 &lt;code>Microsoft OneDrive&lt;/code> 并输入其前面的&lt;code>序号31&lt;/code>&lt;/p>
+&lt;p>接下来会要求输入 &lt;code>client_id &lt;/code>和 &lt;code>client_secret&lt;/code> ，将第一步中获取的值依次输入。&lt;/p>
+&lt;p>地区按照你的账号选择，比如我的就是普通的全球账户，就选择 1&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/32537f14f449c2fae797c0e6bacd1f30.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>填写信息&lt;/p>
+&lt;p>接下来会让你选择你是否有桌面环境，因为 vps 环境下没有桌面环境，因此选择 N 。&lt;/p>
+&lt;p>输入后会看到一段提示，将红框内这段命令复制到本地的电脑执行。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/6e85e40e589c3b7717edfa4971d77d54.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>填写信息 2&lt;/p>
+&lt;p>现在在本地打开命令行，进入到 rclone 所在的文件夹内，粘贴上面的命令并执行&lt;/p>
+&lt;p>不出意外的话，会弹出浏览器窗口让你登录并授权，按要求操作即可。&lt;/p>
+&lt;p>操作完成后，会看到成功的提示&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/864d67bb29a587fbca27f718ce70bc66.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>成功授权&lt;/p>
+&lt;p>此时回到本地的命令行查看，会发现出现了一段授权 code，复制这段 code 并粘贴回 vps。&lt;/p>
+&lt;p>&lt;em>注：如果成功看到下一步操作，请忽略第三节并继续配置，如果出现以下错误，不要担心，请按照第三节的方法操作。&lt;/em>&lt;/p>
+&lt;p>如果遇到类似下图的错误：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">Couldn&lt;span class="s1">&amp;#39;t decode response - try again (make sure you are using a matching version of rclone on both sides: invalid character &amp;#39;&lt;/span>e&lt;span class="err">&amp;#39;&lt;/span> looking &lt;span class="k">for&lt;/span> beginning of value
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/65701738b7890cc457e70adb04ba4577.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>rclone 的 bug&lt;/p>
+&lt;p>则按照第三节的处理。&lt;/p>
+&lt;p>接下来会选择使用哪种类型的账户，我使用的是 OneDrive，故选择 1&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/ff68ee3a2817cbeb5ea0041cf7feaeb0.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>选择账户类型&lt;/p>
+&lt;p>选择 drive&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/a4684065fc4c26453ee9f9aaf8a9abed.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>选择 drive&lt;/p>
+&lt;p>结束！请看第四节挂载。&lt;/p>
+&lt;h2 id="3-挂载失败的解决方法">3. 挂载失败的解决方法&lt;/h2>
+&lt;p>其实解决这个问题我们要使用的就是最简单粗暴的方式，没错：在本地配置好，把配置文件复制过去！&lt;/p>
+&lt;p>打开本地命令行并进入 rclone 目录下，按照类似于第二节的方式重新配置，只不过这次选择是否有桌面环境时选择 Y ，这样子登录账户授权后就会直接成功，不会出现之前的问题了。&lt;/p>
+&lt;p>在本地成功添加配置后，在本地 rclone 目录下和远程 vps 分别执行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rclone config file
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这个获取到的是 rclone 配置文件的目录。现在，直接把本地配置完成的配置文件复制到 vps 上去！&lt;/p>
+&lt;p>放心，这个配置文件在 vps 上也是能直接用的，复制完成后，在 vps 上执行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rclone config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>嗯，能看到你在本地添加的 OneDrive 配置就是没问题了。&lt;/p>
+&lt;h2 id="4-挂载到-vps">4. 挂载到 vps&lt;/h2>
+&lt;p>首先新建一个文件夹用于挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p /home/onedrive
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>开始挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone mount od: /home/onedrive --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>od&lt;/code> 是 rclone 配置时输入的&lt;code>配置名称&lt;/code>，&lt;code>/home/onedrive&lt;/code> 是挂载目录，&lt;code>&amp;amp;&lt;/code> 是指后台运行。&lt;/p>
+&lt;p>此时可能会报错：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Fatal error: mount not ready
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这是因为缺少依赖，我们选择安装&lt;/p>
+&lt;p>centos 系使用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yum install -y fuse3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>debian 系使用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install -y fuse3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>再次执行挂载命令，如果没有报错，就是挂载成功了。&lt;/p>
+&lt;p>检查挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">df -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>应该看到（我这里是用挂载名 song，挂载目录 /music 进行的测试截图）：&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/18ec1bf4ba0819c90008c401c482619d.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>挂载成功&lt;/p>
+&lt;p>接下来可以进行一些测试，如果能正常读写文件，证明挂载没有问题。&lt;/p></description></item><item><title>极速上手：精通rclone云盘同步工具</title><link>https://blog.leshans.eu.org/p/%E6%9E%81%E9%80%9F%E4%B8%8A%E6%89%8B%E7%B2%BE%E9%80%9Arclone%E4%BA%91%E7%9B%98%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7/</link><pubDate>Sun, 10 Sep 2023 11:58:40 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E6%9E%81%E9%80%9F%E4%B8%8A%E6%89%8B%E7%B2%BE%E9%80%9Arclone%E4%BA%91%E7%9B%98%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7/</guid><description>&lt;p>Rclone 是一款的命令行工具，支持在不同对象存储、网盘间同步、上传、下载数据。&lt;/p>
+&lt;p>官网网址：&lt;a class="link" href="https://rclone.org/" target="_blank" rel="noopener"
+>https://rclone.org/&lt;/a>&lt;/p>
+&lt;p>Github 项目：&lt;a class="link" href="https://github.com/rclone/rclone" target="_blank" rel="noopener"
+>https://github.com/rclone/rclone&lt;/a>&lt;/p>
+&lt;h2 id="安装rclone">安装rclone&lt;/h2>
+&lt;p>&lt;code>安装依赖&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get install curl unzip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt-get install fuse3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>下载源码安装&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget --no-check-certificate &lt;span class="s1">&amp;#39;https://downloads.rclone.org/v1.52.3/rclone-v1.52.3-linux-amd64.zip&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">unzip rclone-v1.52.3-linux-amd64.zip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp ./rclone-*/rclone /usr/local/bin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf ./rclone-*
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>官网脚本安装&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">curl https://rclone.org/install.sh | sudo bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl https://rclone.org/install.sh &lt;span class="p">|&lt;/span> bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="配置rclone">配置rclone&lt;/h2>
+&lt;p>在Linux或者Mac上完成安装之后，rclone会默认从配置文件&lt;code>~/.config/rclone/rclone.conf&lt;/code>中获取rclone的配置。我们既可以通过&lt;code>rclone config&lt;/code>命令来交互式修改这个配置，也可以直接编辑这个配置文件。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">touch /root/.config/rclone/rclone.conf &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> vim /root/.config/rclone/rclone.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>AWS S3的rclone配置&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>s3-overseas&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">type&lt;/span> &lt;span class="o">=&lt;/span> s3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">provider&lt;/span> &lt;span class="o">=&lt;/span> AWS
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">env_auth&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">access_key_id&lt;/span> &lt;span class="o">=&lt;/span> &amp;lt;your-aws-access-key-id&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">secret_access_key&lt;/span> &lt;span class="o">=&lt;/span> &amp;lt;your-aws-secret-access-key&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">region&lt;/span> &lt;span class="o">=&lt;/span> &amp;lt;your-region-id&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">acl&lt;/span> &lt;span class="o">=&lt;/span> public-read
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">endpoint&lt;/span> &lt;span class="o">=&lt;/span> https://s3.&amp;lt;your-region-id&amp;gt;.amazonaws.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置参数详解&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>[s3-overseas]&lt;/code>: 定义该S3在本地的一个别名，后续执行命令时方便调用&lt;/li>
+&lt;li>&lt;code>type&lt;/code>: 指定该配置的类型&lt;/li>
+&lt;li>&lt;code>provider&lt;/code>: 存储的提供商，具体可参照&lt;a class="link" href="https://rclone.org/#providers" target="_blank" rel="noopener"
+>官方文档&lt;/a>&lt;/li>
+&lt;li>&lt;code>env_auth&lt;/code>: 是否从环境变量中读取&lt;/li>
+&lt;li>&lt;code>access_key_id&lt;/code>: 有权限操作bucket的 AK&lt;/li>
+&lt;li>&lt;code>secret_access_key&lt;/code>: 有权限操作bucket的 SK&lt;/li>
+&lt;li>&lt;code>region&lt;/code>: bucket所处的地区&lt;/li>
+&lt;li>&lt;code>acl&lt;/code>: 上传的文件的权限&lt;/li>
+&lt;li>&lt;code>endpoint&lt;/code>: bucket的加速地址 &lt;a class="link" href="https://docs.aws.amazon.com/general/latest/gr/s3.html" target="_blank" rel="noopener"
+>点击查看AWS加速节点&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>如果 &lt;code>env_auth&lt;/code> 配置为 &lt;code>true&lt;/code> , 可以避免在rclone.conf中写上AWS的key和secret，而是直接使用~/.aws/中的配置,也可以在运行rclone时，通过指定环境变量&lt;code>AWS_PROFILE=&amp;lt;your_profile_name&amp;gt;&lt;/code>来使用某一个profile&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="ali-oss的rclone配置">Ali OSS的rclone配置&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>oss-hwpf&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">type&lt;/span> &lt;span class="o">=&lt;/span> s3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">provider&lt;/span> &lt;span class="o">=&lt;/span> Alibaba
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">access_key_id&lt;/span> &lt;span class="o">=&lt;/span> &amp;lt;your-ali-access-key-id&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">secret_access_key&lt;/span> &lt;span class="o">=&lt;/span> &amp;lt;your-ali-secret-access-key&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">endpoint&lt;/span> &lt;span class="o">=&lt;/span> oss-cn-hongkong.aliyuncs.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">acl&lt;/span> &lt;span class="o">=&lt;/span> public-read
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a class="link" href="https://help.aliyun.com/document_detail/31837.html?spm=a2c4g.11186623.2.4.YOAwGz" target="_blank" rel="noopener"
+>点击查看阿里云OSS加速节点&lt;/a>&lt;/p>
+&lt;h2 id="cloudflare-r2的rclone配置">cloudflare r2的rclone配置&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>r2&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">type&lt;/span> &lt;span class="o">=&lt;/span> s3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">provider&lt;/span> &lt;span class="o">=&lt;/span> Cloudflare
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">access_key_id&lt;/span> &lt;span class="o">=&lt;/span> xxxx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">secret_access_key&lt;/span> &lt;span class="o">=&lt;/span> xxxx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">region&lt;/span> &lt;span class="o">=&lt;/span> auto
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">endpoint&lt;/span> &lt;span class="o">=&lt;/span> https://xxxx.r2.cloudflarestorage.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="腾讯云cos的rclone配置">腾讯云cos的rclone配置&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>cos&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">type&lt;/span> &lt;span class="o">=&lt;/span> s3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">provider&lt;/span> &lt;span class="o">=&lt;/span> TencentCOS
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">access_key_id&lt;/span> &lt;span class="o">=&lt;/span> xxxx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">secret_access_key&lt;/span> &lt;span class="o">=&lt;/span> xxxx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">endpoint&lt;/span> &lt;span class="o">=&lt;/span> cos.ap-guangzhou.myqcloud.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">acl&lt;/span> &lt;span class="o">=&lt;/span> default
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">storage_class&lt;/span> &lt;span class="o">=&lt;/span> STANDARD
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="命令参数">命令参数&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone config - 以控制会话的形式添加rclone的配置，配置保存在.rclone.conf文件中。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone copy - 将文件从源复制到目的地址，跳过已复制完成的。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone sync - 将源数据同步到目的地址，只更新目的地址的数据。 –dry-run标志来检查要复制、删除的数据
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone move - 将源数据移动到目的地址。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone delete - 删除指定路径下的文件内容。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone purge - 清空指定路径下所有文件数据。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone mkdir - 创建一个新目录。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone rmdir - 删除空目录。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone check - 检查源和目的地址数据是否匹配。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone ls - 列出指定路径下所有的文件以及文件大小和路径。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone lsd - 列出指定路径下所有的目录/容器/桶。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone lsl - 列出指定路径下所有文件以及修改时间、文件大小和路径。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone md5sum - 为指定路径下的所有文件产生一个md5sum文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone sha1sum - 为指定路径下的所有文件产生一个sha1sum文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone size - 获取指定路径下，文件内容的总大小。.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone version - 查看当前版本。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone cleanup - 清空remote。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone dedupe - 交互式查找重复文件，进行删除/重命名操作。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone mount - 挂载云盘为本地硬盘
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fusermount -qzu LocalFolder - 卸载挂载的云盘
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="rclone常用操作">rclone常用操作&lt;/h2>
+&lt;h3 id="ls">ls&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 显示远端bucket下的文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone ls s3-overseas:bucket-name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OUT: &lt;span class="m">106622&lt;/span> header.png
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 显示远端bucket下的目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone lsd s3-overseas:bucket-name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OUT: &lt;span class="m">0&lt;/span> 2020-08-27 15:57:08 -1 new
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 以json形式列出bucket下的目录和文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone lsjson s3-overseas:bucket-name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OUT: &lt;span class="o">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OUT: &lt;span class="o">{&lt;/span>&lt;span class="s2">&amp;#34;Path&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;header.png&amp;#34;&lt;/span>,&lt;span class="s2">&amp;#34;Name&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;header.png&amp;#34;&lt;/span>,&lt;span class="s2">&amp;#34;Size&amp;#34;&lt;/span>:106622,&lt;span class="s2">&amp;#34;MimeType&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;image/png&amp;#34;&lt;/span>,&lt;span class="s2">&amp;#34;ModTime&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;2020-08-27T07:32:29.000000000Z&amp;#34;&lt;/span>,&lt;span class="s2">&amp;#34;IsDir&amp;#34;&lt;/span>:false,&lt;span class="s2">&amp;#34;Tier&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;STANDARD&amp;#34;&lt;/span>&lt;span class="o">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OUT: &lt;span class="o">{&lt;/span>&lt;span class="s2">&amp;#34;Path&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;new&amp;#34;&lt;/span>,&lt;span class="s2">&amp;#34;Name&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;new&amp;#34;&lt;/span>,&lt;span class="s2">&amp;#34;Size&amp;#34;&lt;/span>:0,&lt;span class="s2">&amp;#34;MimeType&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;inode/directory&amp;#34;&lt;/span>,&lt;span class="s2">&amp;#34;ModTime&amp;#34;&lt;/span>:&lt;span class="s2">&amp;#34;2020-08-27T16:02:42.413393904+08:00&amp;#34;&lt;/span>,&lt;span class="s2">&amp;#34;IsDir&amp;#34;&lt;/span>:true&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OUT: &lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 以json形式递归的列出bucket-name下目录和文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone lsjson s3-overseas:bucket-name -R
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 查看存储桶中500B以上的文件列表&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone --min-size 500B lsl s3-overseas:bucket-name
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="sync">sync&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 同步本地目录或文件到远端bucket&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone sync &amp;lt;LOCAL_PATH&amp;gt; s3-overseas:bucket-name/target-path/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 同步远端bucket目录到本地&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone sync s3-overseas:bucket-name/target-path/ &amp;lt;LOCAL_PATH&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 远端同步到远端&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># S3直接同步到阿里的OSS&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone sync s3-overseas:bucket-name oss-hwpf:bucket-name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 将本地文件同步到远端，并备份被删除或修改的文件到备份存储桶中&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone sync &amp;lt;LOCAL_PATH&amp;gt; s3-overseas:bucket-name --backup-dir s3-overseas:backup-bucket-name/backup-dir
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>sync操作，会删除目标端的目录或文件。执行前可以加 &lt;code>--dry-run&lt;/code>参数查看将要删除的文件或目录&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="copy">copy&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 拷贝本地文件到远端&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone copy &amp;lt;LOCAL_PATH&amp;gt; s3-overseas:bucket-name/target-path/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## 拷贝远端对象到本地&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone copy s3-overseas:bucket-name/target-path/ &amp;lt;LOCAL_PATH&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone copy --max-age 24h --progress --no-traverse &amp;lt;LOCAL_PATH&amp;gt; s3-overseas:bucket-name/target-path/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>copy操作，不会删除目标端的任何文件&lt;/p>
+&lt;p>&amp;ndash;max-age 24h: 过滤出来最近24小时变更过的文件&lt;/p>
+&lt;p>&amp;ndash;progress: 显示进度 等同于 -P&lt;/p>
+&lt;p>&amp;ndash;no-traverse: 从源拷贝少量文件到目的中大量目的文件时，速度会更快&lt;/p>
+&lt;h3 id="mkdir">mkdir&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 创建新的bucket 需要AKSK有权限&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone mkdir s3-overseas:new-bucket-name &lt;span class="c1"># 在AWS创建存储桶new-bucket-name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 创建新目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone mkdir s3-overseas:bucket-name/new-dir
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 不支持直接创建空目录则用下面命令&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone touch s3-overseas:bucket-name/new-dir/emptyfile.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="delete">delete&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 删除bucket根目录下的delete.file 如果`--include`不加路径，则递归删除所有该名字文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone delete s3-overseas:bucket-name --include&lt;span class="o">=&lt;/span>/delete.file
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 删除bucket根目录下的所有文件包括子目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone delete s3-overseas:bucket-name --include &lt;span class="s2">&amp;#34;*&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="check">check&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 对比本地文件和远端文件，默认校验修改时间和大小&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone check &amp;lt;LOCAL_PATH&amp;gt; s3-overseas:bucket-name/target-path/ --one-way
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### 进行数据对比校验&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone check s3-overseas:bucket-name/target-path/ oss-hwpf:bucket-name/target-path/ -P
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="其他操作">其他操作&lt;/h2>
+&lt;h3 id="挂载">挂载&lt;/h3>
+&lt;blockquote>
+&lt;p>gd: 谷歌云盘, r2: cloudflare, cos: 腾讯cos&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p /home/google /home/r2 /home/cos
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone mount gd: /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone mount r2: /home/r2 --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone mount cos: /home/cos --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="卸载">卸载&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fusermount -qzu /home/google
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="常用命令">常用命令&lt;/h3>
+&lt;p>复制&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone copy /up gd:upload --ignore-existing -u -v -P --transfers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --ignore-errors --buffer-size&lt;span class="o">=&lt;/span>16M --check-first --checkers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同步&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone sync /up gd:upload --ignore-existing -u -v -P --transfers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --ignore-errors --buffer-size&lt;span class="o">=&lt;/span>16M --check-first --checkers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="网盘到网盘同步">网盘到网盘同步&lt;/h3>
+&lt;blockquote>
+&lt;p>r2图床同步到谷歌云盘和腾讯cos&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone sync r2:blog gd:r2/blog --ignore-existing -u -v -P --transfers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --ignore-errors --buffer-size&lt;span class="o">=&lt;/span>16M --check-first --checkers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone sync r2:blog cos:shenma-1253486782/blog --ignore-existing -u -v -P --transfers&lt;span class="o">=&lt;/span>&lt;span class="m">15&lt;/span> --ignore-errors --buffer-size&lt;span class="o">=&lt;/span>64M --check-first --checkers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="其他参数">其他参数&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone config - 进入交互式配置选项，进行添加、删除、管理网盘等操作。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone config paths - 显示配置文件的路径，一般配置文件在 ~/.config/rclone/rclone.conf，更换服务器可直接copy该文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone config show - 显示配置文件信息
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="可视化上传下载-rclonebrowser">可视化上传下载 RcloneBrowser&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/kapitainsky/RcloneBrowser/releases" target="_blank" rel="noopener"
+>https://github.com/kapitainsky/RcloneBrowser/releases&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/52eefd17a8d391dc08897466d62d4350.webp"
+loading="lazy"
+alt="Pasted image 20230910013441"
+>&lt;/p>
+&lt;p>配置 rclone.exe的路径还有 rclone.conf 配置文件的路径。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/35eea64cc23302c4299153ee8992da7c.webp"
+loading="lazy"
+alt="Pasted image 20230910013504"
+>&lt;/p>
+&lt;p>配置好后就可以看见前面配置的 OneDrive 网盘了 ☁️&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/a56446192d395aae26e42641ba029cbb.webp"
+loading="lazy"
+alt="Pasted image 20230910013603"
+>&lt;/p>
+&lt;p>双击打开就可以看见里面的内容了，可以去愉快的上传或者下载了&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/e7c54ab0daf3265f8c3a4981e7261dab.webp"
+loading="lazy"
+alt="Pasted image 20230910013617"
+>&lt;/p>
+&lt;p>上传的话，选择要上传的文件或文件夹以及云盘的存放路径，再选择 copy 模式，点击 run 即可。下载与之类似。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/bd2ffdf561987e43acb3592242866384.webp"
+loading="lazy"
+alt="Pasted image 20230910013640"
+>&lt;/p>
+&lt;p>在 Jobs当中还可以查看任务的进度、速度等&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/a5c9b642c56bb55fa29b826a66abe593.webp"
+loading="lazy"
+alt="Pasted image 20230910013654"
+>&lt;/p>
+&lt;p>另外还可以设置代理，见下图：&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/afb25f6d96616f4204e5db240cabd443.webp"
+loading="lazy"
+alt="Pasted image 20230910013704"
+>&lt;/p>
+&lt;p>这样挂载谷歌云端硬盘就很方便了。&lt;/p>
+&lt;p>完结~~&lt;/p></description></item><item><title>rclone常用命令参数详解</title><link>https://blog.leshans.eu.org/p/rclone%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</link><pubDate>Sat, 09 Sep 2023 14:51:26 +0800</pubDate><guid>https://blog.leshans.eu.org/p/rclone%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid><description>&lt;h2 id="rclone常用命令">rclone：常用命令&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone config - 进入交互式配置选项，进行添加、删除、管理网盘等操作。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone config paths - 显示配置文件的路径，一般配置文件在 ~/.config/rclone/rclone.conf，更换服务器可直接copy该文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone config show - 显示配置文件信息
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="命令语法">命令语法&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 本地到网盘&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone &lt;span class="o">[&lt;/span>功能选项&lt;span class="o">]&lt;/span> &amp;lt;本地路径&amp;gt; &amp;lt;网盘名称:路径&amp;gt; &lt;span class="o">[&lt;/span>参数&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>参数&lt;span class="o">]&lt;/span> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 网盘到本地&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone &lt;span class="o">[&lt;/span>功能选项&lt;span class="o">]&lt;/span> &amp;lt;网盘名称:路径&amp;gt; &amp;lt;本地路径&amp;gt; &lt;span class="o">[&lt;/span>参数&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>参数&lt;span class="o">]&lt;/span> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 网盘到网盘&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone &lt;span class="o">[&lt;/span>功能选项&lt;span class="o">]&lt;/span> &amp;lt;网盘名称:路径&amp;gt; &amp;lt;网盘名称:路径&amp;gt; &lt;span class="o">[&lt;/span>参数&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>参数&lt;span class="o">]&lt;/span> ...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="用法示例">用法示例:&lt;/h2>
+&lt;p>建议添加 &lt;code>--drive-acknowledge-abuse&lt;/code> 来处理被Google Drive标识为恶意软件的文件&lt;/p>
+&lt;p>复制: &lt;code>rclone copy&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone copy /up gd:upload --ignore-existing -u -v -P --transfers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --ignore-errors --buffer-size&lt;span class="o">=&lt;/span>16M --check-first --checkers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同步: &lt;code>rclone sync&lt;/code> 添加 &lt;code>--drive-acknowledge-abuse&lt;/code>参数&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone sync /up gd:upload --ignore-existing -u -v -P --transfers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --ignore-errors --buffer-size&lt;span class="o">=&lt;/span>16M --check-first --checkers&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> --drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>以下是对每个参数的解释：&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>rclone copy&lt;/code> 为功能选项, 即&lt;code>复制&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>/up&lt;/code>: 本地路径，表示要复制的文件或目录的位置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>gd:upload&lt;/code>: 这是目标路径，&lt;code>gd&lt;/code>是网盘名称,&lt;code>upload&lt;/code>是网盘路径,表示要将文件或目录复制到的位置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--ignore-existing&lt;/code>: 这是一个选项，指示rclone在复制文件时忽略已经存在于目标位置的文件，即不覆盖已存在的文件，仅复制源中不存在于目标位置的文件。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-u&lt;/code>（或 &lt;code>--update&lt;/code>）: 这是一个选项，指示rclone仅复制源中新于目标的文件或文件夹。如果目标上已有相同文件名但内容不同的文件，它不会被覆盖。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-v&lt;/code>（或 &lt;code>--verbose&lt;/code>）: 这是一个选项，用于启用详细的输出，显示更多有关操作进展的信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-P&lt;/code>（或 &lt;code>--progress&lt;/code>）: 这是一个选项，用于显示传输进度，包括已传输的数据量和传输速度等信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--transfers=10&lt;/code>: 这是一个选项，指示rclone一次并发执行最多10个文件传输操作。这可以加快复制速度。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--ignore-errors&lt;/code>: 这是一个选项，指示rclone在遇到错误时继续进行操作而不中断。如果某些文件无法复制，它会继续复制其他文件，而不会停止整个操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--buffer-size=16M&lt;/code>: 这是一个选项，用于指定rclone在内存中使用的缓冲区大小，以提高性能。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--check-first&lt;/code>: 这是一个选项，指示rclone在实际开始复制操作之前，首先检查源和目标之间的差异。这可以节省不必要的复制操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--checkers=10&lt;/code>: 这是一个选项，用于指定rclone在进行检查（check）操作时并发执行的检查器数量。这可以加快检查操作的速度。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--drive-acknowledge-abuse&lt;/code> 标志来处理恶意文件.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>综合起来，这个命令的目标是从源路径 &lt;code>/up&lt;/code> 复制文件或目录到目标路径 &lt;code>gd:upload&lt;/code>，在复制过程中忽略已存在的文件，仅复制新的或不同的文件，同时提供详细的进度信息，最多同时进行10个文件传输，忽略复制中的错误，使用16MB的缓冲区大小，并在复制之前检查源和目标之间的差异。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="常用功能选项">常用功能选项&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone copy - 复制
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone move - 移动，如果要在移动后删除空源目录，请加上 --delete-empty-src-dirs 参数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone sync - 同步：将源目录同步到目标目录，只更改目标目录。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone delete - 删除路径下的文件内容。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone purge - 删除路径及其所有文件内容。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone mkdir - 创建目录。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone rmdir - 删除目录。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone rmdirs - 删除指定灵境下的空目录。如果加上 --leave-root 参数，则不会删除根目录。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone check - 检查源和目的地址数据是否匹配。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone ls - 列出指定路径下的所有的文件以及文件大小和路径。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone lsl - 比上面多一个显示上传时间。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone lsd 列出指定路径下的目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rclone lsf - 列出指定路径下的目录和文件
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="常用参数">常用参数&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">-n &lt;span class="o">=&lt;/span> --dry-run - 测试运行，用来查看 rclone 在实际运行中会进行哪些操作。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-P &lt;span class="o">=&lt;/span> --progress - 显示实时传输进度。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--cache-chunk-size SizeSuffi - 块的大小，默认 5M，理论上是越大上传速度越快，同时占用内存也越多。如果设置得太大，可能会导致进程中断。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--cache-chunk-total-size SizeSuffix - 块可以在本地磁盘上占用的总大小，默认 10G。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--transfers&lt;span class="o">=&lt;/span>N - 并行文件数，默认为 4。在比较小的内存的 VPS 上建议调小这个参数，比如 128M 的小鸡上使用建议设置为 1。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--config string - 指定配置文件路径，string 为配置文件路径。比如在使用宝塔面板输入命令操作时可能会遇到找不到配置文件的问题，这时就需要指定配置文件路径。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="日志">日志&lt;/h2>
+&lt;p>rclone 有 4 个级别的日志记录，ERROR，NOTICE，INFO 和 DEBUG。&lt;/p>
+&lt;p>默认情况下，rclone 将生成 ERROR 和 NOTICE 级别消息。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">-q rclone 将仅生成 ERROR 消息。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-v rclone 将生成 ERROR，NOTICE 和 INFO 消息，推荐此项。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-vv rclone 将生成 ERROR，NOTICE，INFO 和 DEBUG 消息。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--log-level LEVEL 标志控制日志级别。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出日志到文件&lt;/p>
+&lt;p>使用 &amp;ndash;log-file=FILE 选项，rclone 会将 Error，Info 和 Debug 消息以及标准错误重定向到 FILE，这里的 FILE 是你指定的日志文件路径。&lt;/p>
+&lt;p>另一种方法是使用系统的指向命令，比如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone sync -v Onedrive:/DRIVEX Gdrive:/DRIVEX &amp;gt; &lt;span class="s2">&amp;#34;~/DRIVEX.log&amp;#34;&lt;/span> 2&amp;gt;&lt;span class="p">&amp;amp;&lt;/span>&lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="文件过滤">文件过滤&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">--exclude 排除文件或目录。比如 --exclude *.bak，排除所有 bak 文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--include 包含文件或目录。比如 --include *.&lt;span class="o">{&lt;/span>png,jpg&lt;span class="o">}&lt;/span> ，包含所有 png 和 jpg 文件，排除其他文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--delete-excluded 删除排除的文件。需配合过滤参数使用，否则无效。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="目录过滤">目录过滤&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">--exclude .git/ 排除所有目录下的 .git 目录。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--exclude /.git/ 只排除根目录下的 .git 目录。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以/开头只会匹配根目录，而如果没有，则是匹配所目录。同样适用于文件。&lt;/p>
+&lt;p>文件大小过滤&lt;/p>
+&lt;p>默认大小单位为 kBytes ，但可以使用 k ，M 或 G 后缀。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">--min-size 过滤小于指定大小的文件。比如 --min-size &lt;span class="m">50&lt;/span> 表示不会传输小于 50k 的文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--max-size 过滤大于指定大小的文件。比如 --max-size 1G 表示不会传输大于 1G 的文件。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>文件过滤规则&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">--filter-from &amp;lt;规则文件&amp;gt; 从文件添加包含 / 排除规则。比如 --filter-from filter-file.txt。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>过滤规则文件示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">- secret*.jpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+ *.jpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+ *.png
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+ file2.avi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- /dir/Trash/**
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+ /dir/**
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- *
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>是包含，- 是排除&lt;/li>
+&lt;/ul>
+&lt;p>这里只举例比较常用和简单的一些过滤用法，更复杂和高端的用法可以查看官方文档。&lt;/p>
+&lt;h2 id="googledrive网盘挂载到云主机vps上">GoogleDrive网盘挂载到云主机/VPS上&lt;/h2>
+&lt;p>新建一个你要&lt;code>挂载&lt;/code>的目录，例如挂载到 &lt;code>/home/google&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p /home/google
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>再执行挂载命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone mount gd: /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>gd&lt;/code> 为 rclone 的&lt;code>配置名称&lt;/code>，比如你在创建配置 rclone 的时候 &lt;code>Name&lt;/code> 填的 gd，&lt;code>/home/google&lt;/code> 为本地路径；&lt;/p>
+&lt;p>这里还可以自定义设置网盘里的文件夹路径，例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone mount gd:backup /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>gd&lt;/code> 为 rclone 的配置名称：&lt;code>backup&lt;/code> 为网盘里的目录名&lt;/p>
+&lt;p>重连后查看是否挂载成功：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">df -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>有看到gd硬盘、使用量和本地主机路径即成功挂载&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gd: 15G 1.1M 15G 1% /home/gdrive
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>卸载 Google Drive 磁盘&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">fusermount -qzu /home/google
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</link><pubDate>Tue, 05 Sep 2023 22:32:24 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</guid><description>&lt;p>随着&lt;code>GitHub&lt;/code>被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造&lt;code>空间&lt;/code>。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。&lt;/p>
 &lt;h2 id="教程">教程&lt;/h2>
 &lt;p>首先你肯定需要一个&lt;a class="link" href="https://so.csdn.net/so/search?q=Github&amp;amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener"
 >Github&lt;/a>账号，没有的可以去注册一个，地址：&lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google Drive on 奇迹森林</title><link>https://blog.leshans.eu.org/tags/google-drive/</link><description>Recent content in Google Drive on 奇迹森林</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Sep 2023 15:33:02 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/google-drive/index.xml" rel="self" type="application/rss+xml"/><item><title>vps使用rclone挂载Google Drive详细记录</title><link>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/</link><pubDate>Sun, 10 Sep 2023 15:33:02 +0800</pubDate><guid>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
+&lt;h2 id="一-安装并配置-rclone">一、 安装并配置 rclone&lt;/h2>
+&lt;p>首先在 vps 上一键安装 rclone：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl https://rclone.org/install.sh &lt;span class="p">|&lt;/span> sudo bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接下来在本地电脑上下载命令行操作的 rclone：&lt;/p>
+&lt;p>访问 &lt;a class="link" href="https://rclone.org/downloads/" target="_blank" rel="noopener"
+>rclone 下载地址&lt;/a>，选择您的操作系统下载相应的 zip 包并解压。一会需要用得着。&lt;/p>
+&lt;p>软件准备好中，在 vps 上开始配置，执行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>选择 n&lt;/code>，新建配置：&lt;/p>
+&lt;p>此时 &lt;code>rclone&lt;/code> 会要你选择要挂载什么网盘，找到 &lt;code>google drive&lt;/code> 并选择。&lt;/p>
+&lt;p>注意是 google drive，不是 google cloud 或 google photos。&lt;/p>
+&lt;blockquote>
+&lt;p>选择后 rclone 会要求输入 api token，如果留空会使用 rclone 默认的 api，但是据官方说明官方的目前使用人数过多，由于 google 本身的限制可能会出现需要等待时间过长的问题，因此推荐自己去申请一个 api。&lt;/p>
+&lt;/blockquote>
+&lt;p>非常推荐使用自己的 API，可以大幅提升稳定性。&lt;/p>
+&lt;h2 id="申请-api">申请 api&lt;/h2>
+&lt;p>申请 api 并不复杂，也不一定要是需要被挂载的 google 账户操作，随意一个正常的 google 账户就可以。下面是申请的简单步骤：&lt;/p>
+&lt;ol>
+&lt;li>首先登录到 &lt;a class="link" href="https://console.developers.google.com/" target="_blank" rel="noopener"
+>Google API console&lt;/a>，创建一个应用，点击 “启用 API 和服务”，找到 Google Drive 并启用&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/c146931fae3335bbe2b6b98c9b59c69f.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>启用 Google Drive API&lt;/p>
+&lt;ol start="2">
+&lt;li>
+&lt;p>点击 OAuth 同意屏幕，用户类型选择外部，应用名称随便填写，比如 “rclone” 就可以。用户支持电子邮件和开发者联系邮箱都填写您自己的就可以，点击保存并继续，剩下的参数都是用默认就可以了。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击凭据，屏幕上方点击创建凭据，选择 OAuth 客户端 ID&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/0448d20490053057dc0885454f265bcd.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>创建凭据选择&lt;/p>
+&lt;p>应用类型选择桌面应用。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/61d656c89d21680f5d533d21efd06157.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>应用类型选择&lt;/p>
+&lt;p>名称随便填，点击创建。创建后会向您提供您的&lt;code>客户端 ID 和客户端密码&lt;/code>，务必记下这些数据，并且填写到 rclone 中。&lt;/p>
+&lt;p>最后选择 OAuth 同意屏幕，选择发布应用。此时应该能看到发布状态变为了正式版。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/0c488c24a67d7cae11cd392229e74fda.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>发布状态&lt;/p>
+&lt;p>至此 Google API 就申请完成了，继续返回到 rclone 中进行配置。&lt;/p>
+&lt;p>填写 Google API 后，应该会看到如下显示：&lt;/p>
+&lt;p>&lt;code>Scope that rclone should use when requesting access from drive.Choose a number from below, or type in your own value.Press Enter to leave empty. 1 / Full access all files, excluding Application Data Folder. \ (drive) 2 / Read-only access to file metadata and file contents. \ (drive.readonly) / Access to files created by rclone only. 3 | These are visible in the drive website. | File authorization is revoked when the user deauthorizes the app. \ (drive.file) / Allows read and write access to the Application Data folder. 4 | This is not visible in the drive website. \ (drive.appfolder) / Allows read-only access to file metadata but 5 | does not allow any access to read or download file content. \ (drive.metadata.readonly)&lt;/code>&lt;/p>
+&lt;p>这个可以根据需求选择，比如我要完整的访问权限，就选择 1。&lt;/p>
+&lt;p>接下来&lt;/p>
+&lt;p>&lt;code>root_folder_id&lt;/code> 为空，&lt;code>service_account_file&lt;/code> 也为空，直接回车即可。&lt;/p>
+&lt;p>&lt;code>Edit advanced config&lt;/code> 输入 n，不需要进行额外的高级配置。&lt;/p>
+&lt;p>&lt;code>Use auto config&lt;/code> 因为是要在 vps 上挂载，vps 没有桌面环境，因此必须选择 &lt;code>n&lt;/code>，进行远程配置。&lt;/p>
+&lt;p>选择后会看见如下显示：&lt;/p>
+&lt;p>&lt;code>Option config_token.For this to work, you will need rclone available on a machine that hasa web browser available.For more help and alternate methods see: https://rclone.org/remote_setup/Execute the following on the machine with the web browser (same rcloneversion recommended): rclone authorize &amp;quot;drive&amp;quot; &amp;quot;Your Token Code&amp;quot;Then paste the result.Enter a value.&lt;/code>&lt;/p>
+&lt;p>注意，接下来要在本地执行，前面下载在本地的 rclone 压缩包解压后，你应该能看到一个 &lt;code>rclone.exe&lt;/code>，类似下图&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/aecb3cb51ee21df5e8754c021d9bd8ef.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>rclone 解压后&lt;/p>
+&lt;p>打开终端，进入到此目录后执行 &lt;code>rclone authorize “drive”&lt;/code> 这一行。&lt;/p>
+&lt;p>如果不出意外，会自动打开浏览器进入到谷歌账号登录界面，此时一定要登录被挂载的谷歌账号，并选择同意授权。由于是新申请的 API，没有经过的谷歌的验证，所以谷歌会提醒该应用未经验证。但是左下角有一行小灰字，点击选择继续就能授权。&lt;/p>
+&lt;p>授权成功浏览器会提示 success：&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/9fb706ce4d086fc3a92a52393247ec6e.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>授权成功&lt;/p>
+&lt;p>此时返回命令行，等待几秒就能看见授权的 code 了。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/ef9ff70bca686bdbb9bba83d0c3574ec.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;code>获取授权 code&lt;/code>&lt;/p>
+&lt;p>复制授权 code，输入到&lt;code> rclone&lt;/code> 中。&lt;/p>
+&lt;p>接下来 rclone 会询问是否为团队盘：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">Configure this as a Shared Drive &lt;span class="o">(&lt;/span>Team Drive&lt;span class="o">)&lt;/span>? y&lt;span class="o">)&lt;/span> Yesn&lt;span class="o">)&lt;/span> No &lt;span class="o">(&lt;/span>default&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果您要挂载的就是团队盘，那么选择 y，不是的话就选择 n&lt;/p>
+&lt;p>此时配置就已经结束了，退出 clone，开始挂载。&lt;/p>
+&lt;h2 id="二-挂载-google-drive">二、 挂载 Google Drive&lt;/h2>
+&lt;p>首先新建一个文件夹用于挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p /home/google
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>开始挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone mount gdrive: /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>gdrive&lt;/code> 是 rclone 配置时输入的&lt;code>配置名称&lt;/code>，&lt;code>/home/google&lt;/code> 是挂载目录，&lt;code>&amp;amp;&lt;/code> 是指后台运行。&lt;/p>
+&lt;p>此时可能会报错：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Fatal error: mount not ready
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>一般是因为缺少依赖导致的，我们选择安装&lt;/p>
+&lt;p>centos 系使用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yum install -y fuse fuse3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>debian 系使用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install -y fuse fuse3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>再次执行挂载命令，如果没有报错，就是挂载成功了。&lt;/p>
+&lt;p>检查挂载：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">df -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>应该看到：&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/2ebbd4ed56fee9f093f9b88c5e71cb49.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>挂载成功显示&lt;/p>
+&lt;p>可以看到 /google 已经成功挂载了&lt;/p>
+&lt;p>接下来进入 /google 进行一些简单的测试&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /google
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir &lt;span class="nb">test&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf &lt;span class="nb">test&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果能够顺利执行，则说明挂载没有问题。&lt;/p></description></item></channel></rss>
