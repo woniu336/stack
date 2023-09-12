@@ -5541,7 +5541,43 @@ loading="lazy"
 &lt;p>3.tabby: &lt;a class="link" href="https://tabby.sh/" target="_blank" rel="noopener"
 >https://tabby.sh/&lt;/a>&lt;/p></description></item><item><title>vps使用rclone挂载Google Drive教程</title><link>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E6%95%99%E7%A8%8B/</link><pubDate>Wed, 09 Aug 2023 21:48:07 +0800</pubDate><guid>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E6%95%99%E7%A8%8B/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
 &lt;h2 id="一-安装并配置-rclone">一、 安装并配置 rclone&lt;/h2>
-&lt;p>&lt;code>首先在 vps 上一键安装 rclone：&lt;/code>&lt;/p>
+&lt;p>&lt;code>安装unzip和curl：&lt;/code>&lt;/p>
+&lt;p>Debian/Ubuntu系统&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get install curl unzip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>CentOS&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo yum install curl unzip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>安装依赖：&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># centos&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum install -y fuse fuse3 或者 yum install fuse3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># debian&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt-get install fuse3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>一键安装rclone脚本&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -5550,10 +5586,7 @@ loading="lazy"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl https://rclone.org/install.sh &lt;span class="p">|&lt;/span> sudo bash
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>接下来在本地电脑上下载命令行操作的 rclone：&lt;/p>
-&lt;p>访问 &lt;a class="link" href="https://rclone.org/downloads/" target="_blank" rel="noopener"
->rclone 下载地址&lt;/a>，选择您的操作系统下载相应的 zip 包并解压。一会需要用得着。&lt;/p>
-&lt;p>软件准备好中，&lt;code>在 vps 上开始配置&lt;/code>，执行：&lt;/p>
+&lt;/div>&lt;p>&lt;code>vps上开始配置rclone：&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -5579,7 +5612,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">n/s/q&amp;gt; n
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>输入新建的名称，随意写:比如 &lt;code>283pan&lt;/code>&lt;/p>
+&lt;/div>&lt;p>输入新建的名称，随意写:比如 &lt;code>gd&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -5587,12 +5620,12 @@ loading="lazy"
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Enter name for new remote.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">name&amp;gt;283pan
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">name&amp;gt;gd
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>选择要挂载的网盘类型，&lt;code>选择18&lt;/code>，&lt;code>Google Drive&lt;/code>&lt;/p>
-&lt;p>填写OAuth client ID，输入&lt;code>client_id&lt;/code>、&lt;code>client_secret&lt;/code>&lt;/p>
-&lt;p>选择Rclone对Google Drive 谷歌云盘的操作权限，我这里选择1，完整的访问权限&lt;/p>
+&lt;p>输入&lt;code>client_id&lt;/code>、&lt;code>client_secret&lt;/code>&lt;/p>
+&lt;p>选择&lt;code>Google Drive&lt;/code> 谷歌云盘的操作权限，&lt;code>选择1&lt;/code>，&lt;code>完整&lt;/code>的访问权限&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -5658,7 +5691,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">service_account_file&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>是否要编辑高级配置，我这里选择n&lt;/p>
+&lt;/div>&lt;p>是否要编辑&lt;code>高级配置&lt;/code>，我这里&lt;code>选择n&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -5673,41 +5706,71 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">y/n&amp;gt; n
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p> &lt;/p>
-&lt;p>询问是不是自动配置，选择n&lt;/p>
-&lt;h4 id="复制rclone-authorize-drive-your-token-code这一长串代码红色框起来的地方">复制&lt;code>rclone authorize &amp;quot;drive&amp;quot; &amp;quot;Your Token Code&amp;quot;&lt;/code>这一长串代码,&lt;code>红色框起来的地方&lt;/code>&lt;/h4>
+&lt;/div>&lt;p>下面注意了，&lt;code>选择n&lt;/code>，表示自行配置，&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">Use auto config?
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * Say Y &lt;span class="k">if&lt;/span> not sure
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * Say N &lt;span class="k">if&lt;/span> you are working on a remote or headless machine
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">y&lt;span class="o">)&lt;/span> Yes &lt;span class="o">(&lt;/span>default&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">n&lt;span class="o">)&lt;/span> No
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">y/n&amp;gt; n
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>复制代码&lt;/code>(下图红色框起来的地方)，等下会用到&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/e14e26cf7cd20061f721d90b5f606de6.webp"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="二下载rclone-windows版">二、下载rclone windows版&lt;/h2>
+&lt;h2 id="二获取授权">二、获取授权&lt;/h2>
+&lt;h3 id="一下载rclone--windows">一：下载rclone （windows）&lt;/h3>
 &lt;p>&lt;a class="link" href="https://rclone.org/downloads/" target="_blank" rel="noopener"
 >https://rclone.org/downloads/&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0a3618be8579c7bb4517a897dabe8a10.webp"
 loading="lazy"
 >&lt;/p>
-&lt;h4 id="下载在本地的-rclone-压缩包解压后你应该能看到一个-rcloneexe类似下图">下载在本地的 &lt;code>rclone&lt;/code> 压缩包解压后，你应该能看到一个 &lt;code>rclone.exe&lt;/code>，类似下图&lt;/h4>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/c2ff2f533fff4be0a135dfe6cde0eee2.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>空白处右键&amp;ndash;&lt;code>在此处打开命令行窗口&lt;/code>，或者&lt;code>cmd&lt;/code>进入你的&lt;code>rclone目录&lt;/code>&lt;/p>
-&lt;p>打开cmd,粘贴前面复制的代码回车（红色框起来的地方）&lt;/p>
+&lt;h3 id="二获取授权码">二：获取授权码&lt;/h3>
+&lt;p>&lt;code>打开cmd:&lt;/code> 进入你的 &lt;code>rclone目录&lt;/code> &amp;ndash; &lt;code>空白处右键&lt;/code>&amp;ndash;&lt;code>在此处打开命令行窗口&lt;/code>&lt;/p>
+&lt;p>如果开启了科学上网，输入以下命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>取消sock5代理 （可选）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>粘贴VPS生成的&lt;code>代码&lt;/code>回车&lt;/p>
 &lt;p>（&lt;code>浏览器&lt;/code>自动打开进入到谷歌账号登录界面，并&lt;code>选择同意授权&lt;/code>。由于是新申请的 API，所以谷歌会提醒该应用未经验证。但是左下角有一行小灰字，&lt;code>点击选择继续就能授权&lt;/code>）&lt;/p>
 &lt;p>授权成功浏览器会提示 &lt;code>success：&lt;/code>&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/3fde03baf64fa2e8c9bdc91d3123645f.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>此时返回命令行，等待几秒就能看见授权的 code 了。&lt;/p>
+&lt;p>此时返回CMD命令行，等待几秒就能看见&lt;code>授权的 code&lt;/code> 了。&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/c8e213c767691b9501779bfb24632785.webp"
 loading="lazy"
 >&lt;/p>
-&lt;hr>
-&lt;p>&lt;code>如果出现下面这种情况（waiting for code），请往下看第五点&lt;/code>&lt;/p>
-&lt;hr>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/75387d004d80bef3b490d4f7118add2a.webp"
-loading="lazy"
-alt="image-20230810012334426"
->&lt;/p>
-&lt;p>复制授权，回到vps终端，粘贴到 rclone 中。红色框起来的地方&lt;/p>
+&lt;p>复制授权，&lt;code>回到vps终端&lt;/code>，粘贴到 vps 中。红色框起来的地方&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/f0a347b2b05250aaba0bb824a925d413.webp"
 loading="lazy"
 alt="image-20230810014110112"
@@ -5727,8 +5790,8 @@ alt="image-20230810014110112"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">n) No (default)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>如果您要挂载的就是团队盘，那么选择 y，不是的话就选择 n&lt;/p>
-&lt;p>此时配置就已经结束了，退出 clone，开始挂载。&lt;/p>
+&lt;/div>&lt;p>如果您要挂载的就是&lt;code>团队盘&lt;/code>，那么选择 y，不是的话就选择 n&lt;/p>
+&lt;p>&lt;code>此时配置就已经结束了&lt;/code>，退出 clone，开始挂载。&lt;/p>
 &lt;h2 id="三-挂载-google-drive">三、 挂载 Google Drive&lt;/h2>
 &lt;p>首先新建一个文件夹用于挂载：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -5736,15 +5799,31 @@ alt="image-20230810014110112"
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mkdir /google
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p /home/google
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>开始挂载：&lt;/p>
-&lt;p>&lt;code>rclone mount 283pan: /google --allow-other --allow-non-empty --vfs-cache-mode writes &amp;amp;&lt;/code>&lt;/p>
-&lt;p>其中 &lt;code>283pan&lt;/code> 是 rclone 配置时输入的配置名称，&lt;code>/google&lt;/code> 是挂载目录&lt;/p>
-&lt;hr>
-&lt;p>​ 挂载出错请往下看第四点&lt;/p>
-&lt;hr>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone mount gd: /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>gd&lt;/code> 是 rclone 配置时输入的&lt;code>配置名称&lt;/code>，&lt;code>/home/google&lt;/code> 是挂载目录&lt;/p>
+&lt;blockquote>
+&lt;p>还可以&lt;code>自定义&lt;/code>设置&lt;code>网盘里的文件夹路径&lt;/code>，例如：&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone mount gd:backup /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>gd&lt;/code> 为 rclone 的配置名称：&lt;code>backup&lt;/code> 为网盘里的目录名&lt;/p>
 &lt;p>检查挂载：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -5754,80 +5833,16 @@ alt="image-20230810014110112"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">df -h
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/626fa1df5fe52993cd3bd8b4868d373a.webp"
-loading="lazy"
-alt="image-20230810011416520"
->&lt;/p>
-&lt;p>卸载挂载：（/google 为挂载目录）&lt;/p>
+&lt;/div>&lt;p>卸载挂载：（&lt;code>/home/google&lt;/code> 为挂载目录）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">fusermount -u /google
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">fusermount -qzu /home/google
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p> &lt;/p>
-&lt;h2 id="四挂载出错解决">四，挂载出错解决&lt;/h2>
-&lt;p>可能会报错：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">Fatal error: mount not ready
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>一般是因为缺少依赖导致的，我们选择安装&lt;/p>
-&lt;p>centos 系使用：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yum install -y fuse fuse3 或者 yum install fuse3
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>debian 系使用：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt-get install fuse3
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>再次执行挂载命令，如果没有报错，就是挂载成功了。&lt;/p>
-&lt;h2 id="五解决rclone生成不了token-code的问题">五，解决Rclone生成不了token code的问题&lt;/h2>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/20c21f5c2bd1496164aecb572c258dd2.webp"
-loading="lazy"
-alt="image-20230810012334426"
->&lt;/p>
-&lt;p> &lt;/p>
-&lt;p>这是因为开了&lt;code>科学上网&lt;/code>，但是cmd没走代理。我用的是小狐狸，端口是&lt;code>7890&lt;/code>，如果和我一样，那就复制了往里敲&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>socks5://127.0.0.1:7890
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>socks5://127.0.0.1:7890
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>配置完之后，我们再跑一次 &lt;code>rclone authorize&lt;/code>，code显示出来了&lt;/p>
-&lt;p>取消sock5代理&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>将hugo博客部署至IPFS</title><link>https://blog.leshans.eu.org/p/%E5%B0%86hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3ipfs/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%B0%86hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3ipfs/</guid><description>&lt;p>官网: &lt;a class="link" href="https://fleek.co/hosting/" target="_blank" rel="noopener"
+&lt;/div>&lt;p>完结~&lt;/p></description></item><item><title>将hugo博客部署至IPFS</title><link>https://blog.leshans.eu.org/p/%E5%B0%86hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3ipfs/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%B0%86hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3ipfs/</guid><description>&lt;p>官网: &lt;a class="link" href="https://fleek.co/hosting/" target="_blank" rel="noopener"
 >https://fleek.co/hosting/&lt;/a>&lt;/p>
 &lt;p>免费套餐: 每月50G流量&lt;/p>
 &lt;p>&lt;a class="link" href="https://fleek.co/pricing/" target="_blank" rel="noopener"
@@ -11159,6 +11174,15 @@ title="YouTube Video"
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d --restart&lt;span class="o">=&lt;/span>always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
@@ -11182,18 +11206,18 @@ loading="lazy"
 >&lt;/p></description></item><item><title>rclone开机自动挂载</title><link>https://blog.leshans.eu.org/p/10/</link><pubDate>Tue, 25 Jul 2023 23:57:49 +0800</pubDate><guid>https://blog.leshans.eu.org/p/10/</guid><description>&lt;br>
 &lt;h1 id="假设">假设:&lt;/h1>
 &lt;ol>
-&lt;li>你已经挂载好了onedrive&lt;/li>
+&lt;li>你已经挂载好了GoogleDrive&lt;/li>
 &lt;li>不能使用systemctl的请先在root下安装&lt;/li>
 &lt;li>&lt;code>apt install systemd-sysv &amp;amp;&amp;amp; reboot&lt;/code>&lt;/li>
 &lt;li>使用&lt;code>df -h&lt;/code>命令查看是否成功&lt;/li>
 &lt;/ol>
-&lt;p>假设 name: &lt;code>odrive&lt;/code> 挂载目录是 &lt;code>/onedrive&lt;/code> 运行以下命令:&lt;/p>
+&lt;p>假设 name: &lt;code>gd&lt;/code> 挂载目录是 &lt;code>/home/google&lt;/code> 运行以下命令:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#注意修改为你的挂载名字(name),以及挂载目录,使用df -h命令查看&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl"> 注意修改为你的挂载名字&lt;span class="o">(&lt;/span>name&lt;span class="o">)&lt;/span>,以及挂载目录,使用df -h命令查看
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;div class="highlight">&lt;div class="chroma">
@@ -11201,7 +11225,7 @@ loading="lazy"
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">command&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34; mount odrive:/ /onedrive --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">command&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34; mount gd:/ /home/google --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>继续:&lt;/p>
@@ -11210,7 +11234,7 @@ loading="lazy"
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#以下是一整条命令，一起复制到SSH客户端运行&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">以下是一整条命令，一起复制到SSH客户端运行
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;div class="highlight">&lt;div class="chroma">
@@ -11247,8 +11271,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>现在就可以使用&lt;code>systemctl&lt;/code>来挂载OneDrive了&lt;/p>
-&lt;h4 id="heading">&lt;/h4>
+&lt;/div>&lt;p>现在就可以使用&lt;code>systemctl&lt;/code>来挂载GoogleDrive了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -11257,31 +11280,22 @@ loading="lazy"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">systemctl &lt;span class="nb">enable&lt;/span> rclone &lt;span class="c1">#开机自启&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;p>命令:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">systemctl start rclone #启动
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl start rclone &lt;span class="c1">#启动&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart rclone &lt;span class="c1">#重启&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl status rclone &lt;span class="c1">#状态&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">systemctl restart rclone #重启
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">systemctl status rclone #状态
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Debian10升级到5.X-cloud内核，并安装BBR</title><link>https://blog.leshans.eu.org/p/9/</link><pubDate>Tue, 25 Jul 2023 23:50:54 +0800</pubDate><guid>https://blog.leshans.eu.org/p/9/</guid><description> &lt;br>
+&lt;/div>&lt;p>完结~&lt;/p></description></item><item><title>Debian10升级到5.X-cloud内核，并安装BBR</title><link>https://blog.leshans.eu.org/p/9/</link><pubDate>Tue, 25 Jul 2023 23:50:54 +0800</pubDate><guid>https://blog.leshans.eu.org/p/9/</guid><description> &lt;br>
 &lt;h1 id="1-谷歌云一键重装系统-debian-10">1. 谷歌云一键重装系统 Debian 10&lt;/h1>
 &lt;p>&lt;strong>10.146.0.5&lt;/strong> 为内网 IP （需替换）&lt;br>
 &lt;strong>0.146.0.1&lt;/strong> 为网关&lt;/p>

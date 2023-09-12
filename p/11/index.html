@@ -31,6 +31,8 @@
 </span></span></code></pre></td></tr></table></div></div><br><p>4.<strong>进入 NGINX 面板</strong></p><ol><li><p>服务器 IP 加 81 端口访问网页</p></li><li><p>登录:</p><p><code>admin@example.com</code></p></li><li><p>密码:<br><code>changeme</code></p></li></ol><hr><h2 id=portainer-ce-中文版>Portainer-ce 中文版</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>docker run -d --restart<span class=o>=</span>always --name<span class=o>=</span><span class=s2>&#34;portainer&#34;</span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data 6053537/portainer-ce
 </span></span></code></pre></td></tr></table></div></div><hr><h2 id=uptime-kuma-在线监控平台>Uptime Kuma 在线监控平台</h2><p>可以将各类资源挂载到这个网页监控工具上。方便全局掌控网站或者 IP 的 VPS 心跳延迟情况。建康情况全局掌控！</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>docker run -d --restart<span class=o>=</span>always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+</span></span></code></pre></td></tr></table></div></div><p>或者:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
