@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>webdav on 多啦博客</title><link>https://blog.leshans.eu.org/tags/webdav/</link><description>Recent content in webdav on 多啦博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Sep 2023 18:49:40 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/webdav/index.xml" rel="self" type="application/rss+xml"/><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.leshans.eu.org/p/openwrt%E5%AE%89%E8%A3%85alist%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://blog.leshans.eu.org/p/openwrt%E5%AE%89%E8%A3%85alist%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav/</guid><description>&lt;blockquote>
+&lt;p>以下插件只适用于斐讯 N1,其他没测试过&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="一-使用方法">一: 使用方法&lt;/h3>
+&lt;p>下载插件,然后进入软路由: &lt;code>系统&lt;/code>&amp;ndash;&lt;code>文件上传&lt;/code>&amp;ndash;&lt;code>安装&lt;/code>&lt;/p>
+&lt;p>&lt;code>例如: 斐讯 N1 盒子软路由&lt;/code>&lt;/p>
+&lt;h3 id="二-阿里云盘webdav插件">二: 阿里云盘webdav插件&lt;/h3>
+&lt;p>插件下载:&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/woniu336/openwrt-ipk/tree/master/N1%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav" target="_blank" rel="noopener"
+>https://github.com/woniu336/openwrt-ipk/tree/master/N1安装阿里云盘webdav&lt;/a>&lt;/p>
+&lt;p>项目地址 : &lt;a class="link" href="https://github.com/messense/aliyundrive-webdav" target="_blank" rel="noopener"
+>https://github.com/messense/aliyundrive-webdav&lt;/a>&lt;/p>
+&lt;h3 id="三alist插件">三:Alist插件&lt;/h3>
+&lt;p>OpenWrt 查看CPU架构命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat /etc/os-release &lt;span class="p">|&lt;/span>grep ARCH
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>插件下载:&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/woniu336/openwrt-ipk/tree/master/N1%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%AE%89%E8%A3%85alist" target="_blank" rel="noopener"
+>https://github.com/woniu336/openwrt-ipk/tree/master/N1软路由安装alist&lt;/a>&lt;/p>
+&lt;p>项目地址 : &lt;a class="link" href="https://github.com/sbwml/luci-app-alist" target="_blank" rel="noopener"
+>https://github.com/sbwml/luci-app-alist&lt;/a>&lt;/p>
+&lt;p>AList文档：https://alist.nn.ci/zh/guide/&lt;/p>
+&lt;h3 id="四-docker-安装阿里云盘webdav">四: Docker 安装阿里云盘webdav&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d --name&lt;span class="o">=&lt;/span>aliyundrive-webdav --restart&lt;span class="o">=&lt;/span>unless-stopped -p 8080:8080 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /etc/aliyundrive-webdav/:/etc/aliyundrive-webdav/ &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -e &lt;span class="nv">REFRESH_TOKEN&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;your refresh token&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -e &lt;span class="nv">WEBDAV_AUTH_USER&lt;/span>&lt;span class="o">=&lt;/span>admin &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -e &lt;span class="nv">WEBDAV_AUTH_PASSWORD&lt;/span>&lt;span class="o">=&lt;/span>admin &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> messense/aliyundrive-webdav
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中，&lt;code>REFRESH_TOKEN&lt;/code> 环境变量为你的阿里云盘 &lt;code>refresh_token&lt;/code>，&lt;code>WEBDAV_AUTH_USER&lt;/code> 和 &lt;code>WEBDAV_AUTH_PASSWORD&lt;/code> 为连接 WebDAV 服务的用户名和密码。&lt;/p></description></item><item><title>Openwrt安装阿里云盘 WebDAV</title><link>https://blog.leshans.eu.org/p/openwrt%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98-webdav/</link><pubDate>Thu, 14 Sep 2023 18:18:27 +0800</pubDate><guid>https://blog.leshans.eu.org/p/openwrt%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98-webdav/</guid><description>&lt;p>阿里云盘 WebDAV 服务，主要使用场景为配合支持 WebDAV 协议的客户端 App 如 &lt;a class="link" href="https://firecore.com/infuse" target="_blank" rel="noopener"
+>Infuse&lt;/a>、&lt;a class="link" href="https://nplayer.com" target="_blank" rel="noopener"
+>nPlayer&lt;/a>
+等实现在电视上直接观看云盘视频内容， 支持客户端 App 直接从阿里云盘获取文件播放而不经过运行本应用的服务器中转, 支持上传文件，但受限于 WebDAV 协议不支持文件秒传。&lt;/p>
+&lt;p>&lt;strong>请注意：V2 版本基于阿里云盘开放平台接口实现，不再支持阿里云盘 Web 和 App 版本获取的 refresh token。&lt;/strong>
+&lt;strong>由于本项目作者不再使用梅林固件，V2 版本不再免费支持 Koolshare 梅林固件系统，如有需要请考虑&lt;a class="link" href="https://github.com/messense/aliyundrive-webdav/discussions/778" target="_blank" rel="noopener"
+>付费支持&lt;/a>。&lt;/strong>&lt;/p>
+&lt;h2 id="安装">安装&lt;/h2>
+&lt;p>可以从 &lt;a class="link" href="https://github.com/messense/aliyundrive-webdav/releases" target="_blank" rel="noopener"
+>GitHub Releases&lt;/a> 页面下载预先构建的二进制包， 也可以使用 pip 从 PyPI 下载:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pip install aliyundrive-webdav
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果系统支持 &lt;a class="link" href="https://snapcraft.io" target="_blank" rel="noopener"
+>Snapcraft&lt;/a> 比如 Ubuntu、Debian 等，也可以使用 snap 安装：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo snap install aliyundrive-webdav
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="openwrt-路由器">OpenWrt 路由器&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/messense/aliyundrive-webdav/releases" target="_blank" rel="noopener"
+>GitHub Releases&lt;/a> 中有预编译的 ipk 文件， 目前提供了
+aarch64/arm/mipsel/x86_64/i686 等架构的版本，可以下载后使用 opkg 安装，以 nanopi r4s 为例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.2/aliyundrive-webdav_2.3.2-1_aarch64_generic.ipk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.2/luci-app-aliyundrive-webdav_2.3.2_all.ipk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.2/luci-i18n-aliyundrive-webdav-zh-cn_2.3.2-1_all.ipk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">opkg install aliyundrive-webdav_2.3.2-1_aarch64_generic.ipk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">opkg install luci-app-aliyundrive-webdav_2.3.2_all.ipk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">opkg install luci-i18n-aliyundrive-webdav-zh-cn_2.3.2-1_all.ipk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其它 CPU 架构的路由器可在 &lt;a class="link" href="https://github.com/messense/aliyundrive-webdav/releases" target="_blank" rel="noopener"
+>GitHub Releases&lt;/a> 页面中查找对应的架构的主程序 ipk 文件下载安装， 常见
+OpenWrt 路由器 CPU 架构如下表（欢迎补充）：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>路由器&lt;/th>
+&lt;th>CPU 架构&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>nanopi r4s&lt;/td>
+&lt;td>aarch64_generic&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>小米 AX3600&lt;/td>
+&lt;td>aarch64_cortex-a53&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>斐讯 N1 盒子&lt;/td>
+&lt;td>aarch64_cortex-a53&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Newifi D2&lt;/td>
+&lt;td>mipsel_24kc&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Pogoplug&lt;/td>
+&lt;td>arm_mpcore&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>Tips: 不清楚 CPU 架构类型可通过运行 &lt;code>opkg print-architecture&lt;/code> 命令查询。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/ab37d11644e919f925437a1008c2a593.webp"
+loading="lazy"
+alt="Pasted image 20230914182516"
+>&lt;/p>
+&lt;h2 id="docker-运行">Docker 运行&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d --name&lt;span class="o">=&lt;/span>aliyundrive-webdav --restart&lt;span class="o">=&lt;/span>unless-stopped -p 8080:8080 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /etc/aliyundrive-webdav/:/etc/aliyundrive-webdav/ &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -e &lt;span class="nv">REFRESH_TOKEN&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;your refresh token&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -e &lt;span class="nv">WEBDAV_AUTH_USER&lt;/span>&lt;span class="o">=&lt;/span>admin &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -e &lt;span class="nv">WEBDAV_AUTH_PASSWORD&lt;/span>&lt;span class="o">=&lt;/span>admin &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> messense/aliyundrive-webdav
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中，&lt;code>REFRESH_TOKEN&lt;/code> 环境变量为你的阿里云盘 &lt;code>refresh_token&lt;/code>，&lt;code>WEBDAV_AUTH_USER&lt;/code>
+和 &lt;code>WEBDAV_AUTH_PASSWORD&lt;/code> 为连接 WebDAV 服务的用户名和密码。&lt;/p>
+&lt;h3 id="qnap-威联通-nas">QNAP 威联通 NAS&lt;/h3>
+&lt;h4 id="qnap-插件">QNAP 插件&lt;/h4>
+&lt;p>&lt;a class="link" href="https://github.com/iranee/qnap-aliyunpan-webdav" target="_blank" rel="noopener"
+>qnap-aliyunpan-webdav&lt;/a> by
+&lt;a class="link" href="https://github.com/iranee" target="_blank" rel="noopener"
+>@iranee&lt;/a>.&lt;/p>
+&lt;h4 id="containerstation-docker">ContainerStation (Docker)&lt;/h4>
+&lt;p>管理员登陆 NAS 后安装 ContainerStation 并启动服务，在 Management (管理) 标签中 Create Application (新建应用)，配置如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;3.3&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">services&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">aliyundrive-webdav&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">aliyundrive-webdav&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">restart&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">unless-stopped&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ports&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;8080:8080&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">environment&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;REFRESH_TOKEN=mytoken...&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">messense/aliyundrive-webdav&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>REFRESH_TOKEN&lt;/code> 文档最下面说明；&lt;code>:8080&lt;/code> 网盘访问映射端口，可以按需改为其他的。&lt;/p>
+&lt;p>点击 Create (创建)后启动，访问 http://nas地址:8080/ 即可看到你网盘的自动生成索引网页文件。&lt;/p>
+&lt;p>参考文档&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://docs.docker.com/compose/" target="_blank" rel="noopener"
+>https://docs.docker.com/compose/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.composerize.com/" target="_blank" rel="noopener"
+>https://www.composerize.com/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="rclone">rclone&lt;/h2>
+&lt;p>为了避免重复上传文件，使用 rclone 时推荐使用 &lt;a class="link" href="https://rclone.org/webdav/#nextcloud" target="_blank" rel="noopener"
+>Nextcloud WebDAV&lt;/a> 模式，可以支持 sha1 checksums.
+另外需要配合 &lt;code>--no-update-modtime&lt;/code> 参数，否则 rclone 为了更新文件修改时间还是会强制重新上传。&lt;/p>
+&lt;p>举个例子：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rclone --no-update-modtime copy abc.pdf aliyundrive-nc://docs/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="获取-refresh-token">获取 refresh token&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://messense-aliyundrive-webdav-backendrefresh-token-ucs0wn.streamlit.app/" target="_blank" rel="noopener"
+>通过在线工具获取 refresh token&lt;/a>&lt;/li>
+&lt;li>命令行运行 &lt;code>aliyundrive-webdav qr login&lt;/code> 扫码授权后会输出 refresh token&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/967aba8993fb3956185f8f9ae808cc68.webp"
+loading="lazy"
+alt="Pasted image 20230914182724"
+>&lt;/p>
+&lt;h2 id="命令行用法">命令行用法&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;span class="lnt">106
+&lt;/span>&lt;span class="lnt">107
+&lt;/span>&lt;span class="lnt">108
+&lt;/span>&lt;span class="lnt">109
+&lt;/span>&lt;span class="lnt">110
+&lt;/span>&lt;span class="lnt">111
+&lt;/span>&lt;span class="lnt">112
+&lt;/span>&lt;span class="lnt">113
+&lt;/span>&lt;span class="lnt">114
+&lt;/span>&lt;span class="lnt">115
+&lt;/span>&lt;span class="lnt">116
+&lt;/span>&lt;span class="lnt">117
+&lt;/span>&lt;span class="lnt">118
+&lt;/span>&lt;span class="lnt">119
+&lt;/span>&lt;span class="lnt">120
+&lt;/span>&lt;span class="lnt">121
+&lt;/span>&lt;span class="lnt">122
+&lt;/span>&lt;span class="lnt">123
+&lt;/span>&lt;span class="lnt">124
+&lt;/span>&lt;span class="lnt">125
+&lt;/span>&lt;span class="lnt">126
+&lt;/span>&lt;span class="lnt">127
+&lt;/span>&lt;span class="lnt">128
+&lt;/span>&lt;span class="lnt">129
+&lt;/span>&lt;span class="lnt">130
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ aliyundrive-webdav --help
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WebDAV server &lt;span class="k">for&lt;/span> AliyunDrive
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Usage: aliyundrive-webdav &lt;span class="o">[&lt;/span>OPTIONS&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> aliyundrive-webdav &amp;lt;COMMAND&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Commands:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> qr Scan QRCode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">help&lt;/span> Print this message or the &lt;span class="nb">help&lt;/span> of the given subcommand&lt;span class="o">(&lt;/span>s&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Options:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --host &amp;lt;HOST&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Listen host
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">HOST&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>default: 0.0.0.0&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -p, --port &amp;lt;PORT&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Listen port
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">PORT&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>default: 8080&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --client-id &amp;lt;CLIENT_ID&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Aliyun drive client_id
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">CLIENT_ID&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --client-secret &amp;lt;CLIENT_SECRET&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Aliyun drive client_secret
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">CLIENT_SECRET&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --drive-type &amp;lt;DRIVE_TYPE&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Aliyun drive &lt;span class="nb">type&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">DRIVE_TYPE&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Possible values:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - resource: Resource drive
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - backup: Backup drive
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - default: Default drive
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -r, --refresh-token &amp;lt;REFRESH_TOKEN&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Aliyun drive refresh token
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">REFRESH_TOKEN&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -U, --auth-user &amp;lt;AUTH_USER&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WebDAV authentication username
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">WEBDAV_AUTH_USER&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -W, --auth-password &amp;lt;AUTH_PASSWORD&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WebDAV authentication password
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">WEBDAV_AUTH_PASSWORD&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -I, --auto-index
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Automatically generate index.html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -S, --read-buffer-size &amp;lt;READ_BUFFER_SIZE&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Read/download buffer size in bytes, defaults to 10MB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>default: 10485760&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --upload-buffer-size &amp;lt;UPLOAD_BUFFER_SIZE&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Upload buffer size in bytes, defaults to 16MB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>default: 16777216&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --cache-size &amp;lt;CACHE_SIZE&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Directory entries cache size
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>default: 1000&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --cache-ttl &amp;lt;CACHE_TTL&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Directory entries cache expiration &lt;span class="nb">time&lt;/span> in seconds
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>default: 600&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --root &amp;lt;ROOT&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Root directory path
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>default: /&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -w, --workdir &amp;lt;WORKDIR&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Working directory, refresh_token will be stored in there &lt;span class="k">if&lt;/span> specified
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --no-trash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Delete file permanently instead of trashing it
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --read-only
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Enable &lt;span class="nb">read&lt;/span> only mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --tls-cert &amp;lt;TLS_CERT&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TLS certificate file path
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">TLS_CERT&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --tls-key &amp;lt;TLS_KEY&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TLS private key file path
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">TLS_KEY&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --strip-prefix &amp;lt;STRIP_PREFIX&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Prefix to be stripped off when handling request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span>env: &lt;span class="nv">WEBDAV_STRIP_PREFIX&lt;/span>&lt;span class="o">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --debug
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Enable debug log
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --no-self-upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Disable self auto upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --skip-upload-same-size
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Skip uploading same size file
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --prefer-http-download
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Prefer downloading using HTTP protocol
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --redirect
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Enable &lt;span class="m">302&lt;/span> redirect when possible
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -h, --help
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Print &lt;span class="nb">help&lt;/span> &lt;span class="o">(&lt;/span>see a summary with &lt;span class="s1">&amp;#39;-h&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -V, --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Print version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>&lt;/p>
+&lt;p>注意：TLS/HTTPS 暂不支持 MIPS 架构。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>&lt;/p>
+&lt;p>注意：启用 &lt;code>--skip-upload-same-size&lt;/code> 选项虽然能加速上传但可能会导致修改过的同样大小的文件不会被上传&lt;/p>
+&lt;/blockquote></description></item></channel></rss>

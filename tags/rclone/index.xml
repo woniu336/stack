@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>rclone on 多啦博客</title><link>https://blog.leshans.eu.org/tags/rclone/</link><description>Recent content in rclone on 多啦博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Sep 2023 15:33:02 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/rclone/index.xml" rel="self" type="application/rss+xml"/><item><title>vps使用rclone挂载Google Drive详细记录</title><link>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/</link><pubDate>Sun, 10 Sep 2023 15:33:02 +0800</pubDate><guid>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>rclone on 多啦博客</title><link>https://blog.leshans.eu.org/tags/rclone/</link><description>Recent content in rclone on 多啦博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Sep 2023 17:57:22 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/rclone/index.xml" rel="self" type="application/rss+xml"/><item><title>强大的网盘同步工具--rclone工具箱</title><link>https://blog.leshans.eu.org/p/%E5%BC%BA%E5%A4%A7%E7%9A%84%E7%BD%91%E7%9B%98%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7--rclone%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 17:57:22 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%BC%BA%E5%A4%A7%E7%9A%84%E7%BD%91%E7%9B%98%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7--rclone%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;p>如果你在寻找专业且易用的网盘拷贝与同步工具，那就让&lt;code>Rclone&lt;/code>成为你的云端合作伙伴吧。它虽然不会说笑话，但它绝对会在云端任务中&lt;code>带来欢笑&lt;/code>。&lt;/p>
+&lt;p>一键安装rclone工具箱&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rclone.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x rclone.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./rclone.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当谈到强大的&lt;code>网盘拷贝与同步&lt;/code>工具时，&lt;code>Rclone&lt;/code>绝对是那位总是低调却又非常值得注意的明星。它就像是那个坐在后排的天才学生，总是默默地在背后完成任务，而不是在台前卖弄自己。&lt;/p>
+&lt;p>首先，&lt;code>Rclone&lt;/code>是一名真正的变身专家。它可以从一个网盘变成另一个网盘，仿佛是魔术师一样。无论你是想从&lt;code>Google Drive&lt;/code>变身为&lt;code>Dropbox&lt;/code>，还是从&lt;code>OneDrive&lt;/code>蜕变为&lt;code>Amazon S3&lt;/code>，Rclone都能帮你完成。这就像是在玩一场云端变装派对，而Rclone是你的变装专家，总是能帮你换上最适合的服装。&lt;/p>
+&lt;p>而且，Rclone也是一个&lt;code>同步&lt;/code>的奇才。它可以确保你的文件在不同的云存储之间保持同步，就像是一个精密的交响乐团指挥家，确保每个乐器都在正确的时刻奏响。无论你是在办公室工作还是在沙滩度假，Rclone都能确保你的文件不会在云端丢失节奏。&lt;/p>
+&lt;p>但是，尽管&lt;code>Rclone&lt;/code>是一位技术高手，但它并不是那种自恋自大的软件。它没有花哨的用户界面，也不会在社交媒体上炫耀自己的成就。它只是&lt;code>默默地坚守在后台&lt;/code>，为你完成工作，就像是那位永远不会抢镜的配角演员，但却是整个剧组的支持力量。&lt;/p></description></item><item><title>Rclone Browser代理设置</title><link>https://blog.leshans.eu.org/p/rclone-browser%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</link><pubDate>Thu, 14 Sep 2023 21:35:50 +0800</pubDate><guid>https://blog.leshans.eu.org/p/rclone-browser%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</guid><description>&lt;p>假设你已经安装了&lt;code>rclone&lt;/code>,并配置好了各大网盘&lt;/p>
+&lt;p>那么在&lt;code>Rclone Browser&lt;/code>查看谷歌硬盘内容,是看不了的,但是如果你已经开启了&lt;code>科学上网&lt;/code>,则按照下面的方法&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">socks5://127.0.0.1:10808
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>10808&lt;/code>端口是v2ray的代理端口&lt;/p>
+&lt;p>如果是小狐狸则是 &lt;code>7890&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/a7a2b0af127a3a1e82a8b4ea2bf67582.webp"
+loading="lazy"
+alt="Pasted image 20230914213555"
+>&lt;/p>
+&lt;p>下载的时候要加上参数,避免有些文件被误认为病毒无法下载:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">--drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/3f3048d9fc55b43d561e0eeef6a12186.webp"
+loading="lazy"
+alt="Pasted image 20230914221303"
+>&lt;/p>
+&lt;p>cmd终端开启代理:&lt;/p>
+&lt;p>小狐狸:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>v2ray:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>socks5://127.0.0.1:10808
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>socks5://127.0.0.1:10808
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>取消代理:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>vps使用rclone挂载Google Drive详细记录</title><link>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/</link><pubDate>Sun, 10 Sep 2023 15:33:02 +0800</pubDate><guid>https://blog.leshans.eu.org/p/vps%E4%BD%BF%E7%94%A8rclone%E6%8C%82%E8%BD%BDgoogle-drive%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
 &lt;h2 id="一-安装并配置-rclone">一、 安装并配置 rclone&lt;/h2>
 &lt;p>首先在 vps 上一键安装 rclone：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
