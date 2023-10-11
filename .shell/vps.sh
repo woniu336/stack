@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ..
+
 # Preserve the .git directory inside 'public'
 mv public/.git temp_git
 
@@ -13,7 +15,7 @@ mv temp_git public/.git
 
 cd public
 git add .
-git commit -m 'Update My Site to vps'
+git commit -m 'note uptime'
 git push -f origin master
 
 

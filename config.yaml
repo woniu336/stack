@@ -1,7 +1,7 @@
 baseurl: https://blog.leshans.eu.org/
 languageCode: zh-cn
 theme: hugo-theme-stack
-paginate: 10
+paginate: 8
 title: 路飞博客
 
 languages:

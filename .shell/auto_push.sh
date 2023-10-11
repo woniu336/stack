@@ -8,5 +8,3 @@ if [ -z $commitMsg ];then
 fi
 git commit -m "$commitMsg"
 git push -f origin --all  #向存储库推送
-
-
