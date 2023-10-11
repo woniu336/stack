@@ -51,7 +51,7 @@ params:
         avatar:
             enabled: true
             local: true
-            src: /img/rats.png
+            src: /img/rats.jpg
 
     article:
         math: false
