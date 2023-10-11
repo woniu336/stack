@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.leshans.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 10 Oct 2023 12:11:16 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.leshans.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 11 Oct 2023 14:11:05 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -11,7 +11,33 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>谷歌云注册细节</title><link>https://blog.leshans.eu.org/p/%E8%B0%B7%E6%AD%8C%E4%BA%91%E6%B3%A8%E5%86%8C%E7%BB%86%E8%8A%82/</link><pubDate>Tue, 10 Oct 2023 12:11:16 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B0%B7%E6%AD%8C%E4%BA%91%E6%B3%A8%E5%86%8C%E7%BB%86%E8%8A%82/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/10/b05def447c77f267f4ff1a235b54bf3b.jpg" alt="Featured image of post 谷歌云注册细节" />&lt;h3 id="准备东西">准备东西:&lt;/h3>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>使用代理设置 Git 克隆</title><link>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-git-%E5%85%8B%E9%9A%86/</link><pubDate>Wed, 11 Oct 2023 14:11:05 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-git-%E5%85%8B%E9%9A%86/</guid><description>&lt;h3 id="git-clone-ssh-走代理">git clone ssh 走代理&lt;/h3>
+&lt;p>新建一个 &lt;code>C:\Users\你的用户名\.ssh\config&lt;/code> 文件（没有扩展名，如果已存在此文件则不用新建），编辑此文件增加以下内容：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">Host github.com *.github.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> User git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand connect -S 127.0.0.1:7890 %h %p
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>Host&lt;/code> 右边为需要走代理的域名列表，&lt;code>127.0.0.1:7890&lt;/code> 替换为自己的代理服务器地址。&lt;/p>
+&lt;h3 id="git-clone-https-走代理">git clone http(s) 走代理&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git config --global http.proxy &lt;span class="s2">&amp;#34;http://127.0.0.1:7890&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global https.proxy &lt;span class="s2">&amp;#34;http://127.0.0.1:7890&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>127.0.0.1:7890&lt;/code> 替换为自己的代理服务器地址。&lt;/p></description></item><item><title>谷歌云注册细节</title><link>https://blog.leshans.eu.org/p/%E8%B0%B7%E6%AD%8C%E4%BA%91%E6%B3%A8%E5%86%8C%E7%BB%86%E8%8A%82/</link><pubDate>Tue, 10 Oct 2023 12:11:16 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B0%B7%E6%AD%8C%E4%BA%91%E6%B3%A8%E5%86%8C%E7%BB%86%E8%8A%82/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/10/b05def447c77f267f4ff1a235b54bf3b.jpg" alt="Featured image of post 谷歌云注册细节" />&lt;h3 id="准备东西">准备东西:&lt;/h3>
 &lt;ol>
 &lt;li>香港节点(科学上网)&lt;/li>
 &lt;li>打开edge浏览器- 隐私窗口&lt;/li>
