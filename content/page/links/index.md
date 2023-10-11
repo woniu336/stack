@@ -29,7 +29,7 @@ comments: true
 ## 友链格式🤡
 
 ```bash
-🍔名字： 奇迹森林
+🍔名字： 路飞博客
 🍟博客地址：https://blog.leshans.eu.org
 🥗简介：无限进步.🎈
 🍚我的头像:  https://i.imgtg.com/2023/07/31/Oi3cqX.png
