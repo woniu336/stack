@@ -2,13 +2,13 @@ baseurl: https://blog.leshans.eu.org/
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 10
-title: 多啦博客
+title: 路飞博客
 
 languages:
 
     zh-cn:
         languageName: 中文
-        title: 多啦博客
+        title: 路飞博客
         description: 演示说明
         weight: 1
 
