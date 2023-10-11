@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞工具箱 on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><description>Recent content in 路飞工具箱 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Sep 2023 23:30:46 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
-&lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞工具箱 on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><description>Recent content in 路飞工具箱 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Sep 2023 23:30:46 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/87/</guid><description>&lt;blockquote>
+&lt;p>路飞工具箱，如一枚闪亮的多面宝石，集聚了无尽的服务器魔法、Docker魔力、VPS技巧和建站艺术。&lt;/p>
+&lt;p>它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
+&lt;p>以上夸张的描述来自AI&lt;/p>
+&lt;p>将下面的脚本拷贝到您的服务器运行即可&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -9,6 +12,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x tool.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./tool.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
+&lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。&lt;/p>
+&lt;p>不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item></channel></rss>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;quot;&lt;/p></description></item></channel></rss>
