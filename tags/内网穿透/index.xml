@@ -1,5 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>内网穿透 on 多啦博客</title><link>https://blog.leshans.eu.org/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link><description>Recent content in 内网穿透 on 多啦博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Aug 2023 06:02:09 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/index.xml" rel="self" type="application/rss+xml"/><item><title>CloudFlare Tunnel 内网穿透和反向代理</title><link>https://blog.leshans.eu.org/p/cloudflare-tunnel-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link><pubDate>Mon, 21 Aug 2023 06:02:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/cloudflare-tunnel-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid><description>&lt;p>将您的本地服务扩展到全球网络：&lt;code>Cloudflare Tunnel&lt;/code>的魔力&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>内网穿透 on 多啦博客</title><link>https://blog.leshans.eu.org/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link><description>Recent content in 内网穿透 on 多啦博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 26 Sep 2023 13:13:16 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/index.xml" rel="self" type="application/rss+xml"/><item><title>cloudflared Tunnels 内网穿透</title><link>https://blog.leshans.eu.org/p/cloudflared-tunnels-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link><pubDate>Tue, 26 Sep 2023 13:13:16 +0800</pubDate><guid>https://blog.leshans.eu.org/p/cloudflared-tunnels-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid><description>&lt;p>&lt;code>Cloudflared Tunnels&lt;/code>是Cloudflare提供的&lt;code>内网穿透&lt;/code>工具，可安全地将&lt;code>公网流量&lt;/code>转发到内部网络服务。通过加密隧道连接全球网络，它提供安全性和性能优化，方便访问内部服务。&lt;/p>
+&lt;blockquote>
+&lt;p>部署环境: windows10&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="一-下载程序">一: 下载程序&lt;/h3>
+&lt;p>将&lt;code>cloudflared-windows-amd64.exe&lt;/code> 重命名为将&lt;code>cloudflared.exe&lt;/code>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe" target="_blank" rel="noopener"
+>https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe&lt;/a>&lt;/p>
+&lt;h3 id="二-拷贝项目">二: 拷贝项目&lt;/h3>
+&lt;p>拷贝项目文件到本地任意目录:&lt;/p>
+&lt;p>地址 : &lt;a class="link" href="https://github.com/woniu336/cloudflared" target="_blank" rel="noopener"
+>https://github.com/woniu336/cloudflared&lt;/a>&lt;/p>
+&lt;h3 id="三-启动服务">三: 启动服务&lt;/h3>
+&lt;p>将&lt;code>cloudflared.exe&lt;/code>和项目文件放在同一个文件夹,&lt;/p>
+&lt;p>然后双击 &lt;code>menu.bat&lt;/code> 开启你的穿透之旅吧&lt;/p>
+&lt;br></description></item><item><title>CloudFlare Tunnel 内网穿透和反向代理</title><link>https://blog.leshans.eu.org/p/cloudflare-tunnel-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link><pubDate>Mon, 21 Aug 2023 06:02:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/cloudflare-tunnel-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid><description>&lt;p>将您的本地服务扩展到全球网络：&lt;code>Cloudflare Tunnel&lt;/code>的魔力&lt;/p>
 &lt;p>&lt;code>Cloudflare Tunnel&lt;/code>是您连接全球网络的完美伙伴。无论您是个人开发者还是企业用户，通过Cloudflare Tunnel，您可以轻松将您的&lt;code>本地或电脑上&lt;/code>的服务提供给全球用户。这款强大的工具可以安全地将您的服务引导到&lt;code>Cloudflare的分布式&lt;/code>网络中，确保数据的安全性和隐私。通过加密通信和强大的安全功能，您的Web服务将免受恶意攻击和数据泄露的威胁。&lt;/p>
+&lt;h2 id="一键脚本">一键脚本&lt;/h2>
+&lt;p>适用于debian/ubuntu&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cloudflared.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x cloudflared.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./cloudflared.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>后面可以不看了&lt;/code>&lt;/p>
 &lt;h2 id="1下载与安装">1.下载与安装&lt;/h2>
 &lt;p>安装教程: &lt;a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/install-and-setup/tunnel-guide/local/" target="_blank" rel="noopener"
 >点击打开&lt;/a>&lt;/p>
