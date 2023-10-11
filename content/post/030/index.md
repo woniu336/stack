@@ -1,13 +1,14 @@
 ---
-title: "目前最简单、最安全、最稳定的专属节点搭建方法"
+title: "目前最简单、最安全、最稳定的专属节点搭建方法-科学翻墙上网"
 date: 2023-08-05T00:19:04+08:00
 lastmod: 2023-08-05T00:19:04+08:00
 draft: false
 description: ""
-tags: [vpn]
+tags: [vpn,科学,翻墙]
 categories: []
 author: "路飞"
 weight: false
+slug: 30
 comment: true
 toc: true
 autoCollapseToc: false # 是否自动折叠目录
