@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>苹果 on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E8%8B%B9%E6%9E%9C/</link><description>Recent content in 苹果 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Nov 2023 01:52:09 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E8%8B%B9%E6%9E%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>amh7.0安装苹果cms的一些坑和注意事项</title><link>https://blog.leshans.eu.org/p/amh7.0%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9Ccms%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link><pubDate>Mon, 27 Nov 2023 01:52:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/amh7.0%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9Ccms%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid><description>&lt;p>&lt;code>1.数据库导入的问题 &lt;/code>&lt;/p>
+&lt;p> ①先上传到备份目录，在解压，然后在导入 &lt;/p>
+&lt;p> ②数据库设置那里要&lt;code>启用远程开启 &lt;/code>&lt;/p>
+&lt;p>&lt;code> 2.任务计划 &lt;/code>&lt;/p>
+&lt;p> ①注意时区 &lt;/p>
+&lt;p>&lt;code> 3.数据库同步 &lt;/code>&lt;/p>
+&lt;p> ①记得打开数据库二进制 &lt;/p>
+&lt;p>&lt;code> 4.一键还原 &lt;/code>&lt;/p>
+&lt;p>① 注意需要相同的环境组件&lt;/p>
+&lt;p>&lt;code>5.安装memcached注意事项&lt;/code>&lt;/p>
+&lt;p>php需安装 &lt;code>bcmath&lt;/code> 扩展&lt;/p>
+&lt;h3 id="总结">总结:&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>操作&lt;/th>
+&lt;th>注意事项&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>数据库导入&lt;/td>
+&lt;td>上传备份至目标目录并解压，启用远程访问。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>任务计划&lt;/td>
+&lt;td>注意时区设置。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>数据库同步&lt;/td>
+&lt;td>打开数据库的二进制日志功能。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>一键还原&lt;/td>
+&lt;td>确保还原环境具有相同的组件。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>安装 Memcached&lt;/td>
+&lt;td>PHP需安装bcmath扩展。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>

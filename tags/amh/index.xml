@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>amh on 路飞博客</title><link>https://blog.leshans.eu.org/tags/amh/</link><description>Recent content in amh on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Nov 2023 01:52:09 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/amh/index.xml" rel="self" type="application/rss+xml"/><item><title>amh7.0安装苹果cms的一些坑和注意事项</title><link>https://blog.leshans.eu.org/p/amh7.0%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9Ccms%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link><pubDate>Mon, 27 Nov 2023 01:52:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/amh7.0%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9Ccms%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid><description>&lt;p>&lt;code>1.数据库导入的问题 &lt;/code>&lt;/p>
+&lt;p> ①先上传到备份目录，在解压，然后在导入 &lt;/p>
+&lt;p> ②数据库设置那里要&lt;code>启用远程开启 &lt;/code>&lt;/p>
+&lt;p>&lt;code> 2.任务计划 &lt;/code>&lt;/p>
+&lt;p> ①注意时区 &lt;/p>
+&lt;p>&lt;code> 3.数据库同步 &lt;/code>&lt;/p>
+&lt;p> ①记得打开数据库二进制 &lt;/p>
+&lt;p>&lt;code> 4.一键还原 &lt;/code>&lt;/p>
+&lt;p>① 注意需要相同的环境组件&lt;/p>
+&lt;p>&lt;code>5.安装memcached注意事项&lt;/code>&lt;/p>
+&lt;p>php需安装 &lt;code>bcmath&lt;/code> 扩展&lt;/p>
+&lt;h3 id="总结">总结:&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>操作&lt;/th>
+&lt;th>注意事项&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>数据库导入&lt;/td>
+&lt;td>上传备份至目标目录并解压，启用远程访问。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>任务计划&lt;/td>
+&lt;td>注意时区设置。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>数据库同步&lt;/td>
+&lt;td>打开数据库的二进制日志功能。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>一键还原&lt;/td>
+&lt;td>确保还原环境具有相同的组件。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>安装 Memcached&lt;/td>
+&lt;td>PHP需安装bcmath扩展。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>amh搭建海洋cms注意事项</title><link>https://blog.leshans.eu.org/p/amh%E6%90%AD%E5%BB%BA%E6%B5%B7%E6%B4%8Bcms%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link><pubDate>Tue, 07 Nov 2023 10:49:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/amh%E6%90%AD%E5%BB%BA%E6%B5%B7%E6%B4%8Bcms%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid><description>&lt;p>海洋CMS又名SEACMS，完全开源免费，自适应电脑、手机、平板、APP多终端，无加密、更安全，是您最佳的建站工具!&lt;/p>
+&lt;p>爬滚打多年，海洋CMS有着丰富的经验和技术积累，并且能够随着流行趋势加入更多当下流行的功能。&lt;/p>
+&lt;h2 id="注意几点">注意几点&lt;/h2>
+&lt;ol>
+&lt;li>根目录删除&lt;code>.user.ini&lt;/code> 文件&lt;/li>
+&lt;li>data目录设置&lt;code>权限为777&lt;/code>,其余&lt;code>555&lt;/code>&lt;/li>
+&lt;li>如果导入数据库文件后缀为&lt;code>sql.gz&lt;/code>,先解压为&lt;code>sql&lt;/code>&lt;/li>
+&lt;li>修改&lt;code>common.inc.php&lt;/code>数据库信息&lt;/li>
+&lt;li>数据库设置那里要&lt;code>启用远程开启 &lt;/code>&lt;/li>
+&lt;li>伪静态规则&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>伪静态规则&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">location / &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/frim/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /list/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/movie/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /detail/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/play/&lt;span class="o">([&lt;/span>0-9&lt;span class="o">]&lt;/span>+&lt;span class="o">)&lt;/span>-&lt;span class="o">([&lt;/span>0-9&lt;span class="o">]&lt;/span>+&lt;span class="o">)&lt;/span>-&lt;span class="o">([&lt;/span>0-9&lt;span class="o">]&lt;/span>+&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /video/index.php?&lt;span class="nv">$1&lt;/span>-&lt;span class="nv">$2&lt;/span>-&lt;span class="nv">$3&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/topic/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /topic/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/topiclist/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>.html$ /topiclist/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/index&lt;span class="se">\.&lt;/span>html$ index.php permanent&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/news&lt;span class="se">\.&lt;/span>html$ news/ permanent&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/part/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /articlelist/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/article/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /article/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

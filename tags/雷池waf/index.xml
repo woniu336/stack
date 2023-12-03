@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>雷池waf on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E9%9B%B7%E6%B1%A0waf/</link><description>Recent content in 雷池waf on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 25 Nov 2023 19:33:31 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E9%9B%B7%E6%B1%A0waf/index.xml" rel="self" type="application/rss+xml"/><item><title>雷池waf社区版反代上高防</title><link>https://blog.leshans.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</link><pubDate>Sat, 25 Nov 2023 19:33:31 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/585052f90362007594fe1b25e707eb86.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/8RLfPjk1nA8"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+我们经常用&lt;code>NPM可视化面板&lt;/code>反代服务到域名上，我发现一个更加强大的面板，&lt;code>雷池&lt;/code>是个web防火墙面板，基于nginx，反向代理只是基础，重点是还能防御站点，拦截网络恶意攻击。你可以理解为反代加高防的存在，&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/0def04e0ccd10ef58ad357b00811846e.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>使用方法&lt;/strong>&lt;/p>
+&lt;p>Debian/Ubuntu安装下载工具&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">apt update -y  &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>CentOS安装下载工具&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">yum update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> yum install curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>官网版一键脚本&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://kejilion.pro/kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>GitHub版一键脚本 部分小伙伴会遇到官网版出现大段乱码！就用GitHub版本吧！&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/5bce8bb79e908a876d894ca385c8a59d.jpg"
+loading="lazy"
+>&lt;/p></description></item></channel></rss>

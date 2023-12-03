@@ -1,0 +1,603 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="哪吒探针文档: https://nezha.wiki/guide/dashboard.html 截图预览 特性(以下均为基于官方默认主题的更改) 1.基于官方原版主题重新排版 2.解决移动端卡片列表点击最后两个卡片右上角的图标"><title>哪吒探针美化</title><link rel=canonical href=https://blog.leshans.eu.org/p/%E5%93%AA%E5%90%92%E6%8E%A2%E9%92%88%E7%BE%8E%E5%8C%96/><link rel=stylesheet href=/scss/style.min.59d2dbf3de620b7e2463ec6171eaab452b788a787a28b43e4c75c7287b2a4a7f.css><meta property="og:title" content="哪吒探针美化"><meta property="og:description" content="哪吒探针文档: https://nezha.wiki/guide/dashboard.html 截图预览 特性(以下均为基于官方默认主题的更改) 1.基于官方原版主题重新排版 2.解决移动端卡片列表点击最后两个卡片右上角的图标"><meta property="og:url" content="https://blog.leshans.eu.org/p/%E5%93%AA%E5%90%92%E6%8E%A2%E9%92%88%E7%BE%8E%E5%8C%96/"><meta property="og:site_name" content="路飞博客"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="哪吒"><meta property="article:tag" content="探针"><meta property="article:published_time" content="2023-11-26T14:30:45+08:00"><meta property="article:modified_time" content="2023-11-26T14:30:45+08:00"><meta name=twitter:title content="哪吒探针美化"><meta name=twitter:description content="哪吒探针文档: https://nezha.wiki/guide/dashboard.html 截图预览 特性(以下均为基于官方默认主题的更改) 1.基于官方原版主题重新排版 2.解决移动端卡片列表点击最后两个卡片右上角的图标"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#截图预览>截图预览</a></li><li><a href=#特性以下均为基于官方默认主题的更改>特性(以下均为基于官方默认主题的更改)</a></li><li><a href=#使用方法>使用方法</a></li><li><a href=#一些信息的修改地址>一些信息的修改地址</a></li></ol></li><li><a href=#下载地址--点我下载httpsgithubcomwoniu336open_shellblobmainamzayo_template_fin_291zip>下载地址&ndash;><a href=https://github.com/woniu336/open_shell/blob/main/amzayo_template_fin_2.91.zip>点我下载</a></a></li><li><a href=#其他css样式>其他CSS样式</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/%E5%93%AA%E5%90%92%E6%8E%A2%E9%92%88%E7%BE%8E%E5%8C%96/>哪吒探针美化</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2023-11-26</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 4 分钟</time></div></footer></div></header><section class=article-content><p>哪吒探针文档: <a class=link href=https://nezha.wiki/guide/dashboard.html target=_blank rel=noopener>https://nezha.wiki/guide/dashboard.html</a></p><h3 id=截图预览>截图预览</h3><p><img src=https://r2.leshans.eu.org/2023/11/b2932ac72373a815b04e6cfba2feddf5.jpg loading=lazy></p><p><img src=https://r2.leshans.eu.org/2023/11/b90ba894557c351b187dec8d2d132e7b.jpg loading=lazy></p><h3 id=特性以下均为基于官方默认主题的更改>特性(以下均为基于官方默认主题的更改)</h3><p>1.基于官方原版主题重新排版</p><p>2.解决移动端卡片列表点击最后两个卡片右上角的图标时，发生的页面位置跳转问题</p><p>3.固定卡片宽度，栅格化(若剩余宽度不足以容下一个卡片，则换行显示)解决原版主题页面宽度变小后仍然制一行显示4个导致布局错误</p><p>4.解决弹出看卡片位置不合适导致被顶部菜单栏遮挡问题</p><p>5.增加一些我常用的主机信息显示在卡片上，方便查看（不爱喜欢可以自行修改哈）</p><p>6.底部版权信息可以在template文件夹里的footer.html里更改</p><p>7.swap未开启显示提示</p><h3 id=使用方法>使用方法</h3><p>1.template里面的文件解压出来放到服务端模板目录里面</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>/opt/nezha/dashboard/theme-custom/template
+</span></span></code></pre></td></tr></table></div></div><p>2.重启哪吒面板服务</p><p>3.在哪吒面板后台主题选择<code>Custom(local)</code></p><p>4.将<code>css.txt</code>里面的CSS样式代码复制到哪吒面板后台的“自定义代码”文本框里</p><h3 id=一些信息的修改地址>一些信息的修改地址</h3><p>1.站点图标 <code>header.html</code> 文件的第17行，替换掉<code>https://cdn.amzayo.top/static/public/luban/luban_head.png</code></p><p>2.页面左上角 <code>logomenu.html</code> 文件的第5行，替换掉<code>https://cdn.amzayo.top/static/public/luban/test_head.e7b54515.png</code></p><p>3.底部版权信息<code> footer.html</code> 文件的第4到8行，依照demo底部的文字按需替换</p><h2 id=下载地址--点我下载httpsgithubcomwoniu336open_shellblobmainamzayo_template_fin_291zip>下载地址&ndash;><a class=link href=https://github.com/woniu336/open_shell/blob/main/amzayo_template_fin_2.91.zip target=_blank rel=noopener>点我下载</a></h2><h2 id=其他css样式>其他CSS样式</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span><span class=lnt>182
+</span><span class=lnt>183
+</span><span class=lnt>184
+</span><span class=lnt>185
+</span><span class=lnt>186
+</span><span class=lnt>187
+</span><span class=lnt>188
+</span><span class=lnt>189
+</span><span class=lnt>190
+</span><span class=lnt>191
+</span><span class=lnt>192
+</span><span class=lnt>193
+</span><span class=lnt>194
+</span><span class=lnt>195
+</span><span class=lnt>196
+</span><span class=lnt>197
+</span><span class=lnt>198
+</span><span class=lnt>199
+</span><span class=lnt>200
+</span><span class=lnt>201
+</span><span class=lnt>202
+</span><span class=lnt>203
+</span><span class=lnt>204
+</span><span class=lnt>205
+</span><span class=lnt>206
+</span><span class=lnt>207
+</span><span class=lnt>208
+</span><span class=lnt>209
+</span><span class=lnt>210
+</span><span class=lnt>211
+</span><span class=lnt>212
+</span><span class=lnt>213
+</span><span class=lnt>214
+</span><span class=lnt>215
+</span><span class=lnt>216
+</span><span class=lnt>217
+</span><span class=lnt>218
+</span><span class=lnt>219
+</span><span class=lnt>220
+</span><span class=lnt>221
+</span><span class=lnt>222
+</span><span class=lnt>223
+</span><span class=lnt>224
+</span><span class=lnt>225
+</span><span class=lnt>226
+</span><span class=lnt>227
+</span><span class=lnt>228
+</span><span class=lnt>229
+</span><span class=lnt>230
+</span><span class=lnt>231
+</span><span class=lnt>232
+</span><span class=lnt>233
+</span><span class=lnt>234
+</span><span class=lnt>235
+</span><span class=lnt>236
+</span><span class=lnt>237
+</span><span class=lnt>238
+</span><span class=lnt>239
+</span><span class=lnt>240
+</span><span class=lnt>241
+</span><span class=lnt>242
+</span><span class=lnt>243
+</span><span class=lnt>244
+</span><span class=lnt>245
+</span><span class=lnt>246
+</span><span class=lnt>247
+</span><span class=lnt>248
+</span><span class=lnt>249
+</span><span class=lnt>250
+</span><span class=lnt>251
+</span><span class=lnt>252
+</span><span class=lnt>253
+</span><span class=lnt>254
+</span><span class=lnt>255
+</span><span class=lnt>256
+</span><span class=lnt>257
+</span><span class=lnt>258
+</span><span class=lnt>259
+</span><span class=lnt>260
+</span><span class=lnt>261
+</span><span class=lnt>262
+</span><span class=lnt>263
+</span><span class=lnt>264
+</span><span class=lnt>265
+</span><span class=lnt>266
+</span><span class=lnt>267
+</span><span class=lnt>268
+</span><span class=lnt>269
+</span><span class=lnt>270
+</span><span class=lnt>271
+</span><span class=lnt>272
+</span><span class=lnt>273
+</span><span class=lnt>274
+</span><span class=lnt>275
+</span><span class=lnt>276
+</span><span class=lnt>277
+</span><span class=lnt>278
+</span><span class=lnt>279
+</span><span class=lnt>280
+</span><span class=lnt>281
+</span><span class=lnt>282
+</span><span class=lnt>283
+</span><span class=lnt>284
+</span><span class=lnt>285
+</span><span class=lnt>286
+</span><span class=lnt>287
+</span><span class=lnt>288
+</span><span class=lnt>289
+</span><span class=lnt>290
+</span><span class=lnt>291
+</span><span class=lnt>292
+</span><span class=lnt>293
+</span><span class=lnt>294
+</span><span class=lnt>295
+</span><span class=lnt>296
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>&lt;style&gt;
+</span></span><span class=line><span class=cl>/* 屏幕适配 */
+</span></span><span class=line><span class=cl>@media only screen and <span class=o>(</span>min-width: 1200px<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    .ui.container <span class=o>{</span>
+</span></span><span class=line><span class=cl>    width: 80% !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>@media only screen and <span class=o>(</span>max-width: 767px<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    .ui.card&gt;.content&gt;.header:not<span class=o>(</span>.ui<span class=o>)</span>, .ui.cards&gt;.card&gt;.content&gt;.header:not<span class=o>(</span>.ui<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        margin-top: 0.4em !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 整体图标 */
+</span></span><span class=line><span class=cl>i.icon <span class=o>{</span>
+</span></span><span class=line><span class=cl>    color: <span class=c1>#000;</span>
+</span></span><span class=line><span class=cl>    width: 1em !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 背景图片 */
+</span></span><span class=line><span class=cl>body <span class=o>{</span>
+</span></span><span class=line><span class=cl>    content: <span class=s2>&#34; &#34;</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background: fixed !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    z-index: -1 !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    top: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    right: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    bottom: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    left: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background-position: top !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background-repeat: no-repeat !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background-size: cover !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background-image: url<span class=o>(</span>https://gitee.com/darki/img/raw/master/1631081013043.webp<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    font-family: Arial,Helvetica,sans-serif !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>/* 进度条 */
+</span></span><span class=line><span class=cl>.ui.progress <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border-radius: 0.5rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.progress .bar <span class=o>{</span>
+</span></span><span class=line><span class=cl>    min-width: 1.8em !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-radius: 0.5rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    line-height: 1.65em !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.fine.progress&gt; .bar <span class=o>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.progress&gt; .bar <span class=o>{</span>
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.progress.fine .bar <span class=o>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.progress.warning .bar <span class=o>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.progress.error .bar <span class=o>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.progress.offline .bar <span class=o>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>/* 导航栏 */
+</span></span><span class=line><span class=cl>.ui.large.menu <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-radius: 0rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background-color: rgba<span class=o>(</span>255, 255, 255, 55%<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 首页按钮 */
+</span></span><span class=line><span class=cl>.ui.menu .active.item <span class=o>{</span>
+</span></span><span class=line><span class=cl>    background-color: transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 导航栏下拉框 */
+</span></span><span class=line><span class=cl>.ui.dropdown .menu <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-radius: 1rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background-color: rgba<span class=o>(</span>255, 255, 255, 80%<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 登陆按钮 */
+</span></span><span class=line><span class=cl>.nezha-primary-btn <span class=o>{</span>
+</span></span><span class=line><span class=cl>    background-color: transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    color: <span class=c1>#000 !important;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 大卡片 */
+</span></span><span class=line><span class=cl><span class=c1>#app .ui.fluid.accordion {</span>
+</span></span><span class=line><span class=cl>    background-color: <span class=c1>#fbfbfb26 !important;</span>
+</span></span><span class=line><span class=cl>    border-radius: 1rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 小卡片 */
+</span></span><span class=line><span class=cl>.ui.four.cards&gt;.card <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    background-color: <span class=c1>#fafafaa3 !important;</span>
+</span></span><span class=line><span class=cl>    border-radius: 1rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.status.cards .wide.column <span class=o>{</span>
+</span></span><span class=line><span class=cl>    padding-top: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    padding-bottom: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.status.cards .three.wide.column <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.status.cards .wide.column:nth-child<span class=o>(</span>1<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.status.cards .wide.column:nth-child<span class=o>(</span>2<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.status.cards .description <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 小鸡名 */
+</span></span><span class=line><span class=cl>.status.cards .flag <span class=o>{</span>
+</span></span><span class=line><span class=cl>    margin-right: 0.5rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 上传下载 */
+</span></span><span class=line><span class=cl>.status.cards .outline.icon <span class=o>{</span>
+</span></span><span class=line><span class=cl>    margin-right: 1px !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>i.arrow.alternate.circle.down.outline.icon <span class=o>{</span>
+</span></span><span class=line><span class=cl>    color: <span class=c1>#21ba45 !important;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>i.arrow.alternate.circle.up.outline.icon <span class=o>{</span>
+</span></span><span class=line><span class=cl>    color: red !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>/* 弹出卡片小箭头 */
+</span></span><span class=line><span class=cl>.ui.right.center.popup <span class=o>{</span>
+</span></span><span class=line><span class=cl>    margin: -3px <span class=m>0</span> <span class=m>0</span> 0.914286em !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    -webkit-transform-origin: left 50% !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    transform-origin: left 50% !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.bottom.left.popup <span class=o>{</span>
+</span></span><span class=line><span class=cl>    margin-left: 1px !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    margin-top: 3px !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.top.left.popup <span class=o>{</span>
+</span></span><span class=line><span class=cl>    margin-left: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    margin-bottom: 10px !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.top.right.popup <span class=o>{</span>
+</span></span><span class=line><span class=cl>    margin-right: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    margin-bottom: 8px !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.left.center.popup <span class=o>{</span>
+</span></span><span class=line><span class=cl>    margin: -3px .91428571em <span class=m>0</span> <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    -webkit-transform-origin: right 50% !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    transform-origin: right 50% !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.right.center.popup:before,
+</span></span><span class=line><span class=cl>.ui.left.center.popup:before <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border: 0px solid <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    background: <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.top.popup:before <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border-color: <span class=c1>#fafafaeb transparent transparent !important;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.popup:before <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border-color: <span class=c1>#fafafaeb transparent transparent !important;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.bottom.left.popup:before <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border-radius: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border: 1px solid transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-color: <span class=c1>#fafafaeb transparent transparent !important;</span>
+</span></span><span class=line><span class=cl>    background: <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-tap-highlight-color: rgba<span class=o>(</span>0,0,0,0<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.bottom.right.popup:before <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border-radius: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border: 1px solid transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-color: <span class=c1>#fafafaeb transparent transparent !important;</span>
+</span></span><span class=line><span class=cl>    background: <span class=c1>#fafafaeb !important</span>
+</span></span><span class=line><span class=cl>    -webkit-box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-tap-highlight-color: rgba<span class=o>(</span>0,0,0,0<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.top.left.popup:before <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border-radius: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border: 1px solid transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-color: <span class=c1>#fafafaeb transparent transparent !important;</span>
+</span></span><span class=line><span class=cl>    background: <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-tap-highlight-color: rgba<span class=o>(</span>0,0,0,0<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.top.right.popup:before <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border-radius: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border: 1px solid transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-color: <span class=c1>#fafafaeb transparent transparent !important;</span>
+</span></span><span class=line><span class=cl>    background: <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-tap-highlight-color: rgba<span class=o>(</span>0,0,0,0<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.left.center.popup:before <span class=o>{</span>
+</span></span><span class=line><span class=cl>    border-radius: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border: 1px solid transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-color: <span class=c1>#fafafaeb transparent transparent !important;</span>
+</span></span><span class=line><span class=cl>    background: <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    box-shadow: 0px 0px <span class=m>0</span> <span class=m>0</span> <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    -webkit-tap-highlight-color: rgba<span class=o>(</span>0,0,0,0<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 弹出卡片 */
+</span></span><span class=line><span class=cl>.status.cards .ui.content.popup <span class=o>{</span>
+</span></span><span class=line><span class=cl>    min-width: 20rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    line-height: 2rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-radius: 1rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border: 1px solid transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background-color: <span class=c1>#fafafaeb !important;</span>
+</span></span><span class=line><span class=cl>    font-family: Arial,Helvetica,sans-serif !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.content <span class=o>{</span>
+</span></span><span class=line><span class=cl>    margin: <span class=m>0</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    padding: 1em !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>/* 服务页 */
+</span></span><span class=line><span class=cl>.ui.table <span class=o>{</span>
+</span></span><span class=line><span class=cl>    background: RGB<span class=o>(</span>225,225,225,0.6<span class=o>)</span> !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    border-radius: 1rem !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.ui.table thead th <span class=o>{</span>
+</span></span><span class=line><span class=cl>    background: transparent !important<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 服务页进度条 */
+</span></span><span class=line><span class=cl>.service-status .good <span class=o>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.service-status .danger <span class=o>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>.service-status .warning <span class=o>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>/* 版权 */
+</span></span><span class=line><span class=cl>.ui.inverted.segment, .ui.primary.inverted.segment <span class=o>{</span>
+</span></span><span class=line><span class=cl>    color: <span class=c1>#000 !important;</span>
+</span></span><span class=line><span class=cl>    font-weight: bold !important<span class=p>;</span>
+</span></span><span class=line><span class=cl>    background-color: <span class=c1>#fafafaa3 !important;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>&lt;/style&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>&lt;!--Logo和版权--&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;
+</span></span><span class=line><span class=cl>window.onload <span class=o>=</span> <span class=k>function</span><span class=o>(){</span>
+</span></span><span class=line><span class=cl>var <span class=nv>avatar</span><span class=o>=</span>document.querySelector<span class=o>(</span><span class=s2>&#34;.item img&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>var <span class=nv>footer</span><span class=o>=</span>document.querySelector<span class=o>(</span><span class=s2>&#34;div.is-size-7&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>footer.innerHTML<span class=o>=</span><span class=s2>&#34;Powered by 路飞博客&#34;</span>
+</span></span><span class=line><span class=cl>footer.style.visibility<span class=o>=</span><span class=s2>&#34;visible&#34;</span>
+</span></span><span class=line><span class=cl>avatar.src<span class=o>=</span><span class=s2>&#34;https://gravatar.loli.net/avatar/6969d9446ac73edbace44fe66cbae6fc?d=mm&amp;s=50&#34;</span>
+</span></span><span class=line><span class=cl>avatar.style.visibility<span class=o>=</span><span class=s2>&#34;visible&#34;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>&lt;/script&gt;
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/%E5%93%AA%E5%90%92/>哪吒</a>
+<a href=/tags/%E6%8E%A2%E9%92%88/>探针</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><script src=//unpkg.com/@waline/client@v2/dist/waline.js></script>
+<link href=//unpkg.com/@waline/client@v2/dist/waline.css rel=stylesheet><div id=waline class=waline-container></div><style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding);--waline-font-size:var(--article-font-size)}.waline-container .wl-count{color:var(--card-text-color-main)}</style><script>Waline.init({dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://unpkg.com/@waline/emojis@1.1.0/bmoji"],lang:"zh-CN",locale:{admin:"👻屑博主",placeholder:"🎉留下你的脚印."},pageview:!0,requiredMeta:["name","email"],serverURL:"https://waline.talimus.eu.org/"})</script><footer class=site-footer><section class=copyright>&copy;
+2023 路飞博客</section><section class=powerby><a href=https://gohugo.io/ target=_blank rel=noopener>由 Hugo 强力驱动</a> | <a href=https://github.com/ target=_blank rel=noopener>托管在 Github</a><br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.18.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

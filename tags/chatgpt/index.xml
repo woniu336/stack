@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chatgpt on 路飞博客</title><link>https://blog.leshans.eu.org/tags/chatgpt/</link><description>Recent content in chatgpt on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Nov 2023 13:39:19 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/chatgpt/index.xml" rel="self" type="application/rss+xml"/><item><title>PandoraNext项目私有化部署教程</title><link>https://blog.leshans.eu.org/p/pandoranext%E9%A1%B9%E7%9B%AE%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</link><pubDate>Mon, 27 Nov 2023 13:39:19 +0800</pubDate><guid>https://blog.leshans.eu.org/p/pandoranext%E9%A1%B9%E7%9B%AE%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</guid><description>&lt;h4 id="前言">前言&lt;/h4>
+&lt;p>项目地址: &lt;a class="link" href="https://github.com/pandora-next/deploy" target="_blank" rel="noopener"
+>https://github.com/pandora-next/deploy&lt;/a>&lt;/p>
+&lt;p>由于之前的潘多拉项目已经凉凉了，所以今天给大家出个PandoraNext项目的搭建教程&lt;/p>
+&lt;h4 id="简介">简介&lt;/h4>
+&lt;p>&lt;code>Pandora Cloud + Pandora Server + Shared Chat = PandoraNext &lt;/code>&lt;/p>
+&lt;p>支持GPTs，最新UI , 支持多种登录方式：（相当于Pandora Cloud）&lt;/p>
+&lt;p>可内置tokens，支持设置密码。（相当于Pandora Server）&lt;/p>
+&lt;h4 id="demo">demo&lt;/h4>
+&lt;p>&lt;a class="link" href="https://pdn.ywsj.gq/" target="_blank" rel="noopener"
+>https://pdn.ywsj.gq/&lt;/a>&lt;/p>
+&lt;p>准备条件&lt;br>
+1）一台服务器&lt;br>
+需要便宜VPS的可以参考这个&lt;br>
+&lt;a class="link" href="https://www.zhujiceping.com/vps" target="_blank" rel="noopener"
+>https://www.zhujiceping.com/vps&lt;/a>&lt;br>
+2）此项目的github&lt;br>
+&lt;a class="link" href="https://github.com/pandora-next/deploy" target="_blank" rel="noopener"
+>https://github.com/pandora-next/deploy&lt;/a>&lt;br>
+3）获取license_id&lt;/p>
+&lt;p>这里需要一个github账号
+这个账号注册天数需要大于180天用来授权&lt;/p>
+&lt;h3 id="教程开始">教程开始&lt;/h3>
+&lt;p>前提是要安装docker,一键安装docker脚本:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -fsSL https://get.docker.com &lt;span class="p">|&lt;/span> sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -L &lt;span class="s2">&amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-&lt;/span>&lt;span class="k">$(&lt;/span>uname -s&lt;span class="k">)&lt;/span>&lt;span class="s2">-&lt;/span>&lt;span class="k">$(&lt;/span>uname -m&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>PandoraNext一键脚本:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/pandoranext.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x pandoranext.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./pandoranext.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>
+&lt;p>访问这个网页&lt;code>https://dash.pandoranext.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>登录github账号获取&lt;code>license_id&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/c4af2df94c38d45dd020901af0f7eceb.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;h4 id="安装成功以后ip加端口进入web页面">安装成功以后ip加端口进入web页面&lt;/h4>
+&lt;p>&lt;code>http://ip:8181 端口: 8181&lt;/code>&lt;/p>
+&lt;p>可以用&lt;code>账号密码&lt;/code>登录或者用&lt;code>Access Token&lt;/code>登录&lt;/p>
+&lt;p>&lt;code>如果你是gpt4.0也是可以直接使用的 &lt;/code>&lt;/p>
+&lt;p>五、更新网站&lt;br>
+docker-compose down #停止容器&lt;br>
+docker-compose pull #拉取最新镜像&lt;br>
+docker-compose up -d #启动新容器&lt;/p>
+&lt;h3 id="附access-token获取方法">附：Access Token获取方法&lt;/h3>
+&lt;p>官方登录，然后访问&lt;a class="link" href="https://chat.openai.com/api/auth/session" target="_blank" rel="noopener"
+>这里&lt;/a> 拿 &lt;code>Access Token&lt;/code>&lt;br>
+当然可以访问 &lt;a class="link" href="https://ai.fakeopen.com/auth" target="_blank" rel="noopener"
+>这里&lt;/a>拿 Access Token&lt;br>
+Access Token &lt;code>有效期 14&lt;/code> 天，期间访问&lt;code>不需要魔法&lt;/code>。这意味着你在手机上也可使用。&lt;/p></description></item></channel></rss>

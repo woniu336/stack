@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 11 Oct 2023 14:11:05 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/87/</guid><description>&lt;blockquote>
-&lt;p>路飞工具箱，如一枚闪亮的多面宝石，集聚了无尽的服务器魔法、Docker魔力、VPS技巧和建站艺术。&lt;/p>
-&lt;p>它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Dec 2023 12:06:43 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
+&lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
-&lt;p>以上夸张的描述来自AI&lt;/p>
-&lt;p>将下面的脚本拷贝到您的服务器运行即可&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -12,10 +9,1065 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x tool.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./tool.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。&lt;/p>
-&lt;p>不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
+&lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;quot;&lt;/p></description></item><item><title>使用代理设置 Git 克隆</title><link>https://blog.leshans.eu.org/p/90/</link><pubDate>Wed, 11 Oct 2023 14:11:05 +0800</pubDate><guid>https://blog.leshans.eu.org/p/90/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/10/9e4d9c2cddc94f667342b23782a99bbf.jpg" alt="Featured image of post 使用代理设置 Git 克隆" />&lt;h3 id="git-clone-ssh-走代理">git clone ssh 走代理&lt;/h3>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>玩客云刷Openwrt</title><link>https://blog.leshans.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</link><pubDate>Sat, 02 Dec 2023 12:06:43 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</guid><description>&lt;h1 id="玩客云openwrt固件">玩客云Openwrt固件&lt;/h1>
+&lt;p>玩客云固件：链接: https://pan.baidu.com/s/1q3gVWrsVoRiS2m3VKoqgoQ?pwd=p8ic 提取码: p8ic &lt;/p>
+&lt;p>&lt;code>ip:10.0.0.1密码:root&lt;/code>&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1DV411g7nK"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h1 id="小雅命令">小雅命令&lt;/h1>
+&lt;p>bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo;                              输入ip后面加:5678&lt;/p>
+&lt;p>或者bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo; -s host                  输入ip后面加:6789&lt;/p>
+&lt;p>token：https://aliyuntoken.vercel.app/open &lt;/p>
+&lt;p>token: &lt;a class="link" href="https://alist.nn.ci/tool/aliyundrive/request" target="_blank" rel="noopener"
+>https://alist.nn.ci/tool/aliyundrive/request&lt;/a>&lt;/p>
+&lt;p>转存目录：&lt;a class="link" href="https://www.aliyundrive.com/" target="_blank" rel="noopener"
+>https://www.aliyundrive.com/&lt;/a>&lt;/p>
+&lt;p>bash -c &amp;ldquo;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;rdquo; -s 3 -tg   定时清理bash -c &amp;ldquo;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;rdquo; -s 5 -tg   即时清理&lt;/p>
+&lt;p>webdav 账号密码用户: guest 密码: guest_Api789 ​&lt;/p></description></item><item><title>XShell 7和XFTP 7 家庭或学校免费版移除标签限制</title><link>https://blog.leshans.eu.org/p/xshell-7%E5%92%8Cxftp-7-%E5%AE%B6%E5%BA%AD%E6%88%96%E5%AD%A6%E6%A0%A1%E5%85%8D%E8%B4%B9%E7%89%88%E7%A7%BB%E9%99%A4%E6%A0%87%E7%AD%BE%E9%99%90%E5%88%B6/</link><pubDate>Thu, 30 Nov 2023 12:09:50 +0800</pubDate><guid>https://blog.leshans.eu.org/p/xshell-7%E5%92%8Cxftp-7-%E5%AE%B6%E5%BA%AD%E6%88%96%E5%AD%A6%E6%A0%A1%E5%85%8D%E8%B4%B9%E7%89%88%E7%A7%BB%E9%99%A4%E6%A0%87%E7%AD%BE%E9%99%90%E5%88%B6/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/5eeb4732db8fb1954fc7c01b17ca32f1.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>更新：&lt;code>从 2022/02/16 开始，我们的免费许可证的标签限制已被删除&lt;/code>。所有免费用户现在都可以通过下载下面的最新版本来访问无限的标签。当前用户必须下载最新版本并在现有安装上进行安装。&lt;/p>
+&lt;p>申请地址：&lt;a class="link" href="https://www.xshell.com/zh/free-for-home-school/" target="_blank" rel="noopener"
+>https://www.xshell.com/zh/free-for-home-school/&lt;/a>&lt;/p></description></item><item><title>X99一键鸡血工具更新了!!</title><link>https://blog.leshans.eu.org/p/x99%E4%B8%80%E9%94%AE%E9%B8%A1%E8%A1%80%E5%B7%A5%E5%85%B7%E6%9B%B4%E6%96%B0%E4%BA%86/</link><pubDate>Wed, 29 Nov 2023 03:30:06 +0800</pubDate><guid>https://blog.leshans.eu.org/p/x99%E4%B8%80%E9%94%AE%E9%B8%A1%E8%A1%80%E5%B7%A5%E5%85%B7%E6%9B%B4%E6%96%B0%E4%BA%86/</guid><description>&lt;p>提取bios出错？鸡血后不开机？亲测鸡血后巨稳定有想法的可以壮胆冲啊…至强万岁E5万岁&lt;/p>
+&lt;p>&lt;a class="link" href="https://wwcb.lanzouw.com/i5YWS1e0pcmf" target="_blank" rel="noopener"
+>https://wwcb.lanzouw.com/i5YWS1e0pcmf&lt;/a>&lt;br>
+密码:TLDGJ&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV15G41197jv"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div></description></item><item><title>PandoraNext项目私有化部署教程</title><link>https://blog.leshans.eu.org/p/pandoranext%E9%A1%B9%E7%9B%AE%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</link><pubDate>Mon, 27 Nov 2023 13:39:19 +0800</pubDate><guid>https://blog.leshans.eu.org/p/pandoranext%E9%A1%B9%E7%9B%AE%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</guid><description>&lt;h4 id="前言">前言&lt;/h4>
+&lt;p>项目地址: &lt;a class="link" href="https://github.com/pandora-next/deploy" target="_blank" rel="noopener"
+>https://github.com/pandora-next/deploy&lt;/a>&lt;/p>
+&lt;p>由于之前的潘多拉项目已经凉凉了，所以今天给大家出个PandoraNext项目的搭建教程&lt;/p>
+&lt;h4 id="简介">简介&lt;/h4>
+&lt;p>&lt;code>Pandora Cloud + Pandora Server + Shared Chat = PandoraNext &lt;/code>&lt;/p>
+&lt;p>支持GPTs，最新UI , 支持多种登录方式：（相当于Pandora Cloud）&lt;/p>
+&lt;p>可内置tokens，支持设置密码。（相当于Pandora Server）&lt;/p>
+&lt;h4 id="demo">demo&lt;/h4>
+&lt;p>&lt;a class="link" href="https://pdn.ywsj.gq/" target="_blank" rel="noopener"
+>https://pdn.ywsj.gq/&lt;/a>&lt;/p>
+&lt;p>准备条件&lt;br>
+1）一台服务器&lt;br>
+需要便宜VPS的可以参考这个&lt;br>
+&lt;a class="link" href="https://www.zhujiceping.com/vps" target="_blank" rel="noopener"
+>https://www.zhujiceping.com/vps&lt;/a>&lt;br>
+2）此项目的github&lt;br>
+&lt;a class="link" href="https://github.com/pandora-next/deploy" target="_blank" rel="noopener"
+>https://github.com/pandora-next/deploy&lt;/a>&lt;br>
+3）获取license_id&lt;/p>
+&lt;p>这里需要一个github账号
+这个账号注册天数需要大于180天用来授权&lt;/p>
+&lt;h3 id="教程开始">教程开始&lt;/h3>
+&lt;p>前提是要安装docker,一键安装docker脚本:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -fsSL https://get.docker.com &lt;span class="p">|&lt;/span> sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -L &lt;span class="s2">&amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-&lt;/span>&lt;span class="k">$(&lt;/span>uname -s&lt;span class="k">)&lt;/span>&lt;span class="s2">-&lt;/span>&lt;span class="k">$(&lt;/span>uname -m&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>PandoraNext一键脚本:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/pandoranext.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x pandoranext.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./pandoranext.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>
+&lt;p>访问这个网页&lt;code>https://dash.pandoranext.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>登录github账号获取&lt;code>license_id&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/c4af2df94c38d45dd020901af0f7eceb.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;h4 id="安装成功以后ip加端口进入web页面">安装成功以后ip加端口进入web页面&lt;/h4>
+&lt;p>&lt;code>http://ip:8181 端口: 8181&lt;/code>&lt;/p>
+&lt;p>可以用&lt;code>账号密码&lt;/code>登录或者用&lt;code>Access Token&lt;/code>登录&lt;/p>
+&lt;p>&lt;code>如果你是gpt4.0也是可以直接使用的 &lt;/code>&lt;/p>
+&lt;p>五、更新网站&lt;br>
+docker-compose down #停止容器&lt;br>
+docker-compose pull #拉取最新镜像&lt;br>
+docker-compose up -d #启动新容器&lt;/p>
+&lt;h3 id="附access-token获取方法">附：Access Token获取方法&lt;/h3>
+&lt;p>官方登录，然后访问&lt;a class="link" href="https://chat.openai.com/api/auth/session" target="_blank" rel="noopener"
+>这里&lt;/a> 拿 &lt;code>Access Token&lt;/code>&lt;br>
+当然可以访问 &lt;a class="link" href="https://ai.fakeopen.com/auth" target="_blank" rel="noopener"
+>这里&lt;/a>拿 Access Token&lt;br>
+Access Token &lt;code>有效期 14&lt;/code> 天，期间访问&lt;code>不需要魔法&lt;/code>。这意味着你在手机上也可使用。&lt;/p></description></item><item><title>amh7.0安装苹果cms的一些坑和注意事项</title><link>https://blog.leshans.eu.org/p/amh7.0%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9Ccms%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link><pubDate>Mon, 27 Nov 2023 01:52:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/amh7.0%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9Ccms%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid><description>&lt;p>&lt;code>1.数据库导入的问题 &lt;/code>&lt;/p>
+&lt;p> ①先上传到备份目录，在解压，然后在导入 &lt;/p>
+&lt;p> ②数据库设置那里要&lt;code>启用远程开启 &lt;/code>&lt;/p>
+&lt;p>&lt;code> 2.任务计划 &lt;/code>&lt;/p>
+&lt;p> ①注意时区 &lt;/p>
+&lt;p>&lt;code> 3.数据库同步 &lt;/code>&lt;/p>
+&lt;p> ①记得打开数据库二进制 &lt;/p>
+&lt;p>&lt;code> 4.一键还原 &lt;/code>&lt;/p>
+&lt;p>① 注意需要相同的环境组件&lt;/p>
+&lt;p>&lt;code>5.安装memcached注意事项&lt;/code>&lt;/p>
+&lt;p>php需安装 &lt;code>bcmath&lt;/code> 扩展&lt;/p>
+&lt;h3 id="总结">总结:&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>操作&lt;/th>
+&lt;th>注意事项&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>数据库导入&lt;/td>
+&lt;td>上传备份至目标目录并解压，启用远程访问。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>任务计划&lt;/td>
+&lt;td>注意时区设置。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>数据库同步&lt;/td>
+&lt;td>打开数据库的二进制日志功能。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>一键还原&lt;/td>
+&lt;td>确保还原环境具有相同的组件。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>安装 Memcached&lt;/td>
+&lt;td>PHP需安装bcmath扩展。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>靠谱的国外短信接收平台</title><link>https://blog.leshans.eu.org/p/%E9%9D%A0%E8%B0%B1%E7%9A%84%E5%9B%BD%E5%A4%96%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6%E5%B9%B3%E5%8F%B0/</link><pubDate>Sun, 26 Nov 2023 23:21:23 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E9%9D%A0%E8%B0%B1%E7%9A%84%E5%9B%BD%E5%A4%96%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6%E5%B9%B3%E5%8F%B0/</guid><description>&lt;p>国外短信接收平台: &lt;a class="link" href="https://sms-activate.org/cn" target="_blank" rel="noopener"
+>https://sms-activate.org/cn&lt;/a>&lt;/p>
+&lt;p>优点&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>180 多个国家/地区&lt;/strong> — 我们不断扩大我们的地理范围&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>700 多个站点和应用程序的编号&lt;/strong>，以及其他服务的“任何其他”选项&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>通过 SMS、&lt;/strong> 号码或来自机器人的电话验证帐户&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>通过电子钱包方便地充值，&lt;/strong>&lt;br>
+通过银行卡或加密货币&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>老客户&lt;strong>折扣和批发价&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Favorable affiliate program&lt;/strong>—邀请短信激活并赚取&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>开发注册软件？我们将提供 API 和良好的条件！&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>通过电子邮件验证。临时邮寄地址从 0.03 卢布起。用于快速、安全的注册。&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>逆天！AI 的下一个爆款项目，不想失业一定要提前知道！！</title><link>https://blog.leshans.eu.org/p/%E9%80%86%E5%A4%A9ai-%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%88%86%E6%AC%BE%E9%A1%B9%E7%9B%AE%E4%B8%8D%E6%83%B3%E5%A4%B1%E4%B8%9A%E4%B8%80%E5%AE%9A%E8%A6%81%E6%8F%90%E5%89%8D%E7%9F%A5%E9%81%93/</link><pubDate>Sun, 26 Nov 2023 23:12:34 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E9%80%86%E5%A4%A9ai-%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%88%86%E6%AC%BE%E9%A1%B9%E7%9B%AE%E4%B8%8D%E6%83%B3%E5%A4%B1%E4%B8%9A%E4%B8%80%E5%AE%9A%E8%A6%81%E6%8F%90%E5%89%8D%E7%9F%A5%E9%81%93/</guid><description>&lt;h2 id="1-stable-video-diffusion-gpt4-后的下一个曝款ai视频项目">1: Stable Video Diffusion ：GPT4 后的下一个曝款AI视频项目&lt;/h2>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/a0d15546f046e95208c67cd6e295b48f.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>加入等候名单：【&lt;a class="link" href="https://stability.ai/contact" target="_blank" rel="noopener"
+>点击前往&lt;/a>】&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>开源项目：【&lt;a class="link" href="https://github.com/Stability-AI/generative-models" target="_blank" rel="noopener"
+>链接地址&lt;/a>】&lt;/strong>&lt;/p>
+&lt;p>现在，你可以基于原有的静止图像来生成一段几秒钟的视频。&lt;/p>
+&lt;p>基于 Stability AI 原有的 Stable Diffusion 文生图模型，Stable Video Diffusion 成为了开源或已商业行列中为数不多的==视频生成==模型之一。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/87444a144947172e6189ef9f565f0360.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;h2 id="2像魔法一样的ai图像升级增强器提升图片画质只需1秒">2.像魔法一样的AI图像升级、增强器！提升图片画质只需1秒&lt;/h2>
+&lt;p>最先进的人工智能技术可实现疯狂的高分辨率升级。不仅高档，更提升！Magnific 可以在您自己的提示和参数的指导下，产生幻觉并重新想象尽可能多的细节！&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/1b1768220114e69f20f7b91e333c783d.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>加入等候名单：【&lt;a class="link" href="https://magnific.substack.com/" target="_blank" rel="noopener"
+>点击前往&lt;/a>】&lt;/strong>&lt;/p>
+&lt;h2 id="3claude-21-升级后可轻松处理20w指令-准确率提升30">3.Claude 2.1 升级后，可轻松处理20W指令， 准确率提升30%&lt;/h2>
+&lt;p>Claude 2.1 升级后，可轻松处理20W指令。虽然很高兴能够将这一强大的新功能交到用户手中，但通常需要几个小时的人力才能完成的任务可能需要 Claude 几分钟的时间。我们预计随着技术的进步，延迟将大幅减少。&lt;/p>
+&lt;p>幻觉率降低 2 倍&lt;/p>
+&lt;p>Claude 2.1 在诚实方面也取得了显着进步，与我们之前的 Claude 2.0 模型相比，虚假陈述减少了 2 倍。这使企业能够构建高性能的人工智能应用程序，解决具体的业务问题，并以更高的信任度和可靠性在其运营中部署人工智能。&lt;/p>
+&lt;p>我们通过设计大量复杂的事实问题来探究当前模型中已知的弱点，从而测试了 Claude 2.1 的诚实性。使用区分错误说法（“玻利维亚人口第五多的城市是蒙特罗”）和承认不确定性（“我不确定玻利维亚人口第五多的城市是什么”）的标题，Claude 2.1 更有可能提出异议而不是提供不正确的信息。&lt;/p>
+&lt;p>官方链接：&lt;a class="link" href="https://www.anthropic.com/index/claude-2-1" target="_blank" rel="noopener"
+>https://www.anthropic.com/index/claude-2-1&lt;/a>&lt;/p>
+&lt;p>主页: &lt;a class="link" href="https://claude.ai/chats" target="_blank" rel="noopener"
+>https://claude.ai/chats&lt;/a>&lt;/p>
+&lt;p>国外短信接收平台: &lt;a class="link" href="https://sms-activate.org/cn" target="_blank" rel="noopener"
+>https://sms-activate.org/cn&lt;/a>&lt;/p></description></item><item><title>portainer-ce中文纯净版</title><link>https://blog.leshans.eu.org/p/portainer-ce%E4%B8%AD%E6%96%87%E7%BA%AF%E5%87%80%E7%89%88/</link><pubDate>Sun, 26 Nov 2023 16:17:17 +0800</pubDate><guid>https://blog.leshans.eu.org/p/portainer-ce%E4%B8%AD%E6%96%87%E7%BA%AF%E5%87%80%E7%89%88/</guid><description>&lt;p>源码仓库 &lt;a class="link" href="https://github.com/eysp/portainer-ce" target="_blank" rel="noopener"
+>https://github.com/eysp/portainer-ce&lt;/a>&lt;/p>
+&lt;h1 id="portainer-ce中文版">portainer-ce中文版&lt;/h1>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/e00632772fde1afb994b9b2aea480fe4.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>其中arm和ppc64le架构没有设备测试，反馈bug 到GitHub issues&lt;/strong>&lt;/p>
+&lt;p>已更新到&lt;code>2.19.1&lt;/code>，新版删除左上角升级企业版的广告，删除首次登录弹出英文提示的公告，汉化的广告也隐藏，总之这是一个&lt;code>纯净版&lt;/code>&lt;/p>
+&lt;p>如果汉化对你有帮助请往下拉支持我，另外欢迎大家进q群交流，群号&lt;code>758648462&lt;/code>（备注portainer）&lt;/p>
+&lt;h1 id="感谢群里我不是矿神-指导js精简--52fancy-提供编译脚本">感谢群里@我不是矿神 指导js精简 | @52Fancy 提供编译脚本&lt;/h1>
+&lt;p>&lt;em>一键安装代码&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker run -d --restart&lt;span class="o">=&lt;/span>always --name&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;portainer&amp;#34;&lt;/span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock 6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>163镜像安装，portainer-ce中文，访问dockerhub网速不好的尝试&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker run -d --restart&lt;span class="o">=&lt;/span>always --name&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;portainer&amp;#34;&lt;/span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock hub-mirror.c.163.com/6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>访问hub.docker.com网络慢，或者以上代码都无法安装成功尝试以下代码&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker pull hub-mirror.c.163.com/6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker run -d --restart&lt;span class="o">=&lt;/span>always --name&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;portainer&amp;#34;&lt;/span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data 6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>如果你要启用ssl访问，远程主机建议启用，端口443和证书路径/certs请自行更改&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker run -d -p 443:9000 --name portainer --restart always -v
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ~/local-certs:/certs -v portainer_data:/data 6053537/portainer-ce -v /var/run/docker.sock:/var/run/docker.sock --ssl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>或者你也可以启用Nginx反代，下面是代码&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl"> location / &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_pass http://127.0.0.1:9000&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header Host &lt;span class="nv">$host&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header X-Real-IP &lt;span class="nv">$remote_addr&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header X-Forwarded-For &lt;span class="nv">$proxy_add_x_forwarded_for&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_read_timeout 300s&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_http_version 1.1&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header Upgrade &lt;span class="nv">$http_upgrade&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header Connection &lt;span class="s2">&amp;#34;upgrade&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>如果你只想要访问youname.com/portainer这样的子目录也可以&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl"> location ^~ /portainer/ &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_pass http://127.0.0.1:9000/&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header Host &lt;span class="nv">$host&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header X-Real-IP &lt;span class="nv">$remote_addr&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header X-Forwarded-For &lt;span class="nv">$proxy_add_x_forwarded_for&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_read_timeout 300s&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_http_version 1.1&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header Upgrade &lt;span class="nv">$http_upgrade&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy_set_header Connection &lt;span class="s2">&amp;#34;upgrade&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>哪吒探针美化</title><link>https://blog.leshans.eu.org/p/%E5%93%AA%E5%90%92%E6%8E%A2%E9%92%88%E7%BE%8E%E5%8C%96/</link><pubDate>Sun, 26 Nov 2023 14:30:45 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%93%AA%E5%90%92%E6%8E%A2%E9%92%88%E7%BE%8E%E5%8C%96/</guid><description>&lt;p>哪吒探针文档: &lt;a class="link" href="https://nezha.wiki/guide/dashboard.html" target="_blank" rel="noopener"
+>https://nezha.wiki/guide/dashboard.html&lt;/a>&lt;/p>
+&lt;h3 id="截图预览">截图预览&lt;/h3>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/b2932ac72373a815b04e6cfba2feddf5.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/b90ba894557c351b187dec8d2d132e7b.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="特性以下均为基于官方默认主题的更改">特性(以下均为基于官方默认主题的更改)&lt;/h3>
+&lt;p>1.基于官方原版主题重新排版&lt;/p>
+&lt;p>2.解决移动端卡片列表点击最后两个卡片右上角的图标时，发生的页面位置跳转问题&lt;/p>
+&lt;p>3.固定卡片宽度，栅格化(若剩余宽度不足以容下一个卡片，则换行显示)解决原版主题页面宽度变小后仍然制一行显示4个导致布局错误&lt;/p>
+&lt;p>4.解决弹出看卡片位置不合适导致被顶部菜单栏遮挡问题&lt;/p>
+&lt;p>5.增加一些我常用的主机信息显示在卡片上，方便查看（不爱喜欢可以自行修改哈）&lt;/p>
+&lt;p>6.底部版权信息可以在template文件夹里的footer.html里更改&lt;/p>
+&lt;p>7.swap未开启显示提示&lt;/p>
+&lt;h3 id="使用方法">使用方法&lt;/h3>
+&lt;p>1.template里面的文件解压出来放到服务端模板目录里面&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/opt/nezha/dashboard/theme-custom/template
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>2.重启哪吒面板服务&lt;/p>
+&lt;p>3.在哪吒面板后台主题选择&lt;code>Custom(local)&lt;/code>&lt;/p>
+&lt;p>4.将&lt;code>css.txt&lt;/code>里面的CSS样式代码复制到哪吒面板后台的“自定义代码”文本框里&lt;/p>
+&lt;h3 id="一些信息的修改地址">一些信息的修改地址&lt;/h3>
+&lt;p>1.站点图标 &lt;code>header.html&lt;/code> 文件的第17行，替换掉&lt;code>https://cdn.amzayo.top/static/public/luban/luban_head.png&lt;/code>&lt;/p>
+&lt;p>2.页面左上角 &lt;code>logomenu.html&lt;/code> 文件的第5行，替换掉&lt;code>https://cdn.amzayo.top/static/public/luban/test_head.e7b54515.png&lt;/code>&lt;/p>
+&lt;p>3.底部版权信息&lt;code> footer.html&lt;/code> 文件的第4到8行，依照demo底部的文字按需替换&lt;/p>
+&lt;h2 id="下载地址--点我下载httpsgithubcomwoniu336open_shellblobmainamzayo_template_fin_291zip">下载地址&amp;ndash;&amp;gt;&lt;a class="link" href="https://github.com/woniu336/open_shell/blob/main/amzayo_template_fin_2.91.zip" target="_blank" rel="noopener"
+>点我下载&lt;/a>&lt;/h2>
+&lt;h2 id="其他css样式">其他CSS样式&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;span class="lnt">106
+&lt;/span>&lt;span class="lnt">107
+&lt;/span>&lt;span class="lnt">108
+&lt;/span>&lt;span class="lnt">109
+&lt;/span>&lt;span class="lnt">110
+&lt;/span>&lt;span class="lnt">111
+&lt;/span>&lt;span class="lnt">112
+&lt;/span>&lt;span class="lnt">113
+&lt;/span>&lt;span class="lnt">114
+&lt;/span>&lt;span class="lnt">115
+&lt;/span>&lt;span class="lnt">116
+&lt;/span>&lt;span class="lnt">117
+&lt;/span>&lt;span class="lnt">118
+&lt;/span>&lt;span class="lnt">119
+&lt;/span>&lt;span class="lnt">120
+&lt;/span>&lt;span class="lnt">121
+&lt;/span>&lt;span class="lnt">122
+&lt;/span>&lt;span class="lnt">123
+&lt;/span>&lt;span class="lnt">124
+&lt;/span>&lt;span class="lnt">125
+&lt;/span>&lt;span class="lnt">126
+&lt;/span>&lt;span class="lnt">127
+&lt;/span>&lt;span class="lnt">128
+&lt;/span>&lt;span class="lnt">129
+&lt;/span>&lt;span class="lnt">130
+&lt;/span>&lt;span class="lnt">131
+&lt;/span>&lt;span class="lnt">132
+&lt;/span>&lt;span class="lnt">133
+&lt;/span>&lt;span class="lnt">134
+&lt;/span>&lt;span class="lnt">135
+&lt;/span>&lt;span class="lnt">136
+&lt;/span>&lt;span class="lnt">137
+&lt;/span>&lt;span class="lnt">138
+&lt;/span>&lt;span class="lnt">139
+&lt;/span>&lt;span class="lnt">140
+&lt;/span>&lt;span class="lnt">141
+&lt;/span>&lt;span class="lnt">142
+&lt;/span>&lt;span class="lnt">143
+&lt;/span>&lt;span class="lnt">144
+&lt;/span>&lt;span class="lnt">145
+&lt;/span>&lt;span class="lnt">146
+&lt;/span>&lt;span class="lnt">147
+&lt;/span>&lt;span class="lnt">148
+&lt;/span>&lt;span class="lnt">149
+&lt;/span>&lt;span class="lnt">150
+&lt;/span>&lt;span class="lnt">151
+&lt;/span>&lt;span class="lnt">152
+&lt;/span>&lt;span class="lnt">153
+&lt;/span>&lt;span class="lnt">154
+&lt;/span>&lt;span class="lnt">155
+&lt;/span>&lt;span class="lnt">156
+&lt;/span>&lt;span class="lnt">157
+&lt;/span>&lt;span class="lnt">158
+&lt;/span>&lt;span class="lnt">159
+&lt;/span>&lt;span class="lnt">160
+&lt;/span>&lt;span class="lnt">161
+&lt;/span>&lt;span class="lnt">162
+&lt;/span>&lt;span class="lnt">163
+&lt;/span>&lt;span class="lnt">164
+&lt;/span>&lt;span class="lnt">165
+&lt;/span>&lt;span class="lnt">166
+&lt;/span>&lt;span class="lnt">167
+&lt;/span>&lt;span class="lnt">168
+&lt;/span>&lt;span class="lnt">169
+&lt;/span>&lt;span class="lnt">170
+&lt;/span>&lt;span class="lnt">171
+&lt;/span>&lt;span class="lnt">172
+&lt;/span>&lt;span class="lnt">173
+&lt;/span>&lt;span class="lnt">174
+&lt;/span>&lt;span class="lnt">175
+&lt;/span>&lt;span class="lnt">176
+&lt;/span>&lt;span class="lnt">177
+&lt;/span>&lt;span class="lnt">178
+&lt;/span>&lt;span class="lnt">179
+&lt;/span>&lt;span class="lnt">180
+&lt;/span>&lt;span class="lnt">181
+&lt;/span>&lt;span class="lnt">182
+&lt;/span>&lt;span class="lnt">183
+&lt;/span>&lt;span class="lnt">184
+&lt;/span>&lt;span class="lnt">185
+&lt;/span>&lt;span class="lnt">186
+&lt;/span>&lt;span class="lnt">187
+&lt;/span>&lt;span class="lnt">188
+&lt;/span>&lt;span class="lnt">189
+&lt;/span>&lt;span class="lnt">190
+&lt;/span>&lt;span class="lnt">191
+&lt;/span>&lt;span class="lnt">192
+&lt;/span>&lt;span class="lnt">193
+&lt;/span>&lt;span class="lnt">194
+&lt;/span>&lt;span class="lnt">195
+&lt;/span>&lt;span class="lnt">196
+&lt;/span>&lt;span class="lnt">197
+&lt;/span>&lt;span class="lnt">198
+&lt;/span>&lt;span class="lnt">199
+&lt;/span>&lt;span class="lnt">200
+&lt;/span>&lt;span class="lnt">201
+&lt;/span>&lt;span class="lnt">202
+&lt;/span>&lt;span class="lnt">203
+&lt;/span>&lt;span class="lnt">204
+&lt;/span>&lt;span class="lnt">205
+&lt;/span>&lt;span class="lnt">206
+&lt;/span>&lt;span class="lnt">207
+&lt;/span>&lt;span class="lnt">208
+&lt;/span>&lt;span class="lnt">209
+&lt;/span>&lt;span class="lnt">210
+&lt;/span>&lt;span class="lnt">211
+&lt;/span>&lt;span class="lnt">212
+&lt;/span>&lt;span class="lnt">213
+&lt;/span>&lt;span class="lnt">214
+&lt;/span>&lt;span class="lnt">215
+&lt;/span>&lt;span class="lnt">216
+&lt;/span>&lt;span class="lnt">217
+&lt;/span>&lt;span class="lnt">218
+&lt;/span>&lt;span class="lnt">219
+&lt;/span>&lt;span class="lnt">220
+&lt;/span>&lt;span class="lnt">221
+&lt;/span>&lt;span class="lnt">222
+&lt;/span>&lt;span class="lnt">223
+&lt;/span>&lt;span class="lnt">224
+&lt;/span>&lt;span class="lnt">225
+&lt;/span>&lt;span class="lnt">226
+&lt;/span>&lt;span class="lnt">227
+&lt;/span>&lt;span class="lnt">228
+&lt;/span>&lt;span class="lnt">229
+&lt;/span>&lt;span class="lnt">230
+&lt;/span>&lt;span class="lnt">231
+&lt;/span>&lt;span class="lnt">232
+&lt;/span>&lt;span class="lnt">233
+&lt;/span>&lt;span class="lnt">234
+&lt;/span>&lt;span class="lnt">235
+&lt;/span>&lt;span class="lnt">236
+&lt;/span>&lt;span class="lnt">237
+&lt;/span>&lt;span class="lnt">238
+&lt;/span>&lt;span class="lnt">239
+&lt;/span>&lt;span class="lnt">240
+&lt;/span>&lt;span class="lnt">241
+&lt;/span>&lt;span class="lnt">242
+&lt;/span>&lt;span class="lnt">243
+&lt;/span>&lt;span class="lnt">244
+&lt;/span>&lt;span class="lnt">245
+&lt;/span>&lt;span class="lnt">246
+&lt;/span>&lt;span class="lnt">247
+&lt;/span>&lt;span class="lnt">248
+&lt;/span>&lt;span class="lnt">249
+&lt;/span>&lt;span class="lnt">250
+&lt;/span>&lt;span class="lnt">251
+&lt;/span>&lt;span class="lnt">252
+&lt;/span>&lt;span class="lnt">253
+&lt;/span>&lt;span class="lnt">254
+&lt;/span>&lt;span class="lnt">255
+&lt;/span>&lt;span class="lnt">256
+&lt;/span>&lt;span class="lnt">257
+&lt;/span>&lt;span class="lnt">258
+&lt;/span>&lt;span class="lnt">259
+&lt;/span>&lt;span class="lnt">260
+&lt;/span>&lt;span class="lnt">261
+&lt;/span>&lt;span class="lnt">262
+&lt;/span>&lt;span class="lnt">263
+&lt;/span>&lt;span class="lnt">264
+&lt;/span>&lt;span class="lnt">265
+&lt;/span>&lt;span class="lnt">266
+&lt;/span>&lt;span class="lnt">267
+&lt;/span>&lt;span class="lnt">268
+&lt;/span>&lt;span class="lnt">269
+&lt;/span>&lt;span class="lnt">270
+&lt;/span>&lt;span class="lnt">271
+&lt;/span>&lt;span class="lnt">272
+&lt;/span>&lt;span class="lnt">273
+&lt;/span>&lt;span class="lnt">274
+&lt;/span>&lt;span class="lnt">275
+&lt;/span>&lt;span class="lnt">276
+&lt;/span>&lt;span class="lnt">277
+&lt;/span>&lt;span class="lnt">278
+&lt;/span>&lt;span class="lnt">279
+&lt;/span>&lt;span class="lnt">280
+&lt;/span>&lt;span class="lnt">281
+&lt;/span>&lt;span class="lnt">282
+&lt;/span>&lt;span class="lnt">283
+&lt;/span>&lt;span class="lnt">284
+&lt;/span>&lt;span class="lnt">285
+&lt;/span>&lt;span class="lnt">286
+&lt;/span>&lt;span class="lnt">287
+&lt;/span>&lt;span class="lnt">288
+&lt;/span>&lt;span class="lnt">289
+&lt;/span>&lt;span class="lnt">290
+&lt;/span>&lt;span class="lnt">291
+&lt;/span>&lt;span class="lnt">292
+&lt;/span>&lt;span class="lnt">293
+&lt;/span>&lt;span class="lnt">294
+&lt;/span>&lt;span class="lnt">295
+&lt;/span>&lt;span class="lnt">296
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&amp;lt;style&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 屏幕适配 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@media only screen and &lt;span class="o">(&lt;/span>min-width: 1200px&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .ui.container &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> width: 80% !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@media only screen and &lt;span class="o">(&lt;/span>max-width: 767px&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .ui.card&amp;gt;.content&amp;gt;.header:not&lt;span class="o">(&lt;/span>.ui&lt;span class="o">)&lt;/span>, .ui.cards&amp;gt;.card&amp;gt;.content&amp;gt;.header:not&lt;span class="o">(&lt;/span>.ui&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-top: 0.4em !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 整体图标 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">i.icon &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: &lt;span class="c1">#000;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> width: 1em !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 背景图片 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">body &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> content: &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: fixed !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> z-index: -1 !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> top: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> right: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bottom: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> left: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-position: top !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-repeat: no-repeat !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-size: cover !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-image: url&lt;span class="o">(&lt;/span>https://gitee.com/darki/img/raw/master/1631081013043.webp&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> font-family: Arial,Helvetica,sans-serif !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 进度条 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.progress &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: 0.5rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.progress .bar &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> min-width: 1.8em !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: 0.5rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> line-height: 1.65em !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.fine.progress&amp;gt; .bar &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.progress&amp;gt; .bar &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.progress.fine .bar &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.progress.warning .bar &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.progress.error .bar &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.progress.offline .bar &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 导航栏 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.large.menu &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: 0rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-color: rgba&lt;span class="o">(&lt;/span>255, 255, 255, 55%&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 首页按钮 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.menu .active.item &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-color: transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 导航栏下拉框 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.dropdown .menu &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: 1rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-color: rgba&lt;span class="o">(&lt;/span>255, 255, 255, 80%&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 登陆按钮 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.nezha-primary-btn &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-color: transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: &lt;span class="c1">#000 !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 大卡片 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#app .ui.fluid.accordion {&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-color: &lt;span class="c1">#fbfbfb26 !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: 1rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 小卡片 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.four.cards&amp;gt;.card &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-color: &lt;span class="c1">#fafafaa3 !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: 1rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.status.cards .wide.column &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> padding-top: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> padding-bottom: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.status.cards .three.wide.column &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.status.cards .wide.column:nth-child&lt;span class="o">(&lt;/span>1&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.status.cards .wide.column:nth-child&lt;span class="o">(&lt;/span>2&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.status.cards .description &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 小鸡名 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.status.cards .flag &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-right: 0.5rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 上传下载 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.status.cards .outline.icon &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-right: 1px !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">i.arrow.alternate.circle.down.outline.icon &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: &lt;span class="c1">#21ba45 !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">i.arrow.alternate.circle.up.outline.icon &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: red !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 弹出卡片小箭头 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.right.center.popup &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin: -3px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> 0.914286em !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-transform-origin: left 50% !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> transform-origin: left 50% !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.bottom.left.popup &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-left: 1px !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-top: 3px !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.top.left.popup &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-left: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-bottom: 10px !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.top.right.popup &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-right: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin-bottom: 8px !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.left.center.popup &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin: -3px .91428571em &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-transform-origin: right 50% !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> transform-origin: right 50% !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.right.center.popup:before,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.left.center.popup:before &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: 0px solid &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.top.popup:before &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-color: &lt;span class="c1">#fafafaeb transparent transparent !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.popup:before &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-color: &lt;span class="c1">#fafafaeb transparent transparent !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.bottom.left.popup:before &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: 1px solid transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-color: &lt;span class="c1">#fafafaeb transparent transparent !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-tap-highlight-color: rgba&lt;span class="o">(&lt;/span>0,0,0,0&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.bottom.right.popup:before &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: 1px solid transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-color: &lt;span class="c1">#fafafaeb transparent transparent !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: &lt;span class="c1">#fafafaeb !important&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-tap-highlight-color: rgba&lt;span class="o">(&lt;/span>0,0,0,0&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.top.left.popup:before &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: 1px solid transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-color: &lt;span class="c1">#fafafaeb transparent transparent !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-tap-highlight-color: rgba&lt;span class="o">(&lt;/span>0,0,0,0&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.top.right.popup:before &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: 1px solid transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-color: &lt;span class="c1">#fafafaeb transparent transparent !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-tap-highlight-color: rgba&lt;span class="o">(&lt;/span>0,0,0,0&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.left.center.popup:before &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: 1px solid transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-color: &lt;span class="c1">#fafafaeb transparent transparent !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> box-shadow: 0px 0px &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -webkit-tap-highlight-color: rgba&lt;span class="o">(&lt;/span>0,0,0,0&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 弹出卡片 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.status.cards .ui.content.popup &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> min-width: 20rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> line-height: 2rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: 1rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border: 1px solid transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-color: &lt;span class="c1">#fafafaeb !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> font-family: Arial,Helvetica,sans-serif !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.content &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin: &lt;span class="m">0&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> padding: 1em !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 服务页 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.table &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: RGB&lt;span class="o">(&lt;/span>225,225,225,0.6&lt;span class="o">)&lt;/span> !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> border-radius: 1rem !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.table thead th &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background: transparent !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 服务页进度条 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.service-status .good &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.service-status .danger &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.service-status .warning &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/* 版权 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.ui.inverted.segment, .ui.primary.inverted.segment &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: &lt;span class="c1">#000 !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> font-weight: bold !important&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> background-color: &lt;span class="c1">#fafafaa3 !important;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;!--Logo和版权--&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">window.onload &lt;span class="o">=&lt;/span> &lt;span class="k">function&lt;/span>&lt;span class="o">(){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">avatar&lt;/span>&lt;span class="o">=&lt;/span>document.querySelector&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;.item img&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">footer&lt;/span>&lt;span class="o">=&lt;/span>document.querySelector&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;div.is-size-7&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">footer.innerHTML&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;Powered by 路飞博客&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">footer.style.visibility&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;visible&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">avatar.src&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://gravatar.loli.net/avatar/6969d9446ac73edbace44fe66cbae6fc?d=mm&amp;amp;s=50&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">avatar.style.visibility&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;visible&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>雷池waf社区版反代上高防</title><link>https://blog.leshans.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</link><pubDate>Sat, 25 Nov 2023 19:33:31 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/585052f90362007594fe1b25e707eb86.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/8RLfPjk1nA8"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+我们经常用&lt;code>NPM可视化面板&lt;/code>反代服务到域名上，我发现一个更加强大的面板，&lt;code>雷池&lt;/code>是个web防火墙面板，基于nginx，反向代理只是基础，重点是还能防御站点，拦截网络恶意攻击。你可以理解为反代加高防的存在，&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/0def04e0ccd10ef58ad357b00811846e.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>使用方法&lt;/strong>&lt;/p>
+&lt;p>Debian/Ubuntu安装下载工具&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">apt update -y  &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>CentOS安装下载工具&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">yum update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> yum install curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>官网版一键脚本&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://kejilion.pro/kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>GitHub版一键脚本 部分小伙伴会遇到官网版出现大段乱码！就用GitHub版本吧！&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/5bce8bb79e908a876d894ca385c8a59d.jpg"
+loading="lazy"
+>&lt;/p></description></item><item><title>V.PS高端线路的WordPress演示网站</title><link>https://blog.leshans.eu.org/p/v.ps%E9%AB%98%E7%AB%AF%E7%BA%BF%E8%B7%AF%E7%9A%84wordpress%E6%BC%94%E7%A4%BA%E7%BD%91%E7%AB%99/</link><pubDate>Fri, 24 Nov 2023 23:31:58 +0800</pubDate><guid>https://blog.leshans.eu.org/p/v.ps%E9%AB%98%E7%AB%AF%E7%BA%BF%E8%B7%AF%E7%9A%84wordpress%E6%BC%94%E7%A4%BA%E7%BD%91%E7%AB%99/</guid><description>&lt;p>V.PS高端线路的WordPress演示网站：&lt;/p>
+&lt;p>中国-香港（移动CMI）：http://v.ps1.zhujiceping.net/&lt;/p>
+&lt;p>日本-大阪（IIJ）：http://v.ps2.zhujiceping.net/&lt;/p>
+&lt;p>日本-东京（软银）：http://v.ps3.zhujiceping.net/&lt;/p>
+&lt;p>澳大利亚-悉尼（联通AS9929）：http://v.ps4.zhujiceping.net/&lt;/p>
+&lt;p>美国-圣何塞（电信CN2+联通AS9929+移动CMIN2）：http://v.ps5.zhujiceping.net/&lt;/p>
+&lt;p>英国-伦敦（联通AS9929）：http://v.ps6.zhujiceping.net&lt;/p>
+&lt;p>德国-法兰克福（联通AS9929）：http://v.ps7.zhujiceping.net&lt;/p>
+&lt;p>荷兰-阿姆斯特丹（电信CN2+联通AS9929+移动CMI）：http://v.ps8.zhujiceping.net/&lt;/p>
+&lt;p>官网测试： &lt;a class="link" href="https://v.ps/speedtest/" target="_blank" rel="noopener"
+>https://v.ps/speedtest/&lt;/a>&lt;/p></description></item><item><title>amh搭建海洋cms注意事项</title><link>https://blog.leshans.eu.org/p/amh%E6%90%AD%E5%BB%BA%E6%B5%B7%E6%B4%8Bcms%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link><pubDate>Tue, 07 Nov 2023 10:49:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/amh%E6%90%AD%E5%BB%BA%E6%B5%B7%E6%B4%8Bcms%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid><description>&lt;p>海洋CMS又名SEACMS，完全开源免费，自适应电脑、手机、平板、APP多终端，无加密、更安全，是您最佳的建站工具!&lt;/p>
+&lt;p>爬滚打多年，海洋CMS有着丰富的经验和技术积累，并且能够随着流行趋势加入更多当下流行的功能。&lt;/p>
+&lt;h2 id="注意几点">注意几点&lt;/h2>
+&lt;ol>
+&lt;li>根目录删除&lt;code>.user.ini&lt;/code> 文件&lt;/li>
+&lt;li>data目录设置&lt;code>权限为777&lt;/code>,其余&lt;code>555&lt;/code>&lt;/li>
+&lt;li>如果导入数据库文件后缀为&lt;code>sql.gz&lt;/code>,先解压为&lt;code>sql&lt;/code>&lt;/li>
+&lt;li>修改&lt;code>common.inc.php&lt;/code>数据库信息&lt;/li>
+&lt;li>数据库设置那里要&lt;code>启用远程开启 &lt;/code>&lt;/li>
+&lt;li>伪静态规则&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>伪静态规则&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">location / &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/frim/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /list/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/movie/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /detail/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/play/&lt;span class="o">([&lt;/span>0-9&lt;span class="o">]&lt;/span>+&lt;span class="o">)&lt;/span>-&lt;span class="o">([&lt;/span>0-9&lt;span class="o">]&lt;/span>+&lt;span class="o">)&lt;/span>-&lt;span class="o">([&lt;/span>0-9&lt;span class="o">]&lt;/span>+&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /video/index.php?&lt;span class="nv">$1&lt;/span>-&lt;span class="nv">$2&lt;/span>-&lt;span class="nv">$3&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/topic/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /topic/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/topiclist/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>.html$ /topiclist/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/index&lt;span class="se">\.&lt;/span>html$ index.php permanent&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/news&lt;span class="se">\.&lt;/span>html$ news/ permanent&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/part/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /articlelist/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rewrite ^/article/index&lt;span class="o">(&lt;/span>.+?&lt;span class="o">)&lt;/span>&lt;span class="se">\.&lt;/span>html$ /article/index.php?&lt;span class="nv">$1&lt;/span> last&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>使用代理设置 Git 克隆</title><link>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-git-%E5%85%8B%E9%9A%86/</link><pubDate>Wed, 11 Oct 2023 14:11:05 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-git-%E5%85%8B%E9%9A%86/</guid><description>&lt;h3 id="git-clone-ssh-走代理">git clone ssh 走代理&lt;/h3>
 &lt;p>新建一个 &lt;code>C:\Users\你的用户名\.ssh\config&lt;/code> 文件（没有扩展名，如果已存在此文件则不用新建），编辑此文件增加以下内容：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -660,7 +1712,7 @@ alt="Pasted image 20230914182724"
 &lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>&lt;/p>
 &lt;p>注意：启用 &lt;code>--skip-upload-same-size&lt;/code> 选项虽然能加速上传但可能会导致修改过的同样大小的文件不会被上传&lt;/p>
-&lt;/blockquote></description></item><item><title>升级Node.js版本</title><link>https://blog.leshans.eu.org/p/%E5%8D%87%E7%BA%A7node.js%E7%89%88%E6%9C%AC/</link><pubDate>Tue, 12 Sep 2023 14:08:04 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%8D%87%E7%BA%A7node.js%E7%89%88%E6%9C%AC/</guid><description>&lt;p>根据错误消息，您的 Node.js 版本不符合 &lt;code>typescript@5.2.2&lt;/code> 所需的最低 Node.js 版本。TypeScript 5.2.2 要求 Node.js 版本 &lt;code>&amp;gt;=14.17&lt;/code>，但您的系统上的 Node.js 版本是 &lt;code>v12.22.12&lt;/code>。&lt;/p>
+&lt;/blockquote></description></item><item><title>升级Node.js版本</title><link>https://blog.leshans.eu.org/p/%E5%8D%87%E7%BA%A7node.js%E7%89%88%E6%9C%AC/</link><pubDate>Tue, 12 Sep 2023 14:08:04 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%8D%87%E7%BA%A7node.js%E7%89%88%E6%9C%AC/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/10/9e4d9c2cddc94f667342b23782a99bbf.jpg" alt="Featured image of post 升级Node.js版本" />&lt;p>根据错误消息，您的 Node.js 版本不符合 &lt;code>typescript@5.2.2&lt;/code> 所需的最低 Node.js 版本。TypeScript 5.2.2 要求 Node.js 版本 &lt;code>&amp;gt;=14.17&lt;/code>，但您的系统上的 Node.js 版本是 &lt;code>v12.22.12&lt;/code>。&lt;/p>
 &lt;p>为了解决这个问题，您可以考虑升级 Node.js 到 &lt;code>&amp;gt;=14.17&lt;/code> 版本，然后再安装 TypeScript。以下是一些步骤来升级 Node.js：&lt;/p>
 &lt;ol>
 &lt;li>首先，您可以使用 &lt;code>nvm&lt;/code>（Node Version Manager）来管理 Node.js 版本。如果您尚未安装 &lt;code>nvm&lt;/code>，您可以按照以下步骤安装它：&lt;/li>
@@ -7269,7 +8321,7 @@ loading="lazy"
 &lt;h2 id="nothankyoucom">&lt;a class="link" href="mailto:no@thankyou.com" >no@thankyou.com&lt;/a>&lt;/h2>
 &lt;p>而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。&lt;/p>
 &lt;p>简直…太好用。&lt;/p>
-&lt;p>微软你说你是不是深井冰。&lt;/p></description></item><item><title>目前最简单、最安全、最稳定的专属节点搭建方法-科学翻墙上网</title><link>https://blog.leshans.eu.org/p/30/</link><pubDate>Sat, 05 Aug 2023 00:19:04 +0800</pubDate><guid>https://blog.leshans.eu.org/p/30/</guid><description>&lt;div class="video-wrapper">
+&lt;p>微软你说你是不是深井冰。&lt;/p></description></item><item><title>目前最简单、最安全、最稳定的专属节点搭建方法</title><link>https://blog.leshans.eu.org/p/%E7%9B%AE%E5%89%8D%E6%9C%80%E7%AE%80%E5%8D%95%E6%9C%80%E5%AE%89%E5%85%A8%E6%9C%80%E7%A8%B3%E5%AE%9A%E7%9A%84%E4%B8%93%E5%B1%9E%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 05 Aug 2023 00:19:04 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E7%9B%AE%E5%89%8D%E6%9C%80%E7%AE%80%E5%8D%95%E6%9C%80%E5%AE%89%E5%85%A8%E6%9C%80%E7%A8%B3%E5%AE%9A%E7%9A%84%E4%B8%93%E5%B1%9E%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/</guid><description>&lt;div class="video-wrapper">
 &lt;iframe loading="lazy"
 src="https://www.youtube.com/embed/SpxTFes1B8U"
 allowfullscreen

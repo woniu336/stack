@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>玩客云 on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E7%8E%A9%E5%AE%A2%E4%BA%91/</link><description>Recent content in 玩客云 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Dec 2023 12:06:43 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E7%8E%A9%E5%AE%A2%E4%BA%91/index.xml" rel="self" type="application/rss+xml"/><item><title>玩客云刷Openwrt</title><link>https://blog.leshans.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</link><pubDate>Sat, 02 Dec 2023 12:06:43 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</guid><description>&lt;h1 id="玩客云openwrt固件">玩客云Openwrt固件&lt;/h1>
+&lt;p>玩客云固件：链接: https://pan.baidu.com/s/1q3gVWrsVoRiS2m3VKoqgoQ?pwd=p8ic 提取码: p8ic &lt;/p>
+&lt;p>&lt;code>ip:10.0.0.1密码:root&lt;/code>&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1DV411g7nK"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h1 id="小雅命令">小雅命令&lt;/h1>
+&lt;p>bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo;                              输入ip后面加:5678&lt;/p>
+&lt;p>或者bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo; -s host                  输入ip后面加:6789&lt;/p>
+&lt;p>token：https://aliyuntoken.vercel.app/open &lt;/p>
+&lt;p>token: &lt;a class="link" href="https://alist.nn.ci/tool/aliyundrive/request" target="_blank" rel="noopener"
+>https://alist.nn.ci/tool/aliyundrive/request&lt;/a>&lt;/p>
+&lt;p>转存目录：&lt;a class="link" href="https://www.aliyundrive.com/" target="_blank" rel="noopener"
+>https://www.aliyundrive.com/&lt;/a>&lt;/p>
+&lt;p>bash -c &amp;ldquo;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;rdquo; -s 3 -tg   定时清理bash -c &amp;ldquo;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;rdquo; -s 5 -tg   即时清理&lt;/p>
+&lt;p>webdav 账号密码用户: guest 密码: guest_Api789 ​&lt;/p></description></item></channel></rss>
