@@ -197,14 +197,14 @@ menu:
 
         - identifier: rss
           name: cRSS
-          url: /index.xml
+          url: http://pan.talimus.eu.org/
           params:
             newTab: true
             icon: rss
 
         - identifier: github
           name: dGitHub
-          url: https://github.com/woniu336
+          url: https://chat.oaifree.com/
           params:
             newTab: true
             icon: brand-github
