@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WordPress on 路飞博客</title><link>https://blog.leshans.eu.org/tags/wordpress/</link><description>Recent content in WordPress on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 00:45:27 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/wordpress/index.xml" rel="self" type="application/rss+xml"/><item><title>WordPress网站更改后台登录地址保姆级图文教程</title><link>https://blog.leshans.eu.org/p/wordpress%E7%BD%91%E7%AB%99%E6%9B%B4%E6%94%B9%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E5%9C%B0%E5%9D%80%E4%BF%9D%E5%A7%86%E7%BA%A7%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 07 Dec 2023 00:45:27 +0800</pubDate><guid>https://blog.leshans.eu.org/p/wordpress%E7%BD%91%E7%AB%99%E6%9B%B4%E6%94%B9%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E5%9C%B0%E5%9D%80%E4%BF%9D%E5%A7%86%E7%BA%A7%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/</guid><description>&lt;h2 id="背景">背景&lt;/h2>
+&lt;p>WordPress系统默认的&lt;code>后台地址&lt;/code>是 域名&lt;code>/wp-admin&lt;/code> 或域名&lt;code>/wp-login.php&lt;/code>&lt;/p>
+&lt;p>这就意味着所有用WordPress的人都可以用这个地址打开你的后台登录页面，很明显谁都知道这很不安全。那么如何更改Wordpress的后台登录地址呢？&lt;/p>
+&lt;p>引入
+搜了好多帖子，方式主要有两种，一种是使用插件，这种方法比较快。但是网上提供插件居多，我安装测试的插件没几个是最后成功的。第二种是直接修改代码文件，最后决定用这种方式。这里以宝塔面板为例，把图文过程写下来，大家参考下。&lt;/p>
+&lt;h3 id="第一步">第一步：&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>打开WordPress所在的目录，找到 WordPress 目录下的 &lt;code>wp-login.php&lt;/code>，这个文件是我们后台登录的地址，把它重命名成别的，例如：&lt;code>admin.php&lt;/code> ，这就意味着你可以通过 http://域名/admin.php 的方式来访问后台。
+&lt;img src="https://r2.leshans.eu.org/2023/12/a7978211df683a9c44f8647bce38a7ee.png"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>但是这还不够，我们打开刚才重命名的文件，把里面所有的 &lt;code>wp-login&lt;/code> 替换成 &lt;code>admin&lt;/code> ，这样第一步完成。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/0f6da20e2ebfac71616fc7ea369cc96f.png"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="第二步">第二步：&lt;/h3>
+&lt;p>打开 WordPress 目录下 &lt;code>wp-includes&lt;/code> ，找到其目录内的 &lt;code>general-template.php&lt;/code> 文件，打开文件，把里面所有的 &lt;code>wp-login&lt;/code> 全部替换成 &lt;code>admin &lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/7d39bff7da60672e54f6b30c486ed6fa.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/f671d4040afb36d5363ebf3f9379370c.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/85447ecaff32bad7847cc6300118eac0.png"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="第三步">第三步：&lt;/h3>
+&lt;p>打开文件 &lt;code>general-template.php&lt;/code> ，点击搜索变量 &lt;code>$login_url&lt;/code>&lt;/p>
+&lt;p>$login_url
+将site_url 里面第一个参数改成&lt;code> index.php&lt;/code> ，如下&lt;/p>
+&lt;p>&lt;code>$login_url = site_url( 'index.php', 'login' );&lt;/code>&lt;/p>
+&lt;p>其中 index.php 可以换成别的，保存默认的 wp-login 也可以，这行的意思是定义当有人通过 http:// 域名 /wp-admin/ 地址访问网站时或者直接访问后台某个地址时进行跳转到 site_url() 设置的地址内，所以防止别人探索你的地址。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/8b812e1c278259b89de21413bae68219.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>END
+以后要登录后台，就可以通过 &lt;code>http://域名/admin.php &lt;/code>访问了。&lt;/p>
+&lt;p>一键脚本：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/wp.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x wp.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./wp.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

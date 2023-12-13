@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Dec 2023 12:06:43 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Dec 2023 23:02:46 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -11,7 +11,1464 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>玩客云刷Openwrt</title><link>https://blog.leshans.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</link><pubDate>Sat, 02 Dec 2023 12:06:43 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</guid><description>&lt;h1 id="玩客云openwrt固件">玩客云Openwrt固件&lt;/h1>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>免翻墙注册chatgpt账号,国内直连chatgpt一站式解决方案</title><link>https://blog.leshans.eu.org/p/%E5%85%8D%E7%BF%BB%E5%A2%99%E6%B3%A8%E5%86%8Cchatgpt%E8%B4%A6%E5%8F%B7%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Echatgpt%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link><pubDate>Mon, 11 Dec 2023 23:02:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%85%8D%E7%BF%BB%E5%A2%99%E6%B3%A8%E5%86%8Cchatgpt%E8%B4%A6%E5%8F%B7%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Echatgpt%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid><description>&lt;h2 id="相关链接">相关链接&lt;/h2>
+&lt;p>项目地址：&lt;a class="link" href="https://github.com/pandora-next/deploy" target="_blank" rel="noopener"
+>https://github.com/pandora-next/deploy&lt;/a>&lt;/p>
+&lt;p>项目文档：&lt;a class="link" href="https://fakeopen.org/PandoraNext" target="_blank" rel="noopener"
+>https://fakeopen.org/PandoraNext&lt;/a>&lt;/p>
+&lt;p>官方获取Access Token和Session Token：&lt;a class="link" href="https://chat.openai.com/api/auth/session" target="_blank" rel="noopener"
+>https://chat.openai.com/api/auth/session&lt;/a>&lt;/p>
+&lt;p>获取Access Token和Session Token：&lt;a class="link" href="https://ai.fakeopen.com/auth" target="_blank" rel="noopener"
+>https://ai.fakeopen.com/auth&lt;/a>&lt;/p>
+&lt;p>生成Share Token：&lt;a class="link" href="https://ai.fakeopen.com/token" target="_blank" rel="noopener"
+>https://ai.fakeopen.com/token&lt;/a>&lt;/p>
+&lt;p>生成Pool Token：&lt;a class="link" href="https://ai.fakeopen.com/pool" target="_blank" rel="noopener"
+>https://ai.fakeopen.com/pool&lt;/a>&lt;/p>
+&lt;p>第三方WebUI：&lt;a class="link" href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" rel="noopener"
+>https://github.com/Yidadaa/ChatGPT-Next-Web&lt;/a>&lt;/p>
+&lt;h2 id="使用web模式">使用Web模式&lt;/h2>
+&lt;p>免费账号共享池：&lt;a class="link" href="https://baipiao.io/chatgpt" target="_blank" rel="noopener"
+>https://baipiao.io/chatgpt&lt;/a>&lt;/p>
+&lt;p>官方演示地址一：&lt;a class="link" href="https://chat.oaifree.com" target="_blank" rel="noopener"
+>https://chat.oaifree.com&lt;/a>&lt;/p>
+&lt;p>官方演示地址二：&lt;a class="link" href="https://chat1.zhile.io" target="_blank" rel="noopener"
+>https://chat1.zhile.io&lt;/a>&lt;/p>
+&lt;p>别人搭建的网址：&lt;a class="link" href="https://fofa.info/result?qbase64=Ym9keT0iQ29udGludWUgd2l0aCBBY2Nlc3MgVG9rZW4iICYmIHRpdGxlPSJQYW5kb3JhTmV4dCIgJiYgY291bnRyeT0iQ04i" target="_blank" rel="noopener"
+>https://fofa.info/result?qbase64=Ym9keT0iQ29udGludWUgd2l0aCBBY2Nlc3MgVG9rZW4iICYmIHRpdGxlPSJQYW5kb3JhTmV4dCIgJiYgY291bnRyeT0iQ04i&lt;/a>&lt;/p></description></item><item><title>PayPal 注册与提现以及万里汇虚拟外币卡</title><link>https://blog.leshans.eu.org/p/paypal-%E6%B3%A8%E5%86%8C%E4%B8%8E%E6%8F%90%E7%8E%B0%E4%BB%A5%E5%8F%8A%E4%B8%87%E9%87%8C%E6%B1%87%E8%99%9A%E6%8B%9F%E5%A4%96%E5%B8%81%E5%8D%A1/</link><pubDate>Mon, 11 Dec 2023 22:32:02 +0800</pubDate><guid>https://blog.leshans.eu.org/p/paypal-%E6%B3%A8%E5%86%8C%E4%B8%8E%E6%8F%90%E7%8E%B0%E4%BB%A5%E5%8F%8A%E4%B8%87%E9%87%8C%E6%B1%87%E8%99%9A%E6%8B%9F%E5%A4%96%E5%B8%81%E5%8D%A1/</guid><description>&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312112233021.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>准备工作：一张国内四大行的I类卡（一个银行一个人只能办一张）或者申请一张外币信用卡（建议招行），&lt;strong>==本次以招行为例作为演示==&lt;/strong>&lt;/p>
+&lt;p>中国大陆手续费：【&lt;a class="link" href="https://www.paypal.com/c2/webapps/mpp/merchant-fees" target="_blank" rel="noopener"
+>点击进入&lt;/a>】 香港地区手续费：【&lt;a class="link" href="https://www.paypal.com/hk/webapps/mpp/merchant-fees#additional-percentage" target="_blank" rel="noopener"
+>点击进入&lt;/a>】&lt;/p>
+&lt;p>1、注册香港paypal账户，参考视频：【&lt;a class="link" href="https://www.paypal.com/c2/webapps/mpp/account-selection" target="_blank" rel="noopener"
+>点击进入&lt;/a>】&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>记录下PayPal商家号&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>后续国外的款项用此账户作为收款账号&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>2、注册并设置万里汇账户：【&lt;a class="link" href="https://www.worldfirst.com.cn/cn/" target="_blank" rel="noopener"
+>点击进入&lt;/a>】（&lt;strong>==注：如果要删除店铺收款账号，提供需要关闭的货币账户币种以及收款账号（或尾号）到此邮箱，进行人工删除：mscn@service.worldfirst.com==&lt;/strong>==）==&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>设置收款人管理——搜索招行——点击客服——点击个人业务——输入：境外汇入路径——把对应的BIC、收款行、前面准备好的卡号填写进来&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>设置店铺/收款管理——新增店铺收款账户——选择其他电商平台——选择Google Shopping——自定义一个店铺名称——点击申请——申请完成后，不要直接添加信息——再次点击店铺/收款管理——点击补充信息——填写完成后保存&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>再次点击店铺/收款管理——找到刚添加的账号，点击进去——点击查看账户详情——回到paypal——点击关联卡或银行账户——点击关联银行账户——点击关联美国或中国香港特别行政区的银行账户——选择香港——点击下一页——然后把账户详情里面的相关信息添加进来——完成后，点击关联您的银行账户&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>3、前面的流程操作完成后，具体收款流程如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>用paypal账户进行收款——paypal收到款项后——然后把款项提现到万里汇支票账户——万里汇的支票账户收到后（一般要几个工作日）——在万里汇首页点击提款——选择前面添加的美元账户——银行收到钱后——在手机APP掌上生活上搜索：溢缴款领回——选择美元——输入领回金额——选择收款账户/借记卡&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>这里有三个情况需要注意的：1、如果是自己在APP上操作是不需要手续费的，如果需要人工帮忙划转，是需要收取一定的手续费的；2、如果是外币信用卡需要人工划转；3、目前了解到I类卡是支持全币种的，收款是没问题的（招行）&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>免费 FRP 内网穿透服务</title><link>https://blog.leshans.eu.org/p/%E5%85%8D%E8%B4%B9-frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E6%9C%8D%E5%8A%A1/</link><pubDate>Sun, 10 Dec 2023 15:18:31 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%85%8D%E8%B4%B9-frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E6%9C%8D%E5%8A%A1/</guid><description>&lt;p>建议访问官方 Github 项目来查阅文档,可以使用更多本文没有提到的参数来提高穿透服务器的安全性和效率.&lt;/p>
+&lt;p>地址：&lt;a class="link" href="https://freefrp.net/" target="_blank" rel="noopener"
+>https://freefrp.net/&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312101519995.png"
+loading="lazy"
+>&lt;/p></description></item><item><title>小雅网盘</title><link>https://blog.leshans.eu.org/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/</link><pubDate>Sun, 10 Dec 2023 07:40:57 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/</guid><description>&lt;h3 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h3>
+&lt;p>网址：&lt;a class="link" href="https://alist.xiaoya.pro/" target="_blank" rel="noopener"
+>https://alist.xiaoya.pro/&lt;/a>&lt;/p>
+&lt;p>alist文档：&lt;a class="link" href="https://alist.nn.ci/zh/" target="_blank" rel="noopener"
+>https://alist.nn.ci/zh//&lt;/a>&lt;/p>
+&lt;p>小雅文档： &lt;a class="link" href="https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f" target="_blank" rel="noopener"
+>https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f&lt;/a>&lt;/p>
+&lt;p>终端安装命令，端口 &lt;code>5678&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl http://docker.xiaoya.pro/update_new.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者 端口 &lt;code>6789&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl http://docker.xiaoya.pro/update_new.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s host
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>阿里token获取地址：&lt;a class="link" href="https://aliyuntoken.vercel.app/" target="_blank" rel="noopener"
+>https://aliyuntoken.vercel.app/&lt;/a>&lt;/p>
+&lt;p>阿里opentoken地址：&lt;a class="link" href="https://alist.nn.ci/tool/aliyundrive/request.html" target="_blank" rel="noopener"
+>https://alist.nn.ci/tool/aliyundrive/request.html&lt;/a>&lt;/p>
+&lt;p>转存文件夹ID：网页版阿里云，进转存文件夹，地址栏内最后64开头的数字&lt;/p>
+&lt;p>创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像&lt;/p>
+&lt;h3 id="定时清理缓存">定时清理缓存&lt;/h3>
+&lt;p>&lt;code>可以不加-tg&lt;/code>&lt;/p>
+&lt;p>模式3：创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh &lt;span class="p">|&lt;/span> tail -n +2&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s &lt;span class="m">3&lt;/span> -tg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>模式5：与模式3的区别是实时清理，只要产生了播放缓存一分钟内立即清理。签到和定时升级同模式3&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh &lt;span class="p">|&lt;/span> tail -n +2&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s &lt;span class="m">5&lt;/span> -tg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="套娃挂载">套娃挂载：&lt;/h3>
+&lt;p>输入命令，获取&lt;code>令牌&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker &lt;span class="nb">exec&lt;/span> -i xiaoya sqlite3 data/data.db &lt;span class="s">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">select value from x_setting_items where key = &amp;#34;token&amp;#34;;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>挂载 ：alist v3 &lt;code>输入令牌&lt;/code> &lt;code>输入链接&lt;/code> 注意&lt;code>docker&lt;/code>名称&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="同步小雅网盘">同步小雅网盘&lt;/h3>
+&lt;p>如果你是基于Linux系统的（包括openwrt），可以用以下方法设置定时更新，终端执行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">crontab -e
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>添加一条记录&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">0 6 * * * docker restart xiaoya
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>按 &lt;code>o&lt;/code> 插入一行&lt;/li>
+&lt;li>然后把这堆文字输入进去&lt;/li>
+&lt;li>然后按键盘左上角 ESC键退出编辑模式&lt;/li>
+&lt;li>输入 &lt;code>:wq&lt;/code> 保存退出&lt;/li>
+&lt;/ol>
+&lt;p>就是每天凌晨6点自动重启xiaoya docker去同步数据，你把6改成13，那就是下午1点&lt;/p>
+&lt;h3 id="小雅cf反代">小雅CF反代&lt;/h3>
+&lt;p>登录cloudflare，创建&lt;code>Worker&lt;/code> 代码如下,修改&lt;code>const upstream_url = &amp;quot;alist地址&amp;quot;; &lt;/code>&lt;/p>
+&lt;p>免费地址寻找：&lt;a class="link" href="https://www.zoomeye.org/searchResult?q=title%3A%22alist%22" target="_blank" rel="noopener"
+>网络空间雷达&lt;/a> 复制ip&lt;/p>
+&lt;p>我的: &lt;a class="link" href="https://xiaoya.taoshuge.eu.org/" target="_blank" rel="noopener"
+>xiaoya.taoshuge.eu.org&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;span class="lnt">106
+&lt;/span>&lt;span class="lnt">107
+&lt;/span>&lt;span class="lnt">108
+&lt;/span>&lt;span class="lnt">109
+&lt;/span>&lt;span class="lnt">110
+&lt;/span>&lt;span class="lnt">111
+&lt;/span>&lt;span class="lnt">112
+&lt;/span>&lt;span class="lnt">113
+&lt;/span>&lt;span class="lnt">114
+&lt;/span>&lt;span class="lnt">115
+&lt;/span>&lt;span class="lnt">116
+&lt;/span>&lt;span class="lnt">117
+&lt;/span>&lt;span class="lnt">118
+&lt;/span>&lt;span class="lnt">119
+&lt;/span>&lt;span class="lnt">120
+&lt;/span>&lt;span class="lnt">121
+&lt;/span>&lt;span class="lnt">122
+&lt;/span>&lt;span class="lnt">123
+&lt;/span>&lt;span class="lnt">124
+&lt;/span>&lt;span class="lnt">125
+&lt;/span>&lt;span class="lnt">126
+&lt;/span>&lt;span class="lnt">127
+&lt;/span>&lt;span class="lnt">128
+&lt;/span>&lt;span class="lnt">129
+&lt;/span>&lt;span class="lnt">130
+&lt;/span>&lt;span class="lnt">131
+&lt;/span>&lt;span class="lnt">132
+&lt;/span>&lt;span class="lnt">133
+&lt;/span>&lt;span class="lnt">134
+&lt;/span>&lt;span class="lnt">135
+&lt;/span>&lt;span class="lnt">136
+&lt;/span>&lt;span class="lnt">137
+&lt;/span>&lt;span class="lnt">138
+&lt;/span>&lt;span class="lnt">139
+&lt;/span>&lt;span class="lnt">140
+&lt;/span>&lt;span class="lnt">141
+&lt;/span>&lt;span class="lnt">142
+&lt;/span>&lt;span class="lnt">143
+&lt;/span>&lt;span class="lnt">144
+&lt;/span>&lt;span class="lnt">145
+&lt;/span>&lt;span class="lnt">146
+&lt;/span>&lt;span class="lnt">147
+&lt;/span>&lt;span class="lnt">148
+&lt;/span>&lt;span class="lnt">149
+&lt;/span>&lt;span class="lnt">150
+&lt;/span>&lt;span class="lnt">151
+&lt;/span>&lt;span class="lnt">152
+&lt;/span>&lt;span class="lnt">153
+&lt;/span>&lt;span class="lnt">154
+&lt;/span>&lt;span class="lnt">155
+&lt;/span>&lt;span class="lnt">156
+&lt;/span>&lt;span class="lnt">157
+&lt;/span>&lt;span class="lnt">158
+&lt;/span>&lt;span class="lnt">159
+&lt;/span>&lt;span class="lnt">160
+&lt;/span>&lt;span class="lnt">161
+&lt;/span>&lt;span class="lnt">162
+&lt;/span>&lt;span class="lnt">163
+&lt;/span>&lt;span class="lnt">164
+&lt;/span>&lt;span class="lnt">165
+&lt;/span>&lt;span class="lnt">166
+&lt;/span>&lt;span class="lnt">167
+&lt;/span>&lt;span class="lnt">168
+&lt;/span>&lt;span class="lnt">169
+&lt;/span>&lt;span class="lnt">170
+&lt;/span>&lt;span class="lnt">171
+&lt;/span>&lt;span class="lnt">172
+&lt;/span>&lt;span class="lnt">173
+&lt;/span>&lt;span class="lnt">174
+&lt;/span>&lt;span class="lnt">175
+&lt;/span>&lt;span class="lnt">176
+&lt;/span>&lt;span class="lnt">177
+&lt;/span>&lt;span class="lnt">178
+&lt;/span>&lt;span class="lnt">179
+&lt;/span>&lt;span class="lnt">180
+&lt;/span>&lt;span class="lnt">181
+&lt;/span>&lt;span class="lnt">182
+&lt;/span>&lt;span class="lnt">183
+&lt;/span>&lt;span class="lnt">184
+&lt;/span>&lt;span class="lnt">185
+&lt;/span>&lt;span class="lnt">186
+&lt;/span>&lt;span class="lnt">187
+&lt;/span>&lt;span class="lnt">188
+&lt;/span>&lt;span class="lnt">189
+&lt;/span>&lt;span class="lnt">190
+&lt;/span>&lt;span class="lnt">191
+&lt;/span>&lt;span class="lnt">192
+&lt;/span>&lt;span class="lnt">193
+&lt;/span>&lt;span class="lnt">194
+&lt;/span>&lt;span class="lnt">195
+&lt;/span>&lt;span class="lnt">196
+&lt;/span>&lt;span class="lnt">197
+&lt;/span>&lt;span class="lnt">198
+&lt;/span>&lt;span class="lnt">199
+&lt;/span>&lt;span class="lnt">200
+&lt;/span>&lt;span class="lnt">201
+&lt;/span>&lt;span class="lnt">202
+&lt;/span>&lt;span class="lnt">203
+&lt;/span>&lt;span class="lnt">204
+&lt;/span>&lt;span class="lnt">205
+&lt;/span>&lt;span class="lnt">206
+&lt;/span>&lt;span class="lnt">207
+&lt;/span>&lt;span class="lnt">208
+&lt;/span>&lt;span class="lnt">209
+&lt;/span>&lt;span class="lnt">210
+&lt;/span>&lt;span class="lnt">211
+&lt;/span>&lt;span class="lnt">212
+&lt;/span>&lt;span class="lnt">213
+&lt;/span>&lt;span class="lnt">214
+&lt;/span>&lt;span class="lnt">215
+&lt;/span>&lt;span class="lnt">216
+&lt;/span>&lt;span class="lnt">217
+&lt;/span>&lt;span class="lnt">218
+&lt;/span>&lt;span class="lnt">219
+&lt;/span>&lt;span class="lnt">220
+&lt;/span>&lt;span class="lnt">221
+&lt;/span>&lt;span class="lnt">222
+&lt;/span>&lt;span class="lnt">223
+&lt;/span>&lt;span class="lnt">224
+&lt;/span>&lt;span class="lnt">225
+&lt;/span>&lt;span class="lnt">226
+&lt;/span>&lt;span class="lnt">227
+&lt;/span>&lt;span class="lnt">228
+&lt;/span>&lt;span class="lnt">229
+&lt;/span>&lt;span class="lnt">230
+&lt;/span>&lt;span class="lnt">231
+&lt;/span>&lt;span class="lnt">232
+&lt;/span>&lt;span class="lnt">233
+&lt;/span>&lt;span class="lnt">234
+&lt;/span>&lt;span class="lnt">235
+&lt;/span>&lt;span class="lnt">236
+&lt;/span>&lt;span class="lnt">237
+&lt;/span>&lt;span class="lnt">238
+&lt;/span>&lt;span class="lnt">239
+&lt;/span>&lt;span class="lnt">240
+&lt;/span>&lt;span class="lnt">241
+&lt;/span>&lt;span class="lnt">242
+&lt;/span>&lt;span class="lnt">243
+&lt;/span>&lt;span class="lnt">244
+&lt;/span>&lt;span class="lnt">245
+&lt;/span>&lt;span class="lnt">246
+&lt;/span>&lt;span class="lnt">247
+&lt;/span>&lt;span class="lnt">248
+&lt;/span>&lt;span class="lnt">249
+&lt;/span>&lt;span class="lnt">250
+&lt;/span>&lt;span class="lnt">251
+&lt;/span>&lt;span class="lnt">252
+&lt;/span>&lt;span class="lnt">253
+&lt;/span>&lt;span class="lnt">254
+&lt;/span>&lt;span class="lnt">255
+&lt;/span>&lt;span class="lnt">256
+&lt;/span>&lt;span class="lnt">257
+&lt;/span>&lt;span class="lnt">258
+&lt;/span>&lt;span class="lnt">259
+&lt;/span>&lt;span class="lnt">260
+&lt;/span>&lt;span class="lnt">261
+&lt;/span>&lt;span class="lnt">262
+&lt;/span>&lt;span class="lnt">263
+&lt;/span>&lt;span class="lnt">264
+&lt;/span>&lt;span class="lnt">265
+&lt;/span>&lt;span class="lnt">266
+&lt;/span>&lt;span class="lnt">267
+&lt;/span>&lt;span class="lnt">268
+&lt;/span>&lt;span class="lnt">269
+&lt;/span>&lt;span class="lnt">270
+&lt;/span>&lt;span class="lnt">271
+&lt;/span>&lt;span class="lnt">272
+&lt;/span>&lt;span class="lnt">273
+&lt;/span>&lt;span class="lnt">274
+&lt;/span>&lt;span class="lnt">275
+&lt;/span>&lt;span class="lnt">276
+&lt;/span>&lt;span class="lnt">277
+&lt;/span>&lt;span class="lnt">278
+&lt;/span>&lt;span class="lnt">279
+&lt;/span>&lt;span class="lnt">280
+&lt;/span>&lt;span class="lnt">281
+&lt;/span>&lt;span class="lnt">282
+&lt;/span>&lt;span class="lnt">283
+&lt;/span>&lt;span class="lnt">284
+&lt;/span>&lt;span class="lnt">285
+&lt;/span>&lt;span class="lnt">286
+&lt;/span>&lt;span class="lnt">287
+&lt;/span>&lt;span class="lnt">288
+&lt;/span>&lt;span class="lnt">289
+&lt;/span>&lt;span class="lnt">290
+&lt;/span>&lt;span class="lnt">291
+&lt;/span>&lt;span class="lnt">292
+&lt;/span>&lt;span class="lnt">293
+&lt;/span>&lt;span class="lnt">294
+&lt;/span>&lt;span class="lnt">295
+&lt;/span>&lt;span class="lnt">296
+&lt;/span>&lt;span class="lnt">297
+&lt;/span>&lt;span class="lnt">298
+&lt;/span>&lt;span class="lnt">299
+&lt;/span>&lt;span class="lnt">300
+&lt;/span>&lt;span class="lnt">301
+&lt;/span>&lt;span class="lnt">302
+&lt;/span>&lt;span class="lnt">303
+&lt;/span>&lt;span class="lnt">304
+&lt;/span>&lt;span class="lnt">305
+&lt;/span>&lt;span class="lnt">306
+&lt;/span>&lt;span class="lnt">307
+&lt;/span>&lt;span class="lnt">308
+&lt;/span>&lt;span class="lnt">309
+&lt;/span>&lt;span class="lnt">310
+&lt;/span>&lt;span class="lnt">311
+&lt;/span>&lt;span class="lnt">312
+&lt;/span>&lt;span class="lnt">313
+&lt;/span>&lt;span class="lnt">314
+&lt;/span>&lt;span class="lnt">315
+&lt;/span>&lt;span class="lnt">316
+&lt;/span>&lt;span class="lnt">317
+&lt;/span>&lt;span class="lnt">318
+&lt;/span>&lt;span class="lnt">319
+&lt;/span>&lt;span class="lnt">320
+&lt;/span>&lt;span class="lnt">321
+&lt;/span>&lt;span class="lnt">322
+&lt;/span>&lt;span class="lnt">323
+&lt;/span>&lt;span class="lnt">324
+&lt;/span>&lt;span class="lnt">325
+&lt;/span>&lt;span class="lnt">326
+&lt;/span>&lt;span class="lnt">327
+&lt;/span>&lt;span class="lnt">328
+&lt;/span>&lt;span class="lnt">329
+&lt;/span>&lt;span class="lnt">330
+&lt;/span>&lt;span class="lnt">331
+&lt;/span>&lt;span class="lnt">332
+&lt;/span>&lt;span class="lnt">333
+&lt;/span>&lt;span class="lnt">334
+&lt;/span>&lt;span class="lnt">335
+&lt;/span>&lt;span class="lnt">336
+&lt;/span>&lt;span class="lnt">337
+&lt;/span>&lt;span class="lnt">338
+&lt;/span>&lt;span class="lnt">339
+&lt;/span>&lt;span class="lnt">340
+&lt;/span>&lt;span class="lnt">341
+&lt;/span>&lt;span class="lnt">342
+&lt;/span>&lt;span class="lnt">343
+&lt;/span>&lt;span class="lnt">344
+&lt;/span>&lt;span class="lnt">345
+&lt;/span>&lt;span class="lnt">346
+&lt;/span>&lt;span class="lnt">347
+&lt;/span>&lt;span class="lnt">348
+&lt;/span>&lt;span class="lnt">349
+&lt;/span>&lt;span class="lnt">350
+&lt;/span>&lt;span class="lnt">351
+&lt;/span>&lt;span class="lnt">352
+&lt;/span>&lt;span class="lnt">353
+&lt;/span>&lt;span class="lnt">354
+&lt;/span>&lt;span class="lnt">355
+&lt;/span>&lt;span class="lnt">356
+&lt;/span>&lt;span class="lnt">357
+&lt;/span>&lt;span class="lnt">358
+&lt;/span>&lt;span class="lnt">359
+&lt;/span>&lt;span class="lnt">360
+&lt;/span>&lt;span class="lnt">361
+&lt;/span>&lt;span class="lnt">362
+&lt;/span>&lt;span class="lnt">363
+&lt;/span>&lt;span class="lnt">364
+&lt;/span>&lt;span class="lnt">365
+&lt;/span>&lt;span class="lnt">366
+&lt;/span>&lt;span class="lnt">367
+&lt;/span>&lt;span class="lnt">368
+&lt;/span>&lt;span class="lnt">369
+&lt;/span>&lt;span class="lnt">370
+&lt;/span>&lt;span class="lnt">371
+&lt;/span>&lt;span class="lnt">372
+&lt;/span>&lt;span class="lnt">373
+&lt;/span>&lt;span class="lnt">374
+&lt;/span>&lt;span class="lnt">375
+&lt;/span>&lt;span class="lnt">376
+&lt;/span>&lt;span class="lnt">377
+&lt;/span>&lt;span class="lnt">378
+&lt;/span>&lt;span class="lnt">379
+&lt;/span>&lt;span class="lnt">380
+&lt;/span>&lt;span class="lnt">381
+&lt;/span>&lt;span class="lnt">382
+&lt;/span>&lt;span class="lnt">383
+&lt;/span>&lt;span class="lnt">384
+&lt;/span>&lt;span class="lnt">385
+&lt;/span>&lt;span class="lnt">386
+&lt;/span>&lt;span class="lnt">387
+&lt;/span>&lt;span class="lnt">388
+&lt;/span>&lt;span class="lnt">389
+&lt;/span>&lt;span class="lnt">390
+&lt;/span>&lt;span class="lnt">391
+&lt;/span>&lt;span class="lnt">392
+&lt;/span>&lt;span class="lnt">393
+&lt;/span>&lt;span class="lnt">394
+&lt;/span>&lt;span class="lnt">395
+&lt;/span>&lt;span class="lnt">396
+&lt;/span>&lt;span class="lnt">397
+&lt;/span>&lt;span class="lnt">398
+&lt;/span>&lt;span class="lnt">399
+&lt;/span>&lt;span class="lnt">400
+&lt;/span>&lt;span class="lnt">401
+&lt;/span>&lt;span class="lnt">402
+&lt;/span>&lt;span class="lnt">403
+&lt;/span>&lt;span class="lnt">404
+&lt;/span>&lt;span class="lnt">405
+&lt;/span>&lt;span class="lnt">406
+&lt;/span>&lt;span class="lnt">407
+&lt;/span>&lt;span class="lnt">408
+&lt;/span>&lt;span class="lnt">409
+&lt;/span>&lt;span class="lnt">410
+&lt;/span>&lt;span class="lnt">411
+&lt;/span>&lt;span class="lnt">412
+&lt;/span>&lt;span class="lnt">413
+&lt;/span>&lt;span class="lnt">414
+&lt;/span>&lt;span class="lnt">415
+&lt;/span>&lt;span class="lnt">416
+&lt;/span>&lt;span class="lnt">417
+&lt;/span>&lt;span class="lnt">418
+&lt;/span>&lt;span class="lnt">419
+&lt;/span>&lt;span class="lnt">420
+&lt;/span>&lt;span class="lnt">421
+&lt;/span>&lt;span class="lnt">422
+&lt;/span>&lt;span class="lnt">423
+&lt;/span>&lt;span class="lnt">424
+&lt;/span>&lt;span class="lnt">425
+&lt;/span>&lt;span class="lnt">426
+&lt;/span>&lt;span class="lnt">427
+&lt;/span>&lt;span class="lnt">428
+&lt;/span>&lt;span class="lnt">429
+&lt;/span>&lt;span class="lnt">430
+&lt;/span>&lt;span class="lnt">431
+&lt;/span>&lt;span class="lnt">432
+&lt;/span>&lt;span class="lnt">433
+&lt;/span>&lt;span class="lnt">434
+&lt;/span>&lt;span class="lnt">435
+&lt;/span>&lt;span class="lnt">436
+&lt;/span>&lt;span class="lnt">437
+&lt;/span>&lt;span class="lnt">438
+&lt;/span>&lt;span class="lnt">439
+&lt;/span>&lt;span class="lnt">440
+&lt;/span>&lt;span class="lnt">441
+&lt;/span>&lt;span class="lnt">442
+&lt;/span>&lt;span class="lnt">443
+&lt;/span>&lt;span class="lnt">444
+&lt;/span>&lt;span class="lnt">445
+&lt;/span>&lt;span class="lnt">446
+&lt;/span>&lt;span class="lnt">447
+&lt;/span>&lt;span class="lnt">448
+&lt;/span>&lt;span class="lnt">449
+&lt;/span>&lt;span class="lnt">450
+&lt;/span>&lt;span class="lnt">451
+&lt;/span>&lt;span class="lnt">452
+&lt;/span>&lt;span class="lnt">453
+&lt;/span>&lt;span class="lnt">454
+&lt;/span>&lt;span class="lnt">455
+&lt;/span>&lt;span class="lnt">456
+&lt;/span>&lt;span class="lnt">457
+&lt;/span>&lt;span class="lnt">458
+&lt;/span>&lt;span class="lnt">459
+&lt;/span>&lt;span class="lnt">460
+&lt;/span>&lt;span class="lnt">461
+&lt;/span>&lt;span class="lnt">462
+&lt;/span>&lt;span class="lnt">463
+&lt;/span>&lt;span class="lnt">464
+&lt;/span>&lt;span class="lnt">465
+&lt;/span>&lt;span class="lnt">466
+&lt;/span>&lt;span class="lnt">467
+&lt;/span>&lt;span class="lnt">468
+&lt;/span>&lt;span class="lnt">469
+&lt;/span>&lt;span class="lnt">470
+&lt;/span>&lt;span class="lnt">471
+&lt;/span>&lt;span class="lnt">472
+&lt;/span>&lt;span class="lnt">473
+&lt;/span>&lt;span class="lnt">474
+&lt;/span>&lt;span class="lnt">475
+&lt;/span>&lt;span class="lnt">476
+&lt;/span>&lt;span class="lnt">477
+&lt;/span>&lt;span class="lnt">478
+&lt;/span>&lt;span class="lnt">479
+&lt;/span>&lt;span class="lnt">480
+&lt;/span>&lt;span class="lnt">481
+&lt;/span>&lt;span class="lnt">482
+&lt;/span>&lt;span class="lnt">483
+&lt;/span>&lt;span class="lnt">484
+&lt;/span>&lt;span class="lnt">485
+&lt;/span>&lt;span class="lnt">486
+&lt;/span>&lt;span class="lnt">487
+&lt;/span>&lt;span class="lnt">488
+&lt;/span>&lt;span class="lnt">489
+&lt;/span>&lt;span class="lnt">490
+&lt;/span>&lt;span class="lnt">491
+&lt;/span>&lt;span class="lnt">492
+&lt;/span>&lt;span class="lnt">493
+&lt;/span>&lt;span class="lnt">494
+&lt;/span>&lt;span class="lnt">495
+&lt;/span>&lt;span class="lnt">496
+&lt;/span>&lt;span class="lnt">497
+&lt;/span>&lt;span class="lnt">498
+&lt;/span>&lt;span class="lnt">499
+&lt;/span>&lt;span class="lnt">500
+&lt;/span>&lt;span class="lnt">501
+&lt;/span>&lt;span class="lnt">502
+&lt;/span>&lt;span class="lnt">503
+&lt;/span>&lt;span class="lnt">504
+&lt;/span>&lt;span class="lnt">505
+&lt;/span>&lt;span class="lnt">506
+&lt;/span>&lt;span class="lnt">507
+&lt;/span>&lt;span class="lnt">508
+&lt;/span>&lt;span class="lnt">509
+&lt;/span>&lt;span class="lnt">510
+&lt;/span>&lt;span class="lnt">511
+&lt;/span>&lt;span class="lnt">512
+&lt;/span>&lt;span class="lnt">513
+&lt;/span>&lt;span class="lnt">514
+&lt;/span>&lt;span class="lnt">515
+&lt;/span>&lt;span class="lnt">516
+&lt;/span>&lt;span class="lnt">517
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">import &lt;span class="o">{&lt;/span> connect &lt;span class="o">}&lt;/span> from &lt;span class="s1">&amp;#39;cloudflare:sockets&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const &lt;span class="nv">upstream_url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;http://183.134.157.38:5678&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const &lt;span class="nv">proxyList&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">[&lt;/span>&lt;span class="s2">&amp;#34;mypikpak&amp;#34;&lt;/span>, &lt;span class="s2">&amp;#34;sharepoint&amp;#34;&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const &lt;span class="nv">replace_dict&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="s1">&amp;#39;$up_url&amp;#39;&lt;/span>: &lt;span class="s1">&amp;#39;$cust_url&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="s1">&amp;#39;$upstream&amp;#39;&lt;/span>: &lt;span class="s1">&amp;#39;$custom_domain&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">let&lt;/span> &lt;span class="nv">up_scheme&lt;/span> &lt;span class="o">=&lt;/span> upstream_url.split&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;://&amp;#34;&lt;/span>&lt;span class="o">)[&lt;/span>0&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">let&lt;/span> &lt;span class="nv">upstream&lt;/span> &lt;span class="o">=&lt;/span> upstream_url.split&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;://&amp;#34;&lt;/span>&lt;span class="o">)[&lt;/span>1&lt;span class="o">]&lt;/span>.split&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>&lt;span class="o">)[&lt;/span>0&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">let&lt;/span> &lt;span class="nv">port_string&lt;/span> &lt;span class="o">=&lt;/span> upstream_url.split&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;://&amp;#34;&lt;/span>&lt;span class="o">)[&lt;/span>1&lt;span class="o">]&lt;/span>.split&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>&lt;span class="o">)[&lt;/span>1&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>!port_string&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="nv">port_string&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">up_scheme&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;http&amp;#34;&lt;/span> ? &lt;span class="s2">&amp;#34;80&amp;#34;&lt;/span> : &lt;span class="s2">&amp;#34;443&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">let&lt;/span> &lt;span class="nv">port&lt;/span> &lt;span class="o">=&lt;/span> parseInt&lt;span class="o">(&lt;/span>port_string&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const &lt;span class="nv">timeoutDuration&lt;/span> &lt;span class="o">=&lt;/span> 5000&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const &lt;span class="nv">chunkSize&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1024&lt;/span> * 4&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> default &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  async fetch&lt;span class="o">(&lt;/span>request, env, ctx&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">url&lt;/span> &lt;span class="o">=&lt;/span> new URL&lt;span class="o">(&lt;/span>request.url&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">cust_url&lt;/span> &lt;span class="o">=&lt;/span> new URL&lt;span class="o">(&lt;/span>request.url&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    url.port &lt;span class="o">=&lt;/span> port.toString&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">original_url_hostname&lt;/span> &lt;span class="o">=&lt;/span> url.hostname&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    url.hostname &lt;span class="o">=&lt;/span> upstream&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    url.protocol &lt;span class="o">=&lt;/span> up_scheme + &lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>url.pathname.startsWith&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;/proxy/&amp;#34;&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nb">let&lt;/span> &lt;span class="nv">proxyUrl&lt;/span> &lt;span class="o">=&lt;/span> new URL&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;https://&amp;#34;&lt;/span> + url.pathname.replace&lt;span class="o">(&lt;/span>/&lt;span class="se">\/&lt;/span>proxy&lt;span class="se">\/&lt;/span>/g, &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span> + url.search&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nb">let&lt;/span> &lt;span class="nv">proxyReq&lt;/span> &lt;span class="o">=&lt;/span> new Request&lt;span class="o">(&lt;/span>proxyUrl, request&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nb">let&lt;/span> &lt;span class="nv">proxyResponse&lt;/span> &lt;span class="o">=&lt;/span> await fetchOverTcp&lt;span class="o">(&lt;/span>proxyReq, 443&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">return&lt;/span> proxyResponse&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">new_request&lt;/span> &lt;span class="o">=&lt;/span> new Request&lt;span class="o">(&lt;/span>url, request&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">original_response&lt;/span> &lt;span class="o">=&lt;/span> await fetchOverTcp&lt;span class="o">(&lt;/span>new_request&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">response_headers&lt;/span> &lt;span class="o">=&lt;/span> original_response.headers&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">new_response_headers&lt;/span> &lt;span class="o">=&lt;/span> new Headers&lt;span class="o">(&lt;/span>response_headers&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>original_response.status &lt;span class="o">===&lt;/span> 302&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      const &lt;span class="nv">locationHeader&lt;/span> &lt;span class="o">=&lt;/span> new_response_headers.get&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;location&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>locationHeader &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> isReplace&lt;span class="o">(&lt;/span>locationHeader&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="nv">modifiedLocation&lt;/span> &lt;span class="o">=&lt;/span> locationHeader.replace&lt;span class="o">(&lt;/span>/https:&lt;span class="se">\/\/&lt;/span>+/g, &lt;span class="s2">&amp;#34;https://&amp;#34;&lt;/span> + original_url_hostname + &lt;span class="s2">&amp;#34;/proxy/&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        new_response_headers.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;location&amp;#39;&lt;/span>, modifiedLocation&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    const &lt;span class="nv">content_type&lt;/span> &lt;span class="o">=&lt;/span> new_response_headers.get&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;content-type&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>url.pathname.includes&lt;span class="o">(&lt;/span>&lt;span class="s2">&amp;#34;tvbox&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="o">(&lt;/span>content_type !&lt;span class="o">=&lt;/span> null &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="o">(&lt;/span>content_type.includes&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;text/html&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">||&lt;/span> content_type.includes&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;json&amp;#39;&lt;/span>&lt;span class="o">))&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="o">(&lt;/span>content_type.includes&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;UTF-8&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">||&lt;/span> content_type.includes&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;utf-8&amp;#39;&lt;/span>&lt;span class="o">))))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nb">let&lt;/span> &lt;span class="nv">dic_def&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">{}&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      dic_def&lt;span class="o">[&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$upstream&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> upstream&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      dic_def&lt;span class="o">[&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$custom_domain&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> original_url_hostname&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      dic_def&lt;span class="o">[&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$cust_url&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">cust_url&lt;/span>&lt;span class="p">.protocol&lt;/span>&lt;span class="si">}&lt;/span>//&lt;span class="si">${&lt;/span>&lt;span class="nv">cust_url&lt;/span>&lt;span class="p">.hostname&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      dic_def&lt;span class="o">[&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$up_url&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">upstream_url&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nb">let&lt;/span> &lt;span class="nv">original_text&lt;/span> &lt;span class="o">=&lt;/span> replace_response_text&lt;span class="o">(&lt;/span>await original_response.text&lt;span class="o">()&lt;/span>, dic_def&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nb">let&lt;/span> &lt;span class="nv">status&lt;/span> &lt;span class="o">=&lt;/span> original_response.status&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">return&lt;/span> new Response&lt;span class="o">(&lt;/span>original_text, &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        status,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        headers: new_response_headers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="o">})&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">else&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">return&lt;/span> original_response&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">async &lt;span class="k">function&lt;/span> fetchOverTcp&lt;span class="o">(&lt;/span>request, &lt;span class="nv">cust_port&lt;/span> &lt;span class="o">=&lt;/span> null&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="nb">let&lt;/span> &lt;span class="nv">url&lt;/span> &lt;span class="o">=&lt;/span> new URL&lt;span class="o">(&lt;/span>request.url&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="nb">let&lt;/span> &lt;span class="nv">req&lt;/span> &lt;span class="o">=&lt;/span> new Request&lt;span class="o">(&lt;/span>url, request&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="nb">let&lt;/span> &lt;span class="nv">out_port&lt;/span> &lt;span class="o">=&lt;/span> cust_port ? cust_port : port
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">if&lt;/span> &lt;span class="o">((&lt;/span>url.protocol &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;https:&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nv">out_port&lt;/span> &lt;span class="o">===&lt;/span> 443&lt;span class="o">)&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="o">(&lt;/span>url.protocol &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;http:&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nv">out_port&lt;/span> &lt;span class="o">===&lt;/span> 80&lt;span class="o">))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">return&lt;/span> await fetch&lt;span class="o">(&lt;/span>req&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="nb">let&lt;/span> &lt;span class="nv">tcpSocket&lt;/span> &lt;span class="o">=&lt;/span> connect&lt;span class="o">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    hostname: url.hostname,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    port: out_port,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>, &lt;span class="o">{&lt;/span> secureTransport: &lt;span class="s2">&amp;#34;starttls&amp;#34;&lt;/span> &lt;span class="o">})&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>url.protocol &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;https:&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nv">tcpSocket&lt;/span> &lt;span class="o">=&lt;/span> tcpSocket.startTls&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  try &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    const &lt;span class="nv">writer&lt;/span> &lt;span class="o">=&lt;/span> tcpSocket.writable.getWriter&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">   
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">headersString&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">bodyString&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nb">let&lt;/span> &lt;span class="o">[&lt;/span>name, value&lt;span class="o">]&lt;/span> of req.headers&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nv">name&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;host&amp;#34;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nv">name&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;x-forwarded-proto&amp;#34;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nv">name&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;x-real-ip&amp;#34;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nv">name&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;accept-encoding&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        &lt;span class="k">continue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nv">name&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;connection&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        &lt;span class="nv">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;close&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nv">headersString&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">name&lt;/span>&lt;span class="si">}&lt;/span>: &lt;span class="si">${&lt;/span>&lt;span class="nv">value&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="se">\r\n&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">fullpath&lt;/span> &lt;span class="o">=&lt;/span> url.pathname&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">   
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>url.search&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nv">fullpath&lt;/span> &lt;span class="o">+=&lt;/span> url.search.replace&lt;span class="o">(&lt;/span>/%3F/g, &lt;span class="s2">&amp;#34;?&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">   
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>req.method &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;POST&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      const &lt;span class="nv">body&lt;/span> &lt;span class="o">=&lt;/span> await req.text&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nv">bodyString&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">body&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">   
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    await writer.write&lt;span class="o">(&lt;/span>new TextEncoder&lt;span class="o">()&lt;/span>.encode&lt;span class="o">(&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">req&lt;/span>&lt;span class="p">.method&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">fullpath&lt;/span>&lt;span class="si">}&lt;/span> HTTP/1.0&lt;span class="se">\r\n&lt;/span>Host: &lt;span class="si">${&lt;/span>&lt;span class="nv">url&lt;/span>&lt;span class="p">.hostname&lt;/span>&lt;span class="si">}&lt;/span>:&lt;span class="si">${&lt;/span>&lt;span class="nv">port&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="se">\r\n&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">headersString&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="se">\r\n&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">bodyString&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="o">))&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    writer.releaseLock&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">   
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    const &lt;span class="nv">response&lt;/span> &lt;span class="o">=&lt;/span> await constructHttpResponse&lt;span class="o">(&lt;/span>tcpSocket, timeoutDuration&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">return&lt;/span> response&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span> catch &lt;span class="o">(&lt;/span>error&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    tcpSocket.close&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">return&lt;/span> new Response&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;Internal Server Error&amp;#39;&lt;/span>, &lt;span class="o">{&lt;/span> status: &lt;span class="m">500&lt;/span> &lt;span class="o">})&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">async &lt;span class="k">function&lt;/span> constructHttpResponse&lt;span class="o">(&lt;/span>tcpSocket, timeout&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  const &lt;span class="nv">reader&lt;/span> &lt;span class="o">=&lt;/span> tcpSocket.readable.getReader&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="nb">let&lt;/span> &lt;span class="nv">remainingData&lt;/span> &lt;span class="o">=&lt;/span> new Uint8Array&lt;span class="o">(&lt;/span>0&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  try &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">   
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">while&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      const &lt;span class="o">{&lt;/span> value, &lt;span class="k">done&lt;/span> &lt;span class="o">}&lt;/span> &lt;span class="o">=&lt;/span> await raceWithTimeout&lt;span class="o">(&lt;/span>reader.read&lt;span class="o">(&lt;/span>chunkSize&lt;span class="o">)&lt;/span>, timeout&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      const &lt;span class="nv">newData&lt;/span> &lt;span class="o">=&lt;/span> new Uint8Array&lt;span class="o">(&lt;/span>remainingData.length + value.length&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      newData.set&lt;span class="o">(&lt;/span>remainingData&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      newData.set&lt;span class="o">(&lt;/span>value, remainingData.length&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="nv">remainingData&lt;/span> &lt;span class="o">=&lt;/span> newData&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      const &lt;span class="nv">index&lt;/span> &lt;span class="o">=&lt;/span> indexOfDoubleCRLF&lt;span class="o">(&lt;/span>remainingData&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>index !&lt;span class="o">==&lt;/span> -1&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="nv">headerBytes&lt;/span> &lt;span class="o">=&lt;/span> remainingData.subarray&lt;span class="o">(&lt;/span>0, index&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="nv">bodyBytes&lt;/span> &lt;span class="o">=&lt;/span> remainingData.subarray&lt;span class="o">(&lt;/span>index + 4&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="nv">header&lt;/span> &lt;span class="o">=&lt;/span> new TextDecoder&lt;span class="o">()&lt;/span>.decode&lt;span class="o">(&lt;/span>headerBytes&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="o">[&lt;/span>statusLine, ...headers&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> header.split&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;\r\n&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="o">[&lt;/span>httpVersion, statusCode, statusText&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> statusLine.split&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">       
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="nv">responseHeaders&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">{}&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        headers.forEach&lt;span class="o">((&lt;/span>header&lt;span class="o">)&lt;/span> &lt;span class="o">=&lt;/span>&amp;gt; &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          const &lt;span class="o">[&lt;/span>name, value&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> header.split&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;: &amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          responseHeaders&lt;span class="o">[&lt;/span>name.toLowerCase&lt;span class="o">()]&lt;/span> &lt;span class="o">=&lt;/span> value&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        &lt;span class="o">})&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        responseHeaders&lt;span class="o">[&lt;/span>&lt;span class="s1">&amp;#39;content-encoding&amp;#39;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;identity&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="nv">responseInit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          status: parseInt&lt;span class="o">(&lt;/span>statusCode&lt;span class="o">)&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          statusText,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          headers: new Headers&lt;span class="o">(&lt;/span>responseHeaders&lt;span class="o">)&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        &lt;span class="o">}&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">       
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        const &lt;span class="nv">bodyStream&lt;/span> &lt;span class="o">=&lt;/span> new ReadableStream&lt;span class="o">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          async start&lt;span class="o">(&lt;/span>controller&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">            controller.enqueue&lt;span class="o">(&lt;/span>bodyBytes&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          &lt;span class="o">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          async pull&lt;span class="o">(&lt;/span>controller&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">            &lt;span class="k">while&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">              try &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                const &lt;span class="o">{&lt;/span> value, &lt;span class="k">done&lt;/span> &lt;span class="o">}&lt;/span> &lt;span class="o">=&lt;/span> await raceWithTimeout&lt;span class="o">(&lt;/span>reader.read&lt;span class="o">(&lt;/span>chunkSize&lt;span class="o">)&lt;/span>, timeout&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>value&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                  controller.enqueue&lt;span class="o">(&lt;/span>value&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="k">done&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                  controller.close&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                  tcpSocket.close&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                  break&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">              &lt;span class="o">}&lt;/span> catch &lt;span class="o">(&lt;/span>e&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                controller.close&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                tcpSocket.close&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">                &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">              &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">            &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">          &lt;span class="o">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        &lt;span class="o">})&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        &lt;span class="k">return&lt;/span> new Response&lt;span class="o">(&lt;/span>bodyStream, responseInit&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="k">done&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        tcpSocket.close&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        break&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">return&lt;/span> new Response&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span> catch &lt;span class="o">(&lt;/span>error&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    tcpSocket.close&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">function&lt;/span> raceWithTimeout&lt;span class="o">(&lt;/span>promise, timeout&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">return&lt;/span> Promise.race&lt;span class="o">([&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    promise,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    new Promise&lt;span class="o">((&lt;/span>_, reject&lt;span class="o">)&lt;/span> &lt;span class="o">=&lt;/span>&amp;gt; setTimeout&lt;span class="o">(()&lt;/span> &lt;span class="o">=&lt;/span>&amp;gt; reject&lt;span class="o">(&lt;/span>new Error&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;Timeout-1&amp;#39;&lt;/span>&lt;span class="o">))&lt;/span>, timeout&lt;span class="o">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">])&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">function&lt;/span> indexOfDoubleCRLF&lt;span class="o">(&lt;/span>data&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>data.length &amp;lt; 4&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">return&lt;/span> -1&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nb">let&lt;/span> &lt;span class="nv">i&lt;/span> &lt;span class="o">=&lt;/span> 0&lt;span class="p">;&lt;/span> i &amp;lt; data.length - 3&lt;span class="p">;&lt;/span> i++&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>data&lt;span class="o">[&lt;/span>i&lt;span class="o">]&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="m">13&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> data&lt;span class="o">[&lt;/span>i + 1&lt;span class="o">]&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="m">10&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> data&lt;span class="o">[&lt;/span>i + 2&lt;span class="o">]&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="m">13&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> data&lt;span class="o">[&lt;/span>i + 3&lt;span class="o">]&lt;/span> &lt;span class="o">===&lt;/span> 10&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">return&lt;/span> i&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">return&lt;/span> -1&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">function&lt;/span> replace_response_text&lt;span class="o">(&lt;/span>text, dic_def&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  var i, j&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="nb">let&lt;/span> &lt;span class="nv">new_replace_dict&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">{}&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>i in replace_dict&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nv">j&lt;/span> &lt;span class="o">=&lt;/span> replace_dict&lt;span class="o">[&lt;/span>i&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nv">i&lt;/span> &lt;span class="o">=&lt;/span> dic_def&lt;span class="o">[&lt;/span>i&lt;span class="o">]&lt;/span> ? dic_def&lt;span class="o">[&lt;/span>i&lt;span class="o">]&lt;/span> : i&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nv">j&lt;/span> &lt;span class="o">=&lt;/span> dic_def&lt;span class="o">[&lt;/span>j&lt;span class="o">]&lt;/span> ? dic_def&lt;span class="o">[&lt;/span>j&lt;span class="o">]&lt;/span> : j&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    new_replace_dict&lt;span class="o">[&lt;/span>i&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> j&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>i in new_replace_dict&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nv">j&lt;/span> &lt;span class="o">=&lt;/span> new_replace_dict&lt;span class="o">[&lt;/span>i&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nb">let&lt;/span> &lt;span class="nv">re&lt;/span> &lt;span class="o">=&lt;/span> new RegExp&lt;span class="o">(&lt;/span>i, &lt;span class="s1">&amp;#39;g&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nv">text&lt;/span> &lt;span class="o">=&lt;/span> text.replace&lt;span class="o">(&lt;/span>re, j&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="nb">let&lt;/span> &lt;span class="nv">host_name&lt;/span> &lt;span class="o">=&lt;/span> dic_def&lt;span class="o">[&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$custom_domain&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>isReplace&lt;span class="o">(&lt;/span>text&lt;span class="o">)&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> host_name&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="nv">text&lt;/span> &lt;span class="o">=&lt;/span> text.replace&lt;span class="o">(&lt;/span>/https:&lt;span class="se">\/\/&lt;/span>+/g, &lt;span class="s2">&amp;#34;https://&amp;#34;&lt;/span> + host_name + &lt;span class="s2">&amp;#34;/proxy/&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">return&lt;/span> text&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">function&lt;/span> isReplace&lt;span class="o">(&lt;/span>urlString&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">for&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nb">let&lt;/span> &lt;span class="nv">i&lt;/span> &lt;span class="o">=&lt;/span> 0&lt;span class="p">;&lt;/span> i &amp;lt; proxyList.length&lt;span class="p">;&lt;/span> i++&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="k">if&lt;/span> &lt;span class="o">(&lt;/span>urlString.includes&lt;span class="o">(&lt;/span>proxyList&lt;span class="o">[&lt;/span>i&lt;span class="o">]))&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">      &lt;span class="k">return&lt;/span> true&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">  &lt;span class="k">return&lt;/span> false&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="其他内容扩充">其他内容扩充&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>执行时机和清理缓存的操作是完全相同的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可以通过手动创建&lt;code>/etc/xiaoya/mycheckintoken.txt&lt;/code>文件来定义多个网盘签到的32位refresh token，每行一个。若不添加文件，则使用默认小雅转存的网盘签到。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>自动刷新&lt;code>/etc/xiaoya/mycheckintoken.txt&lt;/code>和&lt;code>/etc/xiaoya/mytoken.txt&lt;/code>文件，这有可能延长refresh token的时效，具体效果需要观察。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>定时运行模式包括：&lt;/p>
+&lt;ul>
+&lt;li>默认每天从运行脚本的下一分钟开始执行。&lt;/li>
+&lt;li>运行时间可以通过手动创建&lt;code>/etc/xiaoya/myruntime.txt&lt;/code>文件进行修改，例如06:00和18:00表示每天早晚6点各运行一次。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>自动升级的说明：&lt;/p>
+&lt;ul>
+&lt;li>定时升级的命令保存在&lt;code>/etc/xiaoya/mycmd.txt&lt;/code>中。删除该文件将变成定时重启小雅。&lt;/li>
+&lt;li>完成清理和签到后，脚本会自动执行&lt;code>/etc/xiaoya/mycmd.txt&lt;/code>中的命令。该文件默认包含升级小雅镜像的命令，不建议修改。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>关于TG推送：&lt;/p>
+&lt;ul>
+&lt;li>所有模式加上&lt;code>-tg&lt;/code>功能均可绑定消息推送的TG账号，只有第一次运行需要加上&lt;code>-tg&lt;/code>参数。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>宝塔面板v7.7.0 Github纯净版 优化脚本 手动解锁插件</title><link>https://blog.leshans.eu.org/p/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFv7.7.0-github%E7%BA%AF%E5%87%80%E7%89%88-%E4%BC%98%E5%8C%96%E8%84%9A%E6%9C%AC-%E6%89%8B%E5%8A%A8%E8%A7%A3%E9%94%81%E6%8F%92%E4%BB%B6/</link><pubDate>Sun, 10 Dec 2023 03:06:24 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFv7.7.0-github%E7%BA%AF%E5%87%80%E7%89%88-%E4%BC%98%E5%8C%96%E8%84%9A%E6%9C%AC-%E6%89%8B%E5%8A%A8%E8%A7%A3%E9%94%81%E6%8F%92%E4%BB%B6/</guid><description>&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312100312630.png"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="相关介绍">相关介绍&lt;/h3>
+&lt;p>目前最实用的宝塔7.7.0系列，本地安装纯净版本，并去除了强制绑定帐号、自动创建垃圾文件、活动推荐、在线客服，去除面板日志与网站绑定域名、手动解锁所有付费插件等等。&lt;/p>
+&lt;h3 id="一安装宝塔面板v770本地版">一、安装宝塔面板v7.7.0本地版&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sSO https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/install_panel.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> bash install_panel.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>备用脚本，如果访问不了github：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">http://d.moe.ms/AAAAA/btpanel-v7.7.0/install/install_panel.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="二一键开心补丁">二、一键开心补丁&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/one_key_happy.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x one_key_happy.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./one_key_happy.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="三彩虹优化补丁">三、彩虹优化补丁&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/optimize.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x optimize.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./optimize.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>1.去除宝塔面板强制绑定账号；&lt;br>
+2.去除各种删除操作时的计算题与延时等待；&lt;br>
+3.去除创建网站自动创建的垃圾文件（index.html、404.html、.htaccess）&lt;br>
+4.关闭未绑定域名提示页面，防止有人访问未绑定域名直接看出来是用的宝塔面板；&lt;br>
+5.关闭活动推荐与在线客服；&lt;br>
+6.去除自动校验文件与上报信息定时任务；&lt;br>
+7.去除面板日志与网站绑定域名上报。&lt;/p>
+&lt;h3 id="四手动解锁插件过期时间">四、手动解锁插件过期时间&lt;/h3>
+&lt;p>如一键开心，可不用以下操作。文件路径：www/server/panel/data/plugin.json&lt;br>
+搜索字符串：“endtime”: -1 全部替换为 “endtime”: 999999999999&lt;/p>
+&lt;p>手动阻止解锁插件后自动修复为免费版：&lt;/p>
+&lt;p>chattr +i /www/server/panel/data/plugin.json&lt;/p></description></item><item><title>GitHub图床加速</title><link>https://blog.leshans.eu.org/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</link><pubDate>Thu, 07 Dec 2023 21:07:15 +0800</pubDate><guid>https://blog.leshans.eu.org/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</guid><description>&lt;h1 id="github图床使用">Github图床使用&lt;/h1>
+&lt;p>网络上关于&lt;code>GitHub+Jsdelivr&lt;/code>实现&lt;code>图床加速&lt;/code>的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。&lt;/p>
+&lt;blockquote>
+&lt;p>方法1：Jsdelivr镜像站 &lt;a class="link" href="https://jsd.cdn.zzko.cn/" target="_blank" rel="noopener"
+>https://jsd.cdn.zzko.cn&lt;/a> （公益）&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>方法2：通过&lt;code>Cloudflare Workers&lt;/code>实现反代&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>即使镜像站点跑路了，Cloudflare还在，速度慢点&lt;/p>
+&lt;/blockquote>
+&lt;p>以上方法都要配合PicGo或者PicList使用，本人使用的是PicList&lt;/p>
+&lt;p>配合图床工具: &lt;a class="link" href="https://github.com/Kuingsmile/PicList" target="_blank" rel="noopener"
+>PicList&lt;/a>&lt;/p>
+&lt;p>&lt;code>PicList&lt;/code> 是一款基于&lt;code>PicGo&lt;/code> 深度二次开发,云储存/图床管理和文件上传客户端工具&lt;/p>
+&lt;p>完美兼容PicGo&lt;/p>
+&lt;p>官网: &lt;a class="link" href="https://piclist.cn" target="_blank" rel="noopener"
+>https://piclist.cn&lt;/a>&lt;/p>
+&lt;h3 id="1通过cloudflare-workers实现反代">1.通过Cloudflare Workers实现反代&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">addEventListener&lt;/span>&lt;span class="o">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;fetch&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">event&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">let&lt;/span> &lt;span class="n">url&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">URL&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">event&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">request&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">url&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">url&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">hostname&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;raw.githubusercontent.com&amp;#34;&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">//反代github域名
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">let&lt;/span> &lt;span class="n">request&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">Request&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">event&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">request&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">event&lt;/span>&lt;span class="o">.&lt;/span> &lt;span class="nf">respondWith&lt;/span>&lt;span class="o">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fetch&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">request&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>具体教程网上很多，需要你在Cloudflare有域名&lt;/p>
+&lt;h3 id="2配合piclist">2.配合PicList&lt;/h3>
+&lt;p>请替换为你自己的&lt;code>仓库名&lt;/code> 以及分支，准备好&lt;code>token&lt;/code>&lt;/p>
+&lt;p>反代图&lt;/p>
+&lt;p>&lt;img src="https://github.leshans.eu.org/woniu336/blog-image/main/img/2023-12-07_212014.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>下图为镜像站
+&lt;br>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/2023-12-07_212014.png"
+loading="lazy"
+>&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>仓库名: &lt;code>woniu336/blog-image&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>分支: &lt;code>main&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>存储路径: &lt;code>img/&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名1(镜像站) : &lt;a class="link" href="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main" target="_blank" rel="noopener"
+>https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名2(CF反代)
+: &lt;a class="link" href="https://github.leshans.eu.org/woniu336/blog-image/main" target="_blank" rel="noopener"
+>https://github.leshans.eu.org/woniu336/blog-image/main&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名格式: &lt;a class="link" href="https://cdn.jsdelivr.net/gh/" target="_blank" rel="noopener"
+>https://cdn.jsdelivr.net/gh/&lt;/a>用户名/仓库名@分支&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>图片测试:&lt;/p>
+&lt;p>&lt;img src="https://github.leshans.eu.org/woniu336/blog-image/main/img/202310061243776.jpg"
+loading="lazy"
+>&lt;/p></description></item><item><title>WordPress网站更改后台登录地址保姆级图文教程</title><link>https://blog.leshans.eu.org/p/wordpress%E7%BD%91%E7%AB%99%E6%9B%B4%E6%94%B9%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E5%9C%B0%E5%9D%80%E4%BF%9D%E5%A7%86%E7%BA%A7%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 07 Dec 2023 00:45:27 +0800</pubDate><guid>https://blog.leshans.eu.org/p/wordpress%E7%BD%91%E7%AB%99%E6%9B%B4%E6%94%B9%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E5%9C%B0%E5%9D%80%E4%BF%9D%E5%A7%86%E7%BA%A7%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/</guid><description>&lt;h2 id="背景">背景&lt;/h2>
+&lt;p>WordPress系统默认的&lt;code>后台地址&lt;/code>是 域名&lt;code>/wp-admin&lt;/code> 或域名&lt;code>/wp-login.php&lt;/code>&lt;/p>
+&lt;p>这就意味着所有用WordPress的人都可以用这个地址打开你的后台登录页面，很明显谁都知道这很不安全。那么如何更改Wordpress的后台登录地址呢？&lt;/p>
+&lt;p>引入
+搜了好多帖子，方式主要有两种，一种是使用插件，这种方法比较快。但是网上提供插件居多，我安装测试的插件没几个是最后成功的。第二种是直接修改代码文件，最后决定用这种方式。这里以宝塔面板为例，把图文过程写下来，大家参考下。&lt;/p>
+&lt;h3 id="第一步">第一步：&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>打开WordPress所在的目录，找到 WordPress 目录下的 &lt;code>wp-login.php&lt;/code>，这个文件是我们后台登录的地址，把它重命名成别的，例如：&lt;code>admin.php&lt;/code> ，这就意味着你可以通过 http://域名/admin.php 的方式来访问后台。
+&lt;img src="https://r2.leshans.eu.org/2023/12/a7978211df683a9c44f8647bce38a7ee.png"
+loading="lazy"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>但是这还不够，我们打开刚才重命名的文件，把里面所有的 &lt;code>wp-login&lt;/code> 替换成 &lt;code>admin&lt;/code> ，这样第一步完成。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/0f6da20e2ebfac71616fc7ea369cc96f.png"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="第二步">第二步：&lt;/h3>
+&lt;p>打开 WordPress 目录下 &lt;code>wp-includes&lt;/code> ，找到其目录内的 &lt;code>general-template.php&lt;/code> 文件，打开文件，把里面所有的 &lt;code>wp-login&lt;/code> 全部替换成 &lt;code>admin &lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/7d39bff7da60672e54f6b30c486ed6fa.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/f671d4040afb36d5363ebf3f9379370c.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/85447ecaff32bad7847cc6300118eac0.png"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="第三步">第三步：&lt;/h3>
+&lt;p>打开文件 &lt;code>general-template.php&lt;/code> ，点击搜索变量 &lt;code>$login_url&lt;/code>&lt;/p>
+&lt;p>$login_url
+将site_url 里面第一个参数改成&lt;code> index.php&lt;/code> ，如下&lt;/p>
+&lt;p>&lt;code>$login_url = site_url( 'index.php', 'login' );&lt;/code>&lt;/p>
+&lt;p>其中 index.php 可以换成别的，保存默认的 wp-login 也可以，这行的意思是定义当有人通过 http:// 域名 /wp-admin/ 地址访问网站时或者直接访问后台某个地址时进行跳转到 site_url() 设置的地址内，所以防止别人探索你的地址。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/8b812e1c278259b89de21413bae68219.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>END
+以后要登录后台，就可以通过 &lt;code>http://域名/admin.php &lt;/code>访问了。&lt;/p>
+&lt;p>一键脚本：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/wp.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x wp.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./wp.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>WebShell扫描检测查杀工具</title><link>https://blog.leshans.eu.org/p/webshell%E6%89%AB%E6%8F%8F%E6%A3%80%E6%B5%8B%E6%9F%A5%E6%9D%80%E5%B7%A5%E5%85%B7/</link><pubDate>Wed, 06 Dec 2023 01:34:55 +0800</pubDate><guid>https://blog.leshans.eu.org/p/webshell%E6%89%AB%E6%8F%8F%E6%A3%80%E6%B5%8B%E6%9F%A5%E6%9D%80%E5%B7%A5%E5%85%B7/</guid><description>&lt;p>&lt;code>webshell&lt;/code>是一种可以在web服务器上执行后台脚本或者命令的后门，黑客通过入侵网站上传webshell后获得服务器的执行操作权限，比如执行系统命令、窃取用户数据、删除web页面、修改主页等，其危害不言而喻。而WebShell扫描检测工具可辅助查出该后门。&lt;/p>
+&lt;p>&lt;code>WebShell&lt;/code>扫描工具适用&lt;/p>
+&lt;ul>
+&lt;li>网上下载的源码&lt;/li>
+&lt;li>特定文件检测是否是木马&lt;/li>
+&lt;li>检测目标程序或文件是否存在后门&lt;/li>
+&lt;li>免杀检测识别率测试&lt;/li>
+&lt;/ul>
+&lt;h3 id="1河马查杀">1.河马查杀&lt;/h3>
+&lt;p>在线查杀地址：&lt;a class="link" href="https://n.shellpub.com" target="_blank" rel="noopener"
+>https://n.shellpub.com/&lt;/a>&lt;/p>
+&lt;p>&lt;strong>windows版：&lt;/strong>&lt;/p>
+&lt;p>&lt;a class="link" href="https://dl.shellpub.com/hm-ui/latest/HmSetup.zip?version=1.8.2" target="_blank" rel="noopener"
+>https://dl.shellpub.com/hm-ui/latest/HmSetup.zip?version=1.8.2&lt;/a>&lt;/p>
+&lt;p>&lt;strong>linux-amd64版：&lt;/strong>&lt;/p>
+&lt;p>&lt;a class="link" href="https://dl.shellpub.com/hm/latest/hm-linux-amd64.tgz?version=1.8.3" target="_blank" rel="noopener"
+>https://dl.shellpub.com/hm/latest/hm-linux-amd64.tgz?version=1.8.3&lt;/a>&lt;/p>
+&lt;p>&lt;strong>linux-386版：&lt;/strong>&lt;/p>
+&lt;p>&lt;a class="link" href="https://dl.shellpub.com/hm/latest/hm-linux-386.tgz?version=1.8.3" target="_blank" rel="noopener"
+>https://dl.shellpub.com/hm/latest/hm-linux-386.tgz?version=1.8.3&lt;/a>&lt;/p></description></item><item><title>玩客云刷Openwrt</title><link>https://blog.leshans.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</link><pubDate>Sat, 02 Dec 2023 12:06:43 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</guid><description>&lt;h1 id="玩客云openwrt固件">玩客云Openwrt固件&lt;/h1>
 &lt;p>玩客云固件：链接: https://pan.baidu.com/s/1q3gVWrsVoRiS2m3VKoqgoQ?pwd=p8ic 提取码: p8ic &lt;/p>
 &lt;p>&lt;code>ip:10.0.0.1密码:root&lt;/code>&lt;/p>
 &lt;div class="video-wrapper">
@@ -23,16 +1480,86 @@ allowfullscreen="true"
 >
 &lt;/iframe>
 &lt;/div>
-&lt;h1 id="小雅命令">小雅命令&lt;/h1>
-&lt;p>bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo;                              输入ip后面加:5678&lt;/p>
-&lt;p>或者bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo; -s host                  输入ip后面加:6789&lt;/p>
-&lt;p>token：https://aliyuntoken.vercel.app/open &lt;/p>
-&lt;p>token: &lt;a class="link" href="https://alist.nn.ci/tool/aliyundrive/request" target="_blank" rel="noopener"
->https://alist.nn.ci/tool/aliyundrive/request&lt;/a>&lt;/p>
-&lt;p>转存目录：&lt;a class="link" href="https://www.aliyundrive.com/" target="_blank" rel="noopener"
->https://www.aliyundrive.com/&lt;/a>&lt;/p>
-&lt;p>bash -c &amp;ldquo;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;rdquo; -s 3 -tg   定时清理bash -c &amp;ldquo;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;rdquo; -s 5 -tg   即时清理&lt;/p>
-&lt;p>webdav 账号密码用户: guest 密码: guest_Api789 ​&lt;/p></description></item><item><title>XShell 7和XFTP 7 家庭或学校免费版移除标签限制</title><link>https://blog.leshans.eu.org/p/xshell-7%E5%92%8Cxftp-7-%E5%AE%B6%E5%BA%AD%E6%88%96%E5%AD%A6%E6%A0%A1%E5%85%8D%E8%B4%B9%E7%89%88%E7%A7%BB%E9%99%A4%E6%A0%87%E7%AD%BE%E9%99%90%E5%88%B6/</link><pubDate>Thu, 30 Nov 2023 12:09:50 +0800</pubDate><guid>https://blog.leshans.eu.org/p/xshell-7%E5%92%8Cxftp-7-%E5%AE%B6%E5%BA%AD%E6%88%96%E5%AD%A6%E6%A0%A1%E5%85%8D%E8%B4%B9%E7%89%88%E7%A7%BB%E9%99%A4%E6%A0%87%E7%AD%BE%E9%99%90%E5%88%B6/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/5eeb4732db8fb1954fc7c01b17ca32f1.png"
+&lt;h2 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h2>
+&lt;p>网址：&lt;a class="link" href="https://alist.xiaoya.pro/" target="_blank" rel="noopener"
+>https://alist.xiaoya.pro/&lt;/a>&lt;/p>
+&lt;p>文档： &lt;a class="link" href="https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f" target="_blank" rel="noopener"
+>https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f&lt;/a>&lt;/p>
+&lt;p>终端安装命令，端口 &lt;code>5678&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl http://docker.xiaoya.pro/update_new.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者 端口 &lt;code>6789&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl http://docker.xiaoya.pro/update_new.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s host
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>阿里token获取地址：&lt;a class="link" href="https://aliyuntoken.vercel.app/" target="_blank" rel="noopener"
+>https://aliyuntoken.vercel.app/&lt;/a>&lt;/p>
+&lt;p>阿里opentoken地址：&lt;a class="link" href="https://alist.nn.ci/tool/aliyundrive/request.html" target="_blank" rel="noopener"
+>https://alist.nn.ci/tool/aliyundrive/request.html&lt;/a>&lt;/p>
+&lt;p>转存文件夹ID：网页版阿里云，进转存文件夹，地址栏内最后64开头的数字&lt;/p>
+&lt;p>创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像&lt;/p>
+&lt;h2 id="定时清理缓存">定时清理缓存&lt;/h2>
+&lt;p>模式3：创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh &lt;span class="p">|&lt;/span> tail -n +2&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s &lt;span class="m">3&lt;/span> -tg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>模式5：与模式3的区别是实时清理，只要产生了播放缓存一分钟内立即清理。签到和定时升级同模式3&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh &lt;span class="p">|&lt;/span> tail -n +2&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s &lt;span class="m">5&lt;/span> -tg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>内容描述：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>执行时机和清理缓存的操作是完全相同的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可以通过手动创建&lt;code>/etc/xiaoya/mycheckintoken.txt&lt;/code>文件来定义多个网盘签到的32位refresh token，每行一个。若不添加文件，则使用默认小雅转存的网盘签到。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>自动刷新&lt;code>/etc/xiaoya/mycheckintoken.txt&lt;/code>和&lt;code>/etc/xiaoya/mytoken.txt&lt;/code>文件，这有可能延长refresh token的时效，具体效果需要观察。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>定时运行模式包括：&lt;/p>
+&lt;ul>
+&lt;li>默认每天从运行脚本的下一分钟开始执行。&lt;/li>
+&lt;li>运行时间可以通过手动创建&lt;code>/etc/xiaoya/myruntime.txt&lt;/code>文件进行修改，例如06:00和18:00表示每天早晚6点各运行一次。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>自动升级的说明：&lt;/p>
+&lt;ul>
+&lt;li>定时升级的命令保存在&lt;code>/etc/xiaoya/mycmd.txt&lt;/code>中。删除该文件将变成定时重启小雅。&lt;/li>
+&lt;li>完成清理和签到后，脚本会自动执行&lt;code>/etc/xiaoya/mycmd.txt&lt;/code>中的命令。该文件默认包含升级小雅镜像的命令，不建议修改。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>关于TG推送：&lt;/p>
+&lt;ul>
+&lt;li>所有模式加上&lt;code>-tg&lt;/code>功能均可绑定消息推送的TG账号，只有第一次运行需要加上&lt;code>-tg&lt;/code>参数。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>XShell 7和XFTP 7 家庭或学校免费版移除标签限制</title><link>https://blog.leshans.eu.org/p/xshell-7%E5%92%8Cxftp-7-%E5%AE%B6%E5%BA%AD%E6%88%96%E5%AD%A6%E6%A0%A1%E5%85%8D%E8%B4%B9%E7%89%88%E7%A7%BB%E9%99%A4%E6%A0%87%E7%AD%BE%E9%99%90%E5%88%B6/</link><pubDate>Thu, 30 Nov 2023 12:09:50 +0800</pubDate><guid>https://blog.leshans.eu.org/p/xshell-7%E5%92%8Cxftp-7-%E5%AE%B6%E5%BA%AD%E6%88%96%E5%AD%A6%E6%A0%A1%E5%85%8D%E8%B4%B9%E7%89%88%E7%A7%BB%E9%99%A4%E6%A0%87%E7%AD%BE%E9%99%90%E5%88%B6/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/5eeb4732db8fb1954fc7c01b17ca32f1.png"
 loading="lazy"
 >&lt;/p>
 &lt;p>更新：&lt;code>从 2022/02/16 开始，我们的免费许可证的标签限制已被删除&lt;/code>。所有免费用户现在都可以通过下载下面的最新版本来访问无限的标签。当前用户必须下载最新版本并在现有安装上进行安装。&lt;/p>

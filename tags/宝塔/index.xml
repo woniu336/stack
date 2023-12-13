@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宝塔 on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E5%AE%9D%E5%A1%94/</link><description>Recent content in 宝塔 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 23:38:07 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml"/><item><title>宝塔面板7.7破解版安装教程</title><link>https://blog.leshans.eu.org/p/6/</link><pubDate>Tue, 25 Jul 2023 23:38:07 +0800</pubDate><guid>https://blog.leshans.eu.org/p/6/</guid><description>&lt;p>为什么选择了版本号 7.7.0 而非其他版本呢？这个版本之所以被选中，是因为它并不过于陈旧，也没有太多限制，同时具备一定的破解潜力。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宝塔 on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E5%AE%9D%E5%A1%94/</link><description>Recent content in 宝塔 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Dec 2023 03:06:24 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml"/><item><title>宝塔面板v7.7.0 Github纯净版 优化脚本 手动解锁插件</title><link>https://blog.leshans.eu.org/p/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFv7.7.0-github%E7%BA%AF%E5%87%80%E7%89%88-%E4%BC%98%E5%8C%96%E8%84%9A%E6%9C%AC-%E6%89%8B%E5%8A%A8%E8%A7%A3%E9%94%81%E6%8F%92%E4%BB%B6/</link><pubDate>Sun, 10 Dec 2023 03:06:24 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFv7.7.0-github%E7%BA%AF%E5%87%80%E7%89%88-%E4%BC%98%E5%8C%96%E8%84%9A%E6%9C%AC-%E6%89%8B%E5%8A%A8%E8%A7%A3%E9%94%81%E6%8F%92%E4%BB%B6/</guid><description>&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312100312630.png"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="相关介绍">相关介绍&lt;/h3>
+&lt;p>目前最实用的宝塔7.7.0系列，本地安装纯净版本，并去除了强制绑定帐号、自动创建垃圾文件、活动推荐、在线客服，去除面板日志与网站绑定域名、手动解锁所有付费插件等等。&lt;/p>
+&lt;h3 id="一安装宝塔面板v770本地版">一、安装宝塔面板v7.7.0本地版&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sSO https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/install_panel.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> bash install_panel.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>备用脚本，如果访问不了github：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">http://d.moe.ms/AAAAA/btpanel-v7.7.0/install/install_panel.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="二一键开心补丁">二、一键开心补丁&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/one_key_happy.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x one_key_happy.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./one_key_happy.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="三彩虹优化补丁">三、彩虹优化补丁&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/optimize.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chmod +x optimize.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./optimize.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>1.去除宝塔面板强制绑定账号；&lt;br>
+2.去除各种删除操作时的计算题与延时等待；&lt;br>
+3.去除创建网站自动创建的垃圾文件（index.html、404.html、.htaccess）&lt;br>
+4.关闭未绑定域名提示页面，防止有人访问未绑定域名直接看出来是用的宝塔面板；&lt;br>
+5.关闭活动推荐与在线客服；&lt;br>
+6.去除自动校验文件与上报信息定时任务；&lt;br>
+7.去除面板日志与网站绑定域名上报。&lt;/p>
+&lt;h3 id="四手动解锁插件过期时间">四、手动解锁插件过期时间&lt;/h3>
+&lt;p>如一键开心，可不用以下操作。文件路径：www/server/panel/data/plugin.json&lt;br>
+搜索字符串：“endtime”: -1 全部替换为 “endtime”: 999999999999&lt;/p>
+&lt;p>手动阻止解锁插件后自动修复为免费版：&lt;/p>
+&lt;p>chattr +i /www/server/panel/data/plugin.json&lt;/p></description></item><item><title>宝塔面板7.7破解版安装教程</title><link>https://blog.leshans.eu.org/p/6/</link><pubDate>Tue, 25 Jul 2023 23:38:07 +0800</pubDate><guid>https://blog.leshans.eu.org/p/6/</guid><description>&lt;p>为什么选择了版本号 7.7.0 而非其他版本呢？这个版本之所以被选中，是因为它并不过于陈旧，也没有太多限制，同时具备一定的破解潜力。&lt;/p>
 &lt;p>&lt;code>一键脚本:&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

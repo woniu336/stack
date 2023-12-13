@@ -1,0 +1,1064 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="小雅网盘（基于alist） 网址：https://alist.xiaoya.pro/ alist文档：https://alist.nn.ci/z"><title>小雅网盘</title><link rel=canonical href=https://blog.leshans.eu.org/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/><link rel=stylesheet href=/scss/style.min.59d2dbf3de620b7e2463ec6171eaab452b788a787a28b43e4c75c7287b2a4a7f.css><meta property="og:title" content="小雅网盘"><meta property="og:description" content="小雅网盘（基于alist） 网址：https://alist.xiaoya.pro/ alist文档：https://alist.nn.ci/z"><meta property="og:url" content="https://blog.leshans.eu.org/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/"><meta property="og:site_name" content="路飞博客"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="alist"><meta property="article:tag" content="网盘"><meta property="article:published_time" content="2023-12-10T07:40:57+08:00"><meta property="article:modified_time" content="2023-12-10T07:40:57+08:00"><meta name=twitter:title content="小雅网盘"><meta name=twitter:description content="小雅网盘（基于alist） 网址：https://alist.xiaoya.pro/ alist文档：https://alist.nn.ci/z"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#小雅网盘基于alist>小雅网盘（基于alist）</a></li><li><a href=#定时清理缓存>定时清理缓存</a></li><li><a href=#套娃挂载>套娃挂载：</a></li><li><a href=#同步小雅网盘>同步小雅网盘</a></li><li><a href=#小雅cf反代>小雅CF反代</a></li><li><a href=#其他内容扩充>其他内容扩充</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/>小雅网盘</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2023-12-10</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 5 分钟</time></div></footer></div></header><section class=article-content><h3 id=小雅网盘基于alist>小雅网盘（基于alist）</h3><p>网址：<a class=link href=https://alist.xiaoya.pro/ target=_blank rel=noopener>https://alist.xiaoya.pro/</a></p><p>alist文档：<a class=link href=https://alist.nn.ci/zh/ target=_blank rel=noopener>https://alist.nn.ci/zh//</a></p><p>小雅文档： <a class=link href=https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f target=_blank rel=noopener>https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f</a></p><p>终端安装命令，端口 <code>5678</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bash -c <span class=s2>&#34;</span><span class=k>$(</span>curl http://docker.xiaoya.pro/update_new.sh<span class=k>)</span><span class=s2>&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>或者 端口 <code>6789</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>bash -c <span class=s2>&#34;</span><span class=k>$(</span>curl http://docker.xiaoya.pro/update_new.sh<span class=k>)</span><span class=s2>&#34;</span> -s host
+</span></span></code></pre></td></tr></table></div></div><p>阿里token获取地址：<a class=link href=https://aliyuntoken.vercel.app/ target=_blank rel=noopener>https://aliyuntoken.vercel.app/</a></p><p>阿里opentoken地址：<a class=link href=https://alist.nn.ci/tool/aliyundrive/request.html target=_blank rel=noopener>https://alist.nn.ci/tool/aliyundrive/request.html</a></p><p>转存文件夹ID：网页版阿里云，进转存文件夹，地址栏内最后64开头的数字</p><p>创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像</p><h3 id=定时清理缓存>定时清理缓存</h3><p><code>可以不加-tg</code></p><p>模式3：创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bash -c <span class=s2>&#34;</span><span class=k>$(</span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh <span class=p>|</span> tail -n +2<span class=k>)</span><span class=s2>&#34;</span> -s <span class=m>3</span> -tg
+</span></span></code></pre></td></tr></table></div></div><p>模式5：与模式3的区别是实时清理，只要产生了播放缓存一分钟内立即清理。签到和定时升级同模式3</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bash -c <span class=s2>&#34;</span><span class=k>$(</span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh <span class=p>|</span> tail -n +2<span class=k>)</span><span class=s2>&#34;</span> -s <span class=m>5</span> -tg
+</span></span></code></pre></td></tr></table></div></div><h3 id=套娃挂载>套娃挂载：</h3><p>输入命令，获取<code>令牌</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>docker <span class=nb>exec</span> -i xiaoya sqlite3 data/data.db <span class=s>&lt;&lt;EOF
+</span></span></span><span class=line><span class=cl><span class=s>
+</span></span></span><span class=line><span class=cl><span class=s>select value from x_setting_items where key = &#34;token&#34;;
+</span></span></span><span class=line><span class=cl><span class=s>
+</span></span></span><span class=line><span class=cl><span class=s>EOF</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>挂载 ：alist v3 <code>输入令牌</code> <code>输入链接</code> 注意<code>docker</code>名称</p></blockquote><h3 id=同步小雅网盘>同步小雅网盘</h3><p>如果你是基于Linux系统的（包括openwrt），可以用以下方法设置定时更新，终端执行</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>crontab -e
+</span></span></code></pre></td></tr></table></div></div><p>添加一条记录</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>0 6 * * * docker restart xiaoya
+</span></span></code></pre></td></tr></table></div></div><ol><li>按 <code>o</code> 插入一行</li><li>然后把这堆文字输入进去</li><li>然后按键盘左上角 ESC键退出编辑模式</li><li>输入 <code>:wq</code> 保存退出</li></ol><p>就是每天凌晨6点自动重启xiaoya docker去同步数据，你把6改成13，那就是下午1点</p><h3 id=小雅cf反代>小雅CF反代</h3><p>登录cloudflare，创建<code>Worker</code> 代码如下,修改<code>const upstream_url = "alist地址";</code></p><p>免费地址寻找：<a class=link href="https://www.zoomeye.org/searchResult?q=title%3A%22alist%22" target=_blank rel=noopener>网络空间雷达</a> 复制ip</p><p>我的: <a class=link href=https://xiaoya.taoshuge.eu.org/ target=_blank rel=noopener>xiaoya.taoshuge.eu.org</a></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span><span class=lnt>182
+</span><span class=lnt>183
+</span><span class=lnt>184
+</span><span class=lnt>185
+</span><span class=lnt>186
+</span><span class=lnt>187
+</span><span class=lnt>188
+</span><span class=lnt>189
+</span><span class=lnt>190
+</span><span class=lnt>191
+</span><span class=lnt>192
+</span><span class=lnt>193
+</span><span class=lnt>194
+</span><span class=lnt>195
+</span><span class=lnt>196
+</span><span class=lnt>197
+</span><span class=lnt>198
+</span><span class=lnt>199
+</span><span class=lnt>200
+</span><span class=lnt>201
+</span><span class=lnt>202
+</span><span class=lnt>203
+</span><span class=lnt>204
+</span><span class=lnt>205
+</span><span class=lnt>206
+</span><span class=lnt>207
+</span><span class=lnt>208
+</span><span class=lnt>209
+</span><span class=lnt>210
+</span><span class=lnt>211
+</span><span class=lnt>212
+</span><span class=lnt>213
+</span><span class=lnt>214
+</span><span class=lnt>215
+</span><span class=lnt>216
+</span><span class=lnt>217
+</span><span class=lnt>218
+</span><span class=lnt>219
+</span><span class=lnt>220
+</span><span class=lnt>221
+</span><span class=lnt>222
+</span><span class=lnt>223
+</span><span class=lnt>224
+</span><span class=lnt>225
+</span><span class=lnt>226
+</span><span class=lnt>227
+</span><span class=lnt>228
+</span><span class=lnt>229
+</span><span class=lnt>230
+</span><span class=lnt>231
+</span><span class=lnt>232
+</span><span class=lnt>233
+</span><span class=lnt>234
+</span><span class=lnt>235
+</span><span class=lnt>236
+</span><span class=lnt>237
+</span><span class=lnt>238
+</span><span class=lnt>239
+</span><span class=lnt>240
+</span><span class=lnt>241
+</span><span class=lnt>242
+</span><span class=lnt>243
+</span><span class=lnt>244
+</span><span class=lnt>245
+</span><span class=lnt>246
+</span><span class=lnt>247
+</span><span class=lnt>248
+</span><span class=lnt>249
+</span><span class=lnt>250
+</span><span class=lnt>251
+</span><span class=lnt>252
+</span><span class=lnt>253
+</span><span class=lnt>254
+</span><span class=lnt>255
+</span><span class=lnt>256
+</span><span class=lnt>257
+</span><span class=lnt>258
+</span><span class=lnt>259
+</span><span class=lnt>260
+</span><span class=lnt>261
+</span><span class=lnt>262
+</span><span class=lnt>263
+</span><span class=lnt>264
+</span><span class=lnt>265
+</span><span class=lnt>266
+</span><span class=lnt>267
+</span><span class=lnt>268
+</span><span class=lnt>269
+</span><span class=lnt>270
+</span><span class=lnt>271
+</span><span class=lnt>272
+</span><span class=lnt>273
+</span><span class=lnt>274
+</span><span class=lnt>275
+</span><span class=lnt>276
+</span><span class=lnt>277
+</span><span class=lnt>278
+</span><span class=lnt>279
+</span><span class=lnt>280
+</span><span class=lnt>281
+</span><span class=lnt>282
+</span><span class=lnt>283
+</span><span class=lnt>284
+</span><span class=lnt>285
+</span><span class=lnt>286
+</span><span class=lnt>287
+</span><span class=lnt>288
+</span><span class=lnt>289
+</span><span class=lnt>290
+</span><span class=lnt>291
+</span><span class=lnt>292
+</span><span class=lnt>293
+</span><span class=lnt>294
+</span><span class=lnt>295
+</span><span class=lnt>296
+</span><span class=lnt>297
+</span><span class=lnt>298
+</span><span class=lnt>299
+</span><span class=lnt>300
+</span><span class=lnt>301
+</span><span class=lnt>302
+</span><span class=lnt>303
+</span><span class=lnt>304
+</span><span class=lnt>305
+</span><span class=lnt>306
+</span><span class=lnt>307
+</span><span class=lnt>308
+</span><span class=lnt>309
+</span><span class=lnt>310
+</span><span class=lnt>311
+</span><span class=lnt>312
+</span><span class=lnt>313
+</span><span class=lnt>314
+</span><span class=lnt>315
+</span><span class=lnt>316
+</span><span class=lnt>317
+</span><span class=lnt>318
+</span><span class=lnt>319
+</span><span class=lnt>320
+</span><span class=lnt>321
+</span><span class=lnt>322
+</span><span class=lnt>323
+</span><span class=lnt>324
+</span><span class=lnt>325
+</span><span class=lnt>326
+</span><span class=lnt>327
+</span><span class=lnt>328
+</span><span class=lnt>329
+</span><span class=lnt>330
+</span><span class=lnt>331
+</span><span class=lnt>332
+</span><span class=lnt>333
+</span><span class=lnt>334
+</span><span class=lnt>335
+</span><span class=lnt>336
+</span><span class=lnt>337
+</span><span class=lnt>338
+</span><span class=lnt>339
+</span><span class=lnt>340
+</span><span class=lnt>341
+</span><span class=lnt>342
+</span><span class=lnt>343
+</span><span class=lnt>344
+</span><span class=lnt>345
+</span><span class=lnt>346
+</span><span class=lnt>347
+</span><span class=lnt>348
+</span><span class=lnt>349
+</span><span class=lnt>350
+</span><span class=lnt>351
+</span><span class=lnt>352
+</span><span class=lnt>353
+</span><span class=lnt>354
+</span><span class=lnt>355
+</span><span class=lnt>356
+</span><span class=lnt>357
+</span><span class=lnt>358
+</span><span class=lnt>359
+</span><span class=lnt>360
+</span><span class=lnt>361
+</span><span class=lnt>362
+</span><span class=lnt>363
+</span><span class=lnt>364
+</span><span class=lnt>365
+</span><span class=lnt>366
+</span><span class=lnt>367
+</span><span class=lnt>368
+</span><span class=lnt>369
+</span><span class=lnt>370
+</span><span class=lnt>371
+</span><span class=lnt>372
+</span><span class=lnt>373
+</span><span class=lnt>374
+</span><span class=lnt>375
+</span><span class=lnt>376
+</span><span class=lnt>377
+</span><span class=lnt>378
+</span><span class=lnt>379
+</span><span class=lnt>380
+</span><span class=lnt>381
+</span><span class=lnt>382
+</span><span class=lnt>383
+</span><span class=lnt>384
+</span><span class=lnt>385
+</span><span class=lnt>386
+</span><span class=lnt>387
+</span><span class=lnt>388
+</span><span class=lnt>389
+</span><span class=lnt>390
+</span><span class=lnt>391
+</span><span class=lnt>392
+</span><span class=lnt>393
+</span><span class=lnt>394
+</span><span class=lnt>395
+</span><span class=lnt>396
+</span><span class=lnt>397
+</span><span class=lnt>398
+</span><span class=lnt>399
+</span><span class=lnt>400
+</span><span class=lnt>401
+</span><span class=lnt>402
+</span><span class=lnt>403
+</span><span class=lnt>404
+</span><span class=lnt>405
+</span><span class=lnt>406
+</span><span class=lnt>407
+</span><span class=lnt>408
+</span><span class=lnt>409
+</span><span class=lnt>410
+</span><span class=lnt>411
+</span><span class=lnt>412
+</span><span class=lnt>413
+</span><span class=lnt>414
+</span><span class=lnt>415
+</span><span class=lnt>416
+</span><span class=lnt>417
+</span><span class=lnt>418
+</span><span class=lnt>419
+</span><span class=lnt>420
+</span><span class=lnt>421
+</span><span class=lnt>422
+</span><span class=lnt>423
+</span><span class=lnt>424
+</span><span class=lnt>425
+</span><span class=lnt>426
+</span><span class=lnt>427
+</span><span class=lnt>428
+</span><span class=lnt>429
+</span><span class=lnt>430
+</span><span class=lnt>431
+</span><span class=lnt>432
+</span><span class=lnt>433
+</span><span class=lnt>434
+</span><span class=lnt>435
+</span><span class=lnt>436
+</span><span class=lnt>437
+</span><span class=lnt>438
+</span><span class=lnt>439
+</span><span class=lnt>440
+</span><span class=lnt>441
+</span><span class=lnt>442
+</span><span class=lnt>443
+</span><span class=lnt>444
+</span><span class=lnt>445
+</span><span class=lnt>446
+</span><span class=lnt>447
+</span><span class=lnt>448
+</span><span class=lnt>449
+</span><span class=lnt>450
+</span><span class=lnt>451
+</span><span class=lnt>452
+</span><span class=lnt>453
+</span><span class=lnt>454
+</span><span class=lnt>455
+</span><span class=lnt>456
+</span><span class=lnt>457
+</span><span class=lnt>458
+</span><span class=lnt>459
+</span><span class=lnt>460
+</span><span class=lnt>461
+</span><span class=lnt>462
+</span><span class=lnt>463
+</span><span class=lnt>464
+</span><span class=lnt>465
+</span><span class=lnt>466
+</span><span class=lnt>467
+</span><span class=lnt>468
+</span><span class=lnt>469
+</span><span class=lnt>470
+</span><span class=lnt>471
+</span><span class=lnt>472
+</span><span class=lnt>473
+</span><span class=lnt>474
+</span><span class=lnt>475
+</span><span class=lnt>476
+</span><span class=lnt>477
+</span><span class=lnt>478
+</span><span class=lnt>479
+</span><span class=lnt>480
+</span><span class=lnt>481
+</span><span class=lnt>482
+</span><span class=lnt>483
+</span><span class=lnt>484
+</span><span class=lnt>485
+</span><span class=lnt>486
+</span><span class=lnt>487
+</span><span class=lnt>488
+</span><span class=lnt>489
+</span><span class=lnt>490
+</span><span class=lnt>491
+</span><span class=lnt>492
+</span><span class=lnt>493
+</span><span class=lnt>494
+</span><span class=lnt>495
+</span><span class=lnt>496
+</span><span class=lnt>497
+</span><span class=lnt>498
+</span><span class=lnt>499
+</span><span class=lnt>500
+</span><span class=lnt>501
+</span><span class=lnt>502
+</span><span class=lnt>503
+</span><span class=lnt>504
+</span><span class=lnt>505
+</span><span class=lnt>506
+</span><span class=lnt>507
+</span><span class=lnt>508
+</span><span class=lnt>509
+</span><span class=lnt>510
+</span><span class=lnt>511
+</span><span class=lnt>512
+</span><span class=lnt>513
+</span><span class=lnt>514
+</span><span class=lnt>515
+</span><span class=lnt>516
+</span><span class=lnt>517
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>import <span class=o>{</span> connect <span class=o>}</span> from <span class=s1>&#39;cloudflare:sockets&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>const <span class=nv>upstream_url</span> <span class=o>=</span> <span class=s2>&#34;http://183.134.157.38:5678&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>const <span class=nv>proxyList</span> <span class=o>=</span> <span class=o>[</span><span class=s2>&#34;mypikpak&#34;</span>, <span class=s2>&#34;sharepoint&#34;</span><span class=o>]</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>const <span class=nv>replace_dict</span> <span class=o>=</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=s1>&#39;$up_url&#39;</span>: <span class=s1>&#39;$cust_url&#39;</span>,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=s1>&#39;$upstream&#39;</span>: <span class=s1>&#39;$custom_domain&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>let</span> <span class=nv>up_scheme</span> <span class=o>=</span> upstream_url.split<span class=o>(</span><span class=s2>&#34;://&#34;</span><span class=o>)[</span>0<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>let</span> <span class=nv>upstream</span> <span class=o>=</span> upstream_url.split<span class=o>(</span><span class=s2>&#34;://&#34;</span><span class=o>)[</span>1<span class=o>]</span>.split<span class=o>(</span><span class=s2>&#34;:&#34;</span><span class=o>)[</span>0<span class=o>]</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>let</span> <span class=nv>port_string</span> <span class=o>=</span> upstream_url.split<span class=o>(</span><span class=s2>&#34;://&#34;</span><span class=o>)[</span>1<span class=o>]</span>.split<span class=o>(</span><span class=s2>&#34;:&#34;</span><span class=o>)[</span>1<span class=o>]</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>(</span>!port_string<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nv>port_string</span> <span class=o>=</span> <span class=nv>up_scheme</span> <span class=o>===</span> <span class=s2>&#34;http&#34;</span> ? <span class=s2>&#34;80&#34;</span> : <span class=s2>&#34;443&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>let</span> <span class=nv>port</span> <span class=o>=</span> parseInt<span class=o>(</span>port_string<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>const <span class=nv>timeoutDuration</span> <span class=o>=</span> 5000<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>const <span class=nv>chunkSize</span> <span class=o>=</span> <span class=m>1024</span> * 4<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>export</span> default <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  async fetch<span class=o>(</span>request, env, ctx<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>url</span> <span class=o>=</span> new URL<span class=o>(</span>request.url<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>cust_url</span> <span class=o>=</span> new URL<span class=o>(</span>request.url<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    url.port <span class=o>=</span> port.toString<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>original_url_hostname</span> <span class=o>=</span> url.hostname<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    url.hostname <span class=o>=</span> upstream<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    url.protocol <span class=o>=</span> up_scheme + <span class=s2>&#34;:&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span>url.pathname.startsWith<span class=o>(</span><span class=s2>&#34;/proxy/&#34;</span><span class=o>))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nb>let</span> <span class=nv>proxyUrl</span> <span class=o>=</span> new URL<span class=o>(</span><span class=s2>&#34;https://&#34;</span> + url.pathname.replace<span class=o>(</span>/<span class=se>\/</span>proxy<span class=se>\/</span>/g, <span class=s2>&#34;&#34;</span><span class=o>)</span> + url.search<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nb>let</span> <span class=nv>proxyReq</span> <span class=o>=</span> new Request<span class=o>(</span>proxyUrl, request<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nb>let</span> <span class=nv>proxyResponse</span> <span class=o>=</span> await fetchOverTcp<span class=o>(</span>proxyReq, 443<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> proxyResponse<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>new_request</span> <span class=o>=</span> new Request<span class=o>(</span>url, request<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>original_response</span> <span class=o>=</span> await fetchOverTcp<span class=o>(</span>new_request<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>response_headers</span> <span class=o>=</span> original_response.headers<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>new_response_headers</span> <span class=o>=</span> new Headers<span class=o>(</span>response_headers<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span>original_response.status <span class=o>===</span> 302<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      const <span class=nv>locationHeader</span> <span class=o>=</span> new_response_headers.get<span class=o>(</span><span class=s1>&#39;location&#39;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=o>(</span>locationHeader <span class=o>&amp;&amp;</span> isReplace<span class=o>(</span>locationHeader<span class=o>))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=nv>modifiedLocation</span> <span class=o>=</span> locationHeader.replace<span class=o>(</span>/https:<span class=se>\/\/</span>+/g, <span class=s2>&#34;https://&#34;</span> + original_url_hostname + <span class=s2>&#34;/proxy/&#34;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        new_response_headers.set<span class=o>(</span><span class=s1>&#39;location&#39;</span>, modifiedLocation<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    const <span class=nv>content_type</span> <span class=o>=</span> new_response_headers.get<span class=o>(</span><span class=s1>&#39;content-type&#39;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span>url.pathname.includes<span class=o>(</span><span class=s2>&#34;tvbox&#34;</span><span class=o>)</span> <span class=o>||</span> <span class=o>(</span>content_type !<span class=o>=</span> null <span class=o>&amp;&amp;</span> <span class=o>(</span>content_type.includes<span class=o>(</span><span class=s1>&#39;text/html&#39;</span><span class=o>)</span> <span class=o>||</span> content_type.includes<span class=o>(</span><span class=s1>&#39;json&#39;</span><span class=o>))</span> <span class=o>&amp;&amp;</span> <span class=o>(</span>content_type.includes<span class=o>(</span><span class=s1>&#39;UTF-8&#39;</span><span class=o>)</span> <span class=o>||</span> content_type.includes<span class=o>(</span><span class=s1>&#39;utf-8&#39;</span><span class=o>))))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nb>let</span> <span class=nv>dic_def</span> <span class=o>=</span> <span class=o>{}</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      dic_def<span class=o>[</span><span class=s2>&#34;</span><span class=nv>$upstream</span><span class=s2>&#34;</span><span class=o>]</span> <span class=o>=</span> upstream<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      dic_def<span class=o>[</span><span class=s2>&#34;</span><span class=nv>$custom_domain</span><span class=s2>&#34;</span><span class=o>]</span> <span class=o>=</span> original_url_hostname<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      dic_def<span class=o>[</span><span class=s2>&#34;</span><span class=nv>$cust_url</span><span class=s2>&#34;</span><span class=o>]</span> <span class=o>=</span> <span class=sb>`</span><span class=si>${</span><span class=nv>cust_url</span><span class=p>.protocol</span><span class=si>}</span>//<span class=si>${</span><span class=nv>cust_url</span><span class=p>.hostname</span><span class=si>}</span><span class=sb>`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      dic_def<span class=o>[</span><span class=s2>&#34;</span><span class=nv>$up_url</span><span class=s2>&#34;</span><span class=o>]</span> <span class=o>=</span> <span class=sb>`</span><span class=si>${</span><span class=nv>upstream_url</span><span class=si>}</span><span class=sb>`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nb>let</span> <span class=nv>original_text</span> <span class=o>=</span> replace_response_text<span class=o>(</span>await original_response.text<span class=o>()</span>, dic_def<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nb>let</span> <span class=nv>status</span> <span class=o>=</span> original_response.status<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> new Response<span class=o>(</span>original_text, <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        status,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        headers: new_response_headers
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=o>})</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>else</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> original_response<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>async <span class=k>function</span> fetchOverTcp<span class=o>(</span>request, <span class=nv>cust_port</span> <span class=o>=</span> null<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nb>let</span> <span class=nv>url</span> <span class=o>=</span> new URL<span class=o>(</span>request.url<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nb>let</span> <span class=nv>req</span> <span class=o>=</span> new Request<span class=o>(</span>url, request<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nb>let</span> <span class=nv>out_port</span> <span class=o>=</span> cust_port ? cust_port : port
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=o>((</span>url.protocol <span class=o>===</span> <span class=s2>&#34;https:&#34;</span> <span class=o>&amp;&amp;</span> <span class=nv>out_port</span> <span class=o>===</span> 443<span class=o>)</span> <span class=o>||</span> <span class=o>(</span>url.protocol <span class=o>===</span> <span class=s2>&#34;http:&#34;</span> <span class=o>&amp;&amp;</span> <span class=nv>out_port</span> <span class=o>===</span> 80<span class=o>))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> await fetch<span class=o>(</span>req<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nb>let</span> <span class=nv>tcpSocket</span> <span class=o>=</span> connect<span class=o>({</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    hostname: url.hostname,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    port: out_port,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>, <span class=o>{</span> secureTransport: <span class=s2>&#34;starttls&#34;</span> <span class=o>})</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=o>(</span>url.protocol <span class=o>===</span> <span class=s2>&#34;https:&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>tcpSocket</span> <span class=o>=</span> tcpSocket.startTls<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  try <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    const <span class=nv>writer</span> <span class=o>=</span> tcpSocket.writable.getWriter<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>headersString</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>bodyString</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=o>(</span><span class=nb>let</span> <span class=o>[</span>name, value<span class=o>]</span> of req.headers<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=o>(</span><span class=nv>name</span> <span class=o>===</span> <span class=s2>&#34;host&#34;</span> <span class=o>||</span> <span class=nv>name</span> <span class=o>===</span> <span class=s2>&#34;x-forwarded-proto&#34;</span> <span class=o>||</span> <span class=nv>name</span> <span class=o>===</span> <span class=s2>&#34;x-real-ip&#34;</span> <span class=o>||</span> <span class=nv>name</span> <span class=o>===</span> <span class=s2>&#34;accept-encoding&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>continue</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=o>(</span><span class=nv>name</span> <span class=o>===</span> <span class=s2>&#34;connection&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nv>value</span> <span class=o>=</span> <span class=s2>&#34;close&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nv>headersString</span> <span class=o>+=</span> <span class=sb>`</span><span class=si>${</span><span class=nv>name</span><span class=si>}</span>: <span class=si>${</span><span class=nv>value</span><span class=si>}</span><span class=se>\r\n</span><span class=sb>`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>fullpath</span> <span class=o>=</span> url.pathname<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span>url.search<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nv>fullpath</span> <span class=o>+=</span> url.search.replace<span class=o>(</span>/%3F/g, <span class=s2>&#34;?&#34;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span>req.method <span class=o>===</span> <span class=s2>&#34;POST&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      const <span class=nv>body</span> <span class=o>=</span> await req.text<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nv>bodyString</span> <span class=o>=</span> <span class=sb>`</span><span class=si>${</span><span class=nv>body</span><span class=si>}</span><span class=sb>`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    await writer.write<span class=o>(</span>new TextEncoder<span class=o>()</span>.encode<span class=o>(</span><span class=sb>`</span><span class=si>${</span><span class=nv>req</span><span class=p>.method</span><span class=si>}</span> <span class=si>${</span><span class=nv>fullpath</span><span class=si>}</span> HTTP/1.0<span class=se>\r\n</span>Host: <span class=si>${</span><span class=nv>url</span><span class=p>.hostname</span><span class=si>}</span>:<span class=si>${</span><span class=nv>port</span><span class=si>}</span><span class=se>\r\n</span><span class=si>${</span><span class=nv>headersString</span><span class=si>}</span><span class=se>\r\n</span><span class=si>${</span><span class=nv>bodyString</span><span class=si>}</span><span class=sb>`</span><span class=o>))</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    writer.releaseLock<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    const <span class=nv>response</span> <span class=o>=</span> await constructHttpResponse<span class=o>(</span>tcpSocket, timeoutDuration<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> response<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span> catch <span class=o>(</span>error<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    tcpSocket.close<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> new Response<span class=o>(</span><span class=s1>&#39;Internal Server Error&#39;</span>, <span class=o>{</span> status: <span class=m>500</span> <span class=o>})</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>async <span class=k>function</span> constructHttpResponse<span class=o>(</span>tcpSocket, timeout<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  const <span class=nv>reader</span> <span class=o>=</span> tcpSocket.readable.getReader<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nb>let</span> <span class=nv>remainingData</span> <span class=o>=</span> new Uint8Array<span class=o>(</span>0<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  try <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=o>(</span><span class=nb>true</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      const <span class=o>{</span> value, <span class=k>done</span> <span class=o>}</span> <span class=o>=</span> await raceWithTimeout<span class=o>(</span>reader.read<span class=o>(</span>chunkSize<span class=o>)</span>, timeout<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      const <span class=nv>newData</span> <span class=o>=</span> new Uint8Array<span class=o>(</span>remainingData.length + value.length<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      newData.set<span class=o>(</span>remainingData<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      newData.set<span class=o>(</span>value, remainingData.length<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=nv>remainingData</span> <span class=o>=</span> newData<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      const <span class=nv>index</span> <span class=o>=</span> indexOfDoubleCRLF<span class=o>(</span>remainingData<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=o>(</span>index !<span class=o>==</span> -1<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=nv>headerBytes</span> <span class=o>=</span> remainingData.subarray<span class=o>(</span>0, index<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=nv>bodyBytes</span> <span class=o>=</span> remainingData.subarray<span class=o>(</span>index + 4<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=nv>header</span> <span class=o>=</span> new TextDecoder<span class=o>()</span>.decode<span class=o>(</span>headerBytes<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=o>[</span>statusLine, ...headers<span class=o>]</span> <span class=o>=</span> header.split<span class=o>(</span><span class=s1>&#39;\r\n&#39;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=o>[</span>httpVersion, statusCode, statusText<span class=o>]</span> <span class=o>=</span> statusLine.split<span class=o>(</span><span class=s1>&#39; &#39;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=nv>responseHeaders</span> <span class=o>=</span> <span class=o>{}</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        headers.forEach<span class=o>((</span>header<span class=o>)</span> <span class=o>=</span>&gt; <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          const <span class=o>[</span>name, value<span class=o>]</span> <span class=o>=</span> header.split<span class=o>(</span><span class=s1>&#39;: &#39;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          responseHeaders<span class=o>[</span>name.toLowerCase<span class=o>()]</span> <span class=o>=</span> value<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=o>})</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        responseHeaders<span class=o>[</span><span class=s1>&#39;content-encoding&#39;</span><span class=o>]</span> <span class=o>=</span> <span class=s1>&#39;identity&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=nv>responseInit</span> <span class=o>=</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          status: parseInt<span class=o>(</span>statusCode<span class=o>)</span>,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          statusText,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          headers: new Headers<span class=o>(</span>responseHeaders<span class=o>)</span>,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=o>}</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        const <span class=nv>bodyStream</span> <span class=o>=</span> new ReadableStream<span class=o>({</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          async start<span class=o>(</span>controller<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            controller.enqueue<span class=o>(</span>bodyBytes<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          <span class=o>}</span>,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          async pull<span class=o>(</span>controller<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=k>while</span> <span class=o>(</span><span class=nb>true</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>              try <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                const <span class=o>{</span> value, <span class=k>done</span> <span class=o>}</span> <span class=o>=</span> await raceWithTimeout<span class=o>(</span>reader.read<span class=o>(</span>chunkSize<span class=o>)</span>, timeout<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=o>(</span>value<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                  controller.enqueue<span class=o>(</span>value<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=o>(</span><span class=k>done</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                  controller.close<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                  tcpSocket.close<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                  break<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>              <span class=o>}</span> catch <span class=o>(</span>e<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                controller.close<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                tcpSocket.close<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>              <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>          <span class=o>}</span>,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=o>})</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> new Response<span class=o>(</span>bodyStream, responseInit<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=o>(</span><span class=k>done</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        tcpSocket.close<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        break<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> new Response<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span> catch <span class=o>(</span>error<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    tcpSocket.close<span class=o>()</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>function</span> raceWithTimeout<span class=o>(</span>promise, timeout<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> Promise.race<span class=o>([</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    promise,
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    new Promise<span class=o>((</span>_, reject<span class=o>)</span> <span class=o>=</span>&gt; setTimeout<span class=o>(()</span> <span class=o>=</span>&gt; reject<span class=o>(</span>new Error<span class=o>(</span><span class=s1>&#39;Timeout-1&#39;</span><span class=o>))</span>, timeout<span class=o>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>])</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>function</span> indexOfDoubleCRLF<span class=o>(</span>data<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=o>(</span>data.length &lt; 4<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> -1<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=o>(</span><span class=nb>let</span> <span class=nv>i</span> <span class=o>=</span> 0<span class=p>;</span> i &lt; data.length - 3<span class=p>;</span> i++<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span>data<span class=o>[</span>i<span class=o>]</span> <span class=o>===</span> <span class=m>13</span> <span class=o>&amp;&amp;</span> data<span class=o>[</span>i + 1<span class=o>]</span> <span class=o>===</span> <span class=m>10</span> <span class=o>&amp;&amp;</span> data<span class=o>[</span>i + 2<span class=o>]</span> <span class=o>===</span> <span class=m>13</span> <span class=o>&amp;&amp;</span> data<span class=o>[</span>i + 3<span class=o>]</span> <span class=o>===</span> 10<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> i<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> -1<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>function</span> replace_response_text<span class=o>(</span>text, dic_def<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  var i, j<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nb>let</span> <span class=nv>new_replace_dict</span> <span class=o>=</span> <span class=o>{}</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=o>(</span>i in replace_dict<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>j</span> <span class=o>=</span> replace_dict<span class=o>[</span>i<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>i</span> <span class=o>=</span> dic_def<span class=o>[</span>i<span class=o>]</span> ? dic_def<span class=o>[</span>i<span class=o>]</span> : i<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>j</span> <span class=o>=</span> dic_def<span class=o>[</span>j<span class=o>]</span> ? dic_def<span class=o>[</span>j<span class=o>]</span> : j<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    new_replace_dict<span class=o>[</span>i<span class=o>]</span> <span class=o>=</span> j<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=o>(</span>i in new_replace_dict<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>j</span> <span class=o>=</span> new_replace_dict<span class=o>[</span>i<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>let</span> <span class=nv>re</span> <span class=o>=</span> new RegExp<span class=o>(</span>i, <span class=s1>&#39;g&#39;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>text</span> <span class=o>=</span> text.replace<span class=o>(</span>re, j<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nb>let</span> <span class=nv>host_name</span> <span class=o>=</span> dic_def<span class=o>[</span><span class=s2>&#34;</span><span class=nv>$custom_domain</span><span class=s2>&#34;</span><span class=o>]</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=o>(</span>isReplace<span class=o>(</span>text<span class=o>)</span> <span class=o>&amp;&amp;</span> host_name<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>text</span> <span class=o>=</span> text.replace<span class=o>(</span>/https:<span class=se>\/\/</span>+/g, <span class=s2>&#34;https://&#34;</span> + host_name + <span class=s2>&#34;/proxy/&#34;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> text<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>function</span> isReplace<span class=o>(</span>urlString<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=o>(</span><span class=nb>let</span> <span class=nv>i</span> <span class=o>=</span> 0<span class=p>;</span> i &lt; proxyList.length<span class=p>;</span> i++<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span>urlString.includes<span class=o>(</span>proxyList<span class=o>[</span>i<span class=o>]))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> true<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> false<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=其他内容扩充>其他内容扩充</h3><ul><li><p>执行时机和清理缓存的操作是完全相同的。</p></li><li><p>可以通过手动创建<code>/etc/xiaoya/mycheckintoken.txt</code>文件来定义多个网盘签到的32位refresh token，每行一个。若不添加文件，则使用默认小雅转存的网盘签到。</p></li><li><p>自动刷新<code>/etc/xiaoya/mycheckintoken.txt</code>和<code>/etc/xiaoya/mytoken.txt</code>文件，这有可能延长refresh token的时效，具体效果需要观察。</p></li><li><p>定时运行模式包括：</p><ul><li>默认每天从运行脚本的下一分钟开始执行。</li><li>运行时间可以通过手动创建<code>/etc/xiaoya/myruntime.txt</code>文件进行修改，例如06:00和18:00表示每天早晚6点各运行一次。</li></ul></li><li><p>自动升级的说明：</p><ul><li>定时升级的命令保存在<code>/etc/xiaoya/mycmd.txt</code>中。删除该文件将变成定时重启小雅。</li><li>完成清理和签到后，脚本会自动执行<code>/etc/xiaoya/mycmd.txt</code>中的命令。该文件默认包含升级小雅镜像的命令，不建议修改。</li></ul></li><li><p>关于TG推送：</p><ul><li>所有模式加上<code>-tg</code>功能均可绑定消息推送的TG账号，只有第一次运行需要加上<code>-tg</code>参数。</li></ul></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/alist/>alist</a>
+<a href=/tags/%E7%BD%91%E7%9B%98/>网盘</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><footer class=site-footer><section class=copyright>&copy;
+2023 路飞博客</section><section class=powerby><a href=https://gohugo.io/ target=_blank rel=noopener>由 Hugo 强力驱动</a> | <a href=https://github.com/ target=_blank rel=noopener>托管在 Github</a><br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.18.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

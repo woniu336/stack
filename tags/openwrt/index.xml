@@ -10,16 +10,86 @@ allowfullscreen="true"
 >
 &lt;/iframe>
 &lt;/div>
-&lt;h1 id="小雅命令">小雅命令&lt;/h1>
-&lt;p>bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo;                              输入ip后面加:5678&lt;/p>
-&lt;p>或者bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo; -s host                  输入ip后面加:6789&lt;/p>
-&lt;p>token：https://aliyuntoken.vercel.app/open &lt;/p>
-&lt;p>token: &lt;a class="link" href="https://alist.nn.ci/tool/aliyundrive/request" target="_blank" rel="noopener"
->https://alist.nn.ci/tool/aliyundrive/request&lt;/a>&lt;/p>
-&lt;p>转存目录：&lt;a class="link" href="https://www.aliyundrive.com/" target="_blank" rel="noopener"
->https://www.aliyundrive.com/&lt;/a>&lt;/p>
-&lt;p>bash -c &amp;ldquo;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;rdquo; -s 3 -tg   定时清理bash -c &amp;ldquo;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;rdquo; -s 5 -tg   即时清理&lt;/p>
-&lt;p>webdav 账号密码用户: guest 密码: guest_Api789 ​&lt;/p></description></item><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.leshans.eu.org/p/openwrt%E5%AE%89%E8%A3%85alist%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://blog.leshans.eu.org/p/openwrt%E5%AE%89%E8%A3%85alist%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/10/611b064fdef7009e19e41da1960232b0.jpg" alt="Featured image of post Openwrt安装alist和阿里云盘webdav" />&lt;blockquote>
+&lt;h2 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h2>
+&lt;p>网址：&lt;a class="link" href="https://alist.xiaoya.pro/" target="_blank" rel="noopener"
+>https://alist.xiaoya.pro/&lt;/a>&lt;/p>
+&lt;p>文档： &lt;a class="link" href="https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f" target="_blank" rel="noopener"
+>https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f&lt;/a>&lt;/p>
+&lt;p>终端安装命令，端口 &lt;code>5678&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl http://docker.xiaoya.pro/update_new.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者 端口 &lt;code>6789&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl http://docker.xiaoya.pro/update_new.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s host
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>阿里token获取地址：&lt;a class="link" href="https://aliyuntoken.vercel.app/" target="_blank" rel="noopener"
+>https://aliyuntoken.vercel.app/&lt;/a>&lt;/p>
+&lt;p>阿里opentoken地址：&lt;a class="link" href="https://alist.nn.ci/tool/aliyundrive/request.html" target="_blank" rel="noopener"
+>https://alist.nn.ci/tool/aliyundrive/request.html&lt;/a>&lt;/p>
+&lt;p>转存文件夹ID：网页版阿里云，进转存文件夹，地址栏内最后64开头的数字&lt;/p>
+&lt;p>创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像&lt;/p>
+&lt;h2 id="定时清理缓存">定时清理缓存&lt;/h2>
+&lt;p>模式3：创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh &lt;span class="p">|&lt;/span> tail -n +2&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s &lt;span class="m">3&lt;/span> -tg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>模式5：与模式3的区别是实时清理，只要产生了播放缓存一分钟内立即清理。签到和定时升级同模式3&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh &lt;span class="p">|&lt;/span> tail -n +2&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -s &lt;span class="m">5&lt;/span> -tg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>内容描述：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>执行时机和清理缓存的操作是完全相同的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可以通过手动创建&lt;code>/etc/xiaoya/mycheckintoken.txt&lt;/code>文件来定义多个网盘签到的32位refresh token，每行一个。若不添加文件，则使用默认小雅转存的网盘签到。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>自动刷新&lt;code>/etc/xiaoya/mycheckintoken.txt&lt;/code>和&lt;code>/etc/xiaoya/mytoken.txt&lt;/code>文件，这有可能延长refresh token的时效，具体效果需要观察。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>定时运行模式包括：&lt;/p>
+&lt;ul>
+&lt;li>默认每天从运行脚本的下一分钟开始执行。&lt;/li>
+&lt;li>运行时间可以通过手动创建&lt;code>/etc/xiaoya/myruntime.txt&lt;/code>文件进行修改，例如06:00和18:00表示每天早晚6点各运行一次。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>自动升级的说明：&lt;/p>
+&lt;ul>
+&lt;li>定时升级的命令保存在&lt;code>/etc/xiaoya/mycmd.txt&lt;/code>中。删除该文件将变成定时重启小雅。&lt;/li>
+&lt;li>完成清理和签到后，脚本会自动执行&lt;code>/etc/xiaoya/mycmd.txt&lt;/code>中的命令。该文件默认包含升级小雅镜像的命令，不建议修改。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>关于TG推送：&lt;/p>
+&lt;ul>
+&lt;li>所有模式加上&lt;code>-tg&lt;/code>功能均可绑定消息推送的TG账号，只有第一次运行需要加上&lt;code>-tg&lt;/code>参数。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.leshans.eu.org/p/openwrt%E5%AE%89%E8%A3%85alist%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://blog.leshans.eu.org/p/openwrt%E5%AE%89%E8%A3%85alist%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/10/611b064fdef7009e19e41da1960232b0.jpg" alt="Featured image of post Openwrt安装alist和阿里云盘webdav" />&lt;blockquote>
 &lt;p>以下插件只适用于斐讯 N1,其他没测试过&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="一-使用方法">一: 使用方法&lt;/h3>

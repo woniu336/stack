@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>图床 on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E5%9B%BE%E5%BA%8A/</link><description>Recent content in 图床 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Sep 2023 16:58:58 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml"/><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://blog.leshans.eu.org/p/%E5%AE%9A%E6%97%B6%E5%B0%86r2%E5%9B%BE%E5%BA%8A%E5%90%8C%E6%AD%A5%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link><pubDate>Mon, 11 Sep 2023 16:58:58 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%AE%9A%E6%97%B6%E5%B0%86r2%E5%9B%BE%E5%BA%8A%E5%90%8C%E6%AD%A5%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid><description>&lt;p>请确保您的系统上已经&lt;code>安装了 rclone&lt;/code>，并且命令的路径正确。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>图床 on 路飞博客</title><link>https://blog.leshans.eu.org/tags/%E5%9B%BE%E5%BA%8A/</link><description>Recent content in 图床 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 21:07:15 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub图床加速</title><link>https://blog.leshans.eu.org/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</link><pubDate>Thu, 07 Dec 2023 21:07:15 +0800</pubDate><guid>https://blog.leshans.eu.org/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</guid><description>&lt;h1 id="github图床使用">Github图床使用&lt;/h1>
+&lt;p>网络上关于&lt;code>GitHub+Jsdelivr&lt;/code>实现&lt;code>图床加速&lt;/code>的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。&lt;/p>
+&lt;blockquote>
+&lt;p>方法1：Jsdelivr镜像站 &lt;a class="link" href="https://jsd.cdn.zzko.cn/" target="_blank" rel="noopener"
+>https://jsd.cdn.zzko.cn&lt;/a> （公益）&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>方法2：通过&lt;code>Cloudflare Workers&lt;/code>实现反代&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>即使镜像站点跑路了，Cloudflare还在，速度慢点&lt;/p>
+&lt;/blockquote>
+&lt;p>以上方法都要配合PicGo或者PicList使用，本人使用的是PicList&lt;/p>
+&lt;p>配合图床工具: &lt;a class="link" href="https://github.com/Kuingsmile/PicList" target="_blank" rel="noopener"
+>PicList&lt;/a>&lt;/p>
+&lt;p>&lt;code>PicList&lt;/code> 是一款基于&lt;code>PicGo&lt;/code> 深度二次开发,云储存/图床管理和文件上传客户端工具&lt;/p>
+&lt;p>完美兼容PicGo&lt;/p>
+&lt;p>官网: &lt;a class="link" href="https://piclist.cn" target="_blank" rel="noopener"
+>https://piclist.cn&lt;/a>&lt;/p>
+&lt;h3 id="1通过cloudflare-workers实现反代">1.通过Cloudflare Workers实现反代&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">addEventListener&lt;/span>&lt;span class="o">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;fetch&amp;#34;&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">event&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">let&lt;/span> &lt;span class="n">url&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">URL&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">event&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">request&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">url&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">url&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">hostname&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;raw.githubusercontent.com&amp;#34;&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">//反代github域名
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">let&lt;/span> &lt;span class="n">request&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="n">Request&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">event&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">request&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">event&lt;/span>&lt;span class="o">.&lt;/span> &lt;span class="nf">respondWith&lt;/span>&lt;span class="o">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fetch&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">request&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>具体教程网上很多，需要你在Cloudflare有域名&lt;/p>
+&lt;h3 id="2配合piclist">2.配合PicList&lt;/h3>
+&lt;p>请替换为你自己的&lt;code>仓库名&lt;/code> 以及分支，准备好&lt;code>token&lt;/code>&lt;/p>
+&lt;p>反代图&lt;/p>
+&lt;p>&lt;img src="https://github.leshans.eu.org/woniu336/blog-image/main/img/2023-12-07_212014.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>下图为镜像站
+&lt;br>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/2023-12-07_212014.png"
+loading="lazy"
+>&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>仓库名: &lt;code>woniu336/blog-image&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>分支: &lt;code>main&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>存储路径: &lt;code>img/&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名1(镜像站) : &lt;a class="link" href="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main" target="_blank" rel="noopener"
+>https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名2(CF反代)
+: &lt;a class="link" href="https://github.leshans.eu.org/woniu336/blog-image/main" target="_blank" rel="noopener"
+>https://github.leshans.eu.org/woniu336/blog-image/main&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名格式: &lt;a class="link" href="https://cdn.jsdelivr.net/gh/" target="_blank" rel="noopener"
+>https://cdn.jsdelivr.net/gh/&lt;/a>用户名/仓库名@分支&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>图片测试:&lt;/p>
+&lt;p>&lt;img src="https://github.leshans.eu.org/woniu336/blog-image/main/img/202310061243776.jpg"
+loading="lazy"
+>&lt;/p></description></item><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://blog.leshans.eu.org/p/%E5%AE%9A%E6%97%B6%E5%B0%86r2%E5%9B%BE%E5%BA%8A%E5%90%8C%E6%AD%A5%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link><pubDate>Mon, 11 Sep 2023 16:58:58 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%AE%9A%E6%97%B6%E5%B0%86r2%E5%9B%BE%E5%BA%8A%E5%90%8C%E6%AD%A5%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid><description>&lt;p>请确保您的系统上已经&lt;code>安装了 rclone&lt;/code>，并且命令的路径正确。&lt;/p>
 &lt;p>要将定时任务添加到您的系统中，您可以按照以下步骤进行操作：&lt;/p>
 &lt;p>打开&lt;code>终端&lt;/code>或命令提示符，登录到您的系统。&lt;/p>
 &lt;blockquote>
