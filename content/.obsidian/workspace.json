@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "b343f4dbf8e45afc",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb8a9e0dc1f9ac74",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "199f45bed8293f2a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/113.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "61aeb60414224354",
+    "type": "split",
+    "children": [
+      {
+        "id": "0da7ccf42a057872",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ebaa23d09d81f3c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTime"
+              }
+            }
+          },
+          {
+            "id": "c48be7cee64977a1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c2c175c0a3258734",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "fe092bccbecd3886",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d068f1f716704214",
+    "type": "split",
+    "children": [
+      {
+        "id": "0427ab57a7823a82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "189e72f4ab906964",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "post/113.md"
+              }
+            }
+          },
+          {
+            "id": "a47ec1f32a954797",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6d503ecda5063c35",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "post/113.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0f56a4b97ce3946e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "post/113.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ddd38dd474f55b52",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "cmdr:取消代理": false,
+      "cmdr:新建文章": false,
+      "cmdr:设置代理": false,
+      "cmdr:启动博客": false,
+      "cmdr:停止博客": false,
+      "cmdr:推送": false,
+      "cmdr:上传图片": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "199f45bed8293f2a",
+  "lastOpenFiles": [
+    "主页.md",
+    "post/089.md",
+    "post/113.md",
+    "post/112.md",
+    "_index.zh-cn.md",
+    "日记/未命名.md",
+    "日记/_index.html",
+    "日记/2023-11-29.md",
+    "日记",
+    "_index.md",
+    "post/111.md",
+    "post/110.md",
+    "post/109.md",
+    "post/108.md",
+    "post/106.md",
+    "post/107.md",
+    "post/102.md",
+    "post/105.md",
+    "post/104.md",
+    "post/103.md",
+    "post/101.md",
+    "about.md",
+    "friend.md",
+    "post/032/index.md",
+    "post/100.md",
+    "post/099.md",
+    "post/098.md",
+    "post/097.md",
+    "网站备份/bt_backup/site/judog.cc/web_judog.cc_20230913_013001.tar.gz",
+    "网站备份/bt_backup/site/judog.cc",
+    "网站备份/bt_backup/site",
+    "网站备份/bt_backup",
+    "网站备份",
+    "网站备份/bt_backup/database/283bt_com/db_283bt_com_20230910_030501.sql.gz",
+    "网站备份/bt_backup/database/judog88_cc/db_judog88_cc_20230912_023001.sql.gz",
+    "网站备份/bt_backup/database/283bt_com/db_283bt_com_20230901_030501.sql.gz",
+    "附件/Pasted image 20230914221303.png",
+    "附件/Pasted image 20230914213555.png",
+    "附件/Pasted image 20230914182724.png",
+    "附件/Pasted image 20230914182516.png",
+    "附件/Pasted image 20230911144302.png",
+    "附件/Pasted image 20230911144224.png",
+    "附件/Pasted image 20230910013520.png",
+    "附件/Pasted image 20230910013704.png",
+    "附件/Pasted image 20230910013654.png",
+    "附件/Pasted image 20230910013640.png",
+    "未命名.canvas"
+  ]
+}
