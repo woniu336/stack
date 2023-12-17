@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/113.md",
+                "file": "post/115.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/113.md"
+                "file": "post/115.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/113.md",
+                "file": "post/115.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/113.md",
+                "file": "post/115.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,9 +172,14 @@
   },
   "active": "199f45bed8293f2a",
   "lastOpenFiles": [
+    "Pasted image 20231217232008.png",
     "主页.md",
-    "post/089.md",
+    "post/114.md",
+    "post/115.md",
+    "Pasted image 20231217231733.png",
+    "Pasted image 20231217231434.png",
     "post/113.md",
+    "post/089.md",
     "post/112.md",
     "_index.zh-cn.md",
     "日记/未命名.md",
@@ -197,9 +202,6 @@
     "friend.md",
     "post/032/index.md",
     "post/100.md",
-    "post/099.md",
-    "post/098.md",
-    "post/097.md",
     "网站备份/bt_backup/site/judog.cc/web_judog.cc_20230913_013001.tar.gz",
     "网站备份/bt_backup/site/judog.cc",
     "网站备份/bt_backup/site",
@@ -216,8 +218,6 @@
     "附件/Pasted image 20230911144224.png",
     "附件/Pasted image 20230910013520.png",
     "附件/Pasted image 20230910013704.png",
-    "附件/Pasted image 20230910013654.png",
-    "附件/Pasted image 20230910013640.png",
     "未命名.canvas"
   ]
 }
