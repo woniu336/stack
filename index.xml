@@ -1,7 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.leshans.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Dec 2023 22:47:53 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.leshans.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Dec 2023 20:14:09 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
+&lt;p>安装依赖&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">apt update -y  &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -11,7 +20,448 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>纯代码免插件优化WordPress6.3实现0sql-强化拓展</title><link>https://blog.leshans.eu.org/p/113/</link><pubDate>Sun, 17 Dec 2023 22:47:53 +0800</pubDate><guid>https://blog.leshans.eu.org/p/113/</guid><description>&lt;blockquote>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.leshans.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</link><pubDate>Sat, 23 Dec 2023 20:14:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</guid><description>&lt;h3 id="为什么要设置cloudflare的页面规则-page-rules进行全站缓存">为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？&lt;/h3>
+&lt;p>当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。&lt;/p>
+&lt;p>当访客访问你网站页面的时候，所有的静态文件都是由Cloudflare的节点直接给到访客的，但是HTML文件是默认不缓存的。也就意味着访客访问你的某一页面的时候。仍然会&lt;strong>回源你的&lt;/strong>&lt;a class="link" href="https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&amp;amp;from=20065" target="_blank" rel="noopener"
+>&lt;strong>服务器&lt;/strong>&lt;/a>。&lt;/p>
+&lt;p>所以，本篇文章就是教你如何使用Cloudflare的页面规则（Page Rules）把整个HTML页面给缓存。 使访客访问被缓存的页面的时候，直接交由Cloudflare进行服务，甚至你的源服务器不会收到任何GET请求。&lt;/p>
+&lt;p>&lt;strong>这样做的好处是，可以大大减少源服务器的负载开支，使得你的站点能够承载更多的访客及流量。&lt;/strong>&lt;/p>
+&lt;p>&lt;em>下面两张演示图片就是使用了Cloudflare页面规则之后，节省的源站服务器的请求及流量。&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/ef3ec775cc2e7f873aebe2446daff8bc.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/a6e19dd394d7a2881a752be9cc7e9721.webp"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="如何通过浏览器判断某个页面是否被cloudflare的cdn进行缓存">如何通过浏览器判断某个页面是否被Cloudflare的CDN进行缓存？&lt;/h3>
+&lt;p>在学会如何判断之前，我们要先熟悉一个CDN中常见的术语：&lt;strong>“HIT”&lt;/strong>，中文叫做**“命中”**。我们先看下面这样演示的图片：&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/a051176bbae607346c8c0d0016292e11.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>可见，图中对过往24小时之内的所有请求有一个统计，统计分为：&lt;strong>命中&lt;/strong>、&lt;strong>未命中&lt;/strong>、&lt;strong>动态&lt;/strong>、&lt;strong>绕过&lt;/strong>……等等状态。&lt;/p>
+&lt;ul>
+&lt;li>【命中】&lt;em>状态就表示已经整网页完全被Cloudflare的CDN提供了服务；&lt;/em>&lt;/li>
+&lt;li>【绕过】&lt;em>状态则表示直接绕过Cloudflare的CDN由源站进行服务；&lt;/em>&lt;/li>
+&lt;li>【动态】&lt;em>状态则表示部分资源被Cloudflare的CDN缓存并服务，但混合了一些源站的请求；&lt;/em>&lt;/li>
+&lt;li>【未命中】&lt;em>因为命中与否是一个概率问题。Cloudflare 也并不能保证在缓存规则中的所有资源都完整的命中。&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>**注：如果你开启了小云朵，但并未配置页面规则。**那么你的绝大多数状态都是【&lt;strong>动态&lt;/strong>】，因为访客访问页面中的静态资源交由Cloudflare进行提供，还是有一些请求是通过源站来服务的。&lt;/p>
+&lt;p>接下来，我们以Chrome为示范。教大家判断一个网页在开启Cloudflare CDN之后的缓存状态到底是**【命中】&lt;strong>亦或是&lt;/strong>【动态】**&lt;/p>
+&lt;blockquote>
+&lt;p>打开接入Cloudflare的网站页面，这里以陌涛小站首页示范。 “F12” 进入“&lt;a class="link" href="https://cloud.tencent.com/product/cclid?from_column=20065&amp;amp;from=20065" target="_blank" rel="noopener"
+>开发者工具&lt;/a>”，点击“Network”选项卡。 “Control + F5” 刷新该页面（苹果系统请使用 Command + R），并在“Name”栏中选择“网址”。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/d47c2de2c5124340260ab60a3245817a.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>从上图中可以看到 cf-cache-status 的值为 “HIT”，则说明该页面已经完全缓存。&lt;/strong>&lt;/p>
+&lt;h3 id="其他状态解释如下">其他状态解释如下：&lt;/h3>
+&lt;p>&lt;strong>cf-cache-status:DYNAMIC （动态）&lt;/strong> 如果是“DYNAMIC”则说明，该站可能只开启了小云朵，并没有配置整站完全缓存。 &lt;strong>cf-cache-status:BYPASS （绕过）&lt;/strong> 如果是“BYPASS”则说明，该站针对这个页面设置了绕过，不允许缓存。&lt;/p>
+&lt;h3 id="cloudflare的缓存机制">Cloudflare的缓存机制&lt;/h3>
+&lt;p>假设你的站点有 &lt;a class="link" href="https://www.renao.org/1.html" target="_blank" rel="noopener"
+>www.renao.org/1.html&lt;/a> 和 &lt;a class="link" href="https://www.renao.org/2.html" target="_blank" rel="noopener"
+>www.renao.org/2.html&lt;/a> 两个页面。&lt;/p>
+&lt;p>&lt;strong>当访客A 访问1.html这个页面的时候，首先会经由Cloudflare，这个时候你的页面规则就起作用了。&lt;/strong> Cloudflare会发现，吼吼，这个站有个1.html 我给它缓存下来，并且转发给A。&lt;/p>
+&lt;p>&lt;strong>当访客B 在Edge Cache过期时间之前，重复访问1.html的时候。&lt;/strong> Cloudflare会思考一下。哈哈哈，这个1.html我有。不用麻烦源站了。我直接给到B就可以了。&lt;/p>
+&lt;p>这就是所谓的命中率，如果这个页面被完全命中，那么B访问1.html虽然得到了网页，但是是由Cloudflare直接提供的。你的源站甚至连客户的IP都统计不到。&lt;/p>
+&lt;p>但是，2.html 这个页面在你的规则建立开始时从未有任何访客访问过。那么Cloudflare也不知道这个页面的存在，也不会缓存。除非等到真的有人访问过，Cloudflare才会发现，并对其进行缓存。&lt;/p>
+&lt;p>&lt;strong>好了，冗长的理论知识讲完了，我们来进行实战。&lt;/strong> &lt;strong>这里以Wordpress源站举例，来详细讲解如何设置页面规则才能够进行全站缓存。&lt;/strong>&lt;/p>
+&lt;h3 id="一cloudflare-页面规则-免费版3条规则配置">一、Cloudflare 页面规则 免费版3条规则配置&lt;/h3>
+&lt;p>由于Cloudflare&lt;strong>免费版只提供了三条免费的规则&lt;/strong>，所以我们的想法有很多，但是真正实现起来肯定要有所取舍。下面提供了三种陌涛小站测试过的方法。根据你网站的具体情况选择即可。&lt;/p>
+&lt;p>&lt;em>在所有的规则配置中，“*”代表通配符，另外，规则注意上下排序。默认从第一条规则顺延到第二条规则，然后才是第三条规则。具体请参照以下【三种方法】的详细配置说明。&lt;/em>&lt;/p>
+&lt;h4 id="方法一常规无人值守方法网上流传配置方法">方法一、常规无人值守方法（网上流传配置方法）&lt;/h4>
+&lt;ul>
+&lt;li>&lt;em>.imotao.xyz/wp-login&lt;/em>&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/wp-admin&lt;/em>&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/f2cf9aedd914b1efccaa125464e1184a.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>第一条和第二条：&lt;/strong> 研究Wordpress后台目录，我们发现：wp-login 和 wp-admin 两个页面或目录分别是Wordpress后台的登陆页面和后台管理目录。为了让Cloudflare不缓存这些内容。我们在第一条和第二条中。建立的规则是&lt;strong>Bypass&lt;/strong>，也就是绕过。&lt;/p>
+&lt;p>&lt;strong>第三条：&lt;/strong> 此条规则很简单，也很容易理解。就是告诉Cloudflare 进行全局缓存。无论是图片、html、js、css、等等统统给我缓存。当然，按照上面提到的排序规则。Cloudflare会过滤掉以上我们不想要缓存的第一条、第二条。&lt;/p>
+&lt;h3 id="方法二常规无人值守方法">方法二、常规无人值守方法&lt;/h3>
+&lt;ul>
+&lt;li>*.imotao.xyz/&lt;em>preview=true&lt;/em>&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>.php*&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/e6e716c806f051b67082655879d4eded.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>第一条：&lt;/strong> 由于Wordpress 提供了预览页面，我们研究Wordpress 的预览页面URL可以发现一个特征，预览页面的URL都含有**“preview=ture”&lt;strong>这个字段，所以通过第一条规则，可以限制Cloudflare 缓存我们的&lt;/strong>预览页面**。如果没有此条规则，Cloudflare会缓存我们预览的页面。但实际缓存了&lt;strong>预览页面&lt;/strong>对网站本身的影响并不大。&lt;/p>
+&lt;p>&lt;strong>第二条：&lt;/strong> 这条规则可以说是十分重要了。如果不设置此条规则，那么我们的&lt;strong>后台页面&lt;/strong>、甚至包括&lt;strong>登陆页面&lt;/strong>也都会被Cloudflare给缓存进去。曾经有小伙伴的wp-login页面（Wordpress默认登陆页面）连带着登陆账号密码统统被缓存了。访客直接可以通过缓存的账号密码进入Wordpress的后台，你说恐怖不恐怖？ &lt;strong>此条规则是我们为了防止Cloudflare缓存我们的动态页面（登陆页、后台页）。这条简单粗暴的直接将所有带有“.php”的页面请求全部Bypass 也就是不缓存。&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>第三条：&lt;/strong> 同【方法一】的第三条&lt;/p>
+&lt;h3 id="方法三常规无人值守并为针对搜索功能的cc攻击单独开启5秒盾">方法三、常规无人值守（并为针对“搜索功能的CC攻击”单独开启5秒盾）&lt;/h3>
+&lt;ul>
+&lt;li>&lt;em>.imotao.xyz/?s=&lt;/em>&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>.php*&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/849d93d720510f97438d02b8c6973fe3.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>第一条：&lt;/strong> 将所有在Wordpress站内搜索的用户开启5秒盾。一般针对Wordpress的CC攻击都是通过随机UA、随机搜索内容来创建数千、数万的URL。并通过大量的代理IP来模拟真实用户访问。毕竟搜索在Wordpress这个系统中是需要调用&lt;a class="link" href="https://cloud.tencent.com/solution/database?from_column=20065&amp;amp;from=20065" target="_blank" rel="noopener"
+>数据库&lt;/a>，很消耗服务器资源的。 如果攻击者不清楚你的Page Rules 的配置规则，通过站内搜索对你的站点进行CC攻击的时候，此规则就能够很好的帮助你缓解攻击。除非他技术高超可以穿&lt;strong>5秒盾&lt;/strong>。&lt;/p>
+&lt;p>&lt;strong>第二条：&lt;/strong> 同【方法二】的第二条&lt;/p>
+&lt;p>&lt;strong>第三条：&lt;/strong> 同【方法二】的第三条&lt;/p>
+&lt;p>&lt;strong>使用此种方法，将会舍弃上面方法二提到的【文章预览】功能不缓存，影响并不大。&lt;/strong>&lt;/p>
+&lt;h4 id="特别注意">特别注意&lt;/h4>
+&lt;p>如果你留意到了上面提到的缓存机制的时候，一定要注意一件事情。就是若作为管理着的你登陆在Cloudflare的后台。有些主题在登陆状态下浏览文章是有“登陆条”的。所以尴尬的事情会发生。就是Cloudflare会无差别的把你的登陆条给缓存上去。真正的访客登陆到页面的时候，能看到你的用户名、留言数、等等关键信息。 所以，你需要&lt;strong>在Wordpress的设置中关掉显示登陆条的功能&lt;/strong>。&lt;/p>
+&lt;h3 id="二cloudflare-pro-页面规则-20或30条规则配置">二、Cloudflare Pro 页面规则 20或30条规则配置&lt;/h3>
+&lt;p>如果你有&lt;strong>Cloudflare Pro的付费版本&lt;/strong>，那么恭喜你可以配置&lt;strong>20条&lt;/strong>页面规则。&lt;/p>
+&lt;p>这里贴出一个配置的示范。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/2bb554c9fd849698bdae26d159c51c65.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;strong>这里的第6条，设置之后，所有的动态页面（php）的请求全部301重定向到了陌涛小站的首页。也就意味着我自己也不能登陆后台进行编辑了。当我需要写文章的时候，将此条规则临时关闭,并清楚本地浏览器缓存就可以了。&lt;/strong>&lt;/p>
+&lt;h2 id="三其他cloudflare-常见功能">三、其他Cloudflare 常见功能&lt;/h2>
+&lt;p>**清除缓存：**当我们的页面已经被完全缓存之后，更新页面需要单独删除此链接的缓存，以便Cloudflare重新从源站抓取。&lt;/p>
+&lt;p>**I’m In Attack：**开启5秒盾模式&lt;/p>
+&lt;p>**调试模式：**开启之后默认绕过所有缓存，以便我们进行调试。&lt;/p></description></item><item><title>新版 CloudFlare CDN 防攻击设置</title><link>https://blog.leshans.eu.org/p/%E6%96%B0%E7%89%88-cloudflare-cdn-%E9%98%B2%E6%94%BB%E5%87%BB%E8%AE%BE%E7%BD%AE/</link><pubDate>Sat, 23 Dec 2023 14:45:21 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E6%96%B0%E7%89%88-cloudflare-cdn-%E9%98%B2%E6%94%BB%E5%87%BB%E8%AE%BE%E7%BD%AE/</guid><description>&lt;p>前段时间网站一直被攻击，然后博主扛不住了搬去了 CloudFlare 。初期因为设置问题，攻击还是透过了CloudFlare 打到了源站。后面经过多次的设置后已经可以完全阻止攻击请求了。下面给大家分享下我的设置，如果你的网站被攻击了，可以根据自己的实际情况微调修改下。&lt;/p>
+&lt;h2 id="1设置前说明">1.设置前说明&lt;/h2>
+&lt;p>网站程序为WordPress，不同程序可能需要微调下策略。&lt;/p>
+&lt;p>CloudFlare免费版默认设置是针对整个域名的，如果你有其他二级域名站点，需要注意下这个策略对你其他站点有没有影响。&lt;/p>
+&lt;p>在你使用CloudFlare前确保你的源站IP没有暴露，否则对方可以直接指定hosts到你的源站IP，CloudFlare就形同虚设。&lt;/p>
+&lt;p>如果源站IP已经暴露，先把数据备份出来。开一台新服务器创建站点。&lt;/p>
+&lt;p>关于CloudFlare接入的基础操作这里就不讲了，比如SSL设置之类。&lt;/p>
+&lt;p>下面的规则自己实际使用后一定不要暴露出来，否则攻击者会针对性的进行攻击。建议自己进行规则微调。&lt;/p>
+&lt;h2 id="2策略详情">2.策略详情&lt;/h2>
+&lt;p>策略设置有优先级，排名靠前的优先级大于后方策略。所以说针对搜索引擎蜘蛛的策略，一定放在第一个！&lt;/p>
+&lt;h3 id="21-waf设置">2.1 waf设置&lt;/h3>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/3dba1fc4f195038aef6c62f81de194a5.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>WAF策略总览&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/d5a8a08c755bbb71c08db7d7da82cca1.webp"
+loading="lazy"
+alt="Pasted image 20231223195734"
+>&lt;/p>
+&lt;h4 id="211搜索引擎蜘蛛策略">2.1.1搜索引擎蜘蛛策略&lt;/h4>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/64d67ae80d5db08b92a66bfe9e704d74.webp"
+loading="lazy"
+alt="Pasted image 20231223195823"
+>&lt;/p>
+&lt;p>表达式：(cf.client.bot)&lt;/p>
+&lt;p>主要作用：CloudFlare 对于常见搜索引擎蜘蛛IP有自己的一份数据库，符合此要求的请求将会直接访问网站数据。不会经过 CloudFlare 的 WAF 策略等。避免正常蜘蛛访问被拦截。&lt;/p>
+&lt;h4 id="212登录页策略">2.1.2登录页策略&lt;/h4>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/983e7100f57fc0161d0dce271ae8a0b3.webp"
+loading="lazy"
+alt="Pasted image 20231223195859"
+>&lt;/p>
+&lt;p>网站我们正常运行必然有访客进行注册登录，针对我们的登录页以及常见被扫描的地址，我们可以单独设置一下人机验证。&lt;/p>
+&lt;p>主要作用：本站是WordPress程序，所以设置了xmlrpc.php和wp-login.php地址。其他程序根据自己实际情况设置。优先级低于蜘蛛，放到第二也是为了防止有些访客挂着代理被后续的策略阻止。&lt;/p>
+&lt;h4 id="213威胁分数策略">2.1.3威胁分数策略&lt;/h4>
+&lt;p>此策略是防攻击的主力策略，这一项可以阻挡90%的攻击。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/796fe0d9b6d6e8272990da11d76d706c.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>主要作用：威胁分数大于等于2，可以阻挡90%的恶意IP。CloudFlare 默认推荐分数5实测基本给攻击全漏了进来，设置3同样有漏IP。所以根据2023年9月目前的网络来说这里建议设置为2！&lt;/p>
+&lt;p>rss是因为站点有很多人通过RSS进行订阅，所以针对此类请求我们不要对他进行人机验证。&lt;/p>
+&lt;p>这里针对RSS策略比较简单，如果攻击者知道了你的策略可能会针对性攻击，我们实际使用时可以适当变通一下。&lt;/p>
+&lt;h4 id="214细化攻击策略">2.1.4细化攻击策略&lt;/h4>
+&lt;p>上一个策略是简单的通过威胁分数判断，现在这个策略则是针对漏进来的攻击IP进行针对性的过滤。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/af351b2c645362a9f7e1e35c3ae78519.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>主要作用：首先过滤国家不等于china，因为来自国内的攻击IP极少。我们的访客绝大多数也来自china所以直接略过国家。&lt;/p>
+&lt;p>/feed是我们的RSS订阅地址，我们同样略过此地址。&lt;/p>
+&lt;p>IP源地址是我们的源站IP，针对源站IP来的请求数据我们同样略过。&lt;/p>
+&lt;p>URL不包含.html是因为本次攻击地址都不是.html地址，所以略过了。我网闸对于.html地址也有缓存。大家自己设置时候这一个可以删掉。&lt;/p>
+&lt;p>UA字段WellKnownBot，这个是当时翻策略拦截日志发现的一个UA，好像是个正常请求。所以给他过滤了。&lt;/p>
+&lt;p>威胁分数大于3，这里是保证整个策略不至于过于严格，只针对威胁分数大于 3 的 IP 生效。&lt;/p>
+&lt;h4 id="215地区策略">2.1.5地区策略&lt;/h4>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/a368e1e69eb1e394d4ff91e062487370.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>这里一般不需要设置，我是看攻击IP有大量来自印尼的IP，网站基本也没印尼的访客，所以来自印尼的IP全部进行CAPTCHA交互式人机验证。&lt;/p>
+&lt;h3 id="22-ddos策略">2.2 DDOS策略&lt;/h3>
+&lt;p>CloudFlare针对DDOS有自己的分析策略可供我们使用。&lt;/p>
+&lt;p>这里CloudFlare的DDOS实际是包含我们常说的CC攻击的，七层和四层区别。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/623ca365716f31312d53777313bab8df.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/80cc3f724ed4f14b427b64102a542778.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择进行验证。另外规则集敏感度也可以进行调整。&lt;/p>
+&lt;p>这里如果你正在被攻击，可以将敏感度设置为高。实测误比较少，如果网站长期套CloudFlare，我们可以设置为中。&lt;/p>
+&lt;h3 id="23-其他waf设置">2.3 其他WAF设置&lt;/h3>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/cd5768beb7f4737dfe4fef8bb06b9fa7.webp"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="24-缓存设置">2.4 缓存设置&lt;/h3>
+&lt;p>缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。&lt;/p>
+&lt;p>缓存设置是在多个位置进行的。下面大家看截图就好。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/49e69d9ac882e0c7062d903b66e9971f.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>创建一个静态文件的缓存规则。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/42d62b8007da050d26a6969fe2415723.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/6aece4369ee5b5085ef270633796d8a3.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/dc0a76d8ef331938a885e9d9571cf938.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>上面的是基础缓存，对于页面的缓存我们使用下面的规则。&lt;/p>
+&lt;h4 id="241-页面规则">2.4.1 页面规则&lt;/h4>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/65ed589edffc9425952eaf6acbe5d9ea.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/9bd2660918d3519f86c1ab64e4b260e3.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>下面这个是我针对RSS地址的缓存设置。实际可以不设置这个规则。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/d5f30dc0e4d52516161c82b7a48c369f.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/aaa6398af125b8d113969a8a664861c0.webp"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="25-其他杂项">2.5 其他杂项&lt;/h3>
+&lt;p>一些设置比较散乱，这里给大家列出来。&lt;/p>
+&lt;p>Tor洋葱路由关闭，否则攻击可能穿进源服务器。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/aaa6398af125b8d113969a8a664861c0.webp"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="26-最终防御5秒盾">2.6 最终防御5秒盾&lt;/h3>
+&lt;p>目前本站遇到的攻击无需开启五秒盾。&lt;/p>
+&lt;p>如果你的攻击比较大，而且依靠上面规则无法抵挡的话，就开启这个吧。开启后所有请求都会进行人机验证，影响较大。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/190e53d2717d62f9ec3712b234ae7cb0.webp"
+loading="lazy"
+>&lt;/p></description></item><item><title>全网最新的Python爬虫教程+实战项目案例，超适合小白练手的实战项目！</title><link>https://blog.leshans.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</link><pubDate>Fri, 22 Dec 2023 23:49:02 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</guid><description>&lt;p>Python项目源码、教程、工具合集，由于经常私信受限，或者回复大家不及时，耽误大家时间，所以up主把内部链接放这里了，需要的点击自行拿走。&lt;/p>
+&lt;p>（需要各类安装包和秒杀源码的宝子可以添加文章下方哦）&lt;/p>
+&lt;p>（链接直接复制到百度/夸克网盘打开就可以获取了）&lt;/p>
+&lt;p>1.音乐源码&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1QwEFWLGxp-PSn1E_ajaHjg?pwd=386d &lt;/p>
+&lt;p>提取码：386d &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>2.小说&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/17_r-A95tt-FF2kvcr46-fA?pwd=g1x7 &lt;/p>
+&lt;p>提取码：g1x7 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>3.WiFi密码获取&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1EG44DeW20YYclrcIkfiSzQ?pwd=T94p &lt;/p>
+&lt;p>提取码：T94p &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>4.Python大麦抢票&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/19xq7wdPb327GISXUgrmSNw?pwd=32jb &lt;/p>
+&lt;p>提取码：32jb &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p> &lt;/p>
+&lt;p>5.Python百度文库&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1b-IpYM9H8LYQs55T23LDhg?pwd=649w &lt;/p>
+&lt;p>提取码：649w &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>6.鲜花&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1KPextm2UPF4rEQLzh6dtfA?pwd=7tcL &lt;/p>
+&lt;p>提取码：7tcL &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>7.爱心代码&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1HhpFZVWV7im1HBQxJ6SB1w?pwd=7ow1 &lt;/p>
+&lt;p>提取码：7ow1 &lt;/p>
+&lt;p>8.VIP视频&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/16t82q9llmOwtzYqa6OFN1A?pwd=1Ta4 &lt;/p>
+&lt;p>提取码：1Ta4 &lt;/p>
+&lt;p>9.短信源码&lt;/p>
+&lt;p>复制整段内容，打开最新版「夸克APP」即可获取。&lt;/p>
+&lt;p>链接：https://pan.quark.cn/s/b3282faf09c3&lt;/p>
+&lt;p>10.爬取b站视频&lt;/p>
+&lt;p>&lt;a class="link" href="https://pan.baidu.com/s/1uLvILTSIkDYYIOkcQLSlpw?pwd=2hpd" target="_blank" rel="noopener"
+>https://pan.baidu.com/s/1uLvILTSIkDYYIOkcQLSlpw?pwd=2hpd&lt;/a> &lt;/p>
+&lt;p>提取码：2hpd &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>11.微博爬虫&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1F3Stg49dy-LX1i-rUYlGYw?pwd=y138 &lt;/p>
+&lt;p>提取码：y138 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>12.视频素材下载&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1W_jjbTMWsEpLFDT35GrCMQ?pwd=MyC9 &lt;/p>
+&lt;p>提取码：MyC9 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>13.MySQL安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1BobuIRyqkWW_cDImFcbf5w?pwd=g356 &lt;/p>
+&lt;p>提取码：g356 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>14.anaconda安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1TLOnDZmVV5crxi4Fqy8W4A?pwd=a61m &lt;/p>
+&lt;p>提取码：a61m &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>15.Vmware安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1ag2EaRz68fjXTFlXh2EC5A?pwd=fnc9 &lt;/p>
+&lt;p>提取码：fnc9 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>16.vscode安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1eJvCGArOmzsV0zjGjekG4w?pwd=Btp2 &lt;/p>
+&lt;p>提取码：Btp2 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>17.MATLAB安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1vj_gYYIBTJgcnunwGiPb8A?pwd=53MF &lt;/p>
+&lt;p>提取码：53MF &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>18.navicat安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1uUtKM-s5GgDGAeLq3eJoAg?pwd=qzxq &lt;/p>
+&lt;p>提取码：qzxq &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>19.unity安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1tSQM1YGoK5MY4A_IdwFqQQ?pwd=6B7u &lt;/p>
+&lt;p>提取码：6B7u &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>20.clion安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1DpETVEqRFonrW4sgWABjJQ?pwd=4Ds1 &lt;/p>
+&lt;p>提取码：4Ds1 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>21.eclipse安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1JHsEYIHkzd44KaUO_iRJNg?pwd=H4g6 &lt;/p>
+&lt;p>提取码：H4g6 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」 作者：山寨静香 &lt;a class="link" href="https://www.bilibili.com/read/cv27611437/" target="_blank" rel="noopener"
+>https://www.bilibili.com/read/cv27611437/&lt;/a> 出处：bilibili&lt;/p></description></item><item><title>微力同步</title><link>https://blog.leshans.eu.org/p/%E5%BE%AE%E5%8A%9B%E5%90%8C%E6%AD%A5/</link><pubDate>Thu, 21 Dec 2023 22:56:32 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%BE%AE%E5%8A%9B%E5%90%8C%E6%AD%A5/</guid><description>&lt;p>微力同步是一款可让您在多个设备上同步文件的应用程序，在您自己的机器组成的私有云上，在其中一台机器上创建，修改或删除文件会自动复制同步到其他设备。微力同步不会将您的数据上传到公有云端，而是在您自己的机器组成的私有云上互相同步交换数据。&lt;/p>
+&lt;p>微力同步可在台式机，笔记本电脑，智能手机，平板电脑和网络连接的外围设备之间提供安全的点对点数据同步交换。 没有中心节点存储数据文件，所有数据的传输通过AES加密传送，确保数据的安全性，所有数据都存在自己管理的机器硬盘上，安全性有了更高的保障。&lt;/p>
+&lt;h2 id="linux-自动化安装脚本">Linux 自动化安装脚本&lt;/h2>
+&lt;p>该自动安装器目前适配Centos/Debian/Ubuntu 3大主流系统，其它的使用systemd的系统应该也可以使用，暂未测试&lt;/p>
+&lt;p>快速安装&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#(如果需要指定索引存放位置请在最后面添加-d 路径 如 -d /data/verysync)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl http://www.verysync.com/shell/verysync-linux-installer/go-installer.sh &amp;gt; go-installer.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x go-installer.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./go-installer.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>安装完成后就可以用浏览器打开 &lt;a class="link" href="http://xn--ip-0p3ck01akcu41v:8886/" target="_blank" rel="noopener"
+>http://你的IP地址:8886&lt;/a> 管理微力内容了&lt;/p>
+&lt;p>安装器参数说明&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">./go-installer.sh &lt;span class="o">[&lt;/span>-h&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>-c&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>--remove&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>-p proxy&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>-f&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>--version vx.y.z&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>-l file&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>-d index location&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -h, --help 显示帮助
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -p, --proxy 指定代理服务器 -p socks5://127.0.0.1:1080 or -p http://127.0.0.1:3128 etc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -f, --force 强制安装
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --version 安装特定版本 例如 --version v0.15.11-rc2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -l, --local 从本地下载好的文件安装 需要使用绝对路径如 -l /root/verysync-linux-amd64-v0.15.12-rc1.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --remove 卸载微力同步
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -c, --check 检查更新
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -d --home 指定微力索引存放位置, 默认 ~/.config/verysync
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -u --user 指定运行微力服务的用户 默认 root
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>阿里云如何完全卸载阿里云盾（安骑士）并屏蔽阿里云盾IP</title><link>https://blog.leshans.eu.org/p/%E9%98%BF%E9%87%8C%E4%BA%91%E5%A6%82%E4%BD%95%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%BE%E5%AE%89%E9%AA%91%E5%A3%AB%E5%B9%B6%E5%B1%8F%E8%94%BD%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%BEip/</link><pubDate>Thu, 21 Dec 2023 20:44:39 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E9%98%BF%E9%87%8C%E4%BA%91%E5%A6%82%E4%BD%95%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%BE%E5%AE%89%E9%AA%91%E5%A3%AB%E5%B9%B6%E5%B1%8F%E8%94%BD%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%BEip/</guid><description>&lt;h2 id="什么是阿里云盾">&lt;strong>什么是阿里云盾&lt;/strong>&lt;/h2>
+&lt;p>阿里云盾（AliYunDun），又名安骑士，是购买阿里云云产品后自带的监控云服务器/轻量应用服务器安全的产品，能够自动化实时入侵威胁检测、病毒查杀、漏洞智能修复、基线一键核查等功能，但是同时也会监控你的服务器是否有违规进程，然后就会收到阿里云警告邮件。&lt;/p>
+&lt;p>阿里云盾主要包括3个进程：AliYunDun、aliyun-service和AliYunDunUpdate。&lt;/p>
+&lt;h2 id="如何完全卸载阿里云盾">&lt;strong>如何完全卸载阿里云盾&lt;/strong>&lt;/h2>
+&lt;h3 id="卸载阿里云盾">&lt;strong>卸载阿里云盾&lt;/strong>&lt;/h3>
+&lt;p>远程连接到阿里云云服务器或者轻量应用服务器后，执行以下代码卸载阿里云盾：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">wget http://update.aegis.aliyun.com/download/uninstall.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x uninstall.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./uninstall.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget http://update.aegis.aliyun.com/download/quartz_uninstall.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x quartz_uninstall.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./quartz_uninstall.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="删除阿里云盾文件残留">&lt;strong>删除阿里云盾文件残留&lt;/strong>&lt;/h3>
+&lt;p>卸载阿里云盾后，执行如下代码删除阿里云盾文件残留：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pkill aliyun-service
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -fr /etc/init.d/agentwatch /usr/sbin/aliyun-service
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf /usr/local/aegis*
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="屏蔽阿里云盾ip">&lt;strong>屏蔽阿里云盾IP&lt;/strong>&lt;/h3>
+&lt;p>最后就是屏蔽阿里云盾的IP：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.201.0/28 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.201.16/29 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.201.32/28 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.225.192/29 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.225.200/30 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.225.184/29 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.225.183/32 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.225.206/32 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.225.205/32 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.225.195/32 -j DROP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">iptables -I INPUT -s 140.205.225.204/32 -j DROP
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="检查阿里云盾是否卸载干净">&lt;strong>检查阿里云盾是否卸载干净&lt;/strong>&lt;/h2>
+&lt;p>最后检查下自己服务器上的阿里云盾是否卸载干净了，主要就是看进程里有没有阿里云盾的相关进程了（AliYunDun、aliyun-service和AliYunDunUpdate），可以通过&lt;code>ps -aux | grep -E 'aliyun|AliYunDun'&lt;/code>来检查，如果没有相关进程则说明阿里云盾已经卸载干净了。&lt;/p></description></item><item><title>实用网站合集</title><link>https://blog.leshans.eu.org/p/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E5%90%88%E9%9B%86/</link><pubDate>Tue, 19 Dec 2023 22:07:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E5%90%88%E9%9B%86/</guid><description>&lt;p>静态资源 CDN&lt;/p>
+&lt;p>全球都有节点&lt;/p>
+&lt;p>字节 cdn：https://cdn.bytedance.com 支持搜索。&lt;/p>
+&lt;p>七牛 cdn：https://www.staticfile.org 支持搜索。&lt;/p>
+&lt;p>知乎 unpkg 镜像：https://unpkg.zhimg.com 不全，不支持搜索。&lt;/p>
+&lt;p>360cdn：https://cdn.baomitu.com&lt;/p>
+&lt;p>仅中国大陆有节点&lt;/p>
+&lt;p>bootcdn：https://www.bootcdn.cn&lt;/p>
+&lt;p>75cdn：https://cdn.baomitu.com&lt;/p>
+&lt;p>中国大陆使用国外节点&lt;/p>
+&lt;p>jsDelivr：&lt;/p>
+&lt;p>&lt;a class="link" href="http://fastly.jsdelivr.net" target="_blank" rel="noopener"
+>http://fastly.jsdelivr.net&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://cdn.jsdelivr.net" target="_blank" rel="noopener"
+>http://cdn.jsdelivr.net&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://gcore.jsdelivr.net" target="_blank" rel="noopener"
+>http://gcore.jsdelivr.net&lt;/a>&lt;/p>
+&lt;p>CDNJS：http://www.cdnjs.com&lt;/p>
+&lt;p>unpkg：https://www.unpkg.com&lt;/p>
+&lt;p>Logo 生成网站&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.designevo.com" target="_blank" rel="noopener"
+>https://www.designevo.com&lt;/a> 可以免费下载低画质的 logo，支持自定义。&lt;/p>
+&lt;p>&lt;a class="link" href="http://yeelogo.com" target="_blank" rel="noopener"
+>http://yeelogo.com&lt;/a> 纯免费&lt;/p>
+&lt;p>去除图片背景网站
+&lt;a class="link" href="https://www.remove.bg" target="_blank" rel="noopener"
+>https://www.remove.bg&lt;/a> 免费下载，抠图效果很好。&lt;/p></description></item><item><title>纯代码免插件优化WordPress6.3实现0sql-强化拓展</title><link>https://blog.leshans.eu.org/p/113/</link><pubDate>Sun, 17 Dec 2023 22:47:53 +0800</pubDate><guid>https://blog.leshans.eu.org/p/113/</guid><description>&lt;blockquote>
 &lt;p>在WordPress各种优化插件、各种手段层出不穷的时代，各方大佬均在推荐各类插件，比如super cache、cache master和litespeed cache等。不过对于老白博客个人而言，就想图个清净，不喜欢插件太多，设置一大堆，复杂！所以呢，今天就掏出一个“无代码版”优化WordPress（强化拓展），再结合最新版本的WordPress6.3，轻松实现首页0sql，网站毫秒级加载。&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/7d1e1e7e82ddc7ea6952ee65acb369b3.webp"
@@ -57,7 +507,7 @@ alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展"
 &lt;p>从果酱大佬的描述中我们可以发现：batcache+memcached是一种非常不错的&lt;a class="link" href="https://www.xcbtmw.com/tag/wordpress_optimization" title="查看所有文章关于 WordPress优化"
 target="_blank" rel="noopener"
 >WordPress优化&lt;/a>手段，接下来老白跟大家分享下如何无插件开启&lt;/p>
-&lt;h4 id="31-php安装memcached拓展">3.1 PHP安装memcached拓展&lt;/h4>
+&lt;h3 id="31-php安装memcached拓展">3.1 PHP安装memcached拓展&lt;/h3>
 &lt;p>以&lt;a class="link" href="https://www.xcbtmw.com/tag/bt_panel" title="查看所有文章关于 宝塔面板"
 target="_blank" rel="noopener"
 >宝塔面板&lt;/a>为例，打开软件商店，PHP安装拓展，勾选即可（老白推荐安装opcache+memcached）&lt;/p>
@@ -65,7 +515,7 @@ target="_blank" rel="noopener"
 loading="lazy"
 alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展"
 >&lt;/p>
-&lt;h4 id="32-batcachemem强化拓展下载">3.2 batcache+mem强化拓展下载&lt;/h4>
+&lt;h3 id="32-batcachemem强化拓展下载">3.2 batcache+mem强化拓展下载&lt;/h3>
 &lt;p>下载文件（batcache和memcached均来自于官方插件，大家也可以自行下载）&lt;/p>
 &lt;p>batcache+mem下载：&lt;a class="link" href="https://qtrj.lanzoul.com/i6nSD18cy6eb" target="_blank" rel="noopener"
 >https://qtrj.lanzoul.com/i6nSD18cy6eb&lt;/a>&lt;/p>
@@ -78,12 +528,27 @@ alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">/&lt;/span>&lt;span class="nx">www&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nx">xcbtmw&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nx">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nx">wp&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">content&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="33-激活使用batcachemem">3.3 激活使用batcache+mem&lt;/h4>
+&lt;/div>&lt;h3 id="33-激活使用batcachemem">3.3 激活使用batcache+mem&lt;/h3>
 &lt;p>把上述文件放到对应目录后，还需要在WordPress根目录的wp-config.php进行下面的设置，不然会报错&lt;/p>
-&lt;p>&lt;strong>此处为隐藏内容，&lt;a class="link" href="https://www.xcbtmw.com/29717.html?replytocom" title="评论本文"
-target="_blank" rel="noopener"
->评论&lt;/a>后查看&lt;/strong>&lt;/p>
-&lt;h4 id="34-batcache缓存设置">3.4 batcache缓存设置&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">//设置缓存头，这里testxcbtmw可以随意设置-https://www.xcbtmw.com/29717.html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">define&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;WP_CACHE_KEY_SALT&amp;#39;&lt;/span>, &lt;span class="s1">&amp;#39;testxcbtmw&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//激活memcached
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">define&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ENABLE_CACHE&amp;#39;&lt;/span>, &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//激活batcache
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">define&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;WP_CACHE&amp;#39;&lt;/span>, &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="34-batcache缓存设置">3.4 batcache缓存设置&lt;/h3>
 &lt;p>编辑batcache的advanced-cache.php文件进行设置&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -106,27 +571,27 @@ target="_blank" rel="noopener"
 &lt;/span>&lt;span class="lnt">17
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">var $max_age = 300; // 缓存过期时间(0表示禁用batcache)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $remote = 0; // 禁止向远程数据中心发送缓冲区(从不发送req/sec)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $times = 2; // 一个页面被访问了多少次之后进行缓存(两个或两个以上)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $seconds = 0; // …在这么多秒内(0表示忽略它，立即使用batcache)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $group = &amp;#39;batcache&amp;#39;; // memcached组的名称。您可以通过更改此选项来模拟缓存刷新。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $unique = array(); // 如果您有条件地提供不同的内容，请将变量值放在这里。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $vary = array(); // 函数数组，用于create_function。返回值被添加到上面的$unique中。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $headers = array(); // 在这里添加头作为name=&amp;gt;值或name=&amp;gt;数组(值)。这些将与缓存中的每个响应一起发送。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $cache_redirects = false; // 设置true启用重定向缓存。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $redirect_status = false; // 这将在重定向期间设置为响应代码。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $redirect_location = false; // 这被设置为重定向位置。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $use_stale = true; // 更新缓存时是否可以返回过期的缓存响应?
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $uncached_headers = array(&amp;#39;transfer-encoding&amp;#39;); // 这些头将永远不会缓存。应用函数。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $debug = true; // 设置false以隐藏batcache信息 &amp;lt;!-- comment --&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $cache_control = true; // 将false设置为禁用Last-Modified和Cache-Control头
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $cancel = false; // 更改此选项以取消输出缓冲区。使用batcache_cancel ();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $noskip_cookies = array( &amp;#39;wordpress_test_cookie&amp;#39; ); // cookie的名称——如果它们存在并且缓存通常会被绕过，那么不要绕过它。
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$max_age&lt;/span> &lt;span class="o">=&lt;/span> 300&lt;span class="p">;&lt;/span> // 缓存过期时间&lt;span class="o">(&lt;/span>0表示禁用batcache&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$remote&lt;/span> &lt;span class="o">=&lt;/span> 0&lt;span class="p">;&lt;/span> // 禁止向远程数据中心发送缓冲区&lt;span class="o">(&lt;/span>从不发送req/sec&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$times&lt;/span> &lt;span class="o">=&lt;/span> 2&lt;span class="p">;&lt;/span> // 一个页面被访问了多少次之后进行缓存&lt;span class="o">(&lt;/span>两个或两个以上&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$seconds&lt;/span> &lt;span class="o">=&lt;/span> 0&lt;span class="p">;&lt;/span> // …在这么多秒内&lt;span class="o">(&lt;/span>0表示忽略它，立即使用batcache&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$group&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;batcache&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> // memcached组的名称。您可以通过更改此选项来模拟缓存刷新。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$unique&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span> // 如果您有条件地提供不同的内容，请将变量值放在这里。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$vary&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span> // 函数数组，用于create_function。返回值被添加到上面的&lt;span class="nv">$unique&lt;/span>中。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$headers&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span> // 在这里添加头作为name&lt;span class="o">=&lt;/span>&amp;gt;值或name&lt;span class="o">=&lt;/span>&amp;gt;数组&lt;span class="o">(&lt;/span>值&lt;span class="o">)&lt;/span>。这些将与缓存中的每个响应一起发送。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$cache_redirects&lt;/span> &lt;span class="o">=&lt;/span> false&lt;span class="p">;&lt;/span> // 设置true启用重定向缓存。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$redirect_status&lt;/span> &lt;span class="o">=&lt;/span> false&lt;span class="p">;&lt;/span> // 这将在重定向期间设置为响应代码。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$redirect_location&lt;/span> &lt;span class="o">=&lt;/span> false&lt;span class="p">;&lt;/span> // 这被设置为重定向位置。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$use_stale&lt;/span> &lt;span class="o">=&lt;/span> true&lt;span class="p">;&lt;/span> // 更新缓存时是否可以返回过期的缓存响应?
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$uncached_headers&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;transfer-encoding&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span> // 这些头将永远不会缓存。应用函数。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$debug&lt;/span> &lt;span class="o">=&lt;/span> true&lt;span class="p">;&lt;/span> // 设置false以隐藏batcache信息 &amp;lt;!-- comment --&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$cache_control&lt;/span> &lt;span class="o">=&lt;/span> true&lt;span class="p">;&lt;/span> // 将false设置为禁用Last-Modified和Cache-Control头
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$cancel&lt;/span> &lt;span class="o">=&lt;/span> false&lt;span class="p">;&lt;/span> // 更改此选项以取消输出缓冲区。使用batcache_cancel &lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$noskip_cookies&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">(&lt;/span> &lt;span class="s1">&amp;#39;wordpress_test_cookie&amp;#39;&lt;/span> &lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span> // cookie的名称——如果它们存在并且缓存通常会被绕过，那么不要绕过它。
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>这里大家不作修改也行，老白已经设置好了，保持默认也可&lt;/p>
-&lt;h4 id="35-batcache缓存清除">3.5 batcache缓存清除&lt;/h4>
+&lt;h3 id="35-batcache缓存清除">3.5 batcache缓存清除&lt;/h3>
 &lt;p>关于缓存文件的生成，batcache&lt;strong>不生成物理文件来存储缓存&lt;/strong>的页面。相反，它使用内存缓存（例如Memcached或APCu）来存储页面的副本。这种方式比将页面保存为静态HTML文件更为高效，因为读取内存缓存比读取磁盘上的文件要快得多。&lt;/p>
 &lt;p>内存缓存只是临时存储数据的一种方式，并不持久化保存数据。&lt;/p>
 &lt;p>因此，在重启服务器或清除缓存时，存储在内存缓存中的页面副本将会被清空，并重新生成，&lt;strong>强硬的刷新缓存方案就是重启下memcached&lt;/strong>&lt;/p></description></item><item><title>wordpress无需插件实现页面缓存静态化，提效显著</title><link>https://blog.leshans.eu.org/p/wordpress%E6%97%A0%E9%9C%80%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98%E9%9D%99%E6%80%81%E5%8C%96%E6%8F%90%E6%95%88%E6%98%BE%E8%91%97/</link><pubDate>Sun, 17 Dec 2023 15:14:08 +0800</pubDate><guid>https://blog.leshans.eu.org/p/wordpress%E6%97%A0%E9%9C%80%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98%E9%9D%99%E6%80%81%E5%8C%96%E6%8F%90%E6%95%88%E6%98%BE%E8%91%97/</guid><description>&lt;p> wordpress使用了大量插件，发表了很多文章图片以后速度直线下降，就像蜗牛爬一样慢！&lt;/p>

@@ -44,7 +44,7 @@ alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展"
 &lt;p>从果酱大佬的描述中我们可以发现：batcache+memcached是一种非常不错的&lt;a class="link" href="https://www.xcbtmw.com/tag/wordpress_optimization" title="查看所有文章关于 WordPress优化"
 target="_blank" rel="noopener"
 >WordPress优化&lt;/a>手段，接下来老白跟大家分享下如何无插件开启&lt;/p>
-&lt;h4 id="31-php安装memcached拓展">3.1 PHP安装memcached拓展&lt;/h4>
+&lt;h3 id="31-php安装memcached拓展">3.1 PHP安装memcached拓展&lt;/h3>
 &lt;p>以&lt;a class="link" href="https://www.xcbtmw.com/tag/bt_panel" title="查看所有文章关于 宝塔面板"
 target="_blank" rel="noopener"
 >宝塔面板&lt;/a>为例，打开软件商店，PHP安装拓展，勾选即可（老白推荐安装opcache+memcached）&lt;/p>
@@ -52,7 +52,7 @@ target="_blank" rel="noopener"
 loading="lazy"
 alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展"
 >&lt;/p>
-&lt;h4 id="32-batcachemem强化拓展下载">3.2 batcache+mem强化拓展下载&lt;/h4>
+&lt;h3 id="32-batcachemem强化拓展下载">3.2 batcache+mem强化拓展下载&lt;/h3>
 &lt;p>下载文件（batcache和memcached均来自于官方插件，大家也可以自行下载）&lt;/p>
 &lt;p>batcache+mem下载：&lt;a class="link" href="https://qtrj.lanzoul.com/i6nSD18cy6eb" target="_blank" rel="noopener"
 >https://qtrj.lanzoul.com/i6nSD18cy6eb&lt;/a>&lt;/p>
@@ -65,12 +65,27 @@ alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">/&lt;/span>&lt;span class="nx">www&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nx">xcbtmw&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nx">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nx">wp&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">content&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="33-激活使用batcachemem">3.3 激活使用batcache+mem&lt;/h4>
+&lt;/div>&lt;h3 id="33-激活使用batcachemem">3.3 激活使用batcache+mem&lt;/h3>
 &lt;p>把上述文件放到对应目录后，还需要在WordPress根目录的wp-config.php进行下面的设置，不然会报错&lt;/p>
-&lt;p>&lt;strong>此处为隐藏内容，&lt;a class="link" href="https://www.xcbtmw.com/29717.html?replytocom" title="评论本文"
-target="_blank" rel="noopener"
->评论&lt;/a>后查看&lt;/strong>&lt;/p>
-&lt;h4 id="34-batcache缓存设置">3.4 batcache缓存设置&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">//设置缓存头，这里testxcbtmw可以随意设置-https://www.xcbtmw.com/29717.html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">define&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;WP_CACHE_KEY_SALT&amp;#39;&lt;/span>, &lt;span class="s1">&amp;#39;testxcbtmw&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//激活memcached
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">define&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ENABLE_CACHE&amp;#39;&lt;/span>, &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//激活batcache
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">define&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;WP_CACHE&amp;#39;&lt;/span>, &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="34-batcache缓存设置">3.4 batcache缓存设置&lt;/h3>
 &lt;p>编辑batcache的advanced-cache.php文件进行设置&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -93,27 +108,27 @@ target="_blank" rel="noopener"
 &lt;/span>&lt;span class="lnt">17
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">var $max_age = 300; // 缓存过期时间(0表示禁用batcache)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $remote = 0; // 禁止向远程数据中心发送缓冲区(从不发送req/sec)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $times = 2; // 一个页面被访问了多少次之后进行缓存(两个或两个以上)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $seconds = 0; // …在这么多秒内(0表示忽略它，立即使用batcache)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $group = &amp;#39;batcache&amp;#39;; // memcached组的名称。您可以通过更改此选项来模拟缓存刷新。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $unique = array(); // 如果您有条件地提供不同的内容，请将变量值放在这里。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $vary = array(); // 函数数组，用于create_function。返回值被添加到上面的$unique中。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $headers = array(); // 在这里添加头作为name=&amp;gt;值或name=&amp;gt;数组(值)。这些将与缓存中的每个响应一起发送。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $cache_redirects = false; // 设置true启用重定向缓存。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $redirect_status = false; // 这将在重定向期间设置为响应代码。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $redirect_location = false; // 这被设置为重定向位置。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $use_stale = true; // 更新缓存时是否可以返回过期的缓存响应?
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $uncached_headers = array(&amp;#39;transfer-encoding&amp;#39;); // 这些头将永远不会缓存。应用函数。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $debug = true; // 设置false以隐藏batcache信息 &amp;lt;!-- comment --&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $cache_control = true; // 将false设置为禁用Last-Modified和Cache-Control头
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $cancel = false; // 更改此选项以取消输出缓冲区。使用batcache_cancel ();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var $noskip_cookies = array( &amp;#39;wordpress_test_cookie&amp;#39; ); // cookie的名称——如果它们存在并且缓存通常会被绕过，那么不要绕过它。
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$max_age&lt;/span> &lt;span class="o">=&lt;/span> 300&lt;span class="p">;&lt;/span> // 缓存过期时间&lt;span class="o">(&lt;/span>0表示禁用batcache&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$remote&lt;/span> &lt;span class="o">=&lt;/span> 0&lt;span class="p">;&lt;/span> // 禁止向远程数据中心发送缓冲区&lt;span class="o">(&lt;/span>从不发送req/sec&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$times&lt;/span> &lt;span class="o">=&lt;/span> 2&lt;span class="p">;&lt;/span> // 一个页面被访问了多少次之后进行缓存&lt;span class="o">(&lt;/span>两个或两个以上&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$seconds&lt;/span> &lt;span class="o">=&lt;/span> 0&lt;span class="p">;&lt;/span> // …在这么多秒内&lt;span class="o">(&lt;/span>0表示忽略它，立即使用batcache&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$group&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;batcache&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> // memcached组的名称。您可以通过更改此选项来模拟缓存刷新。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$unique&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span> // 如果您有条件地提供不同的内容，请将变量值放在这里。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$vary&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span> // 函数数组，用于create_function。返回值被添加到上面的&lt;span class="nv">$unique&lt;/span>中。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$headers&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span> // 在这里添加头作为name&lt;span class="o">=&lt;/span>&amp;gt;值或name&lt;span class="o">=&lt;/span>&amp;gt;数组&lt;span class="o">(&lt;/span>值&lt;span class="o">)&lt;/span>。这些将与缓存中的每个响应一起发送。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$cache_redirects&lt;/span> &lt;span class="o">=&lt;/span> false&lt;span class="p">;&lt;/span> // 设置true启用重定向缓存。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$redirect_status&lt;/span> &lt;span class="o">=&lt;/span> false&lt;span class="p">;&lt;/span> // 这将在重定向期间设置为响应代码。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$redirect_location&lt;/span> &lt;span class="o">=&lt;/span> false&lt;span class="p">;&lt;/span> // 这被设置为重定向位置。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$use_stale&lt;/span> &lt;span class="o">=&lt;/span> true&lt;span class="p">;&lt;/span> // 更新缓存时是否可以返回过期的缓存响应?
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$uncached_headers&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;transfer-encoding&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span> // 这些头将永远不会缓存。应用函数。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$debug&lt;/span> &lt;span class="o">=&lt;/span> true&lt;span class="p">;&lt;/span> // 设置false以隐藏batcache信息 &amp;lt;!-- comment --&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$cache_control&lt;/span> &lt;span class="o">=&lt;/span> true&lt;span class="p">;&lt;/span> // 将false设置为禁用Last-Modified和Cache-Control头
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$cancel&lt;/span> &lt;span class="o">=&lt;/span> false&lt;span class="p">;&lt;/span> // 更改此选项以取消输出缓冲区。使用batcache_cancel &lt;span class="o">()&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var &lt;span class="nv">$noskip_cookies&lt;/span> &lt;span class="o">=&lt;/span> array&lt;span class="o">(&lt;/span> &lt;span class="s1">&amp;#39;wordpress_test_cookie&amp;#39;&lt;/span> &lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span> // cookie的名称——如果它们存在并且缓存通常会被绕过，那么不要绕过它。
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>这里大家不作修改也行，老白已经设置好了，保持默认也可&lt;/p>
-&lt;h4 id="35-batcache缓存清除">3.5 batcache缓存清除&lt;/h4>
+&lt;h3 id="35-batcache缓存清除">3.5 batcache缓存清除&lt;/h3>
 &lt;p>关于缓存文件的生成，batcache&lt;strong>不生成物理文件来存储缓存&lt;/strong>的页面。相反，它使用内存缓存（例如Memcached或APCu）来存储页面的副本。这种方式比将页面保存为静态HTML文件更为高效，因为读取内存缓存比读取磁盘上的文件要快得多。&lt;/p>
 &lt;p>内存缓存只是临时存储数据的一种方式，并不持久化保存数据。&lt;/p>
 &lt;p>因此，在重启服务器或清除缓存时，存储在内存缓存中的页面副本将会被清空，并重新生成，&lt;strong>强硬的刷新缓存方案就是重启下memcached&lt;/strong>&lt;/p></description></item></channel></rss>
