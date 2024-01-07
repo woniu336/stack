@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Dec 2023 20:14:09 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 07 Jan 2024 15:24:01 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;p>安装依赖&lt;/p>
@@ -20,7 +20,130 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.leshans.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</link><pubDate>Sat, 23 Dec 2023 20:14:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</guid><description>&lt;h3 id="为什么要设置cloudflare的页面规则-page-rules进行全站缓存">为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？&lt;/h3>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>2023年最新可采集CMS视频资源站网址合集</title><link>https://blog.leshans.eu.org/p/2023%E5%B9%B4%E6%9C%80%E6%96%B0%E5%8F%AF%E9%87%87%E9%9B%86cms%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90%E7%AB%99%E7%BD%91%E5%9D%80%E5%90%88%E9%9B%86/</link><pubDate>Sun, 07 Jan 2024 15:24:01 +0800</pubDate><guid>https://blog.leshans.eu.org/p/2023%E5%B9%B4%E6%9C%80%E6%96%B0%E5%8F%AF%E9%87%87%E9%9B%86cms%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90%E7%AB%99%E7%BD%91%E5%9D%80%E5%90%88%E9%9B%86/</guid><description>&lt;ol>
+&lt;li>飞速资源 &lt;a class="link" href="https://help.feisuzyapi.com/" target="_blank" rel="noopener"
+>https://help.feisuzyapi.com/&lt;/a>&lt;/li>
+&lt;li>闪电资源 &lt;a class="link" href="http://shan04.com/" target="_blank" rel="noopener"
+>http://shan04.com/&lt;/a>&lt;/li>
+&lt;li>樱花资源 &lt;a class="link" href="https://yhzy.cc/" target="_blank" rel="noopener"
+>https://yhzy.cc/&lt;/a>&lt;/li>
+&lt;li>百度资源 &lt;a class="link" href="http://bdzy.com/" target="_blank" rel="noopener"
+>http://bdzy.com/&lt;/a>&lt;/li>
+&lt;li>无尽资源 &lt;a class="link" href="https://www.wujinzy.com/" target="_blank" rel="noopener"
+>https://www.wujinzy.com/&lt;/a>&lt;/li>
+&lt;li>酷点资网 &lt;a class="link" href="https://www.kudian20.com/" target="_blank" rel="noopener"
+>https://www.kudian20.com/&lt;/a>&lt;/li>
+&lt;li>红牛资源 &lt;a class="link" href="https://www.hongniuziyuan.com/" target="_blank" rel="noopener"
+>https://www.hongniuziyuan.com/&lt;/a>&lt;/li>
+&lt;li>云解析资源 &lt;a class="link" href="https://www.yparse.com/help" target="_blank" rel="noopener"
+>https://www.yparse.com/help&lt;/a>&lt;/li>
+&lt;li>天空资源 &lt;a class="link" href="http://help.tiankongapi.com/" target="_blank" rel="noopener"
+>http://help.tiankongapi.com/&lt;/a>&lt;/li>
+&lt;li>天堂官方资源 &lt;a class="link" href="http://vipmv.cc/help/" target="_blank" rel="noopener"
+>http://vipmv.cc/help/&lt;/a>&lt;/li>
+&lt;li>1080zyk优质资源 &lt;a class="link" href="https://1080zyk2.com/" target="_blank" rel="noopener"
+>https://1080zyk2.com/&lt;/a>&lt;/li>
+&lt;li>卧龙影视资源 &lt;a class="link" href="http://wolongzyw.com/" target="_blank" rel="noopener"
+>http://wolongzyw.com/&lt;/a>&lt;/li>
+&lt;li>全网影视资源 &lt;a class="link" href="http://hao123.daicuo.cc/" target="_blank" rel="noopener"
+>http://hao123.daicuo.cc/&lt;/a>&lt;/li>
+&lt;li>fox资源 &lt;a class="link" href="https://help.foxzyapi.com/" target="_blank" rel="noopener"
+>https://help.foxzyapi.com/&lt;/a>&lt;/li>
+&lt;li>金鹰资源 &lt;a class="link" href="https://jinyingzy.net/" target="_blank" rel="noopener"
+>https://jinyingzy.net/&lt;/a>&lt;/li>
+&lt;li>新浪资源 &lt;a class="link" href="https://xinlangzy.com/" target="_blank" rel="noopener"
+>https://xinlangzy.com/&lt;/a>&lt;/li>
+&lt;li>光速影视资源 &lt;a class="link" href="https://guangsuzy.com/" target="_blank" rel="noopener"
+>https://guangsuzy.com/&lt;/a>&lt;/li>
+&lt;li>奥斯卡资源 &lt;a class="link" href="https://aosikazy.com/static/help/index.html" target="_blank" rel="noopener"
+>https://aosikazy.com/static/help/index.html&lt;/a>&lt;/li>
+&lt;li>快车资源 &lt;a class="link" href="https://www.kuaichezy.com/" target="_blank" rel="noopener"
+>https://www.kuaichezy.com/&lt;/a>&lt;/li>
+&lt;li>淘片资源 (需VPN) &lt;a class="link" href="https://www.taopianzy.com/" target="_blank" rel="noopener"
+>https://www.taopianzy.com/&lt;/a>&lt;/li>
+&lt;li>量子资源 &lt;a class="link" href="http://lzizy.net/" target="_blank" rel="noopener"
+>http://lzizy.net/&lt;/a>&lt;/li>
+&lt;li>诺讯资源 &lt;a class="link" href="https://caiji.nxflv.com/" target="_blank" rel="noopener"
+>https://caiji.nxflv.com/&lt;/a>&lt;/li>
+&lt;li>tom资源 &lt;a class="link" href="https://www.tomziyuan.com/" target="_blank" rel="noopener"
+>https://www.tomziyuan.com/&lt;/a>&lt;/li>
+&lt;li>三零资源 &lt;a class="link" href="http://www.000zy.com/" target="_blank" rel="noopener"
+>http://www.000zy.com/&lt;/a>&lt;/li>
+&lt;li>麒麟资源(需要授权) &lt;a class="link" href="https://www.qilinzyz.com/" target="_blank" rel="noopener"
+>https://www.qilinzyz.com/&lt;/a>&lt;/li>
+&lt;li>鱼乐资源 &lt;a class="link" href="https://www.ylzy1.com/" target="_blank" rel="noopener"
+>https://www.ylzy1.com/&lt;/a>&lt;/li>
+&lt;li>ikun资源 &lt;a class="link" href="https://www.ikunzy.com/" target="_blank" rel="noopener"
+>https://www.ikunzy.com/&lt;/a>&lt;/li>
+&lt;li>阳光资源 &lt;a class="link" href="https://www.xxzy.org/" target="_blank" rel="noopener"
+>https://www.xxzy.org/&lt;/a>&lt;/li>
+&lt;li>U酷资源 &lt;a class="link" href="https://ukuzy.com/" target="_blank" rel="noopener"
+>https://ukuzy.com/&lt;/a>&lt;/li>
+&lt;li>非凡资源 &lt;a class="link" href="http://ffzy.tv/" target="_blank" rel="noopener"
+>http://ffzy.tv/&lt;/a>&lt;/li>
+&lt;li>伊人资源 &lt;a class="link" href="https://yrzyz9.com/" target="_blank" rel="noopener"
+>https://yrzyz9.com/&lt;/a>&lt;/li>
+&lt;li>天猫资源 &lt;a class="link" href="https://tianmaozy.com/" target="_blank" rel="noopener"
+>https://tianmaozy.com/&lt;/a>&lt;/li>
+&lt;li>快车资源 &lt;a class="link" href="https://www.kuaichezy.com/" target="_blank" rel="noopener"
+>https://www.kuaichezy.com/&lt;/a>&lt;/li>
+&lt;li>海外看资源(需VPN) &lt;a class="link" href="https://haiwaikan.com/" target="_blank" rel="noopener"
+>https://haiwaikan.com/&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>利用谷歌邮箱别名获取无限Gmail邮箱</title><link>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E8%B0%B7%E6%AD%8C%E9%82%AE%E7%AE%B1%E5%88%AB%E5%90%8D%E8%8E%B7%E5%8F%96%E6%97%A0%E9%99%90gmail%E9%82%AE%E7%AE%B1/</link><pubDate>Sun, 07 Jan 2024 13:10:06 +0800</pubDate><guid>https://blog.leshans.eu.org/p/%E5%88%A9%E7%94%A8%E8%B0%B7%E6%AD%8C%E9%82%AE%E7%AE%B1%E5%88%AB%E5%90%8D%E8%8E%B7%E5%8F%96%E6%97%A0%E9%99%90gmail%E9%82%AE%E7%AE%B1/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>我们注册有些国外的服务时，是不能用国内邮箱注册的，这时一个Gmail邮箱就显得很有必要。而有时候我们会需要注册多个账号，当然你可以用多个Gmail邮箱来注册。但多个Gmail邮箱又不好管理，而且现在Gmail邮箱也不是那么好注册了，这时你就会需要下面我要介绍的内容了，利用Gmail邮箱的别名功能来实现同一邮箱获取无限多个Gmail邮箱号。&lt;/p>
+&lt;p>在这之前你需要有一个谷歌账号（Gmail邮箱）。没有的话去到这里注册：&lt;a class="link" href="http://mail.google.com/" target="_blank" rel="noopener"
+>http://mail.google.com&lt;/a>（目前注册可能需要特殊方法，请自行搜索解决）。&lt;/p>
+&lt;h2 id="gmail邮箱别名设置">Gmail邮箱别名设置&lt;/h2>
+&lt;p>这里我们假设你的Gmail邮箱为：&lt;code>abcdef@gmail.com&lt;/code> ，那就可以通过以下办法得到无限的谷歌邮箱别名。&lt;/p>
+&lt;h3 id="1用户名之间加英文半角">1.用户名之间加 &lt;code>.&lt;/code> （英文半角）&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abc.def@gmail.com&lt;/code>&lt;/p>
+&lt;p>因为Gmail的用户名是不区分 &lt;code>.&lt;/code> 符号的，所以下面其实都是同一个用户名&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>abcde.f&lt;/li>
+&lt;li>a.bcdef&lt;/li>
+&lt;li>ab.cdef&lt;/li>
+&lt;li>a.b.cdef&lt;/li>
+&lt;li>abc.d.ef&lt;/li>
+&lt;/ul>
+&lt;h3 id="2用户名后面加任意字符">2.用户名后面加 &lt;code>+任意字符&lt;/code>&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abcdef+dev@gmail.com&lt;/code>&lt;/p>
+&lt;p>&lt;code>+&lt;/code> 号后面可以是任意字符，例如：&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>+dev&lt;/li>
+&lt;li>+my&lt;/li>
+&lt;li>+sub&lt;/li>
+&lt;li>……&lt;/li>
+&lt;/ul>
+&lt;p>**PS：**使用“+”号法，在许多网站注册时候，并不识别邮箱地址中的“+”，会提示你邮箱错误。&lt;/p>
+&lt;h3 id="3改变用户名中任意字符的大小写">3.改变用户名中任意字符的大小写&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>aBCdef@gmail.com&lt;/code>&lt;/p>
+&lt;p>可以是用户名里的某个或多个字符，&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a class="link" href="mailto:Abcdef@gmail.com" >Abcdef@gmail.com&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="mailto:AbcDeF@gmail.com" >AbcDeF@gmail.com&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="mailto:abcdEf@gmail.com" >abcdEf@gmail.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-把后缀变为googlemailcom">4. 把后缀变为 &lt;code>googlemail.com&lt;/code>&lt;/h3>
+&lt;blockquote>
+&lt;p>因为之前Gmail在某些国家的商标没有谈好，不能使用Gmail商标，只好用googlemail，这个很好理解。（貌似现在全球的商标都已经谈妥了）&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abcdef@googlemail.com&lt;/code>&lt;/p>
+&lt;h3 id="５以上４种方法的结合">５.以上４种方法的结合&lt;/h3>
+&lt;blockquote>
+&lt;p>可以结合上面的4种方法来实现理论上的无限别名。例如：&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a class="link" href="mailto:aBcdef&amp;#43;dev@googlemail.com" >aBcdef+dev@googlemail.com&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="mailto:AbcDEf&amp;#43;sub@googlemail.com" >AbcDEf+sub@googlemail.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="总结">总结&lt;/h2>
+&lt;p>了解了上面的Gmail别名设置的方法后，当你要注册一些服务的时候，只要在填写Gmail邮箱的时候填写通过上述的方法得到的别名邮箱就可以了。无需到Gmail设置，所有的别名邮箱的邮件都会发送到你原来的邮箱 &lt;code>abcdef@gmail.com&lt;/code> 中。&lt;/p></description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.leshans.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</link><pubDate>Sat, 23 Dec 2023 20:14:09 +0800</pubDate><guid>https://blog.leshans.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</guid><description>&lt;h3 id="为什么要设置cloudflare的页面规则-page-rules进行全站缓存">为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？&lt;/h3>
 &lt;p>当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。&lt;/p>
 &lt;p>当访客访问你网站页面的时候，所有的静态文件都是由Cloudflare的节点直接给到访客的，但是HTML文件是默认不缓存的。也就意味着访客访问你的某一页面的时候。仍然会&lt;strong>回源你的&lt;/strong>&lt;a class="link" href="https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&amp;amp;from=20065" target="_blank" rel="noopener"
 >&lt;strong>服务器&lt;/strong>&lt;/a>。&lt;/p>
