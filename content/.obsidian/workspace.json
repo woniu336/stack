@@ -4,22 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "94b5ab6e8519bbf5",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ee36c108c9198ecd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "主页.md",
-                "mode": "source",
-                "source": false
-              }
-            }
+        "id": "52e3aeea83213fc2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "主页.md",
+            "mode": "source",
+            "source": false
           }
-        ]
+        }
       }
     ],
     "direction": "vertical"
@@ -73,7 +67,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -153,13 +148,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "zk-prefixer:创建时间戳笔记": false,
       "cmdr:取消代理": false,
       "cmdr:新建文章": false,
       "cmdr:设置代理": false,
@@ -167,10 +155,17 @@
       "cmdr:停止博客": false,
       "cmdr:推送": false,
       "cmdr:上传图片": false,
-      "homepage:Open homepage": false
+      "homepage:Open homepage": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "zk-prefixer:创建时间戳笔记": false
     }
   },
-  "active": "ee36c108c9198ecd",
+  "active": "52e3aeea83213fc2",
   "lastOpenFiles": [
     "post/114.md",
     "主页.md",
