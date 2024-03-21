@@ -1,0 +1,4 @@
+﻿*.json -text
+*.md -text
+*.jpg binary
+/path/to/excluded/ directory -text
