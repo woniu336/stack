@@ -8,4 +8,3 @@ git config --global user.name "$username"
 git config --global user.email "$email"
 
 echo "Git全局设置已更改"
-read -p "按任意键继续..."

@@ -21,8 +21,7 @@ else
 
   # 检查是否成功新建文章
   if [ $? -eq 0 ]; then
-    echo "成功新建文章 '$postName'！"
-    read -n 1 -s -r -p "按任意键退出..."
+echo -e "\033[1;32m成功新建文章 '$postName'！\033[0m"
   else
     echo "新建文章失败！"
   fi
