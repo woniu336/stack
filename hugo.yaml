@@ -1,5 +1,5 @@
 baseurl: https://blog.qige.cloudns.biz
-languageCode: zh-cn
+languageCode: en-us
 theme: hugo-theme-stack
 paginate: 6
 title: 
@@ -56,15 +56,15 @@ params:
             src: img/lu.jpg
 
     article:
-        math: false
+        math: true
         toc: true
         readingTime: true
         license:
             enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+            default: 知识共享许可证 CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
+        enabled: false
         provider: waline
 
         disqusjs:

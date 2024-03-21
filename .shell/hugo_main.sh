@@ -7,12 +7,11 @@ echo "2. 预览博客"
 echo "3. 生成静态文件"
 echo "4. 更新子模块"
 echo "5. 一键推送"
-echo "6. 推送public到VPS"
-echo "7. 设置代理"
-echo "8. 取消代理"
-echo "9. git用户设置"
-echo "10. 一键Github代理"
-echo "11. 一键SSH代理"
+echo "6. 设置代理"
+echo "7. 取消代理"
+echo "8. Git全局设置"
+echo "9. http加速代理"
+echo "10. ssh加速代理"
 echo "--------------------------------------"
 echo "Press Ctrl+C to stop"
 
@@ -34,21 +33,18 @@ case $num in
     sh auto_push.sh
     ;;
   6)
-    sh vps.sh
-    ;;
-  7)
     sh proxy.sh
 	;;
-  8)
+  7)
     sh unset.sh
 	;;
-  9)
+  8)
     sh git-user.sh
     ;;
-  10)
+  9)
     sh github_proxy.sh
     ;;
-  11)
+  10)
     sh SSH_Proxy.sh
     ;;
   *)
@@ -56,7 +52,7 @@ case $num in
     ;;
 esac
 
-echo "Press any key to continue..."
+echo "按任意键继续..."
 read x
 clear
 sh hugo_main.sh
