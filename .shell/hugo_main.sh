@@ -1,19 +1,29 @@
 #!/bin/bash
 #author: Lruihao
-echo "Please enter the serial number to work"
+echo "请输入序列号开始工作"
 echo "--------------------------------------"
 echo "1. 新建文章"
+
 echo "2. 预览博客"
+
 echo "3. 生成静态文件"
+
 echo "4. 更新子模块"
+
 echo "5. 一键推送"
+
 echo "6. 设置代理"
+
 echo "7. 取消代理"
+
 echo "8. Git全局设置"
+
 echo "9. http加速代理"
+
 echo "10. ssh加速代理"
+
 echo "--------------------------------------"
-echo "Press Ctrl+C to stop"
+echo "请按 Ctrl+C 停止"
 
 read num
 case $num in
