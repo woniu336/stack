@@ -1,0 +1,32 @@
+{
+  "settings": {
+    "migrated": true,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 18,
+    "emojiStyle": "twemoji",
+    "iconColor": "#1aa810",
+    "recentlyUsedIcons": [
+      "SiMarkdown",
+      "SiEvernote",
+      "📓",
+      "📁",
+      "SiActigraph"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false
+  },
+  "post": "SiMarkdown",
+  "附件": "📁",
+  "主页.md": {
+    "iconName": null,
+    "inheritanceIcon": "SiHomeassistant"
+  },
+  "日记": "📓"
+}

@@ -1,0 +1,14 @@
+{
+  "promptDelete": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "日记",
+  "attachmentFolderPath": "附件",
+  "focusNewTab": false,
+  "strictLineBreaks": true,
+  "showFrontmatter": false,
+  "spellcheck": false,
+  "newLinkFormat": "relative",
+  "showInlineTitle": false,
+  "defaultViewMode": "source",
+  "readableLineLength": true
+}

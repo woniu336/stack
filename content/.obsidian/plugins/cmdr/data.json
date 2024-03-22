@@ -1,0 +1,86 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "obsidian-shellcommands:shell-command-qyyohtxf75",
+      "icon": "bug",
+      "name": "取消代理",
+      "mode": "any",
+      "color": "#837025"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-e0jhkf7c5r",
+      "icon": "axe",
+      "name": "设置代理",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-sjl0j8ioe8",
+      "icon": "arrow-up-circle",
+      "name": "推送",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-image-auto-upload-plugin:Upload all images",
+      "icon": "image",
+      "name": "上传图片",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-2urksgwhku",
+      "icon": "airplay",
+      "name": "预览",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-56me5k3cup",
+      "icon": "alert-triangle",
+      "name": "停止预览",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-807bom4zua",
+      "icon": "bold",
+      "name": "新建文章",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": [
+      "新建 Excalidraw 绘图",
+      "查看关系图谱",
+      "打开/创建今天的日记",
+      "打开命令面板",
+      "Memos",
+      "新建白板",
+      "打开快速切换",
+      "博客文件夹",
+      "插入模板",
+      "Templater",
+      "Obsidian发布",
+      "Digital Garden Publication Center"
+    ]
+  },
+  "spacing": "32",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}
