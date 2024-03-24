@@ -1,4 +1,9 @@
 <br> 
+demo
+
+```
+https://demo.stack.jimmycai.com/
+```
 
 ```
 git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
