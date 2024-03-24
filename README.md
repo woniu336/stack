@@ -1,5 +1,6 @@
 <br> 
-哈哈哈哈哈
+
+看看看看
 
 ```
 git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
