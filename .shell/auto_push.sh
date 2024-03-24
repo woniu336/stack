@@ -12,3 +12,4 @@ if git push -f origin --all; then
 else
   echo -e "\033[1;31m推送失败，请检查错误并按任意键退出。\033[0m"
 fi
+read -n 1 -s -r -p "Press any key to continue"

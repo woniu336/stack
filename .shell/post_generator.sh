@@ -26,3 +26,4 @@ echo -e "\033[1;32m成功新建文章 '$postName'！\033[0m"
     echo "新建文章失败！"
   fi
 fi
+read -n 1 -s -r -p "Press any key to continue"
