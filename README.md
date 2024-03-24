@@ -1,4 +1,14 @@
 <br><br>
+```
+git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+```
+
+或者
+
+```bash
+git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+
+```
 
 
 ```
