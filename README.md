@@ -1,5 +1,4 @@
 <br> 
-12377
 
 ```
 git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
