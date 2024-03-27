@@ -3,7 +3,7 @@
 
 public/
 resources/
-
+.obsidian/
 
 assets/jsconfig.json
 .DS_Store
