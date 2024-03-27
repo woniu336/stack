@@ -1,0 +1,261 @@
+{
+  "main": {
+    "id": "b343f4dbf8e45afc",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d7cb8a3da52cd82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "207f801fd80d19ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "主页.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "61aeb60414224354",
+    "type": "split",
+    "children": [
+      {
+        "id": "0da7ccf42a057872",
+        "type": "tabs",
+        "dimension": 52.52725470763132,
+        "children": [
+          {
+            "id": "c4ece1dd9071254e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "a47ec1f32a954797",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c2c175c0a3258734",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "c48be7cee64977a1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "181.md",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "0ae5401a735bf993",
+        "type": "tabs",
+        "dimension": 47.47274529236868,
+        "children": [
+          {
+            "id": "feb3473142556c2f",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 245
+  },
+  "right": {
+    "id": "d068f1f716704214",
+    "type": "split",
+    "children": [
+      {
+        "id": "0427ab57a7823a82",
+        "type": "tabs",
+        "dimension": 19.821605550049554,
+        "children": [
+          {
+            "id": "6d503ecda5063c35",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "主页.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0f56a4b97ce3946e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "主页.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8bb97503a97f5215",
+            "type": "leaf",
+            "state": {
+              "type": "tokei",
+              "state": {}
+            }
+          },
+          {
+            "id": "5bef7e8261cadac3",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "a0653a0394db3f29",
+        "type": "tabs",
+        "dimension": 45.39147670961348,
+        "children": [
+          {
+            "id": "189e72f4ab906964",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "主页.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "92e4650ef2ac6c9f",
+        "type": "tabs",
+        "dimension": 34.78691774033697,
+        "children": [
+          {
+            "id": "c67b687a0876eabf",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 321
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": true,
+      "command-palette:打开命令面板": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "cmdr:主题设置": false,
+      "cmdr:管理按钮": false,
+      "cmdr:上传图像": false,
+      "cmdr:新建文章": false,
+      "homepage:Open homepage": false,
+      "obsidian42-brat:BRAT": false
+    }
+  },
+  "active": "207f801fd80d19ce",
+  "lastOpenFiles": [
+    "主页.md",
+    "content/post/211.md",
+    "layouts/partials/footer/footer.html",
+    "README.md",
+    "content/post/178.md",
+    "content/post/210.md",
+    "public/p/监控测试/index.html",
+    "public/p/监控测试",
+    "2024-03-25.md",
+    "未命名.md",
+    "content/post/209.md",
+    "Pasted image 20240326135830.png",
+    "content/post/1234.md",
+    "public/p/1234/index.html",
+    "public/p/1234",
+    "Pasted image 20240326135849.png",
+    "content/post/207.md",
+    "public/p/2024-博客变化/index.html",
+    "public/p/2024-博客变化",
+    "content/post/206.md",
+    "content/post/208.md",
+    "content/post/140.md",
+    "themes/hugo-theme-stack/images/tn.png",
+    "themes/hugo-theme-stack/images/screenshot.png",
+    "themes/hugo-theme-stack/images",
+    "themes/hugo-theme-stack/data/external.yaml",
+    "themes/hugo-theme-stack/data",
+    "themes/hugo-theme-stack/exampleSite/content/post/rich-content/index.md",
+    "themes/hugo-theme-stack/exampleSite/content/post/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg",
+    "themes/hugo-theme-stack/exampleSite/content/post/placeholder-text/index.md",
+    "themes/hugo-theme-stack/exampleSite/content/post/placeholder-text/index.ar.md",
+    "themes/hugo-theme-stack/exampleSite/content/post/math-typesetting/index.md",
+    "themes/hugo-theme-stack/exampleSite/content/post/markdown-syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg",
+    "themes/hugo-theme-stack/exampleSite/content/post/markdown-syntax/index.md",
+    "themes/hugo-theme-stack/exampleSite/content/post/chinese-test/luca-bravo-alS7ewQ41M8-unsplash.jpg",
+    "themes/hugo-theme-stack/exampleSite/content/post/chinese-test/index.zh-cn.md",
+    "themes/hugo-theme-stack/exampleSite/content/post/chinese-test/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg",
+    "themes/hugo-theme-stack/exampleSite/content/post/chinese-test/helena-hertz-wWZzXlDpMog-unsplash.jpg",
+    "themes/hugo-theme-stack/exampleSite/content/post/chinese-test/florian-klauer-nptLmg6jqDo-unsplash.jpg",
+    "themes/hugo-theme-stack/exampleSite/content/post/emoji-support/index.md",
+    "themes/hugo-theme-stack/exampleSite/content/categories/Test/_index.md",
+    "themes/hugo-theme-stack/exampleSite/content/page/search/index.md",
+    "themes/hugo-theme-stack/exampleSite/content/page/links/index.md",
+    "themes/hugo-theme-stack/exampleSite/content/page/archives/index.md",
+    "themes/hugo-theme-stack/exampleSite/content/page/about/index.zh-cn.md",
+    "白板.canvas"
+  ]
+}

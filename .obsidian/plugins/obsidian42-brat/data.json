@@ -1,0 +1,20 @@
+{
+  "pluginList": [
+    "Stardusten/ob-table-enhancer"
+  ],
+  "pluginSubListFrozenVersion": [],
+  "themesList": [
+    {
+      "repo": "AnubisNekhet/AnuPpuccin",
+      "lastUpdate": "29776265"
+    }
+  ],
+  "updateAtStartup": false,
+  "updateThemesAtStartup": false,
+  "enableAfterInstall": false,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": false
+}
