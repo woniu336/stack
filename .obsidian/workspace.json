@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "207f801fd80d19ce",
+            "id": "a2a154ba281f0446",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "181.md",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,8 +77,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "0ae5401a735bf993",
@@ -209,7 +208,7 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "207f801fd80d19ce",
+  "active": "c4ece1dd9071254e",
   "lastOpenFiles": [
     "主页.md",
     "content/post/211.md",
